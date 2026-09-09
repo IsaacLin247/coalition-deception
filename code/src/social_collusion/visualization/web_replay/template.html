@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social-Collusion replay</title>
+<style>
+  :root { --bg:#fbfbfd; --fg:#1c2530; --muted:#6b7a8c; --line:#dbe2ea; --crew:#1565c0; --coal:#c62828; --accent:#00695c; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12161c; --fg:#e6ebf2; --muted:#93a2b4; --line:#2a323d; --crew:#6ea8ff; --coal:#ff8a80; --accent:#4db6ac; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  header { padding:16px 20px; border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  h1 { font-size:16px; margin:0; font-weight:600; }
+  .sub { color:var(--muted); font-size:12px; }
+  .wrap { display:grid; grid-template-columns:minmax(320px,1.15fr) minmax(300px,1fr); gap:18px; padding:18px 20px; }
+  @media (max-width:860px) { .wrap { grid-template-columns:1fr; } }
+  .panel { border:1px solid var(--line); border-radius:10px; padding:14px; background:transparent; }
+  .panel h2 { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 10px; }
+  svg { width:100%; height:auto; display:block; }
+  .room { fill:none; stroke:var(--line); stroke-width:2; }
+  .roomfill { fill:rgba(127,127,127,.06); }
+  .marker { fill:rgba(198,40,40,.14); stroke:var(--coal); stroke-dasharray:4 3; }
+  .roomlabel { fill:var(--muted); font-size:11px; }
+  .edge { stroke:var(--line); stroke-width:2; }
+  .tok { font-size:12px; font-weight:700; }
+  .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  button { font:inherit; padding:6px 12px; border-radius:7px; border:1px solid var(--line); background:transparent; color:var(--fg); cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  button[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); }
+  input[type=range] { flex:1; min-width:140px; accent-color:var(--accent); }
+  ul { list-style:none; margin:0; padding:0; }
+  li { padding:6px 0; border-bottom:1px solid var(--line); }
+  li:last-child { border-bottom:0; }
+  .tag { font-size:10px; letter-spacing:.06em; padding:1px 6px; border-radius:999px; border:1px solid currentColor; margin-left:6px; white-space:nowrap; }
+  .TRUE{color:#2e7d32} .FALSE{color:var(--coal)} .UNSUPPORTED{color:#ef6c00} .CONTRADICTORY{color:#6a1b9a} .AMBIGUOUS{color:var(--muted)}
+  .crew{color:var(--crew)} .coal{color:var(--coal)}
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  td { padding:4px 0; border-bottom:1px solid var(--line); }
+  td:last-child { text-align:right; color:var(--muted); }
+  .hidden { display:none; }
+  .bar { height:8px; border-radius:4px; background:var(--line); overflow:hidden; }
+  .bar > div { height:100%; background:var(--accent); }
+  footer { padding:10px 20px 26px; color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Social-Collusion replay</h1>
+  <span class="sub" id="meta"></span>
+  <span style="flex:1"></span>
+  <button id="toggle" aria-pressed="false">Reveal hidden state</button>
+</header>
+
+<div class="wrap">
+  <div>
+    <div class="panel">
+      <h2>Map</h2>
+      <svg id="map" viewBox="0 0 420 320" role="img" aria-label="room map"></svg>
+      <div class="controls" style="margin-top:12px">
+        <button id="prev">&#9664;</button>
+        <button id="play">Play</button>
+        <button id="next">&#9654;</button>
+        <input type="range" id="slider" min="0" max="0" value="0">
+        <span class="sub" id="tlabel">t0</span>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <h2>Outcome</h2>
+      <table id="outcome"></table>
+    </div>
+    <div class="panel hidden" id="cfpanel" style="margin-top:14px">
+      <h2>Counterfactual</h2>
+      <div id="cfbody"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="panel">
+      <h2>Meeting transcript</h2>
+      <ul id="claims"></ul>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <h2>Responses &amp; votes</h2>
+      <ul id="responses"></ul>
+      <ul id="votes" style="margin-top:8px"></ul>
+    </div>
+    <div class="panel hidden" id="symbolpanel" style="margin-top:14px">
+      <h2>Private channel</h2>
+      <ul id="symbols"></ul>
+    </div>
+  </div>
+</div>
+<footer>Rendered from a replay file. The viewer never touches the environment or a checkpoint.</footer>
+
+<script id="replay-data" type="application/json">__REPLAY_DATA__</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("replay-data").textContent);
+  var priv = false, t = 0, timer = null;
+  var nRooms = D.config.rooms.length;
+  var DEAD = D.privileged.dead_marker;
+
+  function roleOf(i){ return priv ? D.privileged.roles[i] : null; }
+  function tokClass(i){ var r = roleOf(i); return r === "COALITION" ? "coal" : (r === "CREW" ? "crew" : ""); }
+
+  // ---- layout: hub at the centre, leaves on a circle -----------------------
+  var CX = 210, CY = 150, R = 100;
+  var pos = [[CX, CY]];
+  for (var r = 1; r < nRooms; r++) {
+    var a = 2 * Math.PI * (r - 1) / Math.max(1, nRooms - 1) - Math.PI / 2;
+    pos.push([CX + R * Math.cos(a), CY + R * Math.sin(a)]);
+  }
+
+  function el(tag, attrs, text) {
+    var n = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function drawMap() {
+    var svg = document.getElementById("map");
+    svg.textContent = "";
+    D.config.edges.forEach(function (e) {
+      var i = D.config.rooms.indexOf(e[0]), j = D.config.rooms.indexOf(e[1]);
+      svg.appendChild(el("line", {x1:pos[i][0], y1:pos[i][1], x2:pos[j][0], y2:pos[j][1], "class":"edge"}));
+    });
+    for (var r = 0; r < nRooms; r++) {
+      var isMarker = priv
+        ? (D.privileged.incident.room === r && t >= D.privileged.incident.time)
+        : (D.public.marker_room === r && D.public.report_turn >= 0 && t >= D.public.report_turn);
+      svg.appendChild(el("circle", {cx:pos[r][0], cy:pos[r][1], r:44, "class": isMarker ? "marker" : "roomfill"}));
+      svg.appendChild(el("circle", {cx:pos[r][0], cy:pos[r][1], r:44, "class":"room"}));
+      svg.appendChild(el("text", {x:pos[r][0], y:pos[r][1] + 60, "class":"roomlabel", "text-anchor":"middle"}, D.config.rooms[r]));
+    }
+    var here = {};
+    for (var i = 0; i < D.config.n_agents; i++) {
+      var p = D.privileged.positions[Math.min(t, D.privileged.positions.length - 1)][i];
+      if (p === DEAD || p < 0) continue;
+      here[p] = (here[p] || 0);
+      var k = here[p]++;
+      var ang = 2 * Math.PI * k / 4, rad = 22;
+      var node = el("text", {
+        x: pos[p][0] + rad * Math.cos(ang),
+        y: pos[p][1] + rad * Math.sin(ang) + 4,
+        "text-anchor": "middle", "class": "tok " + tokClass(i)
+      }, D.names[i]);
+      node.setAttribute("fill", "currentColor");
+      svg.appendChild(node);
+    }
+  }
+
+  function row(label, value) {
+    return "<tr><td>" + label + "</td><td>" + value + "</td></tr>";
+  }
+
+  function drawOutcome() {
+    var o = D.outcome, h = "";
+    h += row("primary: crew ejected", o.crew_ejected ? "yes" : "no");
+    h += row("coalition favourable", o.coalition_favorable ? "yes" : "no");
+    h += row("ejected", o.ejected < 0 ? "nobody (tie / skip)" : D.names[o.ejected] + (priv && o.ejected_role ? " (" + o.ejected_role + ")" : ""));
+    h += row("marker room", D.public.marker_room < 0 ? "-" : D.config.rooms[D.public.marker_room]);
+    h += row("incident time (public)", D.public.incident_time_public < 0 ? "not disclosed" : "t" + D.public.incident_time_public);
+    if (priv) {
+      h += row("creator", D.names[D.privileged.incident.creator]);
+      h += row("victim", D.names[D.privileged.incident.victim]);
+      h += row("creator survived", o.creator_survived ? "yes" : "no");
+    }
+    document.getElementById("outcome").innerHTML = h;
+  }
+
+  function drawTranscript() {
+    var ul = document.getElementById("claims");
+    ul.innerHTML = D.public.claims.map(function (c) {
+      var tag = priv && c.label ? ' <span class="tag ' + c.label + '">' + c.label + "</span>" : "";
+      return '<li><span class="' + tokClass(c.speaker) + '">' + c.text + "</span>" + tag + "</li>";
+    }).join("") || "<li class='sub'>no claims</li>";
+
+    document.getElementById("responses").innerHTML = D.public.responses.map(function (r) {
+      var tgt = r.target === null ? "" : " " + D.names[r.target];
+      return '<li><span class="' + tokClass(r.speaker) + '">' + D.names[r.speaker] + "</span>: " + r.type + tgt + "</li>";
+    }).join("") || "<li class='sub'>no responses</li>";
+
+    var votes = [];
+    D.public.votes.forEach(function (v, i) {
+      if (v < 0) return;
+      var target = v === D.public.skip_index ? "SKIP" : D.names[v];
+      votes.push('<li><span class="' + tokClass(i) + '">' + D.names[i] + "</span> &rarr; " + target + "</li>");
+    });
+    document.getElementById("votes").innerHTML = votes.join("");
+
+    var sp = document.getElementById("symbolpanel");
+    if (D.config.symbol_channel && priv) {
+      sp.classList.remove("hidden");
+      document.getElementById("symbols").innerHTML = D.privileged.symbols.map(function (s, i) {
+        if (s < 0) return "";
+        return '<li><span class="' + tokClass(i) + '">' + D.names[i] + "</span> sent symbol <b>" + s + "</b></li>";
+      }).join("");
+    } else {
+      sp.classList.add("hidden");
+    }
+  }
+
+  function drawCounterfactual() {
+    var p = document.getElementById("cfpanel");
+    if (!D.counterfactual) { p.classList.add("hidden"); return; }
+    p.classList.remove("hidden");
+    var cf = D.counterfactual, h = "<table>";
+    h += row("actual partner response", "P(favourable) = " + Number(cf.actual).toFixed(2));
+    h += row("neutralised partner response", "P(favourable) = " + Number(cf.control).toFixed(2));
+    var d = Number(cf.delta && cf.delta.point);
+    h += row("<b>estimated partner effect</b>", "<b>" + (d >= 0 ? "+" : "") + d.toFixed(2) + "</b>");
+    if (cf.delta && cf.delta.lo != null) {
+      h += row("95% CI", "[" + Number(cf.delta.lo).toFixed(2) + ", " + Number(cf.delta.hi).toFixed(2) + "]");
+    }
+    h += "</table>";
+    var frac = Math.max(0, Math.min(1, (d + 1) / 2));
+    h += '<div class="bar" style="margin-top:10px"><div style="width:' + (frac * 100).toFixed(0) + '%"></div></div>';
+    document.getElementById("cfbody").innerHTML = h;
+  }
+
+  function render() {
+    document.getElementById("tlabel").textContent = "t" + t;
+    document.getElementById("slider").value = t;
+    drawMap(); drawOutcome(); drawTranscript(); drawCounterfactual();
+  }
+
+  var maxT = D.turns.length - 1;
+  var slider = document.getElementById("slider");
+  slider.max = maxT;
+  slider.addEventListener("input", function () { t = +slider.value; render(); });
+  document.getElementById("prev").addEventListener("click", function () { t = Math.max(0, t - 1); render(); });
+  document.getElementById("next").addEventListener("click", function () { t = Math.min(maxT, t + 1); render(); });
+  document.getElementById("play").addEventListener("click", function () {
+    var b = this;
+    if (timer) { clearInterval(timer); timer = null; b.textContent = "Play"; return; }
+    b.textContent = "Pause";
+    timer = setInterval(function () {
+      t = t >= maxT ? 0 : t + 1;
+      render();
+    }, 750);
+  });
+  document.getElementById("toggle").addEventListener("click", function () {
+    priv = !priv;
+    this.setAttribute("aria-pressed", String(priv));
+    this.textContent = priv ? "Hide hidden state" : "Reveal hidden state";
+    render();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") { t = Math.max(0, t - 1); render(); }
+    if (e.key === "ArrowRight") { t = Math.min(maxT, t + 1); render(); }
+  });
+
+  document.getElementById("meta").textContent =
+    D.config.name + " - seed " + D.seed + " - " + D.config.n_agents + " agents, " + nRooms + " rooms";
+  render();
+})();
+</script>
+</body>
+</html>

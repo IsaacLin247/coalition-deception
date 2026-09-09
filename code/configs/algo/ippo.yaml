@@ -1,0 +1,26 @@
+name: ippo
+centralized_critic: false
+hidden_dim: 128
+embed_dim: 16
+# Non-recurrent by design for the meeting-only stages: the observation already carries the whole
+# public transcript, and PPOLearner refuses recurrent actors until sequence-batched BPTT exists.
+use_gru: false
+gru_dim: 128
+lr: 3.0e-4
+clip_eps: 0.2
+gae_lambda: 0.95
+gamma: 1.0                # terminal-reward episodic task; no discounting
+value_coef: 0.5
+entropy_coef: 0.02
+entropy_coef_final: 0.005
+grad_clip: 0.5
+ppo_epochs: 8
+n_minibatches: 4
+n_envs: 256
+rollout_episodes: 256     # episodes collected per update
+total_updates: 400
+stratify_minibatches_by_phase: true
+normalize_advantages: true
+eval_every: 25
+eval_episodes: 2000
+checkpoint_every: 100

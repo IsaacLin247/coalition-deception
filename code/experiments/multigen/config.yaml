@@ -1,0 +1,39 @@
+# Multi-generation attacker/defender dynamics: C0 -> D1 -> C1 -> ... -> Dk -> Ck.
+# Matches the F3/F4 protocol of scripts/run_10seed_full.sbatch stage for stage: full_short_game,
+# two impostors, 400 PPO updates per stage with 32 envs x 32 episodes per update, stage seeds
+# offset by +10000 per stage, evaluation seed 987654321 + seed.
+env: full_short_game
+n_agents: 7                 # 5 crew + 2 impostors; 5 (3+2) and 9 (7+2) are also used
+n_coalition: 2
+max_rounds: 8               # 8 = F4 multi-round game (coalition win rate, game length);
+                            # 1 = F3 single-meeting cycle (false-ejection primary)
+generations: 10             # k: number of D/C generations after C0
+seeds: [0, 1, 2, 3, 4]      # one process per seed (see experiments/remote/launch_multigen.sh)
+
+# training budget per stage (fixed budget, exactly as the existing C0 -> D1 -> C1 experiment)
+updates_per_stage: 400
+n_envs: 32
+rollout_episodes: 32
+eval_every: 0               # within-stage eval curve; the per-generation eval below is the record
+eval_episodes: 1000         # frozen-matchup evaluation after every stage
+crossplay_episodes: 500     # every C_i vs every D_j after training ((k+1) x (k+1) matrix)
+checkpoint_every: 50         # retain intermediate checkpoints for independent replay
+
+# rewards: the F3 single-meeting cycle used side-specific objectives; F4 uses game survival
+single_round_objectives: {coalition: balanced_ejection, crew: meeting_ejection}
+multi_round_objective: survive
+
+# probe set for policy distances (fixed across generations and seeds)
+probe_seed: 4242
+probe_episodes_per_policy: 20
+
+# defense: "none" = the paper's protocol (scripted soft-credibility D0, plurality vote);
+# "dependence" = D0 uses the dependence-aware crew rule and the ejection tally is
+# vote_aggregation=dependence_weighted for every later generation (Task 3, stage 3)
+defense: none
+dependence_penalty: 4.0
+dependence_window: 3
+dependence_top_j: 1
+
+device: cpu
+threads: 1

@@ -1,0 +1,27 @@
+# One-incident spatial benchmark (Stage 8-10). Identical downstream meeting/vote/labelling code;
+# the position history is produced by agent movement actions instead of the episode RNG.
+name: one_incident
+n_agents: 5
+n_coalition: 2
+rooms: [Hub, Electrical, Navigation, Medbay]
+edges:
+  - [Hub, Electrical]
+  - [Hub, Navigation]
+  - [Hub, Medbay]
+free_play_turns: 6
+synthetic_evidence: false     # agents move; incidents are created by CREATE_INCIDENT actions
+enable_response_round: true
+enable_symbol_channel: false
+n_symbols: 4
+symbol_mode: none
+partner_known: true
+shared_reward: true
+confidence_levels: 3
+allow_self_vote: false
+allow_skip_vote: true
+tie_ejects: false
+reveal_role_on_eject: false
+random_speaking_order: true
+n_tasks_per_agent: 2
+incident_requires_isolation: true   # no non-victim crew witness in the room
+auto_report_at_end: true

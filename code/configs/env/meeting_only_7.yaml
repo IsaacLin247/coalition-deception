@@ -1,0 +1,27 @@
+# Pre-registered robustness configuration (research_contract.md sec.11, amendment A3).
+# Identical to meeting_only except for the electorate size: 5 crew + 2 coalition, so the meeting
+# has 5 voters of whom 2 are coalition. None of the three outcome metrics saturate here.
+name: meeting_only_7
+n_agents: 7
+n_coalition: 2
+rooms: [Hub, Electrical, Navigation, Medbay]
+edges:
+  - [Hub, Electrical]
+  - [Hub, Navigation]
+  - [Hub, Medbay]
+free_play_turns: 6
+synthetic_evidence: true
+enable_response_round: true
+enable_symbol_channel: false
+n_symbols: 4
+symbol_mode: none
+partner_known: true
+shared_reward: true
+confidence_levels: 3
+allow_self_vote: false
+allow_skip_vote: true
+tie_ejects: false
+reveal_role_on_eject: false
+random_speaking_order: true
+incident_time_public: true
+max_evidence_retries: 64

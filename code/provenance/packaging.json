@@ -1,0 +1,35 @@
+{
+  "kind": "portable source packaging; no completed result migration",
+  "original_source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+  "portable_source_sha256": "cdaa1c031b4e2e6e690771c9a884ed70ed78653814863f99bb2fe0def367ae68",
+  "original_protocol_sha256": "05be4efaff58996ee58c3dffa92b24f8faa4cd60a37ae8b1baf32cfe08eb8aa0",
+  "portable_protocol_sha256": "f7cb7f7535f55ec299c142ef792b738efbd4c1f63843ad6572b9ee0c7d5ddfc2",
+  "job_designs_identical": true,
+  "main_jobs": 240,
+  "shared_paths_changed": [
+    "scripts/plot_f4_full_game.py"
+  ],
+  "source_paths_omitted": [
+    "configs/experiments/counterfactuals.yaml",
+    "configs/experiments/private_channel.yaml",
+    "configs/experiments/registry.yaml",
+    "configs/experiments/reward_sharing.yaml",
+    "experiments/dependence/aggregate_dependence.py",
+    "experiments/multigen/aggregate_multigen.py",
+    "experiments/remote/revision_queue.py",
+    "scripts/smoke_test.py",
+    "scripts/train_f3_adapted_only.py",
+    "scripts/train_f3_defender_only.py"
+  ],
+  "new_source_paths": [],
+  "analysis_adaptations": [
+    "checkpoint_plan: code root replaces nested source snapshot; expected fingerprint repinned",
+    "replicate_mechanisms: source default uses code root; expected fingerprint repinned",
+    "replicate_vote_diagnostic: source and study-protocol defaults use code root",
+    "supplemental protocols freshly generated for portable package; same scientific designs"
+  ],
+  "retained_analysis_regressions": [
+    "analysis/analyze_ablation_budget.py",
+    "analysis/analyze_revision.py"
+  ]
+}

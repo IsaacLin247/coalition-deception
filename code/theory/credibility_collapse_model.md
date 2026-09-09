@@ -1,0 +1,78 @@
+# Corroboration capture under correlated testimony
+
+This analytical note studies the report-aggregation mechanism in isolation. The game benchmark has almost universally compatible honest testimony and does not exhibit corroboration-weight capture in the reported diagnostic. The scalar Gaussian model is therefore an illustrative mechanism, not a calibrated account of the game's alibi-witness or caught-lying channels.
+
+**Setting.** Let $1\le m<n$, $N=n+m$, $f=m/N$, $\sigma,\sigma_c,h>0$, $\gamma,\lambda\ge0$, and $\rho\in[0,1]$. Honest reports are $x_i=\theta+\varepsilon_i$ with independent $\varepsilon_i\sim\mathcal N(0,\sigma^2)$. Coalition reports are $y_j=\theta+b+\eta_j$, with $\eta\sim\mathcal N(0,\sigma_c^2[(1-\rho)I+\rho\mathbf1\mathbf1^\top])$, independent of the honest noise. Define $r=(x,y)$, $c_i=\#\{k\ne i:|r_i-r_k|\le h\}$, and the realized estimator $\hat\theta_{\rm cred}=\sum_i w_i r_i$, $w_i\propto e^{\gamma c_i}$. Dependence-aware weights additionally multiply by $e^{-\lambda\mathrm{ex}_i}$, where $\mathrm{ex}_i=\max_{k\ne i}D_{ik}-(N-1)^{-1}\sum_{k\ne i}D_{ik}$ and $D_{ik}$ is the agreement frequency across $T$ independent repetitions with fixed model parameters.
+
+**Exact agreement probabilities.** With $s^2=\sigma^2+\sigma_c^2$,
+$$
+p_{HH}=\operatorname{erf}(h/(2\sigma)),\qquad
+p_{CC}(\rho)=\operatorname{erf}\!\left(\frac{h}{2\sigma_c\sqrt{1-\rho}}\right),\quad p_{CC}(1)=1,
+$$
+$$
+p_{HC}=\Phi((h-b)/s)-\Phi((-h-b)/s).
+$$
+Hence $\bar c_H=(n-1)p_{HH}+mp_{HC}$, $\bar c_C=(m-1)p_{CC}+np_{HC}$ and $\Delta c=\bar c_C-\bar c_H$ is non-decreasing in $\rho$.
+
+**Deterministic mean-field surrogate.** Replace each random corroboration count by its group expectation. The resulting coalition weight and estimator are
+$$
+W_C=\frac{f}{f+(1-f)e^{-\gamma\Delta c}},\qquad
+\tilde\theta=(1-W_C)\bar x+W_C\bar y.
+$$
+This substitution defines a surrogate. In general $W_C\ne\mathbb E[\sum_{j\in C}w_j]$, and it does not give an exact boundary for the realized estimator. Its exact bias and mean-squared error are
+$$
+\operatorname{bias}(\tilde\theta)=W_Cb,\qquad
+\operatorname{MSE}(\tilde\theta)=W_C^2b^2+(1-W_C)^2\frac{\sigma^2}{n}
++W_C^2\sigma_c^2\left(\rho+\frac{1-\rho}{m}\right).
+$$
+The approximation $\operatorname{MSE}(\tilde\theta)\approx W_C^2b^2$ requires the displayed variance terms to be negligible relative to $W_C^2b^2$.
+
+**Proposition (surrogate amplification and robustness).**
+
+1. *Weight amplification.* For $\gamma>0$, $W_C>f$ if and only if $\Delta c>0$, equivalently
+$$
+(m-1)p_{CC}>(n-1)p_{HH}-(n-m)p_{HC}.
+$$
+At $\gamma=0$, $W_C=f$. When $\Delta c>0$, $W_C$ increases with $\gamma$ and is non-decreasing in $\rho$; $W_C>1/2$ precisely when $\gamma\Delta c>\log((1-f)/f)$. Weight amplification increases the surrogate's squared bias for $b\ne0$; a comparison of total MSE must also include the variance terms above. At $\rho=1$ and negligible cross-group agreement, the amplification condition reduces to $(m-1)>(n-1)p_{HH}$. Negligible cross-group agreement requires separation relative to the noise scale, for example $(|b|-h)/s\gg1$.
+
+2. *Median robustness and the bias reference.* Because $m<n$, the pooled median $M$ lies between the smallest and largest honest reports for every realization, irrespective of the coalition reports. Therefore
+$$
+\operatorname{MSE}(M)\le\sigma^2\mathbb E\!\left[\max_{1\le i\le n}|Z_i|^2\right]<\infty,
+\qquad Z_i\stackrel{\rm iid}{\sim}\mathcal N(0,1),
+$$
+uniformly in $b$ and $\rho$. For odd $N$, writing $k=(N+1)/2$ and $Z_{(j)}$ for honest order statistics gives the sharper pathwise bound $x_{(k-m)}\le M\le x_{(k)}$, hence $|\operatorname{bias}(M)|\le\sigma\mathbb E[Z_{(k)}]$. As $n,m$ grow with $m/N\to f<1/2$, the latter upper bound tends to $B_\infty=\sigma\Phi^{-1}(1/[2(1-f)])$. Thus $W_C|b|=B_\infty$ defines an asymptotic bias-comparison reference, not a finite-sample MSE break-even boundary. For $0<W^*=B_\infty/|b|<1$, $W_C|b|>B_\infty$ is equivalent to
+$$
+\gamma\Delta c>\log\!\frac{(1-f)W^*}{f(1-W^*)}.
+$$
+When $\Delta c>0$ and the right-hand side is positive, division by $\Delta c$ gives the positive reference gain $\gamma^*$. Finite-sample error comparisons use the actual risks or the finite-sample bound above. At $f=1/2$, the median loses its uniform bound against arbitrarily displaced coalition reports; this does not imply that every estimator fails on every distribution.
+
+3. *Dependence penalty.* In the long-window limit, for $m\ge2$,
+$$
+\overline{\mathrm{ex}}_C=\max(p_{CC},p_{HC})-\frac{(m-1)p_{CC}+np_{HC}}{N-1},\qquad
+\overline{\mathrm{ex}}_H=\max(p_{HH},p_{HC})-\frac{(n-1)p_{HH}+mp_{HC}}{N-1}.
+$$
+For $m=1$, $\overline{\mathrm{ex}}_C=0$ and coalition correlation has no effect. The defended surrogate replaces $\gamma\Delta c$ by $\gamma\Delta c-\lambda(\overline{\mathrm{ex}}_C-\overline{\mathrm{ex}}_H)$. On any correlation interval where $m\ge2$ and $p_{CC}(\rho)\ge p_{HC}$, its log-weight advantage depends on $\rho$ through
+$$
+\left[\gamma(m-1)-\lambda\frac{n}{N-1}\right]p_{CC}(\rho).
+$$
+Consequently $\lambda\ge\gamma(m-1)(N-1)/n$ makes the defended surrogate weight non-increasing with correlation on that interval; a strict inequality makes it decrease where $p_{CC}$ increases. For $5+2$, the threshold is $1.2\gamma$. If $p_{CC}<p_{HC}$, the coefficient instead is $(m-1)[\gamma+\lambda/(N-1)]$, so the stated repair condition does not apply there. A comparison between $\rho=0$ and $\rho=1$ requires the first branch to hold throughout that interval.
+
+*Proof sketch.* Groupwise softmax normalization gives $W_C$, and independence of the two groups gives the exact surrogate variance. The amplification and majority statements follow by rearranging the logistic expression. Fewer than half the reports are adversarial, so neither central rank can escape the honest range; for odd $N$ at most $m$ insertions can shift the median's honest rank, giving the stated order-statistic bounds. Gaussian symmetry gives the bias bound, and convergence of central order statistics gives its fixed-fraction limit. Finally, the strong law applied to each pair's agreement indicators gives the long-window matrix entries. Taking each row's actual maximum and collecting coefficients in $p_{CC}$ yields the two dependence branches. $\square$
+
+The tests check the Gaussian probabilities, limiting concentration statistic, simulation identities, and boundary cases. Monte Carlo experiments also exhibit finite-sample reversals of the surrogate's weight-amplification prediction, so they do not establish exactness of its realized-estimator thresholds.
+
+## Numerical illustration and limits
+
+`theory/simulate_model.py` simulates mean, median, 25%-per-tail trimmed mean, credibility weighting, and dependence-aware credibility. The committed default example has $n=5$, $m=2$, $\sigma=\sigma_c=1$, $b=4$, $h=0.4$, $\gamma=1$, $T=8$ and $\lambda=4$. These are synthetic settings, not estimates of game parameters. The no-attack comparison additionally sets both $b=0$ and $\rho=0$; only then are all seven reports independent with common variance and the mean's MSE $\sigma^2/7$.
+
+The existing numerical artifacts show credibility MSE about 0.87 with independent biased coalition noise and about 1.84 with fully correlated noise, compared with about 0.57 for the median at both endpoints. Dependence-aware credibility reaches about 0.31 at full correlation and about 1.02 with independent coalition noise. The matching rounded median numbers do not imply exact invariance in $\rho$. No general monotonicity of realized MSE in gain, coalition size or correlation follows from the mean-field logistic expression.
+
+A counterexample is $n=5,m=2,\sigma=\sigma_c=1,b=20,h=0.43,\rho=1,\gamma=1$. With 100,000 trials and seed 82, the surrogate weight is 0.294849 while the realized average is 0.277398, on opposite sides of $f=2/7$. Moreover the realized credibility MSE is 36.4572 against 32.8132 for the mean. Random weights affect both squared bias and variance; replacing their second moments by a squared deterministic weight is not justified. `tests/test_theory_model.py` retains this case as a regression against conflating the two quantities.
+
+At $\rho=0$ and equal variances, $p_{CC}=p_{HH}$ and $p_{HC}\le p_{HH}$, giving $\Delta c=(n-m)(p_{HC}-p_{HH})\le0$. Thus independent biased reporters cannot amplify their *surrogate* weight in this restricted setting. Unequal variances remove that conclusion. For example a coalition with nearly noiseless but independent reports can corroborate itself more than noisy honest reporters do.
+
+The dependence limit requires independent or suitably ergodic repetitions with fixed parameters. At short windows the empirical row maximum has sampling variability and can penalize honest pairs by chance. This can change error in either direction. With one round it is a deterministic function of that round's count: $\mathrm{ex}_i=\mathbf1\{c_i>0\}-c_i/(N-1)$, so it adds no historical information.
+
+The implementation uses an indicator agreement kernel. It does not implement a selectable smooth Gaussian kernel. Heterogeneous honest reliability, heavy tails, nonlinear dependence, and adaptive changes across the history window require new analysis; the stated constants and conditions should not be transferred to them without proof.
+
+Figures show simulated MSE ratios and analytical reference contours. Their asymptotic median-bias contour is not a finite-sample MSE guarantee. Coalition fractions on fixed-$N$ grids are discrete, and the synthetic sweep is not evidence of a universal phase transition at one half.

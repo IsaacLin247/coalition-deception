@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "social-collusion"
+version = "0.1.0"
+description = "A social-deduction benchmark for learned coalition deception and defensive adaptation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Xi Chen" }, { name = "Isaac Lin" }]
+keywords = ["multi-agent", "reinforcement-learning", "social-deduction", "collusion", "emergent-communication"]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+rl = ["torch>=2.0"]
+env = ["pettingzoo>=1.24", "gymnasium>=0.29"]
+analysis = ["pandas>=2.0", "matplotlib>=3.7"]
+dev = ["pytest>=7", "hypothesis>=6", "pyyaml>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+social_collusion = ["visualization/web_replay/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# E501: line length is handled by the formatter, not enforced here.
+# B905: every zip() in this codebase pairs sequences of known-equal length (per-head masks,
+#       per-seed metric vectors); adding strict= everywhere is churn without a defect to catch.
+ignore = ["E501", "B905"]

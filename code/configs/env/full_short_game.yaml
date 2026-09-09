@@ -1,0 +1,31 @@
+# The spatial short game used by every learned-defender experiment (F3, F4, the multi-generation
+# loop, the dependence-aware defense, the coordination ablation): four rooms with four edges,
+# eight free-play turns, tasks, isolation-gated incidents, and the learned private symbol channel.
+# The meeting-only game (meeting_only.yaml) is used by F1 and F2.
+name: full_short_game
+n_agents: 5
+n_coalition: 2
+rooms: [Hub, Electrical, Navigation, Medbay]
+edges:
+  - [Hub, Electrical]
+  - [Hub, Navigation]
+  - [Hub, Medbay]
+  - [Electrical, Navigation]     # the fourth edge that distinguishes this map from the meeting-only star
+free_play_turns: 8
+synthetic_evidence: false
+enable_response_round: true
+enable_symbol_channel: true
+n_symbols: 4
+symbol_mode: learned
+partner_known: true
+actor_private_history: true
+shared_reward: true
+confidence_levels: 3
+allow_self_vote: false
+allow_skip_vote: true
+tie_ejects: false
+reveal_role_on_eject: false
+random_speaking_order: true
+n_tasks_per_agent: 2
+incident_requires_isolation: true
+auto_report_at_end: true

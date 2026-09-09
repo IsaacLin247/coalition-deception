@@ -1,0 +1,18 @@
+name: belief_listener
+embed_dim: 24
+hidden_dim: 128
+lr: 1.0e-3
+weight_decay: 1.0e-5
+batch_size: 256
+epochs: 30
+train_episodes: 40000
+val_episodes: 4000
+test_episodes: 8000
+label_smoothing: 0.0
+# balanced mixture of scripted coalition strategies used to build the supervised set
+strategy_mix:
+  truthful: 0.25
+  lone_liar: 0.25
+  alibi: 0.25
+  framer: 0.15
+  subtle_support: 0.10

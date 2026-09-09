@@ -1,0 +1,17 @@
+% Captions already contain their manuscript numbers. Keep the text at body size
+% while suppressing duplicate automatic Figure/Table labels.
+\usepackage{caption}
+\captionsetup{labelformat=empty,font=normalsize,justification=raggedright,singlelinecheck=false}
+\captionsetup[longtable]{width=\linewidth}
+\usepackage{pdflscape}
+\usepackage[section]{placeins}
+% Pandoc emits both width and height bounds; graphicx must preserve aspect ratio.
+\setkeys{Gin}{keepaspectratio}
+% Inline 'h' floats can overfill pages shared with longtable's output routine.
+\makeatletter
+\def\fps@figure{tbp}
+% Include the final line's math/subscript depth in the page-height budget.
+% Otherwise TeX can place descenders below the nominal one-inch bottom margin.
+\maxdepth=0pt
+\@maxdepth=0pt
+\makeatother

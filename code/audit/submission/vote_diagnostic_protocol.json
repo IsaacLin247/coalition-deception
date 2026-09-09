@@ -1,0 +1,56 @@
+{
+  "counterfactuals": "Hold recorded ballots fixed; crew-only necessity and coalition-only sufficiency are distinct",
+  "created_utc": "2026-09-09T20:48:58.723756+00:00",
+  "episodes_per_cell": 500,
+  "evaluation": "CPU serial episodes; same reset draws and per-episode actor seeds across nine cells; isolated copies",
+  "evidence_seed_base": 2987654321,
+  "inference": "Descriptive per-seed ratios and across-seed mean/sample SD only; no p-values or confidence intervals",
+  "kind": "post-audit descriptive F8 ballot replay",
+  "required_jobs": {
+    "counterattack_hyp_n7_r1_s0": "0b1edba14733f4ee951c985d3ac44930d41f666ab4def70278c52e9327b1c03c",
+    "counterattack_hyp_n7_r1_s1": "2e2600adf9fc4bb17492b063d3a3b2c3698e14537370f91d096a20e0caac830f",
+    "counterattack_hyp_n7_r1_s2": "2fa5a3f33c6624779fb39b0b8abc0ac3b5beb3cf97f5e593dcbf1c5e08dbcd3f",
+    "counterattack_hyp_n7_r1_s3": "cf73a5c954f2ceded9717d242feb0cb0cd0f74c29280725592337f3504140896",
+    "counterattack_hyp_n7_r1_s4": "cd496af9e056aa5548b3290c8c589bf3ec6ee6ff2be1c5d679265fded34511d9",
+    "counterattack_hyp_n7_r1_s5": "742534b9bfc67d42d0dee0356202c43a46fbcfc63b7c64bb30dcd19c43f730e2",
+    "counterattack_hyp_n7_r1_s6": "3345d02732051d2c0431b94f2e1acfab66abdcd05c85a144e64131fc60c40c01",
+    "counterattack_hyp_n7_r1_s7": "abc3841e9f697f56b7b59b1d9c549a933815dd16e27acdcb9d27e9f7a913bf7d",
+    "counterattack_hyp_n7_r1_s8": "7aea046fa58af7bc000055315e1d0f393855a98e665c33d3c37c0cea6aec5652",
+    "counterattack_hyp_n7_r1_s9": "2f8a2a5ba7cc639132ad3f0b7dd8badb938d2a61ba5972f884dd65134f70c7b1",
+    "counterattack_hyp_n9_r1_s0": "b8234795fdcae912c9a1548a2f73531f20b73939b8eb4d32587fdacde378b49a",
+    "counterattack_hyp_n9_r1_s1": "ff78412a3a20e5e178251a6c8e6b9dda768f6973113a4f5e1b4d866096192b6d",
+    "counterattack_hyp_n9_r1_s2": "d6ae1b990bfc1853b9e4619cca8365e8cb7a295dd212c16ed27f88b085e46c38",
+    "counterattack_hyp_n9_r1_s3": "37c5781ce52f2c13d606480a26c47ac3f649921429ba94a11da7926763601f79",
+    "counterattack_hyp_n9_r1_s4": "fb6e8234f8a3a1ab1e2312fb4fa2778cf33b86978074f3e5ba71ea9b0c4402d1"
+  },
+  "rules": {
+    "hypothesis": "hypothesis",
+    "mean": "mean",
+    "soft": "soft_credibility"
+  },
+  "script_sha256": "6b6752575842615d5ff6861839e2594fe42a0eea4c7def4ab0fe670ec03baac2",
+  "seeds": {
+    "7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "9": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "source_sha256": "cdaa1c031b4e2e6e690771c9a884ed70ed78653814863f99bb2fe0def367ae68",
+  "study_protocol_sha256": "f7cb7f7535f55ec299c142ef792b738efbd4c1f63843ad6572b9ee0c7d5ddfc2",
+  "zero_denominator": "null; across-seed conditional summaries state the number of defined seeds"
+}

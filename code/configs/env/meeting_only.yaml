@@ -1,0 +1,25 @@
+# Meeting-only benchmark (Stage 2-7). Evidence is generated exogenously; agents only speak,
+# respond and vote. Shares the engine and the truth-labelling path with one_incident.yaml.
+name: meeting_only
+n_agents: 5
+n_coalition: 2
+rooms: [Hub, Electrical, Navigation, Medbay]
+edges:
+  - [Hub, Electrical]
+  - [Hub, Navigation]
+  - [Hub, Medbay]
+free_play_turns: 6
+synthetic_evidence: true      # positions come from the episode RNG, not from agent actions
+enable_response_round: true
+enable_symbol_channel: false
+n_symbols: 4
+symbol_mode: none             # none | random | learned | learned_unobserved | public
+partner_known: true
+shared_reward: true
+confidence_levels: 3
+allow_self_vote: false
+allow_skip_vote: true
+tie_ejects: false
+reveal_role_on_eject: false
+random_speaking_order: true
+max_evidence_retries: 64
