@@ -1584,12 +1584,13 @@
     }
   },
   "path_sanitized_copies": 7,
-  "published_files": 136,
-  "published_payload_bytes": 92578248,
+  "published_files": 138,
+  "published_payload_bytes": 92618798,
   "receipt_hash_semantics": "Copied receipts and presentation input hashes continue to identify original unsanitized bytes. Each copied file has distinct source/published hashes below. Publication-specific inference verification hashes the public inputs.",
   "scope": "Only enumerated files. Raw episodes/checkpoints are separate release assets; manuscript-specific selected outputs may have a separate manifest.",
   "source_identity_note": "Original frozen source and scientific results retained; no portable-source relabeling.",
   "source_repository": "IsaacLin247/when-credibility-collapses",
+  "updated_utc": "2026-09-11T04:11:05.715898+00:00",
   "verification": {
     "all_published_hashes_checked": true,
     "data_semantics_unchanged": true,

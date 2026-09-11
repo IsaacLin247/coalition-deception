@@ -4,6 +4,7 @@
   "assets": [
     {
       "bytes": 3774,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/RECONSTRUCT.md",
       "github_digest": "sha256:72e5892e7b58879fb709003948626935ca0dbe30fb407f21da02b54f7e2c84c2",
       "id": 556421467,
       "name": "RECONSTRUCT.md",
@@ -11,6 +12,7 @@
     },
     {
       "bytes": 1599,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/SHA256SUMS",
       "github_digest": "sha256:1b2f6f74e246a54ef6bf5e73227223f828eec38f84f1d236a8406d7b3e0d3be0",
       "id": 556421464,
       "name": "SHA256SUMS",
@@ -18,6 +20,7 @@
     },
     {
       "bytes": 1409,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.complete.json",
       "github_digest": "sha256:9be53502bfddf999fd514a7e2c68e50393f25d22cb4b09b2016303372bfe59df",
       "id": 556421442,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.complete.json",
@@ -25,6 +28,7 @@
     },
     {
       "bytes": 5784828,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.manifest.json",
       "github_digest": "sha256:55e8fb35857168340bdbc6d5a7f002ae6d13115b53a2373e0b3fa255beb37bad",
       "id": 556421494,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.manifest.json",
@@ -32,6 +36,7 @@
     },
     {
       "bytes": 1500000000,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-001",
       "github_digest": "sha256:a65b6859ba7efaa04d3870bb44c3c549b30815836e62cbdc7e574568d44c8c25",
       "id": 556421500,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-001",
@@ -39,6 +44,7 @@
     },
     {
       "bytes": 1500000000,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-002",
       "github_digest": "sha256:e6328d7dd8f5944d9da5f5dcfb3d17077063cd42dab7b08a4db7c6946a1363a2",
       "id": 556421537,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-002",
@@ -46,6 +52,7 @@
     },
     {
       "bytes": 1500000000,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-003",
       "github_digest": "sha256:d29fdc4b4262bb42daa31ca55a4664f8c3993619935431edcc6f343f84adc954",
       "id": 556423030,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-003",
@@ -53,6 +60,7 @@
     },
     {
       "bytes": 1500000000,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-004",
       "github_digest": "sha256:998f5c4d1a6d116c4e472fccc713a7c74deca815e4139b2adb5b7169c1e2d21b",
       "id": 556423741,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-004",
@@ -60,6 +68,7 @@
     },
     {
       "bytes": 1500000000,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-005",
       "github_digest": "sha256:a06943341d79fcfb8fd0a19eb99fa93d81fddbeb11e3e819015163b814efcee3",
       "id": 556424021,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-005",
@@ -67,6 +76,7 @@
     },
     {
       "bytes": 1500000000,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-006",
       "github_digest": "sha256:af809fa152998991dd776721583a11a30eb715dce9866a128023c946b098525e",
       "id": 556424559,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-006",
@@ -74,6 +84,7 @@
     },
     {
       "bytes": 1251673047,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.part-007",
       "github_digest": "sha256:20e31084b4c96997a271458ab1cb7fd731515d6cf03f8eea32206238a19dea08",
       "id": 556421493,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-007",
@@ -81,6 +92,7 @@
     },
     {
       "bytes": 120,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.sha256",
       "github_digest": "sha256:289bbc389d9b7272f4748c18de648cb2d9a86ee7dba559c11e00a7e7115240f7",
       "id": 556421440,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.sha256",
@@ -88,6 +100,7 @@
     },
     {
       "bytes": 839,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/coalition-deception-corrected-study-2026-09-11.tar.gz.verified.json",
       "github_digest": "sha256:d286e30d4a3744ae641b3ed15b9571d4284f4924b54ad126dc92d4ad66b713a8",
       "id": 556421443,
       "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.verified.json",
@@ -95,6 +108,7 @@
     },
     {
       "bytes": 1667,
+      "download_url": "https://github.com/IsaacLin247/coalition-deception/releases/download/corrected-study-2026-09-11/split_manifest.json",
       "github_digest": "sha256:96024adc45126f163529bef0c31f1489080a0469f341c6dfd82c602f1e55a329",
       "id": 556421466,
       "name": "split_manifest.json",
@@ -107,7 +121,10 @@
     "exact byte lengths",
     "GitHub SHA-256 digests equal local asset SHA-256"
   ],
+  "draft": false,
   "failed_uploads": 0,
+  "publication_verified_utc": "2026-09-11T04:11:05.715898+00:00",
+  "published_at": "2026-09-11T04:10:11Z",
   "release_id": 386775298,
   "release_url": "https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11",
   "repo": "IsaacLin247/coalition-deception",
@@ -117,5 +134,5 @@
   "total_asset_bytes": 10257467283,
   "upload_elapsed_seconds": 231.3517802799979,
   "validated_utc": "2026-09-11T04:00:30.400287+00:00",
-  "verification_stage": "Draft-upload verification; immutable asset IDs, bytes and GitHub SHA-256 digests."
+  "verification_stage": "Uploaded assets reverified after public release publication."
 }
