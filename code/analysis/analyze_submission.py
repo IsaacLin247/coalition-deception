@@ -449,6 +449,43 @@ def ingest(job, folder, data):
         ingest_loop(job, folder, data)
 
 
+def verify_undefined_terminal_coordination(episodes, meetings):
+    """Prove a zero denominator from an earlier coalition ejection in every game.
+
+    The frozen metric reads final-meeting ballots, reset between rounds. A
+    coalition member ejected in an earlier meeting cannot cast that ballot.
+    This sufficient condition does not excuse unexplained missing values.
+    """
+    grouped = defaultdict(list)
+    for meeting in meetings:
+        grouped[int(meeting["episode_index"])].append(meeting)
+    if not episodes or set(grouped) != {int(row["episode_index"]) for row in episodes}:
+        raise ValueError("Undefined coordination lacks complete episode/meeting evidence")
+    for episode in episodes:
+        rows = sorted(grouped[int(episode["episode_index"])], key=lambda row: int(row["round"]))
+        expected = int(episode["total_meetings"])
+        if len(rows) != expected or [int(row["round"]) for row in rows] != list(range(expected)):
+            raise ValueError("Undefined coordination has incomplete meeting history")
+        coalition = {int(episode["coalition_a"]), int(episode["coalition_b"])}
+        if len(coalition) != 2 or not any(int(row["ejected"]) in coalition for row in rows[:-1]):
+            raise ValueError("Undefined coordination is not supported by earlier coalition ejections")
+
+
+def checked_crossplay_matrix(metric, raw, size, rounds, undefined_coordination=()):
+    matrix = np.asarray(raw, dtype=float)
+    if matrix.shape != (size, size):
+        raise ValueError(f"Matrix shape mismatch: {metric}")
+    if np.isfinite(matrix).all():
+        return matrix
+    if metric == "coalition_game_win_rate" and rounds == 1 and np.isnan(matrix).all():
+        return None
+    missing = set(map(tuple, np.argwhere(np.isnan(matrix))))
+    if (metric == "same_target_vote_rate" and not np.isinf(matrix).any()
+            and missing <= set(undefined_coordination)):
+        return matrix
+    raise ValueError(f"Incomplete matrix: {metric}")
+
+
 def ingest_loop(job, folder, data):
     group, seed = group_seed(job["name"])
     info = scope(group)
@@ -467,6 +504,7 @@ def ingest_loop(job, folder, data):
     crosspath = folder / "crossplay.json"
     payload = read_json(crosspath)
     matrices = payload["matrices"]
+    undefined_coordination = set()
     evaluation_records = read_json(folder / "evaluation_records.json")["evaluations"]
     expected_records = [("stage", f"stage{2*g:02d}_C{g}") for g in range(k + 1)]
     expected_records += [("stage", f"stage{2*g-1:02d}_D{g}") for g in range(1, k + 1)]
@@ -501,18 +539,17 @@ def ingest_loop(job, folder, data):
             advertised = {metric: values[i][j] for metric, values in matrices.items()}
             if len(episodes) != int(payload["episodes_per_cell"]):
                 raise ValueError("Crossplay episodes_per_cell disagrees with raw records")
+            if "same_target_vote_rate" in advertised and advertised["same_target_vote_rate"] is None:
+                verify_undefined_terminal_coordination(episodes, meetings)
+                undefined_coordination.add((i, j))
         check_episode_summary(advertised, episodes, info["rounds"])
     for metric in primary(info["rounds"]):
         if metric not in matrices:
             raise ValueError(f"Missing primary crossplay matrix {metric}")
     for metric, raw in matrices.items():
-        matrix = np.asarray(raw, dtype=float)
-        if matrix.shape != (k + 1, k + 1):
-            raise ValueError(f"Matrix shape mismatch: {metric}")
-        if not np.isfinite(matrix).all():
-            if metric == "coalition_game_win_rate" and info["rounds"] == 1 and np.isnan(matrix).all():
-                continue
-            raise ValueError(f"Incomplete matrix: {metric}")
+        matrix = checked_crossplay_matrix(metric, raw, k + 1, info["rounds"], undefined_coordination)
+        if matrix is None:
+            continue
         for i, j in itertools.product(range(k + 1), repeat=2):
             data.add(job, "crossplay", f"C{i}|D{j}", metric, matrix[i, j], crosspath)
         # Fixed reference/control horizons; never choose a horizon from outcomes.

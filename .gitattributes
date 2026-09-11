@@ -1,0 +1,6 @@
+# Preserve hashed source/data and manuscript asset bytes across platforms.
+code/** -text
+data/** -text
+paper/** -text
+*.pdf binary
+*.png binary

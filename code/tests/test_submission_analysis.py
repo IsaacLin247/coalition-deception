@@ -10,6 +10,33 @@ from analysis import analyze_submission as analysis
 from experiments.submission.run_study import study_jobs
 
 
+def test_undefined_coordination_requires_earlier_coalition_ejection_in_every_episode():
+    episodes = [dict(episode_index=0, total_meetings=2, coalition_a=1, coalition_b=3)]
+    meetings = [dict(episode_index=0, round=0, ejected=1),
+                dict(episode_index=0, round=1, ejected=3)]
+    analysis.verify_undefined_terminal_coordination(episodes, meetings)
+    # Ejection in the final meeting does not remove the ballot already cast.
+    with pytest.raises(ValueError, match="earlier coalition"):
+        analysis.verify_undefined_terminal_coordination(episodes, [dict(meetings[0], ejected=2), meetings[1]])
+    with pytest.raises(ValueError, match="incomplete meeting history"):
+        analysis.verify_undefined_terminal_coordination(episodes, meetings[1:])
+    with pytest.raises(ValueError, match="complete episode/meeting evidence"):
+        analysis.verify_undefined_terminal_coordination(episodes, [])
+
+
+def test_verified_undefined_coordination_does_not_relax_primary_matrix_gate():
+    values = [[.2, .3], [None, .4]]
+    matrix = analysis.checked_crossplay_matrix("same_target_vote_rate", values, 2, 8, {(1, 0)})
+    assert np.isnan(matrix[1, 0])  # Undefined stays undefined; it is not replaced by zero.
+    assert matrix[0, 0] == .2
+    for metric in ("same_target_vote_rate", "any_false_ejection_rate", "coalition_game_win_rate"):
+        allowed = () if metric == "same_target_vote_rate" else {(1, 0)}
+        with pytest.raises(ValueError, match="Incomplete matrix"):
+            analysis.checked_crossplay_matrix(metric, values, 2, 8, allowed)
+    with pytest.raises(ValueError, match="Incomplete matrix"):
+        analysis.checked_crossplay_matrix("same_target_vote_rate", [[.2, .3], [float("inf"), .4]], 2, 8, {(1, 0)})
+
+
 def test_exact_mean_flips_and_holm_keep_magnitudes_and_missing_family_members():
     assert analysis.exact_mean_sign_flip([3, 2, -1]) == .5
     assert analysis.exact_mean_sign_flip([1] * 5) == .0625

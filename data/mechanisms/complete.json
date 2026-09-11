@@ -1,0 +1,8 @@
+{
+  "episodes": 540000,
+  "inference": "descriptive only",
+  "jobs": 30,
+  "protocol_sha256": "a0adaef10149da078388efcb642bd24236addd35ef4803d88aecb44203ce1610",
+  "script_sha256": "2cce07aa5277a0feb723aa2121eb8b0dc80a6fa277c293124f3c8882a6a15495",
+  "source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35"
+}

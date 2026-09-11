@@ -1,0 +1,101 @@
+{
+  "candidate_count": 5,
+  "cases": [
+    {
+      "above_threshold": [
+        2
+      ],
+      "creator": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "member": [
+        0.0,
+        0.0,
+        1.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "possible_creators": [
+        2
+      ]
+    },
+    {
+      "above_threshold": [
+        2,
+        3
+      ],
+      "creator": [
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "member": [
+        0.0,
+        0.0,
+        0.625,
+        0.625,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "possible_creators": [
+        2,
+        3
+      ]
+    },
+    {
+      "above_threshold": [],
+      "creator": [
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.0,
+        0.0
+      ],
+      "member": [
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "possible_creators": [
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "coalition_size": 2,
+  "formula": "member_j = 1/(M-1) + (M-2)/(M-1) * creator_j, for gate-independent feasibility and m=2",
+  "module": "audit/submission/source/src/social_collusion/policies/hypothesis_crew.py",
+  "module_sha256": "ec8147296b5454bdbd80d4cee9160decd122753d87f61d99ee3a7c6135b9ab7d",
+  "no_incident_exchangeable_membership": [
+    0.0,
+    0.0,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4
+  ],
+  "probe_sha256": "648ef934faa41765943426ca81f0cdee3af61654f44f1c20bf5f3caf483cbd2d",
+  "scope": "Three synthetic feasible observer views, not an F2 sweep or attribution of its aggregate error.",
+  "source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35"
+}

@@ -1,0 +1,1469 @@
+{
+  "rows": [
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_budget_d1600_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.382,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.05454814387309617,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.38739999999999997,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.03952594084901712,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_budget_d1600_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.516,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.03905124837953327,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5252000000000001,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04809573785690369,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.4394,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.06917947672539887,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5671999999999999,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.054819704486616855,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.7452000000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04830320900312939,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8400000000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.05043808085167395,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.852,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.033526109228480414,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8462,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.012153188881935485,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.1648,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.07774123744834525,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition0_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.354,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.11465600725648875,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8482,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.029456747953567432,
+      "table": "crossplay"
+    },
+    {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8542,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.029380265485526143,
+      "table": "crossplay"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_dependence_n7_r8_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.8896749999999999,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 10,
+      "sd": 0.006979185323358139,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.8472500000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 10,
+      "sd": 0.008617649847196665,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_dependence_n7_r8_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.762625,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 10,
+      "sd": 0.04741824104006107,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.65825,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 10,
+      "sd": 0.05138566055925632,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_dependence_n7_r8_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.12900000000000003,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 10,
+      "sd": 0.046163959006037494,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.19134999999999996,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 10,
+      "sd": 0.05057944795621594,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_dependence_n7_r8_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.78865,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 10,
+      "sd": 0.0259155144438402,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.8174249999999998,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 10,
+      "sd": 0.02452579424469949,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_dependence_n7_r8_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.34805,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 10,
+      "sd": 0.05421290334310541,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.308525,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 10,
+      "sd": 0.0653435844423749,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_dependence_n7_r8_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.44530000000000003,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 10,
+      "sd": 0.06969664426801497,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.509,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 10,
+      "sd": 0.08637900979597608,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.54805,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.01484650632303779,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5506000000000001,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04040327956985671,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.37950000000000006,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.0184966213130939,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.26655,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04891778817567287,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.16420000000000004,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.039698236736661244,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.28650000000000003,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.07461316907892332,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.7445999999999999,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.020931883575063183,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.7431499999999999,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.018187048963479543,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.69475,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.028334497525101813,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5138,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.05763446234675914,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.04809999999999999,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.023109521847065533,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.23390000000000005,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.07353264581123138,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8882000000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.020067386476569415,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8537000000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.019591452217740255,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8004,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.028710625210886624,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.7567999999999999,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.0603112758943135,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.09000000000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.03249615361854386,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.10059999999999998,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.05522952109153221,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8831999999999999,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.013917614738165458,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8099999999999999,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.042973829245251144,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5539,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.050773270526921946,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.3736,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.07577631556099836,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.3326,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.05955081863417161,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.4404,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.09490943051140913,
+      "table": "loop_h2"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5702999999999999,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.051053403412505215,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.34735,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.006236485388421922,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.21989999999999998,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04920543669148764,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "c_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.7722,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.03811266193799643,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "d_stage_mean",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.62155,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.02855116022160918,
+      "table": "loop_h4"
+    },
+    {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.14309999999999998,
+      "metric": "coalition_favorable_rate",
+      "n_seeds": 5,
+      "sd": 0.03847141796191038,
+      "table": "loop_h4"
+    }
+  ],
+  "status": "complete"
+}

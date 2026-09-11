@@ -1,7 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite this repository and the accompanying draft manuscript when using the benchmark."
+message: "Please cite this repository and the accompanying manuscript when using the benchmark."
 title: "Coalition Deception and Defensive Adaptation in a Social-Deduction Benchmark"
 type: software
+version: "2.0.0"
+date-released: "2026-09-11"
 authors:
   - family-names: "Lin"
     given-names: "Isaac"
@@ -10,11 +12,11 @@ authors:
 repository-code: "https://github.com/IsaacLin247/coalition-deception"
 url: "https://github.com/IsaacLin247/coalition-deception"
 abstract: >-
-  A social-deduction benchmark for studying coalition deception and defensive
-  adaptation. This repository contains the corrected research implementation,
-  tests, replication protocols, and the current draft manuscript following a
-  publication audit. The full corrected replication remains in progress;
-  remaining archived manuscript results are explicitly provisional.
+  A social-deduction benchmark with completed corrected experiments on coalition
+  deception, defensive adaptation, and repeated response learning. The package
+  includes code, protocols, final seed-level analysis, manuscript and versioned
+  access to raw data and checkpoints. It distinguishes coalition victory,
+  innocent ejections, and mechanisms under adaptive attacks.
 keywords:
   - multi-agent reinforcement learning
   - social deduction

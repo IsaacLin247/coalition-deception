@@ -1,0 +1,2556 @@
+{
+  "figures": {
+    "ballot_diagnostic.pdf": {
+      "kind": "bars",
+      "panels": [
+        {
+          "labels": [
+            "5+2",
+            "7+2"
+          ],
+          "title": "False ejection",
+          "values": [
+            {
+              "defined_seeds": 10,
+              "mean": 0.424,
+              "sd": 0.0660235648167464,
+              "total_seeds": 10
+            },
+            {
+              "defined_seeds": 5,
+              "mean": 0.6048,
+              "sd": 0.012132600710482491,
+              "total_seeds": 5
+            }
+          ]
+        },
+        {
+          "labels": [
+            "5+2",
+            "7+2"
+          ],
+          "title": "Honest abstention",
+          "values": [
+            {
+              "defined_seeds": 10,
+              "mean": 0.660826401683644,
+              "sd": 0.048004726681939336,
+              "total_seeds": 10
+            },
+            {
+              "defined_seeds": 5,
+              "mean": 0.898788109263062,
+              "sd": 0.010971875525143938,
+              "total_seeds": 5
+            }
+          ]
+        },
+        {
+          "labels": [
+            "5+2",
+            "7+2"
+          ],
+          "title": "Coalition ballots necessary",
+          "values": [
+            {
+              "defined_seeds": 10,
+              "mean": 0.9726345859442973,
+              "sd": 0.031013805062367342,
+              "total_seeds": 10
+            },
+            {
+              "defined_seeds": 5,
+              "mean": 1.0,
+              "sd": 0.0,
+              "total_seeds": 5
+            }
+          ]
+        }
+      ]
+    },
+    "coordination_controls.pdf": {
+      "kind": "bars",
+      "panels": [
+        {
+          "labels": [
+            "Default",
+            "No channel",
+            "Hidden partner",
+            "Both removed"
+          ],
+          "title": "Single-meeting false ejection",
+          "values": [
+            {
+              "cell": "default",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r1",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.1854,
+              "metric": "false_ejection_rate",
+              "metric_label": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.07069158365746236,
+              "table": "ablation"
+            },
+            {
+              "cell": "no_channel",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r1",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.21839999999999998,
+              "metric": "false_ejection_rate",
+              "metric_label": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.07127622324450139,
+              "table": "ablation"
+            },
+            {
+              "cell": "no_partner",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r1",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.20800000000000002,
+              "metric": "false_ejection_rate",
+              "metric_label": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.05856193302820527,
+              "table": "ablation"
+            },
+            {
+              "cell": "no_channel_no_partner",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r1",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.25179999999999997,
+              "metric": "false_ejection_rate",
+              "metric_label": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.03775182114812477,
+              "table": "ablation"
+            }
+          ]
+        },
+        {
+          "labels": [
+            "Default",
+            "No channel",
+            "Hidden partner",
+            "Both removed"
+          ],
+          "title": "Multi-round coalition victory",
+          "values": [
+            {
+              "cell": "default",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r8",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.967,
+              "metric": "coalition_game_win_rate",
+              "metric_label": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.010319883720275156,
+              "table": "ablation"
+            },
+            {
+              "cell": "no_channel",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r8",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.9773999999999999,
+              "metric": "coalition_game_win_rate",
+              "metric_label": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.0038470768123342724,
+              "table": "ablation"
+            },
+            {
+              "cell": "no_partner",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r8",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.9621999999999999,
+              "metric": "coalition_game_win_rate",
+              "metric_label": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.008467585252006627,
+              "table": "ablation"
+            },
+            {
+              "cell": "no_channel_no_partner",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "ablation_n7_r8",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.9629999999999999,
+              "metric": "coalition_game_win_rate",
+              "metric_label": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.013656500283747677,
+              "table": "ablation"
+            }
+          ]
+        }
+      ]
+    },
+    "defender_budgets.pdf": {
+      "kind": "bars",
+      "panels": [
+        {
+          "labels": [
+            "400",
+            "800",
+            "1600"
+          ],
+          "title": "Single FE after coalition adaptation",
+          "values": [
+            {
+              "cell": "coalition1_vs_learned_crew1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "f3_tenseed_crew5",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.5252000000000001,
+              "metric": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.04809573785690369,
+              "table": "crossplay"
+            },
+            {
+              "cell": "coalition1_vs_learned_crew1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "f3_budget_d800_crew5",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.5671999999999999,
+              "metric": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.054819704486616855,
+              "table": "crossplay"
+            },
+            {
+              "cell": "coalition1_vs_learned_crew1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "f3_budget_d1600_crew5",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.516,
+              "metric": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.03905124837953327,
+              "table": "crossplay"
+            }
+          ]
+        },
+        {
+          "labels": [
+            "400",
+            "800"
+          ],
+          "title": "Multi win after coalition adaptation",
+          "values": [
+            {
+              "cell": "coalition1_vs_learned_crew1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "f4_tenseed_crew5",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.8542,
+              "metric": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.029380265485526143,
+              "table": "crossplay"
+            },
+            {
+              "cell": "coalition1_vs_learned_crew1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "f4_budget_d800_crew5",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.8482,
+              "metric": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.029456747953567432,
+              "table": "crossplay"
+            }
+          ]
+        }
+      ]
+    },
+    "policy_distance.pdf": {
+      "kind": "successive_policy_distances",
+      "series": [
+        {
+          "generations": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "label": "Coalition",
+          "metric": "coalition_js",
+          "values": [
+            {
+              "cell": "1|0",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.6654462277843382,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.05337464310706225,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "2|1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7431699596963943,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.05461741753015665,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "3|2",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.8066408431767499,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.05889591216720458,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "4|3",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7597272929755371,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.06887625181138751,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "5|4",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7547215429847952,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.061167520825290624,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "6|5",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7637259840607314,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.07517600933258015,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "7|6",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7613423200805961,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.0598881930053001,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "8|7",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7801286030923356,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.04749149955876687,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "9|8",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.791533731691118,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.06619158399501493,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "10|9",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.7394105599361407,
+              "metric": "coalition_js",
+              "metric_label": "coalition_js",
+              "n_seeds": 10,
+              "sd": 0.04338118619041571,
+              "table": "policy_distance"
+            }
+          ]
+        },
+        {
+          "generations": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "label": "Crew",
+          "metric": "crew_js",
+          "values": [
+            {
+              "cell": "2|1",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.8626287933524388,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.12235826545210231,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "3|2",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.9386102981392378,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.15726547597115642,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "4|3",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.8912612785289623,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.15733417613861755,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "5|4",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.9798800326877071,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.17914351881163573,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "6|5",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.9602529401614441,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.14350468554861523,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "7|6",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.9596621527839291,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.18396326920154055,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "8|7",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.9676667525169448,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.19276328410370025,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "9|8",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.9789188802035051,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.13275066272967273,
+              "table": "policy_distance"
+            },
+            {
+              "cell": "10|9",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "mean": 0.90058399708767,
+              "metric": "crew_js",
+              "metric_label": "crew_js",
+              "n_seeds": 10,
+              "sd": 0.1183561440713674,
+              "table": "policy_distance"
+            }
+          ]
+        }
+      ]
+    },
+    "reward_controls.pdf": {
+      "kind": "bars",
+      "panels": [
+        {
+          "labels": [
+            "Default",
+            "Balanced",
+            "Meeting"
+          ],
+          "title": "Single FE adaptation gain",
+          "values": [
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_none_n7_r1_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.28650000000000003,
+              "metric": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.07461316907892332,
+              "table": "loop_h4"
+            },
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_rwbal_n7_r1_k4",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.16420000000000004,
+              "metric": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.039698236736661244,
+              "table": "loop_h4"
+            },
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_rwmeet_n7_r1_k4",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.21989999999999998,
+              "metric": "false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.04920543669148764,
+              "table": "loop_h4"
+            }
+          ]
+        },
+        {
+          "labels": [
+            "Survival",
+            "Framing count"
+          ],
+          "title": "Multi any-FE adaptation gain",
+          "values": [
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.10059999999999998,
+              "metric": "any_false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.05522952109153221,
+              "table": "loop_h2"
+            },
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_rwfe_n7_r8_k2",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.09000000000000001,
+              "metric": "any_false_ejection_rate",
+              "n_seeds": 5,
+              "sd": 0.03249615361854386,
+              "table": "loop_h2"
+            }
+          ]
+        },
+        {
+          "labels": [
+            "Survival",
+            "Framing count"
+          ],
+          "title": "Multi win adaptation gain",
+          "values": [
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_none_n7_r8_k10",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.4404,
+              "metric": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.09490943051140913,
+              "table": "loop_h2"
+            },
+            {
+              "cell": "matrix_adaptation_gain",
+              "complete": true,
+              "expected_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "group": "multigen_rwfe_n7_r8_k2",
+              "included_seeds": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "mean": 0.3326,
+              "metric": "coalition_game_win_rate",
+              "n_seeds": 5,
+              "sd": 0.05955081863417161,
+              "table": "loop_h2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "final_analysis/cell_summary.json": "d244c7f32d5292f6caa7a7afbc1f0c7da45a29612a803dc2aa07b73849028b61",
+    "final_analysis/matched_reference_summary.json": "092b5f2ef4d14326c25386b826aab0f8e38bbc3ad7135fc60d9fbc6ef847e362",
+    "final_analysis/status.json": "fe78923947164181ada4f186e3f95fe1d8a861947ad60ec018831bec3f60f2e1",
+    "vote_diagnostic/summary.json": "be78803f8e10306b53f007ef5ae8ee0b2cadaee585f518e7b3bd6dd04745ee61"
+  },
+  "kind": "Exact sources for the five custom completed-study paper figures",
+  "libraries": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.2"
+  },
+  "note": "All numerical inputs are copied without rounding. Error bars are sample SD across seeds. Budget/reward rows use matched cohorts and horizons. Policy distances compare same-side learned policies and omit scripted D0. Ballot necessity is conditional on false ejection under fixed recorded votes. PDF metadata timestamps can change across regeneration; this manifest binds source values and plotting code, not PDF byte identity.",
+  "original_source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+  "plotter_sha256": "4dc9afa9eebd6299c52d02aed2abccb370210c53151573aa83135ecfb0104c8d",
+  "selected_ballot_metrics": {
+    "n7|hypothesis|hypothesis|coalition_ballots_necessary_share_of_fe": {
+      "defined_seeds": 10,
+      "mean": 0.9726345859442973,
+      "sd": 0.031013805062367342,
+      "total_seeds": 10
+    },
+    "n7|hypothesis|hypothesis|crew_skip_rate": {
+      "defined_seeds": 10,
+      "mean": 0.660826401683644,
+      "sd": 0.048004726681939336,
+      "total_seeds": 10
+    },
+    "n7|hypothesis|hypothesis|false_ejection_rate": {
+      "defined_seeds": 10,
+      "mean": 0.424,
+      "sd": 0.0660235648167464,
+      "total_seeds": 10
+    },
+    "n9|hypothesis|hypothesis|coalition_ballots_necessary_share_of_fe": {
+      "defined_seeds": 5,
+      "mean": 1.0,
+      "sd": 0.0,
+      "total_seeds": 5
+    },
+    "n9|hypothesis|hypothesis|crew_skip_rate": {
+      "defined_seeds": 5,
+      "mean": 0.898788109263062,
+      "sd": 0.010971875525143938,
+      "total_seeds": 5
+    },
+    "n9|hypothesis|hypothesis|false_ejection_rate": {
+      "defined_seeds": 5,
+      "mean": 0.6048,
+      "sd": 0.012132600710482491,
+      "total_seeds": 5
+    }
+  },
+  "selected_rows": {
+    "ablation_n7_r1|ablation|default|false_ejection_rate|full": {
+      "cell": "default",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r1",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.1854,
+      "metric": "false_ejection_rate",
+      "metric_label": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.07069158365746236,
+      "table": "ablation"
+    },
+    "ablation_n7_r1|ablation|no_channel_no_partner|false_ejection_rate|full": {
+      "cell": "no_channel_no_partner",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r1",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.25179999999999997,
+      "metric": "false_ejection_rate",
+      "metric_label": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.03775182114812477,
+      "table": "ablation"
+    },
+    "ablation_n7_r1|ablation|no_channel|false_ejection_rate|full": {
+      "cell": "no_channel",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r1",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.21839999999999998,
+      "metric": "false_ejection_rate",
+      "metric_label": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.07127622324450139,
+      "table": "ablation"
+    },
+    "ablation_n7_r1|ablation|no_partner|false_ejection_rate|full": {
+      "cell": "no_partner",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r1",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.20800000000000002,
+      "metric": "false_ejection_rate",
+      "metric_label": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.05856193302820527,
+      "table": "ablation"
+    },
+    "ablation_n7_r8|ablation|default|coalition_game_win_rate|full": {
+      "cell": "default",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r8",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.967,
+      "metric": "coalition_game_win_rate",
+      "metric_label": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.010319883720275156,
+      "table": "ablation"
+    },
+    "ablation_n7_r8|ablation|no_channel_no_partner|coalition_game_win_rate|full": {
+      "cell": "no_channel_no_partner",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r8",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.9629999999999999,
+      "metric": "coalition_game_win_rate",
+      "metric_label": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.013656500283747677,
+      "table": "ablation"
+    },
+    "ablation_n7_r8|ablation|no_channel|coalition_game_win_rate|full": {
+      "cell": "no_channel",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r8",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.9773999999999999,
+      "metric": "coalition_game_win_rate",
+      "metric_label": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.0038470768123342724,
+      "table": "ablation"
+    },
+    "ablation_n7_r8|ablation|no_partner|coalition_game_win_rate|full": {
+      "cell": "no_partner",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "ablation_n7_r8",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.9621999999999999,
+      "metric": "coalition_game_win_rate",
+      "metric_label": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.008467585252006627,
+      "table": "ablation"
+    },
+    "f3_budget_d1600_crew5|crossplay|coalition1_vs_learned_crew1|false_ejection_rate|matched": {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_budget_d1600_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.516,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.03905124837953327,
+      "table": "crossplay"
+    },
+    "f3_budget_d800_crew5|crossplay|coalition1_vs_learned_crew1|false_ejection_rate|matched": {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5671999999999999,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.054819704486616855,
+      "table": "crossplay"
+    },
+    "f3_tenseed_crew5|crossplay|coalition1_vs_learned_crew1|false_ejection_rate|matched": {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f3_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.5252000000000001,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04809573785690369,
+      "table": "crossplay"
+    },
+    "f4_budget_d800_crew5|crossplay|coalition1_vs_learned_crew1|coalition_game_win_rate|matched": {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_budget_d800_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8482,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.029456747953567432,
+      "table": "crossplay"
+    },
+    "f4_tenseed_crew5|crossplay|coalition1_vs_learned_crew1|coalition_game_win_rate|matched": {
+      "cell": "coalition1_vs_learned_crew1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "f4_tenseed_crew5",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.8542,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.029380265485526143,
+      "table": "crossplay"
+    },
+    "multigen_none_n7_r1_k10|loop_h4|matrix_adaptation_gain|false_ejection_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r1_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.28650000000000003,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.07461316907892332,
+      "table": "loop_h4"
+    },
+    "multigen_none_n7_r8_k10|loop_h2|matrix_adaptation_gain|any_false_ejection_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.10059999999999998,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.05522952109153221,
+      "table": "loop_h2"
+    },
+    "multigen_none_n7_r8_k10|loop_h2|matrix_adaptation_gain|coalition_game_win_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.4404,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.09490943051140913,
+      "table": "loop_h2"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|10|9|coalition_js|full": {
+      "cell": "10|9",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7394105599361407,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.04338118619041571,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|10|9|crew_js|full": {
+      "cell": "10|9",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.90058399708767,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.1183561440713674,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|1|0|coalition_js|full": {
+      "cell": "1|0",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.6654462277843382,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.05337464310706225,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|2|1|coalition_js|full": {
+      "cell": "2|1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7431699596963943,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.05461741753015665,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|2|1|crew_js|full": {
+      "cell": "2|1",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.8626287933524388,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.12235826545210231,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|3|2|coalition_js|full": {
+      "cell": "3|2",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.8066408431767499,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.05889591216720458,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|3|2|crew_js|full": {
+      "cell": "3|2",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.9386102981392378,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.15726547597115642,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|4|3|coalition_js|full": {
+      "cell": "4|3",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7597272929755371,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.06887625181138751,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|4|3|crew_js|full": {
+      "cell": "4|3",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.8912612785289623,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.15733417613861755,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|5|4|coalition_js|full": {
+      "cell": "5|4",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7547215429847952,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.061167520825290624,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|5|4|crew_js|full": {
+      "cell": "5|4",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.9798800326877071,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.17914351881163573,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|6|5|coalition_js|full": {
+      "cell": "6|5",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7637259840607314,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.07517600933258015,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|6|5|crew_js|full": {
+      "cell": "6|5",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.9602529401614441,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.14350468554861523,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|7|6|coalition_js|full": {
+      "cell": "7|6",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7613423200805961,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.0598881930053001,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|7|6|crew_js|full": {
+      "cell": "7|6",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.9596621527839291,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.18396326920154055,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|8|7|coalition_js|full": {
+      "cell": "8|7",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.7801286030923356,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.04749149955876687,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|8|7|crew_js|full": {
+      "cell": "8|7",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.9676667525169448,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.19276328410370025,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|9|8|coalition_js|full": {
+      "cell": "9|8",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.791533731691118,
+      "metric": "coalition_js",
+      "metric_label": "coalition_js",
+      "n_seeds": 10,
+      "sd": 0.06619158399501493,
+      "table": "policy_distance"
+    },
+    "multigen_none_n7_r8_k10|policy_distance|9|8|crew_js|full": {
+      "cell": "9|8",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "group": "multigen_none_n7_r8_k10",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "mean": 0.9789188802035051,
+      "metric": "crew_js",
+      "metric_label": "crew_js",
+      "n_seeds": 10,
+      "sd": 0.13275066272967273,
+      "table": "policy_distance"
+    },
+    "multigen_rwbal_n7_r1_k4|loop_h4|matrix_adaptation_gain|false_ejection_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwbal_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.16420000000000004,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.039698236736661244,
+      "table": "loop_h4"
+    },
+    "multigen_rwfe_n7_r8_k2|loop_h2|matrix_adaptation_gain|any_false_ejection_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.09000000000000001,
+      "metric": "any_false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.03249615361854386,
+      "table": "loop_h2"
+    },
+    "multigen_rwfe_n7_r8_k2|loop_h2|matrix_adaptation_gain|coalition_game_win_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwfe_n7_r8_k2",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.3326,
+      "metric": "coalition_game_win_rate",
+      "n_seeds": 5,
+      "sd": 0.05955081863417161,
+      "table": "loop_h2"
+    },
+    "multigen_rwmeet_n7_r1_k4|loop_h4|matrix_adaptation_gain|false_ejection_rate|matched": {
+      "cell": "matrix_adaptation_gain",
+      "complete": true,
+      "expected_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "group": "multigen_rwmeet_n7_r1_k4",
+      "included_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 0.21989999999999998,
+      "metric": "false_ejection_rate",
+      "n_seeds": 5,
+      "sd": 0.04920543669148764,
+      "table": "loop_h4"
+    }
+  }
+}

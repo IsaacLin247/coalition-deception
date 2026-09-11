@@ -6,100 +6,65 @@ author:
 keywords: [multi-agent reinforcement learning, learning dynamics, strategic communication, robust aggregation, partial observability]
 date: ""
 abstract: |
-  Social-deduction games provide a compact setting for studying strategic communication under
-  partial observability. We develop an Among Us-inspired benchmark with structured claims,
-  exact truth labels, scripted and learned crews, and two impostors sharing a reinforcement-learning
-  policy. An implementation audit identified incomplete-trajectory credit assignment, evaluation
-  selection bias and unequal retention of private observations. We report completed components
-  of a corrected replication separately from archived experiments awaiting replacement. Across
-  ten seeds at each of three population sizes, meeting-only training increases held-out false
-  ejections and aligned coalition voting. In corrected single-meeting spatial experiments, a
-  learned defender has more false ejections than the scripted defender against the same frozen
-  coalition. Coalition retraining increases this error at 5+2 and 7+2 players but decreases its
-  average at 3+2; transfer to the scripted defender is limited. A separate 540,000-episode scripted
-  mechanism study finds that credibility weighting performs worse than the mean against a
-  coordinated alibi at the two larger sizes, despite lower average coalition credibility weight
-  than its uniform share. Removing alibi support or moving caught-lying penalties changes errors
-  across attack conditions and does not provide a uniformly beneficial repair. A stylized
-  mean-field model separately characterizes corroboration-based weight amplification and its
-  dependence-aware attenuation. Multi-round adaptation, adaptive defense comparisons and controls
-  remain under replication; their archived measurements are provisional. The completed results
-  are descriptive pending the full analysis and do not establish convergence or general
-  robustness against adaptive coalitions.
-
-
+  Defenses against coordinated testimony need evaluation against adversaries trained to exploit
+  their decisions. We study this question in a social-deduction benchmark with structured claims,
+  exact truth labels, partial observations, and two impostors sharing a reinforcement-learning
+  policy. A completed 240-job replication uses repaired episode collection, independent evaluation,
+  matched private information, and seed-level inference. Across ten seeds at each of three
+  population sizes, meeting-only learning increases false ejection and aligned voting while
+  directly false claims decrease. Spatial adaptation depends on the opponent and the outcome:
+  in the five-crew, two-impostor multi-round game, coalition victory falls from 0.967 to 0.360
+  after defender training and returns to 0.851 after coalition retraining, while innocent
+  ejections remain frequent. Ten-generation crossplay shows renewed gains against the latest
+  opponent, without establishing convergence or a permanent cycle. A hypothesis-based defender
+  incurs a truthful-testimony accuracy cost and is vulnerable to a targeted coalition:
+  false ejection rises from 0.126 to 0.422 at five plus two players. Supplemental ballot
+  diagnostics implicate honest abstention under fixed recorded votes. A 540,000-episode
+  mechanism study finds increased alibi errors under credibility weighting despite coalition
+  weights below their uniform shares. A separate Gaussian surrogate characterizes weight
+  amplification under explicit assumptions. Dependence-aware defense has mixed effects,
+  including increased innocent ejections in the learning loop. These results distinguish
+  coalition victory, voting harm, and credibility mechanisms, and bound what finite adaptive
+  evaluations establish about robustness.
 ---
 
 # Introduction
 
-In a social-deduction game, agents make decisions from incomplete and conflicting evidence.
-Players report where they were and whom they saw, and a voting rule combines their reports into
-an ejection decision. Testimony is strategic: speakers choose what to say while pursuing
-potentially conflicting objectives. Agreement between two speakers can reflect independent
-observations or coordination within a hidden coalition.
+In a social-deduction game, players combine private observations and public testimony to decide
+whom to eject. Agreement between speakers can reflect independent evidence or coordination
+within a hidden coalition. A defense that handles one scripted form of corroboration may face a
+different problem when the coalition is trained against its decisions.
 
-We study this distinction in a controlled environment inspired by *Among Us*. Two impostors
-share a reinforcement-learning policy and face either scripted crews using fixed aggregation
-rules or learned crews trained against a frozen coalition. The same engine supports scripted
-coalitions and coalitions trained against a particular defense. Our question is:
+We study an Among Us-inspired benchmark in which two impostors share a policy and objective.
+Structured claims provide explicit truth and support labels, while the same meeting engine
+accepts scripted testimony, learned coalitions, and scripted or learned defenders. Our central
+question is whether defensive performance transfers from specified attacks to adversaries
+trained against the defense, and how this interaction changes over repeated response training.
 
-> Does a defense's performance against scripted coordinated testimony transfer to a coalition
-> trained against that defense?
+All empirical game results in this manuscript use the completed corrected replication.
+An implementation audit identified incomplete spatial trajectories, duration-dependent
+evaluation selection, unequal private-history retention, and defects in compatibility and
+hypothesis scoring. These were repaired before the 240-job replication; historical learned
+outcomes are not pooled with it. Final inclusion checks accepted every planned job and all
+303 contrasts. The post-audit analysis specification is not a prospective preregistration of
+the original research. The separate mechanism and ballot studies are descriptive supplements.
 
-**Status of the evidence in this working revision.** An implementation audit found a rollout
-credit-assignment defect in variable-length spatial episodes, evaluation selection bias and
-unequal retention of private histories between scripted and learned policies. The synchronized,
-fixed-length meeting-only F1 collector was unaffected by that particular rollout defect, but its
-old evaluations reused training environment draws. Corrected F1 and F3 replications have now
-completed all ten seeds at all three population sizes; Sections 6.1 and 6.3 report their new
-held-out measurements. Section 6.2's mechanism subsection reports a separate completed scripted
-replication (Tables 5 and 6). These results are descriptive; the full 240-job study and its
-planned inference are not yet complete. Remaining benchmark results are explicitly archived and
-provisional, including the F2 seven-rule comparison, multi-round learning, adaptive defense
-comparisons and controls. They predate the repaired collector or other implementation changes
-and cannot be combined with the new measurements. Appendix C specifies the corrected protocols.
-The theoretical calculations are independent of these implementation repairs.
+The findings distinguish several claims that outcome curves alone can conflate. Meeting-only
+training increases harmful voting alongside greater coalition alignment, even as directly false
+claims fall. The repaired hypothesis rule improves some scripted-attack outcomes but incurs a
+large truthful-testimony cost. Spatial defender training changes incident opportunities and
+voting behavior; its benefit depends on whether success means preventing coalition victory or
+preventing innocent ejection. Repeated training creates renewed gains against the latest
+opponent, but finite crossplay does not identify asymptotic dynamics. Adaptive attacks against
+the hypothesis rule expose a substantial vulnerability, whereas dependence-aware defenses have
+mixed effects across harms and opponents.
 
-The paper organizes the completed and pending evidence into eight findings and three controls.
-
-1. **Learned coalition behavior (F1, corrected).** Across ten seeds and three crew sizes,
-   independent untrained-to-final evaluations show increases in false ejections, same-target
-   voting and creator survival. Direct false-claim changes are reported alongside these outcomes.
-2. **Rules against scripted coalitions (F2, archived comparison).** In the meeting-only sweep the mean and credibility
-   rules have no observed false ejections with truthful testimony. Against a coordinated alibi,
-   soft and sharp credibility perform worse than the mean at 5+2 and 7+2. The median and trimmed
-   mean discard useful sparse testimony.
-3. **Hypothesis scoring (F2, archived comparison).** A crew that enumerates candidate coalitions reduces
-   alibi false ejections from 0.329 to 0.156 at 5+2 and from 0.206 to 0.084 at 7+2. Its normalized
-   archived scores used a simplified mixed-honesty model and smoothing; they were not exact posteriors for
-   the game, and the rule has no demonstrated immunity to manufactured testimony.
-4. **Staged adaptation (F3 corrected; F4 pending).** The corrected single-meeting runs retain
-   higher false-ejection rates for the learned crew against C0. A coalition retrained against
-   that crew increases false ejections at 5+2 and 7+2, but lowers the average at 3+2. The archived
-   multi-round response pattern remains provisional pending its corrected replication.
-5. **Repeated adaptation (F5, archived).** Over the observed generations, independently initialized
-   response policies repeatedly change the outcome in favor of the side trained last. This is
-   finite-horizon evidence, not a proof of non-convergence or an attracting cycle.
-6. **Analytical model (F6).** A deterministic mean-field surrogate gives conditions for
-   corroboration-based weight amplification and its dependence-aware attenuation. Finite-sample
-   simulations need not obey the surrogate's thresholds exactly.
-7. **Dependence-aware defense (F7, archived).** A penalty on concentrated agreement reduces the scripted
-   alibi's false-ejection rate in the spatial game, but the archived adaptive evaluations show
-   little corresponding benefit against learned coalitions.
-8. **Adaptive attack on hypothesis scoring (F8, archived).** Directly trained coalitions increase the
-   hypothesis crew's false-ejection rate from 0.079 to 0.359 at 5+2 and from 0.05 to 0.51 at 7+2.
-   Cross-play and ballot diagnostics suggest that uninformative claims and abstention contribute;
-   targeted interventions would be needed to identify their separate causal effects.
-
-The controls remove the explicit private-symbol channel and partner-identity feature at the C0
-stage, increase the defender's training budget, and vary rewards. The tested C0 ablations retain
-strong coalition performance, but do not test an entire adaptation lineage or remove every route
-to role information. The budget and reward variants retain positive last-mover gains in the
-archived runs; they do not establish equivalence or exclude effects of training design.
-
-We use **coalition** for agents sharing a policy and objective. The experiments measure their
-behavior in this benchmark, rather than the emergence of a coalition from independently
-incentivized agents or a universal ranking of voting rules.
+A Gaussian report model separately supplies exact agreement probabilities and a deterministic
+mean-field surrogate for corroboration-based weight amplification. Its assumptions and
+finite-sample limitations are explicit. Direct measurement in the game instead finds alibi
+errors without excessive total coalition credibility weight, and targeted score interventions
+have attack-dependent costs. The benchmark therefore supports a comparison of mechanisms and
+finite responses, rather than a universal ranking of defenses.
 
 # Related work and contribution
 
@@ -146,8 +111,7 @@ elements make the comparison possible and interpretable.
    coalition learning, defender response, and coalition adaptation; its continuation for ten
    generations, with cross-generation play and policy-distance tracking, describes the finite-horizon
    sequence of approximate responses trained from fresh initializations. Controls for the coalition's
-   coordination channel, the training budget, and the reward specification test whether the
-   dynamics are properties of the interaction.
+   coordination channel, the training budget, and the reward specification test sensitivity to the selected information, budget and reward settings.
 4. **An analytical model** of credibility weighting under correlated testimony, with exact agreement probabilities and a deterministic surrogate checked alongside
    Monte Carlo simulations and the game's measured credibility weights, so
    that the one failure mode the model describes, corroboration capture, can be distinguished from
@@ -155,10 +119,8 @@ elements make the comparison possible and interpretable.
 
 # Environment
 
-Sections 3--5 describe the benchmark and identify differences between the archived and corrected
-protocols. Appendix C records the corrected replication. F1, F3 and the scripted mechanism
-diagnostic now use that corrected implementation; the remaining empirical sections identify
-their archived results explicitly.
+The corrected implementation is used throughout the game experiments. Appendix C records
+its source identity and validation; the historical implementation is preserved separately.
 
 ## Game structure
 
@@ -198,12 +160,10 @@ skip.
 
 Claims are structured symbolic objects. Claims have a truth/support label (true, unsupported, false, or contradictory) relative to the recorded state and the speaker's evidence, which provides exact
 measurement of strategic testimony. No-information is a separate claim action, not a fifth truth label. The scripted policies reconstruct the observer's full within-round co-location history,
-including negative observations, to check claims. In the archived experiments, learned actors
-instead received the most recent sighting and elapsed time for each agent, their current room,
-and the public transcript. Their non-recurrent observation did not preserve the full private
-trajectory, confounding comparisons between scripted and learned defenders. The corrected
-spatial replication adds a time-indexed private-history block that retains the same positive
-and negative positional evidence without exposing unseen rooms or future positions.
+including negative observations, to check claims. Learned spatial actors receive the public
+transcript and a time-indexed private-history block containing observation validity, their own
+room, and co-located agents. This retains the same positive and negative positional evidence
+without exposing unseen rooms or future positions.
 
 The two impostors know one another and share a policy. An identity feature marks the partner in
 each impostor's observation so that the two copies of the shared policy can specialize within the
@@ -222,7 +182,8 @@ suspicion exceeds a threshold and votes the same way, skipping otherwise. Its su
 the aggregation rule of Section 3.4.
 
 Four scripted **coalitions** define F2. The *truthful* coalition uses supported claims and the
-crew's suspicion rule, while avoiding its partner in voting. For the *lone liar*, the creator
+crew's suspicion rule, while filtering some incriminating claims and avoiding coalition members
+in voting. Truthful claim contents therefore do not define a fully cooperative electorate. For the *lone liar*, the creator
 claims to have been elsewhere, accuses a selected innocent and votes for that target; the partner
 speaks truthfully without defending the creator. In the *coordinated alibi*, the creator makes a
 self-location claim away from the scene, while the partner claims to have seen the creator away
@@ -232,10 +193,9 @@ selected innocent. Without a channel, their asserted rooms are not guaranteed to
 room at the incident time, then accuse and vote for that player. Those framing claims are not
 necessarily truthful. These are distinct scripts, not pure manipulations of one agreement variable.
 
-In the archived spatial game, scripted coalitions inspected true occupancy in adjacent rooms
-when choosing movement. That privileged heuristic was unavailable to learned actors. The
-corrected scripts use their own last sightings, public alive status, and legitimately known
-partner and marker information. F2's exogenous evidence removes this particular movement difference.
+Scripted spatial coalitions use their own last sightings, public alive status, and legitimately
+known partner and marker information when choosing movement. They do not inspect unseen
+neighboring occupancy. F2 instead uses exogenous evidence, so movement is not a learned choice.
 
 ## Aggregation rules
 
@@ -269,29 +229,16 @@ elsewhere, and treats agents it cannot place as suspects by default.
   $\lambda = 4$. A **dependence-weighted vote** applies the same discount to ballots instead of to
   testimony. This ballot-level rule remains active when a learned crew replaces the scripted
   testimony aggregator.
-- **Archived hypothesis elimination (hypothesis scoring):** this version enumerated size-two coalitions among
-  all agents other than the voter. For each candidate it assumes that speakers outside the
-  coalition are truthful and averages over branches in which each coalition speaker's informative
-  claims are treated as truthful with probability 1/2 or ignored otherwise. Caught lies and joint
-  inconsistencies invalidate branches. A candidate creator receives a location factor of $R$
-  when placed at the scene, 1 when unplaced, and 0 when placed elsewhere. The implementation sums
-  these factors, assigns weight $10^{-3}$ to zero-weight hypotheses, normalizes, and votes for
-  the leading living candidate only if its membership score exceeds 1/2. Creator score and own
-  evidence provide small tie-breaking adjustments. The rule ignores response accusations.
-  Coalition claims are retained in truthful branches even under the true coalition hypothesis;
-  consequently the procedure has no general invariance to manufactured corroboration. Its
-  uniform-room factors, incomplete spatial constraints and smoothing make it a likelihood-inspired
-  heuristic, rather than an exact posterior for the benchmark. The candidate set also includes
-  incident victims, even though victims are necessarily crew; these archived baseline results
-  require comparison with a corrected model.
-
-The corrected hypothesis rule excludes publicly known crew, including murdered victims inferred
+**Hypothesis scoring.** The rule enumerates size-two coalitions and averages over declared
+honesty gates, treating each coalition speaker's informative claims as accepted with probability
+one half or ignored otherwise. It excludes publicly known crew, including murdered victims inferred
 from public death and ejection records. Accepted claim constraints and private positive/negative
 observations are solved jointly, with public inactivity respected. It averages feasibility
 indicators over the declared honesty gates and auxiliary creator/time assignments, normalizes
 positive scores, and gives infeasible candidates zero weight; an all-zero view skips when legal.
 Membership, creator score, own evidence, and agent index provide exact lexicographic tie breaking.
-This remains a feasibility heuristic, not a calibrated posterior for the full game-generating
+A vote requires leading membership score above one half; ties are resolved by creator score,
+own evidence, and finally agent index. This remains a feasibility heuristic, not a calibrated posterior for the full game-generating
 process. The shared solver now checks all emitted constraints using propagation and backtracking;
 some negative transition claims still use a documented necessary-constraint relaxation.
 
@@ -322,11 +269,11 @@ uses $\lambda = 0.95$, and each update runs up to eight PPO epochs over four min
 coefficient annealed from 0.02 to 0.005. PPO can stop an update early when approximate KL
 exceeds 0.075 (1.5 times the target KL of 0.05). The policy is non-recurrent: the meeting observation
 contains the public transcript, so the visible history is available at each meeting, but
-long-horizon memory across rounds is a limitation of the multi-round study. The standard stage budget is 400 updates; defender-budget controls use 800 or 1,600. F1 collects 64 total episodes per update across 64 parallel environments. Spatial runs used
-32 environments and a target of at least 32 completed episodes per update; asynchronous completion
-could overshoot this count. The original collector also finalized unfinished fragments at this
-boundary with zero bootstrap. The corrected collector waits for complete vector batches; all
-reported spatial training measurements predate that fix. Evaluation samples actions from the policy, as during training.
+long-horizon memory across rounds is a limitation of the multi-round study. The standard stage budget is 400 updates; defender-budget controls use 800 or 1,600. F1 collects 64 completed episodes per update across 64 parallel environments. Spatial runs
+collect 32 completed episodes across 32 environments; the collector waits for the complete batch
+before assigning terminal targets. No unfinished trajectory is finalized as terminal.
+Evaluation samples actions from the policy, using a copied policy with an independently seeded
+action generator.
 
 ## Reward design
 
@@ -378,11 +325,10 @@ distances include effects of independent training and initialization.
 
 The cycle is continued as C0 → D1 → C1 → D2 → C2 → … → D$k$ → C$k$. Every stage trains one side for
 the same budget against the other side's frozen checkpoint; D0 is the scripted soft-credibility
-crew, and stage $s$ of a run with seed $\sigma$ uses training seed $\sigma + 10000\,s$, so the first
-three stages use the same seeds and budget as the F3 and F4 runs. After every stage the frozen
+crew, and stage $s$ of a run with seed $\sigma$ uses training seed $\sigma + 10000\,s$, with matched per-stage seed offsets and standard budgets. Single-meeting reward definitions
+still differ between the staged cycle and the default multi-generation loop. After every stage the frozen
 match-up is evaluated on 1,000 episodes, both sides' policies are compared with their predecessors
-on a fixed scripted probe set whose size depends on the configuration (10,920 decision points in the
-5+2 multi-round game) (Kullback–Leibler and Jensen–Shannon divergences summed over masked action heads and averaged
+on a fixed scripted probe set whose size depends on the configuration (Kullback–Leibler and Jensen–Shannon divergences summed over masked action heads and averaged
 over probe rows, a behavioral Jensen–Shannon divergence between vote distributions in
 canonical categories, and the fraction of greedy actions that differ), and after the last stage
 every C$_i$ is played against every D$_j$ (500 episodes per cell). Ten training seeds are run for $k = 10$ at 5+2 in both regimes and at 3+2 in the
@@ -408,168 +354,168 @@ by seed.
 
 # Evaluation protocol
 
-The primary single-meeting outcome is the **false-ejection rate**, the probability that a crew
-member is ejected, because it directly measures the central harm to the crew. It is reported
-together with the **incident-creator ejection rate**, since a rule that skips whenever it is unsure
-has a low false-ejection rate for the wrong reason. In the spatial game the coalition decides
-whether an incident occurs and a meeting is held either way, so single-meeting outcomes there are
-reported per meeting together with the **incident rate** and the incident-conditional rates
-(Section 6.3); the creator-ejection rate always requires a real incident. Secondary outcomes are the coalition-favorable
-rate (no coalition member ejected), the coalition game-win rate in multi-round play, same-target
-voting between the two impostors, the coalition's false-claim rate (the fraction with the FALSE label; contradictory and
-no-information claims are separate categories), creator survival, and rounds
-played. For multi-round games, the legacy FE, claim and same-target summaries describe the
-terminal meeting; game-win rate and rounds played describe the whole game. Section 6.4 adds
-a separately recomputed cumulative incident-bearing harm measure. F1 originally evaluated with
-the training seed and episode indices. F2 uses condition/rule-specific evaluation streams; spatial
-cross-play generally uses $987654321+$ run seed, separate from training. The corrected Trainer
-default also uses this offset unless an evaluation seed is supplied explicitly.
+All 240 planned jobs, containing 1,255 learner stages, completed and passed source, job,
+configuration, checkpoint, and raw-record checks. The independent unit is a training seed for
+learned experiments and an independently seeded evaluation batch for scripted experiments.
+Episodes and generations are repeated observations within that unit. No seed was removed or
+stopped because of its outcome.
 
-The main analyses use: F1, learned-coalition training curves at crew sizes 3, 5, and 7 with ten
-seeds each; F2, seven rules against four scripted coalitions at three crew sizes, ten seeds and
-1,000 episodes per cell; F3 and F4, ten seeds per crew size in the response cycle with 1,000
-cross-play episodes per stage; F5, the multi-generation loop with ten seeds at 5+2 in the multi-round game and in the single meeting, ten at 3+2 and five at 7+2;
-F6, the analytical surrogate compared with Monte Carlo (4,000 trials per grid point); F7, the
-dependence-aware defense against scripted and frozen learned coalitions (1,000 episodes per cell,
-five seeds), against freshly retrained coalitions (ten seeds at 5+2 and five at 3+2), and inside the
-multi-generation loop (ten seeds); F8, a fresh coalition trained against the
-hypothesis-elimination crew and cross-evaluated against the three selected rules (ten seeds at 5+2, five at 7+2); and the
-three controls with five seeds each.
+The primary single-meeting outcome is false-ejection probability, together with creator-ejection,
+no-ejection, and incident rates. Creator ejection and creator survival both require a real
+incident; they are not unconditional complements. Conditional rates are computed within each
+seed and averaged only over seeds with nonzero denominators, with contributing counts retained.
+For multi-round play we report coalition victory, probability of any innocent ejection during
+the game, and mean innocent-ejection count. Terminal-meeting false ejection and pooled
+false-ejections per meeting remain separate descriptive quantities. Every completed meeting,
+including incident-free meetings, contributes to whole-game records. Dependence statistics
+include the complete electorate before ejection and count each historical meeting once.
 
-The run seed is the independent statistical unit; in fully scripted experiments it is an
-evaluation replicate rather than a training seed. Evaluation games provide
-within-seed precision and are not treated as independent training replicates. Paired exact
-sign-flip tests for the archived results are reported as descriptive consistency checks; with ten nonzero paired differences the smallest attainable two-sided value is
-$2/2^{10}=0.001953125$ (reported as 0.002), and with five it is $2/2^5=0.0625$
-(reported as 0.063). Tests enumerate signs of the paired mean difference and assume sign symmetry
-under the null; they are unadjusted exploratory comparisons, not independent confirmatory tests.
-A non-significant contrast does not establish equivalence. Conditional rates are first computed
-within each seed and then averaged, so aggregate conditional and unconditional means need not
-satisfy a pooled mixture identity; zero-denominator conventions are noted with the affected tables.
+F1 uses ten seeds per population, 400 updates, and 400 holdout episodes at the genuinely
+untrained and final checkpoints. Monitored curves use a separate evaluation stream.
+F2 uses ten independent replicates and 1,000 episodes per rule/condition at each size.
+F3 and F4 use ten seeds per population and 1,000 final episodes for each of four pairings.
+The main multi-generation loops use ten seeds for 5+2 single- and multi-round play and
+3+2 multi-round play through ten generations; the 7+2 multi-round loop uses five seeds
+through three generations. Each stage has 1,000 evaluation episodes; full crossplay uses
+500 per cell. The defended loop uses ten seeds and four generations. Adaptive dependence
+comparisons use ten seeds at 5+2 and five at 3+2; adaptive hypothesis comparisons use ten
+at 5+2 and five at 7+2. Static spatial and control studies use five seeds. All seed identities,
+budgets, metrics, and signed comparison expressions are supplied in the versioned protocols.
 
-The corrected replication uses independent monitored and final evaluation streams, fixed episode
-indices, and isolated policy-sampling generators. Its dated analysis plan pairs seed IDs and
-specifies effect sizes, paired bootstrap intervals, and Holm correction within fixed comparison
-families. No new inferential results are reported until the required runs and comparisons are
-complete. These procedures do not retroactively change the archived exploratory p-values.
+The final evidence stream starts at 1987654321 plus the run seed, separately from monitored
+evaluation at 987654321 plus the run seed. Evaluations finish predetermined episode indices
+rather than selecting the fastest completions, and do not advance training randomness.
+F2 streams are condition/rule-specific; pairing is by replicate ID and does not imply that its
+full transcripts are held fixed. Supplemental matched-evidence studies state their stronger
+matching separately.
+
+For each of 303 specified contrasts in 15 families, identical seed IDs are paired before
+subtraction. We report the mean effect, sample SD, a pointwise 95% percentile interval from
+20,000 resamples of complete paired seed differences, and a two-sided exact sign-flip test of
+the paired mean. The test preserves effect magnitudes and assumes sign symmetry/exchangeability
+under the null; pairing alone does not ensure this assumption. Holm correction applies within
+each complete declared family, not across the entire paper. All planned contrasts, including
+unfavorable and nonsignificant results, are distributed with the analysis.
+
+With ten seeds the minimum raw two-sided p-value is 0.001953125; with five it is 0.0625.
+Consequently a five-seed test cannot reject at raw 0.05, and a family of at least 26 ten-seed
+tests cannot pass Holm's first threshold at 0.05. The F4 family contains 27 contrasts, so its
+smallest adjusted p-value is 0.0527. This resolution limit was retained rather than changing
+families after observing outcomes. Confidence intervals are pointwise, not simultaneous;
+failure to reject does not establish equivalence. Unless a paired interval or adjusted p-value
+is stated, numerical comparisons are descriptive means and sample SDs.
+
+The 540,000-episode mechanism and 67,500-episode ballot studies are post-audit descriptive
+supplements. The former has ten replicates per population and matches initial evidence across
+nine rule/variant cells within each condition; responses and votes may change. The latter
+evaluates retained hypothesis-attack checkpoints across 135 cells, with 500 episodes per cell,
+ten seeds at 5+2 and five at 7+2. It retains complete pre-ejection ballots and honest score views.
+Removing ballots in that diagnostic holds other recorded votes fixed, not behavior under a
+different game.
+
+For each multi-generation crossplay matrix $M$, the exploratory finite-pool gap is
+$G_k=\max_i M_{ik}-\min_j M_{kj}$, using all observed policies, including policies trained after
+generation $k$. Simultaneous Hoeffding bands over the finite matrix account for evaluation
+uncertainty and selection of empirical extrema; independent episode draws within each cell
+are assumed, while shared seeds across cells are allowed. This is a retrospective policy-pool
+comparison, not true exploitability or a stopping rule. Neither gaps, policy distances,
+nonsignificant trends, nor observed alternation prove an equilibrium or asymptotic cycle.
 
 # Results
 
 ## F1: learning against a fixed scripted defense
 
-![](figures/f1_learning_and_holdout.pdf)
+![](figures/final/f1_learning_and_holdout.pdf){width=100%}
 
-Figure 1. Corrected meeting-only replication against the scripted soft-credibility crew, with
-all ten training seeds at each of three population sizes. Top: monitored curves at completed
-PPO updates, using a separate evaluation stream. Bottom: untrained and 400-update checkpoints
-on the independent final evidence stream. Each evaluation uses 400 episodes per seed; lines,
-shading and bars show seed means and sample SDs. “No coalition member ejected” includes skips
-and is not a game-win probability. These complete-group results are descriptive while the
-remaining study is pending.
+Figure 1. Meeting-only learning at all three populations. Curves use monitored evaluations; initial and final points use an independent holdout stream. Lines and error bars describe ten-seed variability, not independent episode replicates.
 
-The repaired implementation provides a genuine untrained baseline and a separate holdout
-comparison after 400 PPO updates. All 30 F1 jobs are complete. In the independent holdout,
-false-ejection rates increase from 0.045 to 0.271 at 3+2, from 0.073 to 0.212 at 5+2, and from
-0.091 to 0.194 at 7+2 (Figure 1, Table 2). These replace the archived comparison whose first
-recorded endpoint already followed 20 updates.
+| Players | Outcome | Untrained | Final |
+| :-- | --: | --: | --: |
+| 3+2 | False ejection | 0.045 ± 0.011 | 0.271 ± 0.046 |
+| 3+2 | Aligned votes | 0.126 ± 0.023 | 0.613 ± 0.062 |
+| 3+2 | False claims | 0.429 ± 0.017 | 0.328 ± 0.074 |
+| 3+2 | Creator survives | 0.457 ± 0.024 | 0.789 ± 0.036 |
+| 5+2 | False ejection | 0.073 ± 0.008 | 0.212 ± 0.018 |
+| 5+2 | Aligned votes | 0.108 ± 0.023 | 0.316 ± 0.058 |
+| 5+2 | False claims | 0.423 ± 0.012 | 0.349 ± 0.046 |
+| 5+2 | Creator survives | 0.310 ± 0.020 | 0.438 ± 0.023 |
+| 7+2 | False ejection | 0.091 ± 0.017 | 0.194 ± 0.027 |
+| 7+2 | Aligned votes | 0.092 ± 0.016 | 0.244 ± 0.041 |
+| 7+2 | False claims | 0.420 ± 0.011 | 0.385 ± 0.048 |
+| 7+2 | Creator survives | 0.272 ± 0.018 | 0.366 ± 0.022 |
 
-| Population, checkpoint | False ejection | Same-target voting | Creator survival | Coalition false claims |
-|:-----------------------|-----------------------:|-----------------------:|-----------------------:|-----------------------:|
-| 3+2, untrained | 0.045 ± 0.011 | 0.126 ± 0.023 | 0.457 ± 0.024 | 0.429 ± 0.017 |
-| 3+2, final | 0.271 ± 0.046 | 0.613 ± 0.062 | 0.789 ± 0.036 | 0.328 ± 0.074 |
-| 5+2, untrained | 0.073 ± 0.008 | 0.108 ± 0.023 | 0.310 ± 0.020 | 0.423 ± 0.012 |
-| 5+2, final | 0.212 ± 0.018 | 0.316 ± 0.058 | 0.438 ± 0.023 | 0.349 ± 0.046 |
-| 7+2, untrained | 0.091 ± 0.017 | 0.092 ± 0.016 | 0.272 ± 0.018 | 0.420 ± 0.011 |
-| 7+2, final | 0.194 ± 0.027 | 0.244 ± 0.041 | 0.366 ± 0.022 | 0.385 ± 0.048 |
+Table 2. Independent holdout outcomes, mean ± sample SD across ten seeds. Aligned votes exclude shared abstention; creator survival is incident-gated. False claims count the FALSE label, separately from contradictions and no-information.
 
-Table 2. Corrected untrained and final holdout outcomes, mean ± sample SD across all ten
-training seeds per population, with 400 evaluation episodes per endpoint and seed. Final
-means exactly 400 PPO updates. Same-target voting requires both coalition votes to name the
-same agent; shared skips do not count. Creator survival is the per-episode probability that
-a real incident occurred and its creator was not ejected. The last column is the fraction of
-coalition claims labeled false, not the probability that an episode contains a false claim.
-SD describes variation across seeds; no confidence intervals or significance tests are
-reported during the interim analysis.
-
-Vote coordination and creator survival also rise at all three population sizes. In contrast
-to the archived endpoint account, the mean explicitly false-claim fraction falls at every
-population: 0.429 to 0.328, 0.423 to 0.349, and 0.420 to 0.385. Thus increased harm accompanies
-more coordinated voting and fewer explicitly false claims in these runs. These behavioral
-co-occurrences do not establish that reducing false claims causes the increase in harm, nor
-do they identify a unique mechanism involving omissions, compatible testimony, or voting.
-
-Figure 1 also separates false ejection from the broader event that no coalition member is
-ejected. That event includes a skip, so an improvement in coalition survival need not imply
-an increase of the same size in innocent-player harm. The table's distinct outcome definitions
-are needed to interpret what the policy has learned.
+False ejection rises from 0.045 to 0.271 at 3+2, 0.073 to 0.2125 at 5+2, and 0.091 to
+0.194 at 7+2. All three specified final-minus-initial false-ejection contrasts have
+Holm-adjusted $p=0.0117$ within the six-test F1 family. Aligned voting and creator survival
+also increase descriptively, while the directly false-claim fraction falls at all sizes.
+These joint changes show that harmful coordination need not involve more explicitly false
+statements; they do not isolate communication as a causal driver.
 
 ## F2: testimony rules against scripted coalitions
 
-![](figures/fig_f2_tenseed_rules.png)
+![](figures/final/f2_tenseed_crew5_rules.pdf){width=100%}
 
-Figure 2. Archived measurements. False-ejection rate (top) and incident-creator ejection rate (bottom) of seven
-testimony rules against four scripted coalitions at three crew sizes. Bars show the mean ± SD
-across ten seeds; 1,000 episodes per cell.
+Figure 2. Seven rules against scripted testimony at 5+2, using ten replicates and 1,000 episodes per cell. False-ejection and creator-ejection outcomes answer different questions; the complete three-population values accompany the analysis.
 
-The honest baseline and the attacked conditions tell different stories (Figure 2, Tables 3 and
-4). With honest testimony the mean, soft credibility, sharp credibility and the dependence-aware
-rule never eject an innocent at any crew size and eject the incident creator in nine meetings out
-of ten at 5+2 and 7+2. The median and the trimmed mean are much worse with the *same* honest
-testimony (false ejection 0.39 and 0.31 at 5+2): most speakers say nothing about most candidates,
-so the per-candidate median of the testimony rows is zero and the decision falls back on the
-voter's own, mostly uninformative, evidence. Order statistics are the wrong tool for sparse
-testimony.
+| Players / script | Mean | Median | Trim. | Soft | Sharp | Dep. | Hyp. |
+| :-- | --: | --: | --: | --: | --: | --: | --: |
+| 3+2 Truthful | 0.000 | 0.137 | 0.137 | 0.000 | 0.000 | 0.000 | 0.245 |
+| 3+2 Lone | 0.328 | 0.245 | 0.245 | 0.178 | 0.204 | 0.210 | 0.412 |
+| 3+2 Alibi | 0.512 | 0.439 | 0.439 | 0.524 | 0.504 | 0.451 | 0.482 |
+| 3+2 Framer | 0.542 | 0.532 | 0.532 | 0.535 | 0.519 | 0.535 | 0.352 |
+| 5+2 Truthful | 0.000 | 0.389 | 0.312 | 0.000 | 0.000 | 0.000 | 0.370 |
+| 5+2 Lone | 0.131 | 0.430 | 0.359 | 0.159 | 0.278 | 0.194 | 0.191 |
+| 5+2 Alibi | 0.327 | 0.422 | 0.419 | 0.392 | 0.428 | 0.326 | 0.147 |
+| 5+2 Framer | 0.411 | 0.423 | 0.531 | 0.403 | 0.400 | 0.479 | 0.154 |
+| 7+2 Truthful | 0.000 | 0.504 | 0.380 | 0.000 | 0.000 | 0.000 | 0.393 |
+| 7+2 Lone | 0.100 | 0.553 | 0.417 | 0.151 | 0.300 | 0.178 | 0.070 |
+| 7+2 Alibi | 0.212 | 0.557 | 0.486 | 0.378 | 0.451 | 0.340 | 0.065 |
+| 7+2 Framer | 0.260 | 0.522 | 0.535 | 0.255 | 0.314 | 0.355 | 0.088 |
 
-| Crew, condition | Mean | Median | Trim. | Soft cred. | Sharp cred. | Dep.-aware | Hyp. |
-|:-----------------------------------|----------:|----------:|----------:|----------:|----------:|----------:|----------:|
-| 3+2, honest | 0.000 | 0.139 | 0.139 | 0.000 | 0.000 | 0.000 | 0.000 |
-| 3+2, one liar | 0.329 | 0.241 | 0.256 | 0.174 | 0.206 | 0.211 | 0.401 |
-| 3+2, coordinated alibi | 0.513 | 0.434 | 0.436 | 0.528 | 0.517 | 0.461 | 0.528 |
-| 3+2, coordinated framer | 0.546 | 0.540 | 0.541 | 0.537 | 0.527 | 0.540 | 0.533 |
-| 5+2, honest | 0.000 | 0.393 | 0.308 | 0.000 | 0.000 | 0.000 | 0.077 |
-| 5+2, one liar | 0.133 | 0.435 | 0.363 | 0.167 | 0.282 | 0.200 | 0.169 |
-| 5+2, coordinated alibi | 0.329 | 0.423 | 0.418 | 0.390 | 0.430 | 0.325 | **0.156** |
-| 5+2, coordinated framer | 0.412 | 0.432 | 0.532 | 0.406 | 0.396 | 0.481 | **0.310** |
-| 7+2, honest | 0.000 | 0.495 | 0.379 | 0.000 | 0.000 | 0.000 | 0.125 |
-| 7+2, one liar | 0.098 | 0.560 | 0.426 | 0.153 | 0.297 | 0.183 | **0.077** |
-| 7+2, coordinated alibi | 0.206 | 0.558 | 0.482 | 0.377 | 0.444 | 0.339 | **0.084** |
-| 7+2, coordinated framer | 0.260 | 0.527 | 0.529 | 0.266 | 0.312 | 0.349 | **0.166** |
+Table 3. False-ejection probability. Entries are ten-replicate means; complete sample SDs and seed identities are in the accompanying machine-readable tables. Truthful concerns supported claim contents, while coalition voting and information selection remain adversarial.
 
-Table 3. Archived measurements. False-ejection rate, mean across ten seeds (across-seed SDs are zero in observed zero-error cells and typically 0.01 to 0.03 otherwise). Trim. denotes trimmed mean and Hyp. hypothesis scoring; bold marks
-the best rule where the hypothesis crew leads.
+| Players / script | Mean | Median | Trim. | Soft | Sharp | Dep. | Hyp. |
+| :-- | --: | --: | --: | --: | --: | --: | --: |
+| 3+2 Truthful | 0.052 | 0.036 | 0.036 | 0.052 | 0.052 | 0.052 | 0.019 |
+| 3+2 Lone | 0.178 | 0.165 | 0.165 | 0.171 | 0.155 | 0.142 | 0.158 |
+| 3+2 Alibi | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 3+2 Framer | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| 5+2 Truthful | 0.901 | 0.415 | 0.521 | 0.901 | 0.901 | 0.901 | 0.475 |
+| 5+2 Lone | 0.661 | 0.358 | 0.461 | 0.563 | 0.407 | 0.490 | 0.555 |
+| 5+2 Alibi | 0.354 | 0.351 | 0.310 | 0.221 | 0.213 | 0.362 | 0.360 |
+| 5+2 Framer | 0.380 | 0.353 | 0.237 | 0.409 | 0.410 | 0.328 | 0.386 |
+| 7+2 Truthful | 0.930 | 0.314 | 0.492 | 0.930 | 0.930 | 0.930 | 0.495 |
+| 7+2 Lone | 0.779 | 0.279 | 0.453 | 0.657 | 0.485 | 0.606 | 0.834 |
+| 7+2 Alibi | 0.560 | 0.277 | 0.344 | 0.332 | 0.298 | 0.457 | 0.604 |
+| 7+2 Framer | 0.590 | 0.279 | 0.299 | 0.612 | 0.560 | 0.532 | 0.592 |
 
-| Crew, condition | Mean | Median | Trim. | Soft cred. | Sharp cred. | Dep.-aware | Hyp. |
-|:-----------------------------------|----------:|----------:|----------:|----------:|----------:|----------:|----------:|
-| 5+2, honest | 0.90 | 0.41 | 0.53 | 0.90 | 0.90 | 0.89 | 0.85 |
-| 5+2, one liar | 0.65 | 0.35 | 0.45 | 0.56 | 0.40 | 0.49 | 0.50 |
-| 5+2, coordinated alibi | 0.35 | 0.35 | 0.31 | 0.22 | 0.21 | 0.37 | 0.36 |
-| 5+2, coordinated framer | 0.37 | 0.34 | 0.23 | 0.40 | 0.41 | 0.33 | 0.29 |
-| 7+2, honest | 0.93 | 0.32 | 0.49 | 0.93 | 0.92 | 0.92 | 0.84 |
-| 7+2, one liar | 0.79 | 0.27 | 0.44 | 0.65 | 0.48 | 0.60 | 0.79 |
-| 7+2, coordinated alibi | 0.56 | 0.27 | 0.35 | 0.33 | 0.30 | 0.45 | 0.62 |
-| 7+2, coordinated framer | 0.59 | 0.28 | 0.30 | 0.60 | 0.56 | 0.53 | 0.46 |
+Table 4. Incident-creator ejection probability. Entries are ten-replicate means; complete sample SDs and seed identities are in the accompanying machine-readable tables. Truthful concerns supported claim contents, while coalition voting and information selection remain adversarial.
 
-Table 4. Archived measurements. Incident-creator ejection rate for the same cells (abbreviations as in Table 3) (at 3+2 the creator is essentially never
-ejected under the two coordinated attacks, because after the incident two coalition votes tie two
-crew votes and ties do not eject).
+The repaired hypothesis rule has a substantial truthful-testimony cost: false ejection is
+0.2447, 0.3700, and 0.3926 at 3+2, 5+2, and 7+2, while mean and soft credibility have zero
+observed errors in these cells. At 5+2, hypothesis scoring improves on the mean under alibi
+(0.1469 versus 0.3273) and framer (0.1542 versus 0.4106), but worsens lone-liar error
+(0.1907 versus 0.1311). Median and trimming can discard useful sparse testimony; their
+robustness to scalar contamination does not guarantee accurate votes here.
 
-The coordinated alibi is where the rules separate. At 5+2 and 7+2 the mean outperforms soft credibility, and sharp credibility is worse still (false ejection
-0.21, 0.38 and 0.44 at 7+2; the paired differences from the mean are positive in every seed, exact
-sign-flip $p = 0.002$). The credibility rules also eject the creator less often. Sophistication in
-the weighting therefore costs robustness against the coordinated alibi, and it costs more the
-sharper the weighting; the diagnostic below shows that the cost is not paid through the
-corroboration weights. The one-liar condition is intermediate: soft credibility is a little worse
-than the mean and sharp credibility clearly worse, while at 3+2, where one caught lie decides the
-meeting, both credibility rules beat the mean. The framer combines scene-placement claims with accusations and aligned votes. Its performance
-therefore cannot be attributed to accusations alone, and the ground-truth consistency of its
-claims can distinguish it from honest co-witnesses.
-The 3+2 setting is the parity-boundary case in which no rule does well against a coordinated
-attack.
+The F2 condition and rule families contain 63 and 36 contrasts. Their adjusted tests do not
+reject at 0.05 under the retained ten-seed resolution. Large descriptive differences should
+therefore be read with their reported between-replicate variability, not promoted into
+unreported familywise conclusions.
 
+A bounded replay examined ten truthful-testimony false ejections from one 5+2 seed. The true
+coalition retained positive weight in all 40 honest pre-vote views, and the actual timelines
+satisfied the emitted constraints. Equal membership/creator scores could select an innocent
+through deterministic index tie breaking; in another case every honest voter skipped and
+coalition ballots alone decided the ejection. This establishes concrete failure routes,
+not their prevalence across the entire F2 distribution. Hard feasibility does not guarantee
+calibrated scores or accurate decisions.
 
-### Where the credibility rule's behavior comes from
+### Credibility weights and score interventions
 
-We conducted a separate mechanism replication using the repaired frozen implementation: ten evaluation replicates with 500 meetings each for every combination of three initial crew sizes, four scripted conditions, three aggregation rules, and three variants (540,000 meetings). Tables 5 and 6 report means and sample SDs across replicates. These new measurements supersede the former single-seed mechanism diagnostic; they are separate from the archived full F2 rule sweep above. Within each size, condition, and replicate, all nine rule/variant cells share the same exogenous evidence and episode identities. The interventions govern crew responses and votes, so subsequent public responses may differ; they do not hold the full transcript fixed.
+We conducted a separate mechanism replication using the repaired frozen implementation: ten evaluation replicates with 500 meetings each for every combination of three initial crew sizes, four scripted conditions, three aggregation rules, and three variants (540,000 meetings). Tables 5 and 6 report means and sample SDs across replicates. These new measurements supersede the former single-seed mechanism diagnostic; they use a separate matched-evidence stream from the full F2 rule sweep above. Within each size, condition, and replicate, all nine rule/variant cells share the same exogenous evidence and episode identities. The interventions govern crew responses and votes, so subsequent public responses may differ; they do not hold the full transcript fixed.
 
 | Game, condition | Credibility C | Credibility H | Coalition weight (uniform) | Coalition caught | Top pick differs |
 |:--|--:|--:|--:|--:|--:|
@@ -645,335 +591,203 @@ The improvements are conditional on the attack and size. Removing alibi credit r
 
 False-ejection reductions can reflect abstention or tied votes rather than more correct ejections. Under coordinated alibi at 3+2, every tested rule/variant has creator-ejection rate zero and coalition-favorable rate one; reducing false ejections only increases no-ejection outcomes. Under the lone liar at 5+2, soft catch-outside lowers false ejection from 0.1598 to 0.1316, but raises no-ejection from 0.0402 ± 0.0049 to 0.1100 ± 0.0105 and coalition-favorable outcomes from 0.2000 ± 0.0207 to 0.2416 ± 0.0257. Thus these measurements distinguish testimony-based alibi support and catch-penalty placement from increased coalition weight, without establishing a unique causal explanation or an improvement under every objective.
 
-### A principled baseline: hypothesis elimination
-
-The hypothesis-scoring crew of Section 3.4 reduces alibi false ejections to 0.156 at 5+2
-and 0.084 at 7+2: reductions of 53% and 59% relative to the mean. The improvement over the mean
-holds in every seed. Creator ejection is comparable to the best other rule at 5+2 (0.36 versus
-0.37 for dependence-aware credibility) and highest at 7+2 (0.62). It also has the lowest observed
-false-ejection rate against the framer at 5+2 and 7+2 and against the lone liar at 7+2.
-
-The procedure scores jointly consistent subsets rather than adding speaker suspicion rows.
-However, this archived version includes coalition claims in some mixed-honesty branches and gives nonzero smoothed
-weight to otherwise excluded hypotheses. Its scripted performance therefore provides empirical
-evidence for this implementation, not a guarantee of immunity to coordinated alibis.
-
-With truthful testimony, the hypothesis crew ejects an innocent in 0.077 of meetings at 5+2 and
-0.125 at 7+2, while the mean and credibility rules have no observed false ejections. The heuristics
-can exploit truthful self-placement by the creator, whereas the hypothesis rule partially
-discounts adversarial claims and uses a simplified incident-location model. Its residual errors
-can reflect both ambiguous evidence and model misspecification; they do not directly measure an
-irreducible information limit. At 3+2 it performs worst against the lone liar. Section 6.9 tests
-whether its empirical advantage against the scripted alibi survives a trained adversary.
-
 ## F3: single-meeting crossplay depends on opponent and population
 
-![](figures/f3_tenseed_crew5_crossplay.pdf)
+![](figures/final/f3_tenseed_crew5_crossplay.pdf){width=100%}
 
-Figure 3. Corrected single-meeting crossplay at 5+2, showing the full two-by-two pairing of
-coalition policies C0/C1 and defenses D0/D1. D0 is scripted soft credibility; D1 is trained
-against frozen C0, and C1 is trained against frozen D1. Entries are mean ± sample SD across
-ten training seeds, with 1,000 final holdout episodes per pair and seed. The right panel's
-“no coalition member ejected” outcome includes skips. Table 7 gives all four pairings at all
-three populations. These are descriptive complete-group results, with inference deferred
-until the full planned study is complete.
+Figure 3. Spatial single-meeting crossplay at 5+2, including false ejection, incident opportunity, and creator outcomes. Each cell uses all ten seeds and 1,000 final games per seed.
 
-All 30 corrected F3 jobs are complete, with 400 PPO updates in each of the C0, D1 and C1
-stages. The learned spatial policies now receive their full within-round private movement
-and sighting histories. Crossplay uses fixed episode indices, isolated policy-sampling
-streams and the independent final evidence stream. Every game has one meeting, including
-when the coalition creates no incident. Table 7 therefore reports both unconditional harm
-and the observed conditional rates reconstructed from all 120,000 retained game records.
+| Players | Pair | False ejection | Incident | Creator ejected |
+| :-- | --: | --: | --: | --: |
+| 3+2 | C0–D0 | 0.188 ± 0.045 | 0.986 ± 0.005 | 0.128 ± 0.049 |
+| 3+2 | C0–D1 | 0.463 ± 0.073 | 0.087 ± 0.140 | 0.016 ± 0.030 |
+| 3+2 | C1–D1 | 0.415 ± 0.089 | 0.302 ± 0.286 | 0.025 ± 0.034 |
+| 3+2 | C1–D0 | 0.068 ± 0.034 | 0.949 ± 0.089 | 0.341 ± 0.101 |
+| 5+2 | C0–D0 | 0.194 ± 0.051 | 0.963 ± 0.027 | 0.566 ± 0.054 |
+| 5+2 | C0–D1 | 0.403 ± 0.040 | 0.254 ± 0.178 | 0.051 ± 0.035 |
+| 5+2 | C1–D1 | 0.538 ± 0.053 | 0.788 ± 0.132 | 0.092 ± 0.024 |
+| 5+2 | C1–D0 | 0.076 ± 0.014 | 0.984 ± 0.003 | 0.686 ± 0.036 |
+| 7+2 | C0–D0 | 0.211 ± 0.022 | 0.943 ± 0.030 | 0.584 ± 0.039 |
+| 7+2 | C0–D1 | 0.475 ± 0.037 | 0.321 ± 0.216 | 0.036 ± 0.026 |
+| 7+2 | C1–D1 | 0.587 ± 0.040 | 0.754 ± 0.117 | 0.061 ± 0.019 |
+| 7+2 | C1–D0 | 0.083 ± 0.020 | 0.970 ± 0.010 | 0.710 ± 0.032 |
 
-| Population, pair | Incident | FE | FE given incident | FE given no incident | Creator ejected given incident |
-|:-------------------|----------------:|----------------:|----------------:|----------------:|----------------:|
-| 3+2, C0/D0 | 0.986 ± 0.005 | 0.188 ± 0.045 | 0.183 ± 0.045 | 0.589 ± 0.227 | 0.130 ± 0.050 |
-| 3+2, C0/D1† | 0.087 ± 0.140 | 0.463 ± 0.073 | 0.276 ± 0.236 | 0.486 ± 0.059 | 0.140 ± 0.161 |
-| 3+2, C1/D1‡ | 0.302 ± 0.286 | 0.415 ± 0.089 | 0.405 ± 0.207 | 0.414 ± 0.090 | 0.062 ± 0.050 |
-| 3+2, C1/D0 | 0.949 ± 0.089 | 0.068 ± 0.034 | 0.050 ± 0.018 | 0.458 ± 0.091 | 0.364 ± 0.113 |
-| 5+2, C0/D0 | 0.963 ± 0.027 | 0.194 ± 0.051 | 0.175 ± 0.041 | 0.661 ± 0.091 | 0.587 ± 0.042 |
-| 5+2, C0/D1 | 0.254 ± 0.178 | 0.403 ± 0.040 | 0.353 ± 0.082 | 0.416 ± 0.040 | 0.201 ± 0.105 |
-| 5+2, C1/D1 | 0.788 ± 0.132 | 0.538 ± 0.053 | 0.553 ± 0.055 | 0.480 ± 0.047 | 0.119 ± 0.030 |
-| 5+2, C1/D0 | 0.984 ± 0.003 | 0.076 ± 0.014 | 0.067 ± 0.014 | 0.651 ± 0.138 | 0.696 ± 0.036 |
-| 7+2, C0/D0 | 0.943 ± 0.030 | 0.211 ± 0.022 | 0.188 ± 0.019 | 0.604 ± 0.103 | 0.619 ± 0.028 |
-| 7+2, C0/D1 | 0.321 ± 0.216 | 0.475 ± 0.037 | 0.474 ± 0.035 | 0.476 ± 0.047 | 0.111 ± 0.020 |
-| 7+2, C1/D1 | 0.754 ± 0.117 | 0.587 ± 0.040 | 0.614 ± 0.051 | 0.516 ± 0.039 | 0.080 ± 0.017 |
-| 7+2, C1/D0 | 0.970 ± 0.010 | 0.083 ± 0.020 | 0.066 ± 0.019 | 0.611 ± 0.108 | 0.732 ± 0.030 |
+Table 7. Unconditional per-game probabilities, mean ± sample SD across ten seeds. Creator ejection requires an incident. D0 is scripted; D1 and C1 are fresh policies trained against their frozen predecessor.
 
-Table 7. Corrected single-meeting outcomes, mean ± sample SD of within-seed rates. D0 denotes
-the scripted soft-credibility crew. Incident and FE are per-episode probabilities; the three
-conditional columns use the indicated stratum. All unconditional entries use ten seeds and
-1,000 episodes per seed and pair. † At 3+2, C0/D1 has incidents in 6/10 seeds; ‡ C1/D1 has
-incidents in 8/10 seeds. Their incident-conditional means and SDs use those six or eight
-defined seed rates. All other conditional entries use ten seeds. Empty strata remain
-undefined and are not imputed as zero risk; all seeds remain in the unconditional summaries.
-Some incident-free strata are small (as few as five episodes in a seed). Conditional means
-are descriptive averages of the observed strata, not causal effects of creating an incident,
-and need not satisfy a pooled mixture identity with the unconditional seed means.
+At 5+2, false ejection rises from 0.1940 for C0–D0 to 0.4031 for C0–D1, then to
+0.5385 for C1–D1. Against D0 the adapted coalition achieves only 0.0759. The specified
+defender-effect contrast is C0–D0 minus C0–D1; it is negative at all three sizes
+(-0.2752, -0.2091, -0.2638), with Holm-adjusted $p=0.0176$. Thus the learned defender has
+more innocent ejections against the same frozen coalition.
 
-The corrected results change the archived incident-avoidance account. Against D0, C0 creates
-an incident in 0.986, 0.963 and 0.943 of episodes at 3+2, 5+2 and 7+2. When the same frozen C0
-instead faces D1, the incident rates fall to 0.087, 0.254 and 0.321. This change follows from
-the changed joint trajectories and does not represent additional coalition learning. The
-conditional columns describe different resulting evidence populations, so their differences
-do not isolate a testimony mechanism.
+Coalition adaptation against D1 has different signs across populations. At 3+2 the mean falls
+from 0.4635 to 0.4153, an effect of -0.0482 that does not reject; at 5+2 and 7+2 the increases
+are 0.1354 and 0.1124. Full paired intervals and adjusted tests are supplied alongside the
+tables. The data do not support a universal increase from coalition retraining.
 
-Against frozen C0, D1 has a higher observed mean false-ejection rate than D0 at every
-population: 0.188 to 0.463, 0.194 to 0.403, and 0.211 to 0.475. Coalition retraining then has
-a population-dependent result. Against the same D1 checkpoint, C1 raises mean FE from 0.403
-to 0.538 at 5+2 and from 0.475 to 0.587 at 7+2, but lowers it from 0.463 to 0.415 at 3+2.
-The latter result does not support a universal counter-adaptation gain in false ejection.
+C0 creates incidents in 0.986, 0.963, and 0.943 of games against D0, versus 0.087, 0.254,
+and 0.321 against D1. Changing the defender also changes movement, opportunities, and
+testimony. Conditional error is therefore not an isolated reasoning comparison. Some
+3+2 seeds have no incidents against D1: their incident-conditional rates remain undefined,
+while all unconditional summaries retain ten seeds. The formerly reported rare-incident
+account does not describe this corrected implementation; multiple repairs changed together,
+so their individual causal contributions are not identified.
 
-The complete crossplay also limits the transfer claim. Returning C1 to D0 gives FE rates of
-0.068, 0.076 and 0.083, below C0's 0.188, 0.194 and 0.211 against D0. Thus the policy trained
-against D1 produces less innocent-player harm against the scripted reference in these runs.
-Together these comparisons describe opponent-dependent outcomes at the tested fixed training
-budget. They establish neither an equilibrium nor a general ordering of learned and scripted
-defenses. The full-study paired uncertainty and multiplicity analysis remains pending.
+## F4: coalition victory and whole-game harm can diverge
 
-## F4: multi-round play creates a moving response cycle
+![](figures/final/f4_tenseed_crew5_crossplay.pdf){width=100%}
 
-![](figures/fig_f4_tenseed_distributions.png)
+Figure 4. Multi-round crossplay at 5+2. Coalition victory, any innocent ejection, mean innocent-ejection count, and terminal outcomes are kept distinct. All ten seeds are included.
 
-Figure 4. Archived measurements. Multi-round outcomes and game-length distributions. Each condition uses 1,000
-evaluation games per seed and ten seeds; the pooled game-length distributions are descriptive.
+| Players | Pair | Coalition wins | Any innocent ejected | Mean count |
+| :-- | --: | --: | --: | --: |
+| 3+2 | C0–D0 | 0.997 ± 0.004 | 0.562 ± 0.312 | 0.626 ± 0.410 |
+| 3+2 | C0–D1 | 0.282 ± 0.255 | 0.286 ± 0.197 | 0.324 ± 0.251 |
+| 3+2 | C1–D1 | 0.941 ± 0.058 | 0.521 ± 0.076 | 0.539 ± 0.093 |
+| 3+2 | C1–D0 | 0.988 ± 0.021 | 0.088 ± 0.014 | 0.088 ± 0.014 |
+| 5+2 | C0–D0 | 0.967 ± 0.012 | 0.974 ± 0.012 | 2.906 ± 0.059 |
+| 5+2 | C0–D1 | 0.360 ± 0.106 | 0.839 ± 0.043 | 1.634 ± 0.163 |
+| 5+2 | C1–D1 | 0.851 ± 0.026 | 0.847 ± 0.019 | 1.209 ± 0.060 |
+| 5+2 | C1–D0 | 0.218 ± 0.058 | 0.289 ± 0.084 | 0.332 ± 0.117 |
+| 7+2 | C0–D0 | 0.963 ± 0.007 | 0.978 ± 0.009 | 4.862 ± 0.042 |
+| 7+2 | C0–D1 | 0.304 ± 0.026 | 0.947 ± 0.006 | 2.996 ± 0.095 |
+| 7+2 | C1–D1 | 0.814 ± 0.016 | 0.947 ± 0.005 | 1.989 ± 0.053 |
+| 7+2 | C1–D0 | 0.063 ± 0.026 | 0.409 ± 0.054 | 0.558 ± 0.112 |
 
-The multi-round extension changes the interpretation of a meeting. Agents move, create an
-incident, complete tasks, report, make claims, respond, vote, and continue if neither side has met
-the terminal condition. A learned defender can affect the ejection and the amount of future
-evidence available in the game, and here the learned defender is decisive.
+Table 8. Whole-game outcomes, mean ± seed SD. Any innocent ejection includes incident-free meetings; mean count is the number per game. It is not a terminal-meeting probability.
 
-| Crew + impostors | C0 vs scripted crew | C0 vs learned D1 | C1 vs learned D1 |
-|------------------------------|-------------------------:|-------------------------:|-------------------------:|
-| 3 + 2 | 99.9% coalition wins; FE 0.10; 1.24 rounds | 34.4%; 0.27; 2.89 | 92.9%; 0.64; 1.35 |
-| 5 + 2 | 97.9%; FE 0.96; 3.95 rounds | 26.9%; 0.27; 4.35 | 86.4%; 0.54; 2.64 |
-| 7 + 2 | 95.5%; FE 0.97; 6.34 rounds | 18.6%; 0.27; 6.16 | 78.4%; 0.53; 3.71 |
+At 5+2, coalition victory drops from 0.9670 for C0–D0 to 0.3603 for C0–D1 and returns to
+0.8514 for C1–D1. Yet any innocent ejection is 0.8392 and 0.8467 in the latter two pairings.
+The descriptive coalition-adaptation effects are +0.4911 for victory and only +0.0075 for
+any false ejection; mean innocent-ejection count falls by 0.4249 per game. At 7+2, victory
+rises by 0.5104 while mean count falls by 1.0066. Shorter or differently terminated games
+can therefore combine more coalition wins with fewer total innocent ejections. Reducing coalition wins therefore coexists with frequent crew harm;
+victory alone is an incomplete measure of defensive quality. Transfer again differs:
+C1–D0 wins only 0.2182 at 5+2 and 0.0630 at 7+2, but 0.9882 at 3+2.
 
-Table 8. Archived measurements. Multi-round response cycle: coalition game-win rate, terminal-meeting false-ejection
-probability (FE, one final meeting per game), and
-mean rounds played, means across ten seeds.
+None of the 27 F4 contrasts passes Holm correction at 0.05; the minimum adjusted value is
+0.0527, imposed by the ten-seed exact-test resolution. The effect estimates remain relevant,
+but pointwise intervals do not override that familywise result. Whole-game harm records
+replace the old terminal-only interpretation.
 
-Against the scripted crew the learned coalition wins almost every multi-round game and, at 5+2 and
-7+2, ends with an innocent ejection in 96 to 97 percent of games. This archived FE metric inspects
-only the final meeting; it is neither a per-meeting average nor cumulative harm across rounds. The same scripted crew that is a strong
-single-meeting defender is helpless once the coalition controls movement and the incident: movement and incident creation change both the available evidence and the opportunities to win.
-The current measurements do not isolate which of those mechanisms causes the difference. The learned defender D1 cuts the coalition's win rate by 0.65
-to 0.77 at every crew size ($p = 0.002$). Terminal-meeting FE falls to about 0.27 at 5+2 and
-7+2, but rises from 0.10 to 0.27 at 3+2. It lengthens the game at 3+2 and 5+2. The adapted coalition C1 recovers most of the loss (win
-rates 0.93, 0.86 and 0.78) and shortens the game again to 1.4, 2.6 and 3.7 rounds. The 3+2
-setting is a parity-boundary case: one successful kill leaves two impostors against two crew, so
-it is inherently easier for the coalition.
+## Controls: information, defender budget, and reward design
 
-A separate reaggregation of the saved episode records gives the probability of at least one
-incident-bearing innocent ejection anywhere in the game: for C0 versus scripted, C0 versus D1,
-and C1 versus D1 respectively, it is 0.074, 0.066 and 0.313 at 3+2; 0.108, 0.149 and 0.832 at
-5+2; and 0.088, 0.166 and 0.931 at 7+2. This cumulative quantity excludes incident-free ejections
-because the original accumulator was incident-gated. Its different pattern shows why a decrease
-in terminal-meeting FE cannot be interpreted as a decrease in whole-game harm.
+| Condition | Single FE | Multi any-FE | Multi win |
+| :-- | --: | --: | --: |
+| Default | 0.185 ± 0.071 | 0.973 ± 0.011 | 0.967 ± 0.010 |
+| No channel | 0.218 ± 0.071 | 0.983 ± 0.003 | 0.977 ± 0.004 |
+| Hidden partner | 0.208 ± 0.059 | 0.973 ± 0.007 | 0.962 ± 0.008 |
+| Both removed | 0.252 ± 0.038 | 0.970 ± 0.014 | 0.963 ± 0.014 |
 
-![](figures/fig_f4_full_game_public.png)
+Table 9. C0 information controls at 5+2, five seeds per condition. Hidden partner changes information and communication together; it does not prevent inference from observed events.
 
-Figure 5. Archived measurements. Omniscient diagnostic view of one illustrative archived full-game replay, with direct
-role labels suppressed. It displays ground-truth trajectories, incident creators and victims,
-and role-specific survivor counts; these are not all available to any player's private view.
+![](figures/final/coordination_controls.pdf){width=100%}
 
-## Controls: what the coalition's coordination depends on, and whether budget or reward explains the last-mover advantage
+Figure 5. Information-control outcomes at 5+2, with sample SD across five seeds. Error bars are descriptive and do not establish equivalence.
 
-**Coordination ablation.** The C0-stage ablations retain strong coalition performance
-(Figure 6, Table 9): multi-round wins average 0.96 to 0.97 across the four conditions, and
-same-target voting averages 0.18 to 0.19 in the single meeting and 0.36 to 0.52 in multi-round
-play. None of the tested paired differences is significant at 0.05 (minimum exact sign-flip
-$p = 0.063$), but five seeds provide limited power and no equivalence margin was specified.
-The result concerns removal of an explicit symbol channel and partner-identity observation block.
-Role-dependent incident-action masks still supply information about possible targets, and shared
-policies and objectives remain. This is therefore not a test of complete partner ignorance,
-independent incentives, or whether a full adaptation lineage would persist without these features.
+Removing both aids gives single-meeting false ejection 0.2518 versus 0.1854 by default;
+this does not demonstrate that either aid is necessary for harm. None of the nine planned
+outcome-ablation contrasts rejects after Holm correction. The intervention does not remove
+shared parameters, rewards, prearranged behavior, or all possible role inference, and it
+tests only C0 rather than an entire response lineage.
 
-| Regime, metric | Channel + partner id | No channel | No partner id | Neither |
-|:-----------------------------|-------------------:|-------------------:|-------------------:|-------------------:|
-| Single meeting, false ejection | 0.39 ± 0.08 | 0.40 ± 0.09 | 0.34 ± 0.04 | 0.40 ± 0.04 |
-| Single meeting, same-target voting | 0.19 ± 0.05 | 0.19 ± 0.05 | 0.18 ± 0.03 | 0.18 ± 0.03 |
-| Single meeting, real creator survives (per episode) | 0.09 ± 0.08 | 0.04 ± 0.03 | 0.09 ± 0.05 | 0.04 ± 0.02 |
-| Multi-round, coalition wins | 0.97 ± 0.02 | 0.96 ± 0.01 | 0.97 ± 0.01 | 0.97 ± 0.01 |
-| Multi-round, same-target voting | 0.43 ± 0.07 | 0.44 ± 0.08 | 0.36 ± 0.17 | 0.52 ± 0.09 |
+| Outcome | Defender updates | C0–D1 | C1–D1 |
+| :-- | --: | --: | --: |
+| Single FE | 400 | 0.387 ± 0.040 | 0.525 ± 0.048 |
+| Single FE | 800 | 0.439 ± 0.069 | 0.567 ± 0.055 |
+| Single FE | 1600 | 0.382 ± 0.055 | 0.516 ± 0.039 |
+| Multi any-FE | 400 | 0.840 ± 0.050 | 0.846 ± 0.012 |
+| Multi any-FE | 800 | 0.745 ± 0.048 | 0.852 ± 0.034 |
+| Multi win | 400 | 0.354 ± 0.115 | 0.854 ± 0.029 |
+| Multi win | 800 | 0.165 ± 0.078 | 0.848 ± 0.029 |
 
-Table 9. Archived measurements. Coordination ablation, C0 stage at 5+2 against the scripted crew; mean ± SD across five
-seeds, 1,000 evaluation episodes per seed.
+Table 10. Defender-budget controls at 5+2. Every row, including the 400-update reference, uses exactly seeds 0–4. C0 and C1 keep 400 updates.
 
-![](figures/fig_ablation.png)
+![](figures/final/defender_budgets.pdf){width=100%}
 
-Figure 6. Archived measurements. Coordination ablation: the C0 stage trained and evaluated under four information
-conditions (5+2 players, mean ± SD across five seeds).
+Figure 6. Matched-five-seed budget comparisons after coalition adaptation. The reference is recomputed from those five seeds, not the ten-seed headline estimate.
 
-**Defender budget.** The tested increases in defender updates do not remove the archived last-mover gain (Figure 7, Table 10). In the
-single meeting a defender trained for 800 or 1,600 updates instead of 400 is no better against C0
-(false ejection 0.49 and 0.46 against 0.44), and C1, trained for 400 updates against each of them,
-reaches the same 0.58. In the multi-round game the extra budget does help the defender stage: D1
-with 800 updates holds the coalition to a 0.13 win rate instead of 0.29. The coalition trained
-against that stronger defender still wins about 0.86 of games against both defenders; this numerical similarity is not an
-equivalence result. These controls vary update count, not information access or the rollout implementation.
+In single-meeting play, C1–D1 false ejection is 0.5252 at 400 defender updates,
+0.5672 at 800, and 0.5160 at 1,600 on the matched five seeds. None of the eight budget
+contrasts rejects after Holm correction. These finite budgets do not establish an optimal
+defender response, and the five-seed minimum raw p-value is already above 0.05.
 
-| Regime, defender updates | C0 vs scripted | C0 vs D1 | C1 vs D1 |
-|:-----------------------------|-------------------------:|-------------------------:|-------------------------:|
-| Single meeting, 400 (reference) | 0.39 ± 0.09 | 0.44 ± 0.02 | 0.59 ± 0.04 |
-| Single meeting, 800 | 0.39 ± 0.10 | 0.49 ± 0.05 | 0.58 ± 0.04 |
-| Single meeting, 1,600 | 0.40 ± 0.10 | 0.46 ± 0.03 | 0.58 ± 0.03 |
-| Multi-round, 400 (reference) | 0.98 ± 0.01 | 0.29 ± 0.14 | 0.86 ± 0.02 |
-| Multi-round, 800 | 0.98 ± 0.01 | 0.13 ± 0.15 | 0.86 ± 0.03 |
+| Outcome | Reward | C stages | D stages | Matrix gain |
+| :-- | --: | --: | --: | --: |
+| Single FE | Default | 0.551 ± 0.040 | 0.267 ± 0.049 | 0.287 ± 0.075 |
+| Single FE | Balanced | 0.548 ± 0.015 | 0.380 ± 0.018 | 0.164 ± 0.040 |
+| Single FE | Meeting | 0.570 ± 0.051 | 0.347 ± 0.006 | 0.220 ± 0.049 |
+| Multi any-FE | Survival | 0.854 ± 0.020 | 0.757 ± 0.060 | 0.101 ± 0.055 |
+| Multi any-FE | Framing count | 0.888 ± 0.020 | 0.800 ± 0.029 | 0.090 ± 0.032 |
+| Multi win | Survival | 0.810 ± 0.043 | 0.374 ± 0.076 | 0.440 ± 0.095 |
+| Multi win | Framing count | 0.883 ± 0.014 | 0.554 ± 0.051 | 0.333 ± 0.060 |
 
-Table 10. Archived measurements. Defender budget at 5+2: false-ejection rate (single meeting) or coalition game-win rate
-(multi-round), mean ± SD across the same five seeds; C0 and C1 always train for 400 updates.
+Table 11. Reward controls, means ± SD across the same five seeds and matched horizons: four generations for single-meeting, two for multi-round. C-stage and D-stage means omit C0; matrix gain averages M[g,g] minus M[g−1,g].
 
-![](figures/fig_budget.png)
+![](figures/final/reward_controls.pdf){width=100%}
 
-Figure 7. Archived measurements. Defender budget: the response cycle with the defender trained for 400, 800 and 1,600
-updates (5+2 players, mean ± SD across five seeds).
+Figure 7. Reward-control matrix adaptation gains on matched seed cohorts and horizons. Panels report different outcomes, not a common reward scale.
 
-**Reward specification.** Positive last-mover gains persist under the tested objectives, while
-some outcome levels change (Figures 8 and 9, Table 11). All rows here use the same five seeds.
-In the single meeting, the coalition-stage rates are 0.756, 0.766 and 0.759 under the reference,
-shared balanced-ejection and shared meeting-ejection objectives. The respective last-mover gains
-are +0.19 ± 0.03, +0.14 ± 0.05 and +0.20 ± 0.04. Defender-stage rates are 0.562, 0.627 and 0.564;
-the balanced objective increases this rate by +0.065 ± 0.038 relative to the reference
-($p = 0.063$). Similar point estimates and non-significant contrasts do not establish that the
-reward specifications are interchangeable.
+None of the 18 specified reward-control contrasts rejects after Holm correction.
+The variants can alter outcome levels and response gains descriptively; the evidence does not
+show that reward design is irrelevant. Five seeds provide limited resolution, and the tested
+objectives do not exhaust alternative incentives or learning algorithms.
 
-Generation 0 also differs: coalition-favorable rates are 0.773, 0.675 and 0.965. With the
-meeting-ejection objective, incident-free meetings carry zero reward regardless of the tally;
-this does not prevent a coalition member from being ejected. The different machines used for
-some reference and control runs are another possible source of variation.
+## F5: repeated gains over a finite response sequence
 
-In multi-round play, the framing-count reward counts innocent ejections only in incident-bearing
-rounds and pays neither side directly for winning. Coalition-stage win rates are 0.836 under
-framing count and 0.849 under survival, but defender-stage rates are 0.660 and 0.336. Last-mover
-gains are +0.17 ± 0.09 and +0.52 ± 0.15, positive in every seed. These are distinct levels, not
-invariance to reward specification. The plotted terminal-meeting FE metric is also different from
-the cumulative, incident-gated framing count actually optimized. As with the other spatial
-learning results, these controls require reruns after the collector repair.
+![](figures/final/multigen_none_n7_r8_k10_stages.pdf){width=100%}
 
-| Regime, objective | Generation 0 | After coalition stages | After defender stages | Last-mover gain |
-|:-----------------------------|-------------------------:|-------------------------:|-------------------------:|-------------------------:|
-| Single meeting, side-specific objectives (paper), $k = 4$ | 0.77 | 0.756 ± 0.009 | 0.562 ± 0.031 | +0.19 ± 0.03 |
-| Single meeting, both sides balanced ejection | 0.67 | 0.766 ± 0.012 | 0.627 ± 0.039 | +0.14 ± 0.05 |
-| Single meeting, both sides meeting ejection | 0.96 | 0.759 ± 0.024 | 0.564 ± 0.037 | +0.20 ± 0.04 |
-| Multi-round, survival (paper), $k = 2$ | 0.97 | 0.849 ± 0.023 | 0.336 ± 0.140 | +0.52 ± 0.15 |
-| Multi-round, both sides framing count | 0.33 | 0.836 ± 0.020 | 0.660 ± 0.089 | +0.17 ± 0.09 |
+Figure 8. The 5+2 multi-round sequence through ten generations, ten seeds. C and D stages are independently initialized response policies; monitored and holdout quantities remain separate.
 
-Table 11. Archived measurements. Reward control at 5+2: the primary metric (coalition-favorable meeting rate in the
-single meeting, coalition game-win rate in the multi-round game) after the coalition stages and
-after the defender stages of the loop, and the last-mover gain from cross-play; mean ± SD across
-the same five seeds, the reference rows truncated to the control's horizon.
+| Setting | Seeds | C stages | D stages | Matrix gain |
+| :-- | --: | --: | --: | --: |
+| 3+2 multi | 10 | 0.918 ± 0.021 | 0.341 ± 0.059 | 0.576 ± 0.050 |
+| 5+2 single | 10 | 0.557 ± 0.016 | 0.257 ± 0.023 | 0.300 ± 0.032 |
+| 5+2 multi | 10 | 0.804 ± 0.025 | 0.303 ± 0.035 | 0.501 ± 0.050 |
+| 7+2 multi | 5 | 0.752 ± 0.048 | 0.330 ± 0.044 | 0.418 ± 0.088 |
 
-![](figures/reward_ablation_r1.pdf){width=100%}
+Table 12. Finite-horizon response summaries. Single-meeting uses false ejection; multi-round uses coalition victory. Stage means omit C0. Matrix gains use final crossplay, not differences between monitored curves.
 
-Figure 8. Archived measurements. Reward control, single meeting: the loop under the paper's side-specific objectives and
-under one objective for both sides (mean ± SD across five seeds).
+![](figures/final/multigen_none_n7_r8_k10_matrix.pdf){width=100%}
 
-![](figures/reward_ablation_r8.pdf){width=100%}
+Figure 9. Full 5+2 multi-round crossplay, 500 episodes per cell and ten seeds. Comparing each diagonal entry with the entry immediately above measures adaptation against a fixed defender.
 
-Figure 9. Archived measurements. Reward control, multi-round game: the first five stages of the loop under the survival
-objective and under the framing-count objective on both sides (mean ± SD across five seeds).
+At 5+2, coalition victory is 0.9658 for C0–D0, 0.3524 for C0–D1, and 0.8562 for C1–D1.
+By generation ten it is 0.3068 for C9–D10 and 0.7968 for C10–D10, while C10–D0 achieves
+only 0.1804. The coalition repeatedly improves against the newest defender, with limited
+transfer to the scripted policy. The ten-seed loops' specified matrix-gain tests pass Holm
+correction in the 25-test dynamics family ($p=0.0488$); the five-seed largest-population
+loop does not. None of the specified late-minus-early or parity tests rejects after correction.
 
-## F5: repeated outcome reversals over the observed training horizon
+![](figures/final/policy_distance.pdf){width=100%}
 
-![](figures/none_n7_r8_metrics_vs_generation.pdf){width=100%}
+Figure 10. Jensen–Shannon distances between successive same-side policies on fixed probe observations, mean ± ten-seed SD. Learned defender comparisons begin at D2 versus D1; D0 is scripted. Distances reflect fresh initialization and training and are not distances along a single continuous optimization trajectory.
 
-Figure 10. Archived measurements. The ten-generation loop for 5+2 players in the multi-round game. Each point is the
-frozen match-up evaluated after that stage (red: after a coalition stage, blue: after a defender
-stage); bands are ± SD across ten training seeds.
+![](figures/final/multigen_none_n7_r8_k10_response_gaps.pdf){width=100%}
 
-The first three stages of the multi-round loop use the F4 protocol and standard budget and reproduce
-it within training noise (coalition game-win rate 0.97 against the scripted crew,
-0.25 against D1, 0.88 for C1 against D1; F4: 0.98, 0.27 and 0.86;
-the loop's seeds 5 to 9 were trained on a different machine). The remaining generations show a persistent alternation
-(Figure 10, Table 12). The coalition-stage level over the last three generations is
-0.82 and the defender-stage level 0.37; the least-squares slopes over
-generations are -0.003 and +0.008 per generation; the sawtooth
-amplitude is 0.50 over the first three generations and 0.45
-over the last three; and the late-minus-early change of the coalition-stage win rate is
--0.016 ± 0.021 across seeds (exploratory sign-flip $p = 0.049$). This small decrease
-does not establish stationarity; the alternation remains large over the observed horizon. Terminal-meeting false ejection shows a similar alternation (0.52
-after coalition stages, 0.23 after defender stages), as do game length
-(2.7 rounds after coalition stages, 3.0 after defender stages)
-and both sides' policy entropies (no trend). The other configurations show the same picture at
-their own levels.
+Figure 11. Retrospective response gaps in the finite observed policy pool. Conservative simultaneous cell bands account for Monte Carlo error and selection of extrema; later-generation policies are included in earlier-generation pools.
 
-| Configuration | After coalition stages | After defender stages | Sawtooth early → late | Last-mover gain |
-|:--|--:|--:|--:|--:|
-| 5+2, multi-round, $k = 10$ (10 seeds) | 0.82 | 0.37 | 0.50 → 0.45 | +0.43 ± 0.07 |
-| 5+2, single meeting, $k = 10$ (10 seeds) | 0.76 | 0.49 | 0.17 → 0.27 | +0.24 ± 0.03 |
-| 3+2, multi-round, $k = 10$ (10 seeds) | 0.95 | 0.35 | 0.56 → 0.59 | +0.58 ± 0.08 |
-| 7+2, multi-round, $k = 3$ (5 seeds) | 0.75 | 0.40 | 0.59 → 0.26 | +0.35 ± 0.05 |
+Policy distances and outcome reversals do not identify an attracting cycle. The policies
+are independently initialized at each stage, the opponent changes, and outcome probabilities
+are estimated with finite precision. A small observed gap can also reflect a limited policy
+pool. These data describe repeated adaptive vulnerability within the measured horizon,
+without proving convergence, nonconvergence, optimality, or permanent attacker advantage.
 
-Table 12. Archived measurements. Late-horizon levels of the primary metric (mean over the last three generations; the
-coalition game-win rate in the multi-round game and the coalition-favorable meeting rate in the
-single meeting), the sawtooth amplitude over the first and last three generations (first and last
-generation for $k = 3$), and the last-mover gain ($C_i$ against $D_i$ minus $C_{i-1}$ against
-$D_i$ in cross-play, mean ± SD across seeds; positive in every seed of every configuration, exact
-sign-flip $p = 0.002$ at 5+2 multi-round).
+![](figures/final/multigen_none_n9_r8_k3_stages.pdf){width=100%}
 
-![](figures/none_n7_r8_crossplay_coalition_game_win_rate.pdf){width=78%}
+Figure 12. Largest-population sequence, 7+2 players and three generations across five seeds. This shorter horizon and coarser statistical resolution limit comparison with ten-generation results.
 
-Figure 11. Archived measurements. Cross-generation play: coalition game-win rate of every $C_i$ (rows) against every
-$D_j$ (columns), 5+2 players, multi-round game, mean of ten seeds. Boxes mark $C_i$
-against its own $D_i$.
-
-*Cross-play.* The cross-play matrix (Figure 11) has one strong structure and one weak one. The
-strong one is the last-mover advantage: every $C_i$ beats its own $D_i$ by 0.43
-on average more than $C_{i-1}$ did, in every seed, and the diagonal averages
-0.82 from $C_1$ onward.
-Defenders do not accumulate strength: a defender's average win rate conceded to all coalitions is
-0.54 to 0.69 with no trend in the generation, and a coalition's average against all learned
-defenders is 0.60 to 0.63 from $C_1$ onward. A coalition's average win rate against the defenders
-that came after it equals its average against those that came before it (0.54 and 0.54); the
-ordering of generations carries no information beyond adjacency.
-The weak structure is parity: the earlier version of this study reported that odd coalitions beat
-odd defenders and lose to even ones. Measured properly, as a coalition's win rate against
-non-adjacent defenders of the same parity minus the opposite parity, the gap is
-+0.09 ± 0.14 in the 5+2 multi-round game (positive in 80 percent of
-seeds, $p = 0.076$), +0.14 ± 0.14 at 3+2 (80 percent, $p = 0.023$),
-and +0.07 ± 0.03 in the 5+2 single meeting (100 percent,
-$p = 0.002$). These finite-sample parity contrasts do not establish a period-2 cycle in strategy space.
-
-![](figures/none_n7_r8_policy_distance.pdf){width=100%}
-
-Figure 12. Archived measurements. Distance between successive same-side policies on the fixed probe set, 5+2 players,
-multi-round game (mean ± SD across ten seeds).
-
-*Probe-set distances.* Independently trained successive policies differ on the scripted probe set. The Kullback–Leibler divergence from a
-policy to its successor is 5.6 nats for the coalition and 5.0 for the crew (summed over heads) in
-the last three generations and just as large in the first three; the Jensen–Shannon divergence is
-0.96 and 0.91 bits; greedy actions differ in 86 to 89 percent of probe states; and the crew moves
-its voting pattern about twice as far per generation as the coalition (vote-pattern JS 0.39
-against 0.21). The distances remain substantial at late generations. Because each stage starts from a fresh
-initialization and probes are drawn from scripted rather than learned play, this does not test
-convergence of a continuously updated policy or exclude restart variability as a contributor.
-
-*What the lineage learns.* The coalition's false-claim rate is 0.39 against the scripted crew and
-0.43 to 0.46 in the loop; learned defenders do not catch lies the way the scripted rules do, so
-lying stays cheap, and every later coalition is weaker against the scripted crew than $C_0$ was
-(cross-play column $D_0$: 0.19 on average against 0.97 for $C_0$). Vote coordination is acquired
-in the first generation and kept (same-target voting 0.38 → 0.65). The archived dependence statistic uses post-ejection survivors and is not a valid estimate of
-the full pre-vote coalition population; its apparent stability is not used as mechanism evidence.
-
-![](figures/none_n9_r8_metrics_vs_generation.pdf){width=100%}
-
-Figure 13. Archived measurements. The loop for 7+2 players in the multi-round game, three generations, mean ± SD across
-five training seeds.
-
-*The largest crew size.* At 7+2 (Figure 13, five seeds) the alternation is present
-with the same sign: the coalition wins 0.94, 0.78, 0.72 and 0.74 after its stages and 0.19, 0.51 and 0.48 after the
-defender stages, with a last-mover gain of +0.35 ± 0.05 (positive in every seed). Over the
-three generations run, the defender stages weaken and the amplitude shrinks from 0.59
-to 0.26, so the 7+2 loop looks more like a damped alternation than the persistent one
-of 5+2. Three generations do not settle whether it damps out; what the run shows is that the
-last-mover advantage and the coalition's stage-level lead are not specific to the smaller crews.
+Two terminal coordination cells in the 7+2 loop are undefined because all 500 games in
+each cell lost a coalition voter before the last meeting. Complete meeting histories verify
+the zero denominator. No null was replaced by zero, no seed was dropped, and all primary
+crossplay outcomes remain complete. Terminal coordination should not be confused with
+coordination over every meeting of a game.
 
 ## F6: an analytical model of corroboration capture under correlated testimony
 
 The model isolates the one failure mode that the framing of "credibility collapse" usually refers
 to: manufactured agreement earning a coalition more than its share of a trust rule's weight. We use
-the term in that sense only; Section 6.2's archived scripted diagnostics do not show average
+the term in that sense only; Section 6.2's corrected scripted diagnostics do not show average
 coalition-weight amplification in those conditions. The model replaces claims and votes by real-valued reports about a latent state $\theta$. $n$
 honest agents report $x_i = \theta + \varepsilon_i$ with $\varepsilon_i \sim \mathcal N(0,\sigma^2)$
 i.i.d.; $m$ coalition agents report $y_j = \theta + b + \eta_j$ with equicorrelated Gaussian noise of marginal variance $\sigma_c^2$, independent of honest noise,
@@ -1005,9 +819,9 @@ $p_{CC}\ge p_{HC}$ throughout, a dependence strength
 $\lambda\ge\gamma(m-1)(N-1)/n$ makes the defended surrogate's coalition weight non-increasing
 with correlation on that interval, where $N=n+m$. The realized softmax can have a different amplification boundary.
 
-![](figures/phase_diagram_f_rho_N7.pdf){width=100%}
+![](figures/final/theory_phase.pdf){width=100%}
 
-Figure 14. Phase diagram of the model ($N = 7$ reporters, $\gamma = 1$, $b = 4\sigma$,
+Figure 13. Phase diagram of the model ($N = 7$ reporters, $\gamma = 1$, $b = 4\sigma$,
 $h = 0.4\sigma$, $\sigma_c=\sigma$). Rows are discrete coalition sizes,
 $f=1/7,2/7,3/7,4/7$; contours interpolate the sampled grid. The row with $f\ge1/2$ lies outside
 Appendix A's minority-coalition guarantee. Colour: $\log_{10}$ of the ratio of the estimator's error to the median's; black
@@ -1015,9 +829,9 @@ contour: break-even; white reference contours, where present, mark the surrogate
 crossing and majority-weight boundary. The N=7 grid has no bias-reference crossing. These are analytical references, not exact boundaries for the realized estimator. Left: credibility weighting; middle: dependence-aware credibility (window of eight
 rounds, $\lambda = 4$); right: the mean-field coalition weight $W_C(f,\rho)$.
 
-![](figures/error_curves.pdf){width=100%}
+![](figures/final/theory_error.pdf){width=100%}
 
-Figure 15. Estimator error (units of $\sigma^2$) against coalition correlation, credibility gain
+Figure 14. Estimator error (units of $\sigma^2$) against coalition correlation, credibility gain
 (the game's soft and sharp gains marked), coalition fraction, and the window length of the
 dependence penalty; 5+2 defaults with $\sigma_c=\sigma$, 4,000 trials per point.
 The coalition-fraction sweep includes values outside the minority-coalition guarantee.
@@ -1026,7 +840,7 @@ Numerically, with $n = 5$, $m = 2$, $\sigma_c=\sigma$, $h = 0.4\sigma$ (honest r
 0.22), $b = 4\sigma$ and $\gamma = 1$, credibility weighting is the best summing rule against
 *independent* liars (mean-squared error 0.87 against 1.45 for the mean and 0.57 for the median)
 and the worst rule against the *same* liars coordinating (1.84 at $\rho = 1$), while the median
-has similar rounded error at those endpoints (0.57): condition (i) has $\Delta c = -0.6$ at $\rho = 0$ and $+0.12$ at $\rho = 1$.
+has similar rounded error at those endpoints (0.57): the surrogate has $\Delta c = -0.6$ at $\rho = 0$ and $+0.12$ at $\rho = 1$.
 The dependence-aware rule brings the coordinated case to 0.31, below the median, but pays for it
 at short windows and at low correlation (1.02 at $\rho = 0$), because the concentration statistic
 is estimated from few rounds. In the equal-variance, minority-coalition surrogate, independent biased reporters cannot amplify
@@ -1062,391 +876,187 @@ compromised reports, the median remains best ($0.58\pm0.02$), followed by credib
 These simulations illustrate a benefit of the dependence penalty under the chosen parameters;
 they do not establish a general repair guarantee for trust aggregation.
 
-## F7: a dependence-aware defense, and what a learned coalition does to it
+## F7: dependence-aware defense changes distinct outcomes differently
 
-The dependence-aware rule of Section 3.4 is the mechanism the model of Section 6.7 suggests:
-discount agreement that is concentrated in a small group. The archived comparisons below use the
-parameters in Appendix B; the corrected replication fixes those parameters before training.
-The archived study has three parts: against the
-scripted and the frozen learned coalitions, against a fresh coalition retrained with the defense in
-place, and inside the multi-generation loop.
+![](figures/final/depstatic_n7_r1_rules.pdf){width=100%}
 
-![](figures/static_rules_n7.pdf){width=100%}
+Figure 15. Spatial static-rule evaluations at 5+2, five evaluation replicates. This configuration has action-dependent evidence and differs from F2's exogenous meeting-only evidence.
 
-Figure 16. Archived measurements. False-ejection rates of the seven crew rules against the scripted coalitions and
-against the frozen learned coalitions $C_0$ to $C_3$ of the single-meeting multi-generation loop
-(5+2 players, spatial game; mean ± SD across five seeds, 1,000 episodes each).
+| Coalition | Mean | Soft | Dependence | Hypothesis |
+| :-- | --: | --: | --: | --: |
+| Truthful | 0.007 ± 0.003 | 0.007 ± 0.003 | 0.007 ± 0.003 | 0.270 ± 0.010 |
+| Lone | 0.132 ± 0.008 | 0.151 ± 0.011 | 0.204 ± 0.011 | 0.224 ± 0.014 |
+| Alibi | 0.352 ± 0.013 | 0.421 ± 0.015 | 0.328 ± 0.012 | 0.168 ± 0.007 |
+| Framer | 0.388 ± 0.011 | 0.399 ± 0.014 | 0.521 ± 0.014 | 0.222 ± 0.015 |
+| C0 | 0.145 ± 0.068 | 0.193 ± 0.067 | 0.185 ± 0.072 | 0.111 ± 0.061 |
+| C1 | 0.038 ± 0.014 | 0.074 ± 0.021 | 0.062 ± 0.020 | 0.057 ± 0.028 |
+| C2 | 0.058 ± 0.018 | 0.092 ± 0.021 | 0.086 ± 0.022 | 0.061 ± 0.021 |
+| C3 | 0.045 ± 0.016 | 0.080 ± 0.020 | 0.076 ± 0.023 | 0.050 ± 0.022 |
 
-*Static coalitions.* Against the scripted alibi the dependence-aware rule does what it was built
-for (Figure 16, Table 13): it keeps credibility's honest-testimony behavior (false ejection 0.029
-against 0.025 for soft credibility) and reduces false ejections, 0.439 → 0.275, level with the
-hypothesis crew (0.260) and well below the mean (0.379). The strength response is monotone for the
-crew-rule placement (0.41, 0.36, 0.34, 0.27, 0.23, 0.22 at $\lambda = 0, 1, 2, 4, 6, 8$) with the
-honest rate flat at 0.02 to 0.03. Weighting ballots on its own is harmful: it raises the alibi rate
-to 0.47 at every strength up to 6 and at $\lambda = 8$ starts to eject honest players (0.14),
-because weighted ballots rarely tie and a meeting that plurality voting would leave undecided
-becomes an ejection. The rule is also harmful against the scripted framer (0.47 → 0.61), whose
-signature, both members accusing and voting for the same innocent, is one that honest witnesses
-share whenever they converge on a suspect.
+Table 13. Spatial static false-ejection rates, mean ± SD across five seeds. C0–C3 are frozen checkpoints from the single-meeting loop; no rule is tuned by selecting its best test strength. The full seven-rule and strength sweep is included with the data.
 
-| Coalition | Mean | Median | Trim. | Soft cred. | Sharp cred. | Dep.-aware | Hyp. |
-|:--|--:|--:|--:|--:|--:|--:|--:|
-| Everyone honest | 0.022 | 0.382 | 0.266 | 0.025 | 0.025 | 0.029 | 0.077 |
-| One liar | 0.056 | 0.431 | 0.338 | 0.068 | 0.074 | 0.088 | 0.085 |
-| Alibi | 0.379 | 0.434 | 0.463 | 0.439 | 0.453 | **0.275** | **0.260** |
-| Framer | 0.408 | 0.442 | 0.620 | 0.468 | 0.436 | 0.614 | 0.502 |
-| Learned $C_0$ (trained vs soft credibility) | 0.119 | 0.370 | 0.349 | 0.381 | 0.397 | 0.393 | **0.089** |
-| Learned $C_1$ | 0.040 | 0.277 | 0.251 | 0.086 | 0.157 | 0.081 | 0.066 |
-| Learned $C_2$ | 0.042 | 0.265 | 0.217 | 0.068 | 0.153 | 0.065 | 0.064 |
-| Learned $C_3$ | 0.036 | 0.238 | 0.204 | 0.073 | 0.121 | 0.065 | 0.086 |
+| Players | Trained against | Soft | Rule | Rule + tally |
+| :-- | --: | --: | --: | --: |
+| 3+2 | soft | 0.210 ± 0.048 | 0.206 ± 0.038 | 0.413 ± 0.040 |
+| 3+2 | rule | 0.194 ± 0.030 | 0.226 ± 0.036 | 0.439 ± 0.016 |
+| 3+2 | both | 0.025 ± 0.006 | 0.039 ± 0.017 | 0.872 ± 0.010 |
+| 5+2 | soft | 0.194 ± 0.055 | 0.182 ± 0.051 | 0.204 ± 0.052 |
+| 5+2 | rule | 0.174 ± 0.031 | 0.170 ± 0.038 | 0.193 ± 0.034 |
+| 5+2 | both | 0.169 ± 0.038 | 0.164 ± 0.042 | 0.190 ± 0.040 |
 
-Table 13. Archived measurements. Alibi and framer refer to the coordinated scripts; other abbreviations follow Table 3.
-False-ejection rates of the seven rules in the spatial single-meeting game (5+2), mean
-across five seeds; across-seed SDs are 0.01 to 0.03 for the scripted rows and 0.01 to 0.10 for the
-learned ones.
+Table 14. Adaptive dependence crossplay. Rule discounts testimony; rule + tally also discounts votes. Values are mean ± SD across ten seeds at 5+2 and five at 3+2, with 1,000 episodes per cell.
 
-*Frozen learned coalitions.* The C0 coalition obtains false-ejection rates of 0.381, 0.397
-and 0.393 against soft, sharp and dependence-aware credibility, respectively, versus 0.119 for
-the mean and 0.089 for hypothesis scoring. These differences are compatible with sensitivity to
-credibility weighting. They do not isolate a learned exploit of the catch-penalty placement,
-because the corresponding penalty intervention was performed on scripted coalitions, not these
-checkpoints. Frozen C0 can also produce different trajectories against different crews.
+![](figures/final/counterattack_n7_r1_crossplay.pdf){width=100%}
 
-Later coalitions C1–C3, trained against learned crews, obtain lower false-ejection rates against
-the mean, credibility, dependence-aware and hypothesis rules (0.036 to 0.157), but remain more
-successful against median and trimmed mean (up to 0.277 and 0.251). The cross-play matrix thus
-shows substantial opponent specificity, rather than uniform robustness of every scripted rule.
+Figure 16. Dependence-specific coalition training and transfer at 5+2. Rows identify the training defense; columns identify the evaluation defense.
 
-*Adaptive counterattack.* A fresh coalition was trained for the C0 budget against soft credibility,
-against the dependence-aware crew rule, and against the crew rule combined with the
-dependence-weighted vote, and every trained coalition was evaluated against every defense
-(Figure 17, Table 14).
+At 5+2, rule-specific retraining gives false ejection 0.1696 against the dependence rule,
+versus 0.1819 for the soft-trained coalition: effect -0.0123, pointwise 95% CI
+[-0.0516, 0.0374], Holm-adjusted $p=1$. Against the combined rule/tally, retraining changes
+0.2044 to 0.1896: effect -0.0148, CI [-0.0513, 0.0215], adjusted $p=1$. These corrected
+comparisons do not reproduce a general defense-specific attack gain. At 3+2, however,
+the combined-defense rate rises descriptively from 0.4132 to 0.8722; with five seeds the
+adjusted result remains nonsignificant. Neither outcome establishes immunity.
 
-| Trained against | vs soft credibility | vs dependence-aware rule | vs rule + weighted vote |
-|:-----------------------------|-------------------------:|-------------------------:|-------------------------:|
-| Soft credibility (C0) | 0.418 ± 0.081 | 0.423 ± 0.071 | 0.536 ± 0.099 |
-| Dependence-aware rule | 0.412 ± 0.090 | 0.420 ± 0.092 | 0.562 ± 0.086 |
-| Rule + weighted vote | 0.384 ± 0.088 | 0.394 ± 0.083 | 0.558 ± 0.081 |
+| Outcome | Summary | Reference | Defended | Difference | Holm p |
+| :-- | --: | --: | --: | --: | --: |
+| Any FE | C stages | 0.847 ± 0.009 | 0.890 ± 0.007 | +0.042 | 0.0117 |
+| Any FE | D stages | 0.658 ± 0.051 | 0.763 ± 0.047 | +0.104 | 0.0117 |
+| Any FE | Matrix gain | 0.191 ± 0.051 | 0.129 ± 0.046 | -0.062 | 0.0234 |
+| Coalition win | C stages | 0.817 ± 0.025 | 0.789 ± 0.026 | -0.029 | 0.0410 |
+| Coalition win | D stages | 0.309 ± 0.065 | 0.348 ± 0.054 | +0.040 | 0.1387 |
+| Coalition win | Matrix gain | 0.509 ± 0.086 | 0.445 ± 0.070 | -0.064 | 0.0469 |
 
-Table 14. Archived measurements. Cross-evaluated false-ejection rates at 5+2 (mean ± SD across ten seeds, 1,000
-episodes per cell). These coalitions, like $C_0$ in F3, create an incident in a minority of
-episodes (0.1 to 0.4 in replicates, Section 6.9), so most of the meetings scored here are
-incident-free.
+Table 15. Dependence-aware loop versus the undefended loop over the same four generations and ten seeds. Difference is defended minus reference; stages exclude C0. Means ± SD and adjusted tests retain the six-contrast family.
 
-The defense that reduces the scripted alibi attack shows little benefit in these learned-coalition evaluations. The crew-
-rule placement has a small estimated effect (0.42 against 0.42 for the paper's own C0,
-paired difference +0.005 ± 0.022, $p = 0.508$; and a coalition trained against the rule
-is no weaker against soft credibility than one trained against soft credibility, 0.41
-against 0.42), and the weighted vote helps the attacker: C0 gains +0.12 ± 0.06
-against it without retraining ($p = 0.002$), and a coalition trained against it reaches
-0.56; all three cells evaluated under the weighted vote exceed their corresponding unweighted cells.
-The archived training-log dependence summaries condition on agents surviving the ejection.
-Because ejection depends on the behavior being measured, those summaries cannot explain which
-pre-vote pairs the defense penalized. We therefore retain the outcome comparison but do not use
-those logged penalties to establish why it occurred.
+![](figures/final/multigen_dependence_n7_r8_k4_stages.pdf){width=100%}
 
-![](figures/counterattack_training_n7.pdf){width=100%}
+Figure 17. The defended four-generation 5+2 multi-round sequence. Table 15 compares it to the matching horizon and seeds of the undefended sequence.
 
-Figure 17. Archived coalition training against soft credibility, the dependence-aware rule,
-and rule + weighted vote (5+2; mean ± SD across ten seeds). Dependence/penalty panels, including
-the dashed crew lines, use post-ejection populations and are retained as archived diagnostics,
-not estimates of the weights applied to the full pre-vote electorate.
+The dependence-aware loop increases any innocent ejection by 0.042425 after C stages
+(pointwise 95% CI [0.034775, 0.049400]) and by 0.104375 after D stages
+([0.073274, 0.135025]); both have Holm-adjusted $p=0.0117$. At C stages it reduces coalition
+victory by 0.028775 ([-0.045625, -0.012050], adjusted $p=0.0410$). Matrix adaptation gains
+also shrink, but this is not a guarantee of less harm or better stability. The same defense
+can reduce one success measure while increasing another adverse outcome.
 
-Table 15 preserves the archived per-channel diagnostic for transparency. It was computed after
-ejection and excludes the ejected voter from pair rates and penalties. These quantities are
-conditional on survival and must be recomputed on pre-vote populations before they can support
-mechanistic comparisons of coalition and crew agreement.
+## F8: adaptive hypothesis attacks and ballot diagnostics
 
-| Coalition | Vouching C / H | Support C / H | Same vote C / H | Penalty C / H |
-|:-----------------------------|-------------------:|-------------------:|-------------------:|-------------------:|
-| Scripted alibi | 1.00 / 0.24 | 0.97 / 0.00 | 1.00 / 0.72 | 0.34 / 0.52 |
-| Scripted framer | 0.00 / 0.22 | 0.00 / 0.00 | 1.00 / 0.87 | 0.75 / 0.58 |
-| Learned, trained vs soft credibility | 0.07 / 0.19 | 0.08 / 0.00 | 0.27 / 0.47 | 0.72 / 0.74 |
-| Learned, trained vs dependence-aware rule | — / 0.22 | 0.08 / 0.00 | 0.25 / 0.39 | 0.73 / 0.75 |
-| Learned, trained vs rule + weighted vote | 0.00 / 0.18 | 0.07 / 0.00 | 0.27 / 0.39 | 0.71 / 0.76 |
-| Learned $C_1$ to $C_{10}$ of the loop (vs learned crews) | 0.09 / 0.19 | 0.11 / 0.00 | 0.54 / 0.93 | 0.74 / 0.58 |
+| Players | Trained against | Mean | Soft | Hypothesis |
+| :-- | --: | --: | --: | --: |
+| 5+2 | mean | 0.104 ± 0.037 | 0.148 ± 0.040 | 0.077 ± 0.031 |
+| 5+2 | soft | 0.143 ± 0.053 | 0.194 ± 0.055 | 0.126 ± 0.058 |
+| 5+2 | hypothesis | 0.096 ± 0.063 | 0.098 ± 0.068 | 0.422 ± 0.066 |
+| 7+2 | mean | 0.139 ± 0.051 | 0.189 ± 0.056 | 0.124 ± 0.074 |
+| 7+2 | soft | 0.136 ± 0.017 | 0.202 ± 0.013 | 0.110 ± 0.033 |
+| 7+2 | hypothesis | 0.037 ± 0.007 | 0.030 ± 0.007 | 0.604 ± 0.018 |
 
-Table 15. Archived post-ejection diagnostic, not valid as a pre-vote mechanism comparison.
-Per-channel agreement rates for surviving coalition pairs (C) and honest pairs (H), means across
-five seeds (the last row also averages over generations 1, 2, 3, 5, 7 and 10 of the single-
-meeting loop); "—" marks no recorded opportunities in this selected population. The joint-satisfiability channel is
-0.87 to 1.00 for every coalition and 0.92 to 0.97 for honest pairs, and does not separate them.
+Table 16. Adaptive hypothesis crossplay, ten seeds at 5+2 and five at 7+2, 1,000 independent final episodes per cell. Training against a rule is distinct from transferring a coalition trained against another rule.
 
-The archived channel table contains nonzero coalition vouching and support rates, so it cannot
-support the original assertion that learned coalitions never use these actions. Its survivor
-selection further prevents a reliable comparison with honest pairs. The observed cross-play
-still shows that success against the scripted alibi does not transfer to the tested learned
-coalitions; explaining that difference requires a corrected diagnostic and interventions on the
-suspected channels.
+![](figures/final/counterattack_hyp_n7_r1_crossplay.pdf){width=100%}
 
-At 3+2, the coalition trained against the weighted tally obtains a false-ejection rate of 0.90
-under that tally and 0.03 against soft credibility. Integer plurality can leave a two-versus-two
-tie, whereas unequal ballot weights can resolve it. This is a plausible mechanism, not proof
-that every such decision was won by the less-concentrated pair. The analogy to 50% contamination
-in the Gaussian model is qualitative; the voting game includes different information and rules.
+Figure 18. Adaptive hypothesis attack and transfer at 5+2. The matrix uses the main final-evaluation stream; the ballot supplement below uses an independent stream.
 
-![](figures/multigen_compare_n7_r8.pdf){width=100%}
+At 5+2, targeted training increases hypothesis-defender false ejection from 0.1255 to
+0.4217: paired effect 0.2962, pointwise 95% CI [0.2521, 0.3418], Holm-adjusted $p=0.0273$.
+Its matched adaptive error also exceeds soft-trained versus soft by 0.2275
+(adjusted $p=0.0273$). Yet the hypothesis-trained coalition achieves only 0.0962 against
+mean and 0.0976 against soft credibility. This is a substantial tested adaptive vulnerability
+with opponent specialization, not a uniformly stronger attack.
 
-Figure 18. Archived measurements. The multi-generation loop with (teal) and without (grey) the dependence-aware defense
-over the first four generations, 5+2 players, multi-round game (mean ± SD across ten seeds).
-FE and communication rates summarize the final meeting; dependence panels retain the archived
-post-ejection selection and historical-window limitations described below.
+| Players | Attack | FE | Crew skip | Top score | Necessary | Sufficient | Crew-only FE | Seeds |
+| :-- | --: | --: | --: | --: | --: | --: | --: | --: |
+| 5+2 | mean | 0.075 | 0.196 | 0.794 | 0.651 | 0.603 | 0.032 | 10 |
+| 5+2 | soft | 0.117 | 0.271 | 0.746 | 0.684 | 0.662 | 0.040 | 10 |
+| 5+2 | hypothesis | 0.424 | 0.661 | 0.507 | 0.973 | 0.978 | 0.014 | 10 |
+| 7+2 | mean | 0.128 | 0.448 | 0.683 | 0.770 | 0.769 | 0.027 | 5 |
+| 7+2 | soft | 0.101 | 0.406 | 0.713 | 0.819 | 0.823 | 0.022 | 5 |
+| 7+2 | hypothesis | 0.605 | 0.899 | 0.410 | 1.000 | 1.000 | 0.000 | 5 |
 
-*Inside the multi-generation loop.* With $D_0$ the dependence-aware crew and every later
-generation playing under the dependence-weighted vote (four generations, ten seeds,
-compared with the same generations and seeds of the undefended loop; Figure 18), the attacker's
-stage-level point estimate is similar (coalition win 0.83 against 0.81 over the
-last three coalition stages, paired difference +0.02 ± 0.03, $p=0.053$; no equivalence test) and the defender stages are
-weaker (0.48 against 0.34 coalition wins averaged over the defender
-stages, +0.14 ± 0.12, $p = 0.010$; terminal-meeting false ejection 0.39 against
-0.24, $p = 0.002$). The archived coalition false-claim rate is lower with the defense (0.33 against 0.42), and
-games end sooner after defender stages (2.93 against 3.34 rounds). The logged dependence
-statistic has the post-ejection selection problem described above; multi-round terminal
-diagnostics can additionally count the final meeting both as current and in history. Thus these
-numbers do not establish deliberate decorrelation or its causal role. The archived outcome
-comparison shows higher coalition win and terminal-meeting FE rates after defended defender
-stages, but this result needs corrected training and a diagnostic reconstructed at decision time.
+Table 17. Independent ballot supplement evaluated against the hypothesis defender. Entries are means of within-seed rates; full SDs and defined-seed counts accompany the data. Necessary: removing coalition ballots prevents an observed false ejection. Sufficient: coalition ballots alone select an innocent. Both condition on observed false ejections and hold votes fixed; they are different counterfactuals. Top score is the honest view's leading membership score, not a calibrated probability.
 
-## F8: an adaptive attack on hypothesis elimination
+![](figures/final/ballot_diagnostic.pdf){width=100%}
 
-The hypothesis crew is the strongest rule against the scripted alibi and holds the paper's own
-$C_0$ to a false-ejection rate of 0.09 (Table 13). Both are evaluations against coalitions that
-were not trained against it. To ask whether its advantage is a property of the mechanism or of the
-mismatch between the mechanism and the attacks, a fresh coalition was trained for the $C_0$ budget
-directly against the hypothesis crew, alongside paired coalitions trained against soft credibility
-(the paper's $C_0$) and against the mean, a strong summing baseline under the scripted alibi, and every
-coalition was evaluated against all three selected rules (Figure 19, Table 16; ten seeds at 5+2 and
-five at 7+2, the latter reported at the end of the section).
+Figure 19. Hypothesis-trained attacks against the hypothesis rule in the independent ballot supplement. Means ± sample SD use ten seeds at 5+2 and five at 7+2. Ballot necessity is conditional on a false ejection.
 
-| Trained against | vs soft credibility | vs mean | vs hypothesis elimination |
-|:-----------------------------|-------------------------:|-------------------------:|-------------------------:|
-| Soft credibility ($C_0$) | 0.369 ± 0.090 | 0.097 ± 0.050 | 0.079 ± 0.035 |
-| Mean | 0.366 ± 0.068 | 0.100 ± 0.046 | 0.074 ± 0.030 |
-| Hypothesis elimination | 0.091 ± 0.046 | 0.092 ± 0.037 | 0.359 ± 0.061 |
+The separate 135-cell, 67,500-episode diagnostic gives false ejection 0.4240 at 5+2 and
+0.6048 at 7+2 for hypothesis-trained coalitions. Honest voters skip at rates 0.6608 and
+0.8988. Removing coalition ballots prevents 97.26% and 100% of observed false ejections;
+coalition ballots alone are sufficient in 97.75% and 100%. Crew-only false ejection is
+0.0142 and 0, respectively. Raw verification covers the full electorate, including the
+ejected voter, and recomputes tally and score-derived quantities.
 
-Table 16. Archived measurements. Cross-evaluated false-ejection rates at 5+2 in the spatial single-meeting game (mean ±
-SD across ten seeds, 1,000 episodes per cell). The soft-credibility row is a within-run replicate of the paper's $C_0$ (Table 14) trained on a different machine; training is not bit-reproducible across machines, and the replicate's rates lie within the seed spread of the original.
-
-![](figures/hypothesis_counterattack_n7.pdf){width=100%}
-
-Figure 19. Archived measurements. Left: false-ejection rate on the training rollouts of a fresh coalition trained against
-soft credibility, the mean, and the hypothesis crew (5+2 players, mean ± SD across seeds,
-ten-update moving average). Right: the cross-evaluated false-ejection matrix of Table 16.
-
-*The advantage does not persist.* A coalition trained against the hypothesis crew raises the
-crew's false-ejection rate from 0.08 for the paper's $C_0$ to 0.36, a 4.6-fold
-increase that holds in every seed (paired difference +0.28 ± 0.07, exact sign-flip
-$p = 0.002$). Under adaptive attack the rule that was best against the scripted alibi at 5+2 has a similar point estimate to soft credibility, which concedes 0.37 to its own adaptive
-coalition (hypothesis-minus-soft difference −0.010 ± 0.115, $p = 0.787$; this is not an equivalence test), and about 3.6 times the rate of
-the mean, which concedes 0.10 to the coalition trained against it (+0.26 ± 0.08,
-$p = 0.002$). The creator is ejected in 0.27 of the hypothesis-trained
-coalition's incidents, where the archived scripted soft-credibility crew of F3 ejected $C_0$'s creator in
-0.59. The training curve against the hypothesis crew is the slowest of the three and is still
-rising at the end of the budget (Figure 19), so a longer run is a relevant follow-up; an increasing noisy training curve is not a
-guaranteed lower bound on future performance.
-
-*Ballots and claim content.* We reevaluated the saved checkpoints on 500 episodes per seed and
-corrected the diagnostic to include all agents that cast ballots, including the subsequently
-ejected player (Table 17). The original diagnostic excluded that player and evaluated hypothesis
-scores after the ejection, biasing both vote statistics and apparent confidence. The corrected
-calculation reconstructs the pre-ejection population.
-
-The hypothesis-trained coalition uses fewer false claims and more no-information claims than
-coalitions trained against the summing rules. The hypothesis crew also casts many skips. These
-associations are consistent with an abstention-related vulnerability, but do not establish that
-the entire honest record contains nothing checkable or that inference is exact. For the hypothesis-trained coalition against its training defense, 0.65 of claims are
-no-information, 0.08 have the false label, same-target voting is 0.58, and crew skip rate is
-0.66. Coalition ballots are necessary for the observed innocent's unique plurality in 0.97
-of false ejections. The mean top membership score is 0.52, not a uniformly flat distribution.
-A mean maximum membership score is a property of this simplified model, not a calibrated probability of error.
-
-The ballot-removal diagnostic asks whether the same innocent would retain a unique plurality
-without coalition votes. A negative answer means coalition ballots were necessary for that
-particular ejection in the recorded tally. It does not imply that two coalition ballots alone
-were sufficient, that no crew member voted for the ejected innocent, or that crew-only voting
-would have produced no ejection at all. We do not make those stronger claims.
-
-| Trained vs → evaluated vs | Incident | FE | C votes needed | Crew skips | Same-target | False claims | No-info claims | Top membership score |
-|:--|--:|--:|--:|--:|--:|--:|--:|--:|
-| Soft → Soft | 0.23 | 0.37 | 0.51 | 0.64 | 0.21 | 0.43 | 0.08 | 0.72 |
-| Soft → Hyp. | 0.23 | 0.09 | 0.85 | 0.38 | 0.20 | 0.42 | 0.08 | 0.72 |
-| Mean → Mean | 0.20 | 0.10 | 0.41 | 0.10 | 0.16 | 0.37 | 0.14 | 0.73 |
-| Mean → Hyp. | 0.19 | 0.07 | 0.89 | 0.37 | 0.17 | 0.37 | 0.14 | 0.73 |
-| Hyp. → Hyp. | 0.90 | 0.37 | 0.97 | 0.66 | 0.58 | 0.08 | 0.65 | 0.52 |
-| Hyp. → Mean | 0.91 | 0.08 | 0.33 | 0.06 | 0.46 | 0.08 | 0.65 | 0.52 |
-
-Table 17. Archived measurements. Corrected pre-ejection ballot decomposition at 5+2 (500 replayed episodes per seed,
-means across ten seeds). Each row identifies the coalition's training defense and its evaluation
-defense; Hyp. denotes hypothesis scoring. "Incident" is the fraction of episodes with a real incident; "C votes needed" the
-fraction of false ejections in which the ejected agent would not have held the plurality without
-the coalition's two ballots; "crew skips" the fraction of crew ballots that are skips;
-"same-target" the fraction of meetings in which the two coalition members vote for the same
-agent; "false claims" and "no-info claims" the fractions of coalition claims that are false or
-carry no information; "top membership score" the honest voters' mean maximum normalized membership score under
-the hypothesis-elimination model, computed for every cell from the same record.
-
-*Transfer.* The hypothesis-trained coalition has lower false-ejection rates against the
-summing rules (0.091 against soft credibility and 0.092 against the mean) than against the
-hypothesis crew (0.359). Conversely, the soft- and mean-trained coalitions obtain 0.079 and
-0.074 against the hypothesis crew while both obtain about 0.37 against soft credibility.
-Thus exploitation transfers between some attacks and defenses; it is not true that each rule
-is beaten only by its own trained coalition.
-
-Among these direct attacks, the mean concedes 0.100 to the coalition trained against it,
-compared with 0.359 for hypothesis scoring and 0.369 for soft credibility. Mean aggregation does
-allow abstention and has nonzero skip rates in the diagnostic. Its lower observed harm therefore
-cannot be explained by a rule that never skips. Neither this comparison nor the rising training
-curve excludes a stronger attack with a longer budget or a different training procedure.
-
-At 7+2 (five seeds), the hypothesis crew concedes 0.513 to its trained attacker versus 0.048 to
-the soft-trained coalition (difference +0.465 ± 0.048, positive in all five seeds, exact sign-flip
-$p=0.063$). Soft credibility concedes 0.374 and the mean 0.045 to their respective trained
-attackers. The hypothesis-trained coalition has a false-claim rate of 0.024 against its training
-defense and low transfer false-ejection rates against soft credibility (0.043) and the mean
-(0.037). These are archived-policy measurements and remain subject to the training-validity
-limitation of Section 4.1.
+These results support an abstention-related route to failure under recorded votes.
+They do not show that abstention is the only cause, that all score ties are uninformative,
+or that agents would retain their votes if the decision rule changed. Membership scores
+are feasibility summaries, not exact posterior probabilities; their numerical scale alone
+does not establish calibrated uncertainty.
 
 # Interpretation
 
-## Scripted and adaptive evaluations
+The completed experiments distinguish three forms of evidence. Scripted-rule comparisons
+measure behavior against specified testimony; adaptive crossplay tests responses to particular
+trained opponents; supplemental interventions investigate score and ballot mechanisms under
+explicit matching assumptions. None replaces the others. The hypothesis rule's scripted-attack
+benefits coexist with truthful-testimony costs and targeted adaptive vulnerability.
 
-Within each tested configuration, a scripted evaluation measures a defense against the specified
-behavior. The F2 sweep separates aggregation rules under fixed testimony; the spatial F7 and F8
-experiments test some of those rules against trained policies. The archived cross-play matrices
-show that the hypothesis-scoring crew's advantage against scripted alibis does not persist against
-its own trained attacker. The mean has the lowest false-ejection rate under the direct adaptive
-attacks tested. This is a comparison at a finite training budget, not a guarantee that the mean is
-robust to every adaptive coalition.
+Learning dynamics are also outcome-dependent. Multi-round defenders can suppress coalition
+victory while retaining frequent innocent ejections. The dependence-aware loop modestly lowers
+coalition victory after coalition stages yet increases whole-game voting harm. A smaller
+adaptation gap is therefore not itself a safety improvement or a stability certificate.
+The ten-generation sequence shows repeated gains against the latest opponent; fresh
+initialization, restricted policy classes, changing opponents, and finite evaluation prevent
+an asymptotic dynamical conclusion.
 
-The corrected F3 results establish a descriptive single-meeting comparison under repaired
-collection, independent evaluation and retained within-round private histories. They do not
-certify optimal responses or explain the gap by reasoning ability alone. The remaining archived
-learned-policy measurements are limited by the original rollout defect and other implementation
-changes. Their corrected reruns are needed to determine which multi-round and adaptive-defense
-patterns persist.
-
-## Distinguishing mechanisms
-
-The scripted mechanism diagnostic measures reduced average coalition credibility weight under
-the alibi, and thus does not show average corroboration capture. Alibi testimony and the placement
-of caught-lying penalties affect outcomes in the tested interventions. Moving that penalty outside
-a speaker's weighted row improves several attacked cells, but does not uniformly dominate the
-mean. The Gaussian model formalizes a separate mean-field mechanism and cannot supply an exact
-threshold for this symbolic game.
-
-For the hypothesis-scoring crew, uninformative claims, skip ballots and coordinated voting are
-consistent with an abstention-related vulnerability. The archived rule is not an exact Bayesian benchmark:
-it omits relevant constraints, smooths otherwise impossible hypotheses, and retains coalition
-claims in some branches. Its errors may arise from both an ambiguous record and misspecification.
-A causal test should vary the information content and abstention rule separately while holding
-other policies and episode draws fixed.
-
-The original per-channel dependence diagnostic excluded ejected participants and, in multi-round
-terminal summaries, could count the current meeting twice. It cannot establish that learned
-coalitions coordinate less than honest crews or that decorrelation caused their success. The
-corrected ballot diagnostic includes every agent that actually voted, but a ballot-removal
-counterfactual still measures necessity for a particular ejection rather than proving that two
-coalition ballots alone were sufficient.
-
-## Training, information and response dynamics
-
-Both learned teams use shared policies and team rewards. In the archived runs, the scripted crew
-had access to its full within-round observation history, whereas the non-recurrent actor saw a
-compressed last-sighting representation. Thus those comparisons combine policy learning with
-different retained information. Removing the explicit partner-identity feature also left
-role-dependent incident masks. The corrected replication retains private positional histories
-and removes the direct role-mask channel; its ablation still does not preclude inference from
-subsequent outcomes or test independently incentivized coalition formation.
-
-The budget and reward controls retain positive last-mover gains in the archived runs, but they
-cover specific finite budgets and objectives. They do not establish equivalence, rule out training
-artifacts, or test the full lineage under the coordination ablations. Reward changes substantially
-affect defender-stage levels and the size of the last-mover gain.
-
-F5 trains a fresh policy against a frozen opponent at every stage. Repeated outcome reversals and
-large distances between separately initialized policies do not demonstrate an attracting cycle,
-absence of a fixed point, or asymptotic non-convergence. Tests against policy populations,
-warm-started responses, restart controls and measured exploitability would be needed to address
-those questions. The observed last-mover gains are finite-horizon descriptive findings.
-
-## Whole-game outcomes
-
-Multi-round play adds population changes, movement and repeated opportunities to create incidents.
-Game-win rate and rounds played therefore capture effects that a single-meeting metric cannot.
-The archived FE statistic, however, inspects only the terminal meeting. The separately recomputed
-cumulative incident-bearing FE probability has a different pattern. Future evaluations should
-report cumulative innocent ejections with and without incidents, per-meeting rates, and game wins
-separately, rather than treating a lower terminal FE rate as reduced harm throughout the game.
+The Gaussian surrogate models corroboration capture as coalition-weight amplification.
+The game's measured alibi errors occur while total coalition weight remains below its uniform
+share in the inspected scripted records. Alibi credit and the placement of self-incriminating
+penalties within downweighted rows offer different mechanisms, with attack-dependent tradeoffs
+under intervention. This distinction prevents the paper's motivating analogy from becoming an
+unsupported explanation of every game outcome.
 
 # Limitations
 
-1. **Training validity.** The original asynchronous collector finalized unfinished fragments with
-   zero terminal bootstrap and later credited rewards only to the remaining fragment. The
-   collector is repaired and regression-tested. F1 and single-meeting F3 now report completed
-   corrected replications; the remaining spatial learning and budget/reward/coordination results
-   are provisional archives while their reruns continue. Completed results remain descriptive
-   until the full planned analysis is available.
-2. **Evaluation scope.** The corrected F1 study uses genuinely untrained and final checkpoints
-   on independent held-out draws, with monitored curves on a separate stream. This replaces the
-   archived reused-environment evaluation. Evaluation remains within the same benchmark
-   distribution and does not measure transfer to unseen game rules or natural-language play.
-3. **Information and ablation scope.** Archived learned actors did not retain the full private
-   history used by scripted crews, and partner-feature ablation left role information in action
-   masks. Both defects are repaired for the replication. C0-stage channel ablation still does
-   not test a full response lineage or isolate all information and coordination mechanisms.
-4. **Hypothesis model.** The archived rule used a uniform-room approximation and nonzero smoothing,
-   and permitted incident victims in candidate coalitions. The corrected rule removes those
-   features but remains a declared feasibility heuristic rather than an exact posterior under
-   the game's full data-generating process. Its new evaluations and adaptive attacks are pending.
-5. **Diagnostic and outcome definitions.** The archived dependence summaries use post-ejection
-   survivors and are not pre-vote mechanism estimates. The ballot diagnostic has been corrected
-   separately. Archived multi-round FE is a final-meeting statistic and the old cumulative framing
-   counter includes only rounds with real incidents. New records distinguish total harm,
-   incident-bearing harm, and incident-free harm across all meetings.
-6. **Statistical scope.** Seed counts are ten or five as specified in Section 5. The archived
-   sign-flip tests are exploratory, unadjusted and require a sign-symmetry assumption. With five nonzero paired
-   differences the minimum two-sided value is 0.0625. Null results do not establish equivalence,
-   and multiple tables reuse seeds, policies and outcomes. Tables 5 and 6 now use ten independent
-   evaluation replicates per population, but are a post-audit descriptive study. Common initial
-   evidence does not make their response and vote transcripts identical across interventions.
-7. **Sequential training.** Each stage is a finite-budget PPO-trained response from a fresh
-   initialization, not a certified best response. Ten generations cannot establish asymptotic
-   dynamics. Population-based and simultaneous training were not evaluated.
-8. **Environment scope.** Four rooms, short horizons, symbolic claims and two impostors limit
-   generalization to natural-language social deduction. Incidents require no additional crew
-   witness, but may occur with the partner present. Multi-round parity is checked after the
-   meeting vote; a temporary parity after a kill does not itself terminate the game.
-9. **Analytical scope.** The deterministic mean-field surrogate and asymptotic median-bias
-   reference are distinct from finite-sample estimator risk. Dependence repair requires the
-   stated agreement-ordering assumptions. The sensor simulation uses one parameter family.
-10. **Reproducibility.** Local summary and episode artifacts permit substantial reaggregation,
-    but many original checkpoints and full replays are absent. Archived results cannot all be
-    reevaluated without retrieving missing artifacts or retraining. Some matched-seed runs used
-    different machines; without a controlled comparison this remains a possible confound.
+1. **Restricted benchmark.** Small maps, structured claims, two policy-sharing impostors, and
+   fixed observation/action spaces do not establish behavior in natural-language deliberation,
+   independently incentivized coalitions, or deployed sensor systems.
+2. **Finite learning and testing.** PPO stages start from fresh weights and have finite budgets.
+   Crossplay contains a finite policy pool, not optimal responses over all possible strategies.
+   The larger population has only three generations and five seeds.
+3. **Inference resolution.** Five-seed exact tests cannot reject at raw 0.05, and larger ten-seed
+   families encounter a corresponding Holm limit. Intervals are pointwise; Holm correction is
+   within named families. Absence of rejection is not equivalence, and 303 specified contrasts
+   do not make the original exploratory study prospectively preregistered.
+4. **Information and hypothesis modeling.** Within-round histories are matched, but non-recurrent
+   actors have limited cross-round memory. Hidden-partner controls change several information
+   channels together. The hypothesis solver is exact for emitted constraints, with documented
+   relaxations for some negative claims; normalized feasibility scores are not calibrated
+   generative posteriors.
+5. **Mechanism scope.** Matched initial evidence does not fix subsequent responses; ballot
+   removal does not model behavioral adaptation. The bounded F2 replay does not estimate
+   failure-route prevalence. Supplemental studies remain descriptive.
+6. **Outcome definitions.** Creator quantities require incidents. Terminal coordination can be
+   undefined after a prior coalition ejection. Whole-game harm includes incident-free meetings.
+   Voting error, abstention, and coalition victory cannot be substituted for one another.
+7. **Implementation and reproduction.** The audit changed several components together, so
+   differences from historical experiments cannot be attributed to one isolated fix. Frozen
+   source hashes, checkpoints, raw outcomes, and environment manifests support reproduction;
+   different operating systems and PyTorch builds need not produce bit-identical training.
+8. **Analytical correspondence.** The Gaussian surrogate has a strict reporter-minority
+   condition and a parameter-restricted dependence result. Finite-sample weights and game
+   testimony need not obey its amplification thresholds.
 
 # Conclusion
 
-The completed corrected experiments show that aggregation rules and trained policies affect
-false ejections in this structured benchmark. Meeting-only coalition training increases
-held-out false ejections at all three population sizes. In the single-meeting spatial game,
-the learned defender ejects more innocents against C0 than the scripted crew, and coalition
-retraining raises this error at 5+2 and 7+2 but lowers its average at 3+2. The resulting policies
-transfer poorly to the scripted defender. These comparisons are descriptive and specific to
-the tested finite-budget training procedure.
-
-The separate scripted replication finds a credibility disadvantage against coordinated alibis
-at the two larger sizes despite below-uniform average coalition weight. Alibi support and
-caught-lying penalty placement affect errors across conditions; their interventions do not
-provide a universally better rule. The analytical model supplies explicit conditions for
-weight amplification and attenuation in a deterministic surrogate, without calibrating an
-exact threshold for the symbolic game.
-
-The audit corrected trajectory collection, evaluation, private-history retention, inference
-constraints and diagnostic populations. Multi-round response sequences, adaptive defense
-comparisons and controls still require their completed corrected measurements. The archived
-patterns cannot establish those findings for the repaired implementation or demonstrate
-asymptotic learning dynamics. The full replication and its prespecified analysis must be
-integrated before this working revision is ready for submission.
+The completed corrected replication shows that defensive performance depends on the attacker,
+the training sequence, and the chosen outcome. Coalition learning increases harmful aligned
+voting without increasing directly false claims. Hypothesis scoring trades some scripted-attack
+accuracy gains for truthful-testimony costs and remains vulnerable to targeted training.
+Repeated response learning produces renewed gains against the latest opponent over the observed
+horizon, without establishing an equilibrium or persistent cycle. Dependence-aware defenses
+can lower coalition victory while increasing innocent ejections. Combining explicit outcome
+definitions, adaptive crossplay, and bounded mechanism diagnostics yields a more qualified
+account of coalition deception than any single credibility or win-rate measure.
 
 # Acknowledgements {-}
 
@@ -1456,16 +1066,19 @@ produced by the executable experiments and analysis scripts described in this pa
 
 # Data availability {-}
 
-The code, configurations and locally retained data are being assembled into a versioned
-reproducibility package alongside the corrected replication. A public archive identifier
-has not yet been assigned. Appendix C distinguishes archived artifacts from the corrected
-implementation and its new experiments.
+Code, the manuscript, all final seed-level summaries, planned comparisons, and supplemental
+diagnostics are available in the public repository
+[Coalition Deception](https://github.com/IsaacLin247/coalition-deception).
+The versioned corrected-study release supplies the original frozen source, retained checkpoints,
+raw episode and meeting records, and checksum manifests:
+[corrected-study-2026-09-11](https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11).
+The original and portable source fingerprints are distinguished in the reproduction guide.
+Appendix C specifies the analysis and manuscript build.
 
 # References {-}
 
 ::: {#refs}
 :::
-
 
 # Appendix A. Proposition: corroboration capture under correlated testimony {-}
 
@@ -1547,16 +1160,14 @@ The tests check the Gaussian probabilities, limiting concentration statistic, si
 | PPO | learning rate $3\times10^{-4}$, clip 0.2, $\gamma = 1$, GAE $\lambda = 0.95$, up to 8 epochs (target KL 0.05), 4 minibatches stratified by phase, value coefficient 0.5, entropy coefficient 0.02 annealed to 0.005, gradient clip 0.5 |
 | Updates per stage | 400 standard; 800 or 1,600 for defender-budget controls |
 | Generations (multi-generation loops) | 10 (5+2 and 3+2), 3 (7+2), 4 (defended loop, single-meeting reward control), 2 (multi-round reward control) |
-| Rollout per update | 64 total episodes across 64 environments (F1); target of at least 32 completions across 32 environments (archived spatial training) |
+| Rollout per update | 64 completed episodes across 64 environments (F1); 32 completed episodes across 32 environments (spatial) |
 | Evaluation | 400 episodes every 20 updates (F1); 1,000 cross-play episodes per stage (F3, F4, controls); 1,000 per stage and 500 per cross-play cell (multi-generation) |
 | Seeds | 10 (F1–F4; F8 at 5+2; 5+2 multi-generation loops, defended loop and counterattack), 10 (3+2 loop), 5 (7+2 loop), 5 (F8 at 7+2, static learned-policy evaluations, controls); see Section 5 for evaluation-seed conventions |
 | Credibility temperatures | 1.5 (soft), 0.15 (sharp) |
 | Dependence-aware defense | $\lambda = 4$, window of three meetings, top-1 partner |
-| Hypothesis crew | honesty probability 1/2, ejection threshold 1/2, excluded-hypothesis pseudoweight $10^{-3}$ |
+| Hypothesis crew | honesty probability 1/2, ejection threshold 1/2, zero weight for impossible hypotheses; no pseudoweight |
 
-Table B1. Archived configurations and hyperparameters. The corrected hypothesis rule uses no
-pseudoweight; repaired collection, observation, evaluation and scoring procedures are specified
-in Sections 3--5 and Appendix C.
+Table B1. Corrected configurations and hyperparameters. All trained policies use completed-episode batches and independent evaluation streams.
 
 **Suspicion weights of the scripted crew.** Own evidence: an agent the voter saw in the incident
 room during the scene window +3.0; an agent the voter saw elsewhere −3.5; an agent the voter could
@@ -1572,54 +1183,41 @@ jointly satisfiable. The caught and contradictory branches replace the corrobora
 
 **Scripted coalitions.** The full behavioral definitions are in Section 3.3. In particular,
 alibi support is asymmetric (creator self-location plus partner sighting/defense), and the framer
-makes scene-placement claims rather than necessarily truthful testimony. The archived scripts'
-spatial movement inspected adjacent-room occupancy; the corrected scripts use their own sightings
-and other legitimately available information.
+makes scene-placement claims rather than necessarily truthful testimony. Spatial movement uses the script's own sightings and other legitimately available information.
 
 # Appendix C. Reproduction {-}
 
-The public source package contains corrected scientific code in `code/`, manuscript sources
-and figures in `paper/`, and the publication audit record in `cahnges.md`. See `code/README.md`
-for reproduction commands. `paper/build.sh` regenerates PDF and TeX. Historical launchers,
-live status, raw data and checkpoints are excluded.
+The public package separates code, paper, and final analysis data. The original completed
+study identifies its 82-file executable/configuration snapshot by SHA-256
+691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35.
+The cleaned portable package has a different source fingerprint, recorded in its packaging
+provenance, while preserving all 240 job designs and the scientific engine. Original run
+outputs retain the original protocol; they are not relabeled as products of the portable tree.
 
-Fresh runs use the same experimental design with a new packaging fingerprint and protocols.
-The original 240-job protocol is `code/provenance/original_study_protocol.json`;
-existing corrected measurements retain their original source and run provenance. Passing
-tests cannot validate old-collector results. Reruns need a fresh results directory, code
-version, complete checkpoints, environment configuration and independent evaluation seeds.
+The study completed 1,255 learner stages and retains 11,885 checkpoints, including a genuinely
+untrained F1 checkpoint, intermediate checkpoints every 20 F1 or 50 spatial updates, and final
+checkpoints. Validation checks restricted deserialization, finite architecture-compatible
+tensors, expected update counts, and equality of final versus final-numbered parameters.
+It checks raw episode and meeting outcomes against aggregates, exact seed cohorts, every
+planned comparison, source identity, and configuration. A completed history file alone does
+not mark an experiment complete.
 
-**Post-audit replication protocol.** The correction package specifies 240 jobs containing
-1,255 learner stages in `code/experiments/submission/run_study.py`. It preserves the original
-seed counts, 400-update standard budget, 800/1,600-update defender controls, 64 completed
-episodes per F1 update, and 32 completed episodes per spatial update. A frozen source
-manifest and job-specific completion records distinguish these runs from the archives.
-The primary final evaluation stream starts at seed 1987654321; monitored training curves
-use the separate 987654321 stream. All evaluations finish fixed episode-index batches,
-and evaluation policies have isolated sampling generators. F1 retains an untrained
-checkpoint and checkpoints every 20 updates; spatial runs retain checkpoints every
-50 updates. Completed multigeneration evaluations retain per-game and per-meeting CSVs.
+The reproducibility archive supplies the frozen engine and protocols, raw main-study and
+supplemental data, environment manifests, current analysis/verification tools, and checksums.
+The current analyzer and renderer are separate from the immutable engine snapshot. The final
+analysis contains all 303 contrasts in 15 families; the manuscript presents selected estimates,
+while the complete tables retain every contrast, metric, and seed identity. The finite-pool
+gap file includes the selected policies and conservative within-matrix uncertainty bands.
 
-The revised spatial observation adds within-round private histories, and the partner-information
-intervention removes direct identity, legality-mask and message-missingness channels.
-Scripted movement no longer inspects unseen adjacent rooms. Hypothesis scoring applies hard
-public-role and joint positional constraints without pseudoweights for impossible hypotheses;
-it remains a feasibility heuristic, not an exact posterior for the full game. Dependence is
-computed over the complete electorate with each meeting counted once. New harm metrics include
-any innocent ejection and total innocent ejections across all meetings, including incident-free
-meetings. These changes define the corrected replication. Tables 2 and 7 and Figures 1 and 3
-report completed F1/F3 groups; Tables 5 and 6 report the completed mechanism supplement. Other
-empirical tables and figures remain archived until their replacements are checked. Detailed
-changes and evidence status appear in `cahnges.md`; `code/README.md` documents reproduction
-using `code/submission_protocol.json`.
+The mechanism supplement includes 30 jobs, 540,000 episodes, and 240,000 honest-voter records.
+The ballot supplement includes 15 trained input jobs, 135 evaluation cells, 67,500 episodes,
+and 317,670 honest score views. Source, checkpoint, reset, and raw-record identities are retained.
+Independent verification recomputes tally necessity/sufficiency, abstention, score-derived
+flags, and aggregate summaries; it does not turn feasibility scores into exact probabilities.
 
-The supplemental mechanism study uses ten independent evaluation replicates per population,
-500 episodes per rule/condition/intervention cell, four scripted conditions, three summing rules
-and three mechanism variants (540,000 episodes in total). Initial evidence is matched across
-the nine rule/variant cells within each condition and replicate. All episode outcomes and the
-baseline soft-rule voter records are retained. Both response actions and votes use the selected
-variant; these are full mechanism interventions. The portable supplement scripts and
-fresh-run protocols are under `code/audit/submission/`; existing measurements retain their
-original frozen protocol. This study is post-audit and descriptive.
-The checkpoint-dependent F8 ballot replay has a separate fixed protocol and awaits its newly
-trained input policies; the archived Table 17 is not a measurement of the repaired hypothesis rule.
+The self-contained paper build converts the canonical Markdown into TeX and PDF using Pandoc,
+the supplied caption filter, and XeLaTeX. Its final tables are selected from validated
+machine-readable summaries; the paper directory retains a source-value manifest. The release
+README provides exact analysis, checksum-verification, extraction, and build commands.
+Historical drafts, incomplete jobs, smoke outputs, and superseded analyses are not used as
+evidence for the results in this manuscript.

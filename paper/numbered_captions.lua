@@ -53,7 +53,7 @@ local function group_captions(blocks)
         specs[3][2] = specs[3][2] + 0.005
         block.colspecs = specs
       elseif table_number == '17' then
-        local widths = {0.20, 0.085, 0.055, 0.10, 0.10, 0.10, 0.10, 0.105, 0.155}
+        local widths = {0.08, 0.14, 0.075, 0.105, 0.105, 0.12, 0.12, 0.16, 0.095}
         for column, width in ipairs(widths) do specs[column][2] = width end
         block.colspecs = specs
       end

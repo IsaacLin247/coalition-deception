@@ -1,0 +1,12 @@
+{
+  "C2_vs_D0": {
+    "episodes": 500,
+    "earlier_coalition_ejection": 500,
+    "meetings": 1359
+  },
+  "C3_vs_D0": {
+    "episodes": 500,
+    "earlier_coalition_ejection": 500,
+    "meetings": 1457
+  }
+}

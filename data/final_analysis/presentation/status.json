@@ -1,0 +1,245 @@
+{
+  "status": "complete",
+  "included_groups": [
+    "ablation_n7_r1",
+    "ablation_n7_r8",
+    "counterattack_hyp_n7_r1",
+    "counterattack_hyp_n9_r1",
+    "counterattack_n5_r1",
+    "counterattack_n7_r1",
+    "depstatic_n7_r1",
+    "f1_tenseed_crew3",
+    "f1_tenseed_crew5",
+    "f1_tenseed_crew7",
+    "f2_tenseed_crew3",
+    "f2_tenseed_crew5",
+    "f2_tenseed_crew7",
+    "f3_budget_d1600_crew5",
+    "f3_budget_d800_crew5",
+    "f3_tenseed_crew3",
+    "f3_tenseed_crew5",
+    "f3_tenseed_crew7",
+    "f4_budget_d800_crew5",
+    "f4_tenseed_crew3",
+    "f4_tenseed_crew5",
+    "f4_tenseed_crew7",
+    "multigen_dependence_n7_r8_k4",
+    "multigen_none_n5_r8_k10",
+    "multigen_none_n7_r1_k10",
+    "multigen_none_n7_r8_k10",
+    "multigen_none_n9_r8_k3",
+    "multigen_rwbal_n7_r1_k4",
+    "multigen_rwfe_n7_r8_k2",
+    "multigen_rwmeet_n7_r1_k4"
+  ],
+  "source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+  "input_hashes": {
+    "status": "bb1b680c6c86089d0131a2c70f814ac621adf87f03d81f6b2510123e383c8dd8",
+    "cell_summary": "d244c7f32d5292f6caa7a7afbc1f0c7da45a29612a803dc2aa07b73849028b61",
+    "paired_effects": "93d8e72adffb565aea03b344f28414d072e0feb2e1c472a0bf1ccab1fabb1924",
+    "matched_reference_summary": "092b5f2ef4d14326c25386b826aab0f8e38bbc3ad7135fc60d9fbc6ef847e362",
+    "per_seed": "0753ef5edc01d50d944d862f17f5292e9808aefe8b1f4c238bcec5e380a1c992"
+  },
+  "analysis_sha256": "b76f5ec4345a174d101d456ab7efe3ffc98c755ffdfc2d5c90b1b8542a61f92b",
+  "renderer_sha256": "64fb73ead1d7242e3208cd7c6d9127dfa138e43a7268c774557810863ba98a14",
+  "created_utc": "2026-09-11T03:00:11.016692+00:00",
+  "figures": [
+    {
+      "file": "f1_learning_and_holdout.pdf",
+      "preview": "f1_learning_and_holdout.png",
+      "caption": "F1 monitored curves and independent holdout endpoints. Curve axes use the analyzer's completed-update values; monitored evaluations are separate from both holdout endpoints."
+    },
+    {
+      "file": "depstatic_n7_r1_rules.pdf",
+      "preview": "depstatic_n7_r1_rules.png",
+      "caption": "Scripted coalition and crew-rule evaluation (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f2_tenseed_crew3_rules.pdf",
+      "preview": "f2_tenseed_crew3_rules.png",
+      "caption": "Scripted coalition and crew-rule evaluation (3+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f2_tenseed_crew5_rules.pdf",
+      "preview": "f2_tenseed_crew5_rules.png",
+      "caption": "Scripted coalition and crew-rule evaluation (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f2_tenseed_crew7_rules.pdf",
+      "preview": "f2_tenseed_crew7_rules.png",
+      "caption": "Scripted coalition and crew-rule evaluation (7+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f3_tenseed_crew3_crossplay.pdf",
+      "preview": "f3_tenseed_crew3_crossplay.png",
+      "caption": "Matched three-stage crossplay (3+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f3_tenseed_crew5_crossplay.pdf",
+      "preview": "f3_tenseed_crew5_crossplay.png",
+      "caption": "Matched three-stage crossplay (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f3_tenseed_crew7_crossplay.pdf",
+      "preview": "f3_tenseed_crew7_crossplay.png",
+      "caption": "Matched three-stage crossplay (7+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f4_tenseed_crew3_crossplay.pdf",
+      "preview": "f4_tenseed_crew3_crossplay.png",
+      "caption": "Matched three-stage crossplay (3+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f4_tenseed_crew5_crossplay.pdf",
+      "preview": "f4_tenseed_crew5_crossplay.png",
+      "caption": "Matched three-stage crossplay (5+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "f4_tenseed_crew7_crossplay.pdf",
+      "preview": "f4_tenseed_crew7_crossplay.png",
+      "caption": "Matched three-stage crossplay (7+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "counterattack_hyp_n7_r1_crossplay.pdf",
+      "preview": "counterattack_hyp_n7_r1_crossplay.png",
+      "caption": "Coalition training-defense \u00d7 evaluation-defense crossplay (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "counterattack_hyp_n9_r1_crossplay.pdf",
+      "preview": "counterattack_hyp_n9_r1_crossplay.png",
+      "caption": "Coalition training-defense \u00d7 evaluation-defense crossplay (7+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "counterattack_n5_r1_crossplay.pdf",
+      "preview": "counterattack_n5_r1_crossplay.png",
+      "caption": "Coalition training-defense \u00d7 evaluation-defense crossplay (3+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "counterattack_n7_r1_crossplay.pdf",
+      "preview": "counterattack_n7_r1_crossplay.png",
+      "caption": "Coalition training-defense \u00d7 evaluation-defense crossplay (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_dependence_n7_r8_k4_stages.pdf",
+      "preview": "multigen_dependence_n7_r8_k4_stages.png",
+      "caption": "Stage evaluations, 5+2 players, up to 8 rounds. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_dependence_n7_r8_k4_matrix.pdf",
+      "preview": "multigen_dependence_n7_r8_k4_matrix.png",
+      "caption": "Cross-generation evaluation matrix (5+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_dependence_n7_r8_k4_response_gaps.pdf",
+      "preview": "multigen_dependence_n7_r8_k4_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_none_n5_r8_k10_stages.pdf",
+      "preview": "multigen_none_n5_r8_k10_stages.png",
+      "caption": "Stage evaluations, 3+2 players, up to 8 rounds. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_none_n5_r8_k10_matrix.pdf",
+      "preview": "multigen_none_n5_r8_k10_matrix.png",
+      "caption": "Cross-generation evaluation matrix (3+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_none_n5_r8_k10_response_gaps.pdf",
+      "preview": "multigen_none_n5_r8_k10_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_none_n7_r1_k10_stages.pdf",
+      "preview": "multigen_none_n7_r1_k10_stages.png",
+      "caption": "Stage evaluations, 5+2 players, single meeting. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_none_n7_r1_k10_matrix.pdf",
+      "preview": "multigen_none_n7_r1_k10_matrix.png",
+      "caption": "Cross-generation evaluation matrix (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_none_n7_r1_k10_response_gaps.pdf",
+      "preview": "multigen_none_n7_r1_k10_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_none_n7_r8_k10_stages.pdf",
+      "preview": "multigen_none_n7_r8_k10_stages.png",
+      "caption": "Stage evaluations, 5+2 players, up to 8 rounds. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_none_n7_r8_k10_matrix.pdf",
+      "preview": "multigen_none_n7_r8_k10_matrix.png",
+      "caption": "Cross-generation evaluation matrix (5+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_none_n7_r8_k10_response_gaps.pdf",
+      "preview": "multigen_none_n7_r8_k10_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_none_n9_r8_k3_stages.pdf",
+      "preview": "multigen_none_n9_r8_k3_stages.png",
+      "caption": "Stage evaluations, 7+2 players, up to 8 rounds. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_none_n9_r8_k3_matrix.pdf",
+      "preview": "multigen_none_n9_r8_k3_matrix.png",
+      "caption": "Cross-generation evaluation matrix (7+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_none_n9_r8_k3_response_gaps.pdf",
+      "preview": "multigen_none_n9_r8_k3_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_rwbal_n7_r1_k4_stages.pdf",
+      "preview": "multigen_rwbal_n7_r1_k4_stages.png",
+      "caption": "Stage evaluations, 5+2 players, single meeting. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_rwbal_n7_r1_k4_matrix.pdf",
+      "preview": "multigen_rwbal_n7_r1_k4_matrix.png",
+      "caption": "Cross-generation evaluation matrix (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_rwbal_n7_r1_k4_response_gaps.pdf",
+      "preview": "multigen_rwbal_n7_r1_k4_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_rwfe_n7_r8_k2_stages.pdf",
+      "preview": "multigen_rwfe_n7_r8_k2_stages.png",
+      "caption": "Stage evaluations, 5+2 players, up to 8 rounds. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_rwfe_n7_r8_k2_matrix.pdf",
+      "preview": "multigen_rwfe_n7_r8_k2_matrix.png",
+      "caption": "Cross-generation evaluation matrix (5+2 players, up to 8 rounds). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_rwfe_n7_r8_k2_response_gaps.pdf",
+      "preview": "multigen_rwfe_n7_r8_k2_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    },
+    {
+      "file": "multigen_rwmeet_n7_r1_k4_stages.pdf",
+      "preview": "multigen_rwmeet_n7_r1_k4_stages.png",
+      "caption": "Stage evaluations, 5+2 players, single meeting. The band is between-seed SD; similar levels do not establish stationarity or convergence."
+    },
+    {
+      "file": "multigen_rwmeet_n7_r1_k4_matrix.pdf",
+      "preview": "multigen_rwmeet_n7_r1_k4_matrix.png",
+      "caption": "Cross-generation evaluation matrix (5+2 players, single meeting). Columns identify the evaluated defender/condition; rows identify the coalition or crew rule. Each cell is mean \u00b1 SD across the complete seed group."
+    },
+    {
+      "file": "multigen_rwmeet_n7_r1_k4_response_gaps.pdf",
+      "preview": "multigen_rwmeet_n7_r1_k4_response_gaps.png",
+      "caption": "Finite observed-policy response gaps. All observed policy generations define the pool; shading shows seed SD, not Monte Carlo confidence bounds or uncertainty over unobserved policies."
+    }
+  ],
+  "table_cells": 2487,
+  "paired_contrasts": 303
+}

@@ -1,5 +1,5 @@
 {
-  "kind": "portable source packaging; no completed result migration",
+  "kind": "portable source packaging; original completed results distributed separately",
   "original_source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
   "portable_source_sha256": "cdaa1c031b4e2e6e690771c9a884ed70ed78653814863f99bb2fe0def367ae68",
   "original_protocol_sha256": "05be4efaff58996ee58c3dffa92b24f8faa4cd60a37ae8b1baf32cfe08eb8aa0",
@@ -26,10 +26,14 @@
     "checkpoint_plan: code root replaces nested source snapshot; expected fingerprint repinned",
     "replicate_mechanisms: source default uses code root; expected fingerprint repinned",
     "replicate_vote_diagnostic: source and study-protocol defaults use code root",
-    "supplemental protocols freshly generated for portable package; same scientific designs"
+    "supplemental protocols freshly generated for portable package; same scientific designs",
+    "analyze_submission: preserve only raw-proven undefined terminal coordination; primary outcomes remain strictly complete",
+    "verify_packaging: verify original/portable protocol identities, equal job designs, and exact portable scientific source inventory",
+    "Original-run main analysis uses original_study_protocol.json; portable checkpoint expectations are identical for all scientific drivers/configurations"
   ],
   "retained_analysis_regressions": [
     "analysis/analyze_ablation_budget.py",
     "analysis/analyze_revision.py"
-  ]
+  ],
+  "final_analysis_note": "The original main study completed all 240 jobs and final inference on 2026-09-11 UTC (2026-09-10 America/Chicago). Analysis-only revisions do not change either frozen training source fingerprint."
 }

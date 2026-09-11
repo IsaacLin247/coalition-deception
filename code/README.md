@@ -1,6 +1,6 @@
 # Research code
 
-This directory contains the audited environment, policies, PPO training, complete 240-job study runner, scientific supplements, analysis, and regression tests. The accompanying paper is a working manuscript; the corrected replication is still in progress. This public package contains code and protocols, not completed research data or checkpoints.
+This directory contains the audited environment, policies, PPO training, complete 240-job study runner, scientific supplements, analysis, and regression tests. The corrected study has completed all 240 jobs and final numerical validation, plus both descriptive supplements. Main-study tables and statistical results are in [../data/final_analysis/](../data/final_analysis/); this code directory contains no raw research data or checkpoints. The original study and a new reproduction have different source fingerprints, as explained below.
 
 ## Install and verify
 
@@ -12,10 +12,13 @@ python -m venv .venv
 python -m pip install -e '.[rl,env,analysis,dev]'
 python -m pytest tests
 python -m pytest --import-mode=importlib audit/submission/test_vote_diagnostic.py audit/submission/test_verify_vote_diagnostic.py
+python analysis/verify_packaging.py
 python experiments/submission/run_study.py status
 ```
 
 The editable install is required for this repository workflow because configuration files live alongside the source tree. Dependencies are NumPy, PyTorch, PyYAML, pandas, matplotlib, PettingZoo, Gymnasium, pytest, and Hypothesis; the installation command includes all of them. Production experiments use CPU execution and one computation thread per job. Results can differ across library versions and platforms even with identical seeds.
+
+The runner's default status describes a new local reproduction, so a fresh checkout correctly reports zero completed jobs. It does not query the completed original study or download its results.
 
 ## Run the complete study
 
@@ -29,7 +32,7 @@ python experiments/submission/run_study.py status --worker all --results results
 
 Four slots is an example; select a concurrency level your machine can support. The complete study is substantial: 1,255 training stages and 512,000 PPO updates, plus scripted evaluation. The runner checks dependencies, source identity, required artifacts, and completion markers. It resumes by skipping completed jobs. Interrupted individual jobs do not resume an intermediate checkpoint automatically. Worker names are scheduling labels; `--worker all` runs the entire plan on one machine. A `--families` subset is useful for development but cannot satisfy the full analysis gate.
 
-Do not edit hashed source files during a reproduction. Changes require a separately documented new protocol and matching supplement/analysis pins; they must not overwrite or masquerade as this package's frozen design. The original ongoing computation is separate and remains unchanged.
+Do not edit hashed source files during a reproduction. Changes require a separately documented new protocol and matching supplement/analysis pins; they must not overwrite or masquerade as this package's frozen design. The completed original computation remains separately identified and unchanged.
 
 ## Analyze completed outputs
 
@@ -42,7 +45,29 @@ The analyzer verifies job identity, checkpoints, raw outcomes, all planned seeds
 
 The current `analyze_ablation_budget.py` and `analyze_revision.py` helpers are also retained because the regression suite checks their repaired statistical estimands and matched reference cohorts. The complete reproduction workflow uses the gated commands above.
 
-These commands regenerate tables and plots from a new reproduction. They do not silently replace the accompanying manuscript's figures or convert provisional manuscript claims into final findings.
+These commands regenerate tables and plots from a new reproduction. Generated outputs retain that reproduction's source identity; incorporate new outcomes into a manuscript only with the matching analysis and provenance.
+
+### Reanalyze the completed original study
+
+Use the retained **original** protocol when analyzing the completed study's raw run directory, including a run directory extracted from its reproducibility archive. Replace `PATH_TO_ORIGINAL_RUNS` with the directory containing the 240 job folders and their `_control` completion markers:
+
+```sh
+python analysis/verify_packaging.py
+python analysis/analyze_submission.py --protocol provenance/original_study_protocol.json --runs PATH_TO_ORIGINAL_RUNS --out results/original_analysis
+python analysis/render_submission.py --analysis results/original_analysis --out results/original_presentation
+```
+
+The packaging verifier checks both protocol hashes, all 240 identical job definitions, the complete portable source inventory, and the documented differences from the original manifest. All 71 shared files other than the replay presentation script are byte-identical to the frozen originals. Checkpoint expectations therefore come from the same scientific driver and configuration bytes; the analyzer still requires the original source hash in every original job's completion and run metadata. It does not relabel those runs with the portable hash. A full verification against all 240 original jobs reproduced every numerical field in the five final analysis tables; [the verification receipt](provenance/final_analysis_verification.json) records the comparison and canonical table hashes.
+
+The published per-seed table also supports an independent numerical check without checkpoints or training. This verifier does not import the production analyzer; it reconstructs all 303 planned signed contrasts, exact sign-flip p-values, 20,000-resample bootstrap intervals, and the 15 family-wise Holm corrections:
+
+```sh
+python audit/submission/verify_final_inference.py --analysis ../data/final_analysis
+```
+
+The final analyzer retains undefined terminal coordination when raw meeting histories prove that an earlier coalition ejection left fewer than two coalition ballots in every terminal meeting. Two cells in one nine-agent multigeneration run meet that condition. Undefined values remain undefined; missing primary outcomes, unexplained missing coordination, infinities, incomplete histories, or missing seeds still block final inference.
+
+This command is for main-study analysis. Original mechanism/F8 result validation and reproduction use the original pinned supplement scripts and protocols retained with the original reproducibility archive. The supplement commands below use this distribution's portable pins for a new reproduction; do not apply those pins to original supplemental outputs.
 
 ## Mechanism supplement
 
@@ -86,7 +111,7 @@ The theory model is a restricted mathematical example, separate from the learned
 
 ## Provenance of this clean package
 
-[provenance/packaging.json](provenance/packaging.json) records both source fingerprints, the omitted historical/operational files, and the one retained source file updated since the original freeze: `scripts/plot_f4_full_game.py`. All shared engine, policy, training-driver, and configuration bytes match the original audited study. The original protocol is retained solely as [provenance/original_study_protocol.json](provenance/original_study_protocol.json).
+[provenance/packaging.json](provenance/packaging.json) records both source fingerprints, the omitted historical/operational files, and the one retained source file updated since the original freeze: `scripts/plot_f4_full_game.py`. All shared engine, policy, training-driver, and configuration bytes match the original audited study. The original protocol is retained as [provenance/original_study_protocol.json](provenance/original_study_protocol.json) for provenance and reanalysis of original results.
 
 The new main job list is exactly equal to that original list. Portable checkpoint validation now reads the source at this code root. Mechanism source pins and all supplemental protocol hashes were regenerated for the package, preserving every scientific design field. These fresh packaging timestamps do not imply prospective preregistration or newly completed experiments.
 

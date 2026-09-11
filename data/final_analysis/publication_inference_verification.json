@@ -1,0 +1,43 @@
+{
+  "bootstrap_resamples_per_contrast": 20000,
+  "checks": [
+    "prespecified identities and seed cohorts",
+    "per-seed signed expressions",
+    "paired means and sample SDs",
+    "complete exact sign enumeration",
+    "deterministic percentile bootstrap intervals",
+    "full-family Holm adjustment"
+  ],
+  "comparison_families": 15,
+  "completed_jobs": 240,
+  "family_sizes": {
+    "ablation": 9,
+    "ablation_behavior": 18,
+    "budget": 8,
+    "dependence_counterattack": 12,
+    "dependence_loop": 6,
+    "f1_learning": 6,
+    "f2_condition_effects": 63,
+    "f2_rule_effects": 36,
+    "f3_cycle": 9,
+    "f4_cycle": 27,
+    "hypothesis_adaptation": 14,
+    "loop_dynamics": 25,
+    "reward_controls": 18,
+    "static_learned": 28,
+    "static_rules": 24
+  },
+  "holm_below_0_05": 30,
+  "input_sha256": {
+    "paired_effects.json": "93d8e72adffb565aea03b344f28414d072e0feb2e1c472a0bf1ccab1fabb1924",
+    "per_seed.json": "6de93d77ae37386cb7fff2fc8f494ae5feade4af9f9ae8c0f69445b35e90b38f",
+    "planned_comparisons.json": "f5f5c65bf91efa299678986a69db19caeae7363d1dc3078d2d4dd76f03da0488",
+    "status.json": "fe78923947164181ada4f186e3f95fe1d8a861947ad60ec018831bec3f60f2e1"
+  },
+  "numeric_absolute_tolerance": 1e-12,
+  "paired_contrasts": 303,
+  "source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+  "status": "passed",
+  "validated_utc": "2026-09-11T03:55:23.307737+00:00",
+  "verifier_sha256": "de2ea6d8a998cb237a47b382b1cd618bdea2c694ffd76ac385c84912c84da8e6"
+}

@@ -1,0 +1,43 @@
+{
+  "analysis_sha256": "b76f5ec4345a174d101d456ab7efe3ffc98c755ffdfc2d5c90b1b8542a61f92b",
+  "comparison": "Exact equality of every row field in the five final tables, excluding machine-dependent artifact path strings in per_seed only. Canonical rows use json.dumps(rows, sort_keys=True).",
+  "completed_jobs": 240,
+  "original_source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+  "planned_contrasts": 303,
+  "portable_source_sha256": "cdaa1c031b4e2e6e690771c9a884ed70ed78653814863f99bb2fe0def367ae68",
+  "scope": "Portable public analyzer reingested all original main-study raw runs and checkpoints using the retained original protocol.",
+  "status": "passed",
+  "tables": {
+    "cell_summary": {
+      "all_semantic_fields_equal": true,
+      "canonical_rows_sha256": "b6ab07ab1adbb5a6da044027b0394957edef3b4271d4c64dae995ef27827fb93",
+      "rows": 12873
+    },
+    "matched_reference_summary": {
+      "all_semantic_fields_equal": true,
+      "canonical_rows_sha256": "e7b6a12e19d10136229b7a00f5f99b44768373295b4c593667673e218b454cd2",
+      "rows": 56
+    },
+    "paired_effects": {
+      "all_semantic_fields_equal": true,
+      "canonical_rows_sha256": "116910aa77e1b8e62c410c21ed1cdd6791573efc703d576a3b444caf8bf1b750",
+      "rows": 303
+    },
+    "per_seed": {
+      "all_semantic_fields_equal": true,
+      "canonical_rows_sha256": "f5bb51382c436f3989c3887574427459ab562842a3a5dc49b06146682dce7b16",
+      "rows": 108133
+    },
+    "restricted_pool_gaps": {
+      "all_semantic_fields_equal": true,
+      "canonical_rows_sha256": "175a11916aa0b88f11dd8fbed1ecd93601c422f0edbe8b5182d8d5c4cdb8e262",
+      "rows": 770
+    }
+  },
+  "training_or_result_data_modified": false,
+  "validation_code_sha256": {
+    "checkpoint_integrity.py": "66e3c9d9b9bd9a4117efc18ec32af6eea7fe603e763a8f81a7623e53559b054c",
+    "checkpoint_plan.py": "8c72fb704dfe1a19ca39f2d6fc0cd325d34dcefc429ae72223d1f35bbdfc78dd"
+  },
+  "verified_utc": "2026-09-11T03:47:52.026552+00:00"
+}

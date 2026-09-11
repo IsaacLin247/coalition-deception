@@ -1,0 +1,12 @@
+{
+  "checked_contrasts": 303,
+  "checked_families": 15,
+  "checks": [
+    "mean",
+    "sample_SD",
+    "exact_signed_mean_p",
+    "deterministic_20000_seed_bootstrap_CI",
+    "complete_family_Holm"
+  ],
+  "issues": []
+}

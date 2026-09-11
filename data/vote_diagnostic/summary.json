@@ -1,0 +1,2625 @@
+{
+  "cells": {
+    "n7|hypothesis|hypothesis": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.9726345859442973,
+          "sd": 0.031013805062367342,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.9775360229393465,
+          "sd": 0.02471298648645363,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0303,
+          "sd": 0.03281276851741983,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5405,
+          "sd": 0.3256870515626244,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.642,
+          "sd": 0.07886979424624135,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.25785680335075417,
+          "sd": 0.06302529671873612,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.2496,
+          "sd": 0.06426196386666067,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2017.3,
+          "sd": 6.515792780280505,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6569753658338076,
+          "sd": 0.05180905122410991,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0142,
+          "sd": 0.014920530225907598,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.660826401683644,
+          "sd": 0.048004726681939336,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.4707219438904824,
+          "sd": 0.026432613960490677,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.507150403317858,
+          "sd": 0.01576016884309954,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.42093441115896285,
+          "sd": 0.06335310185438715,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.424,
+          "sd": 0.0660235648167464,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5239785180046319,
+          "sd": 0.17481451569759443,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 212,
+          "sd": 33.01178240837319,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9653999999999999,
+          "sd": 0.013031585560561021,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 482.7,
+          "sd": 6.515792780280505,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|hypothesis|mean": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.3053245200468863,
+          "sd": 0.1291040359251034,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.37192755640358555,
+          "sd": 0.1656963187875879,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0303,
+          "sd": 0.03281276851741983,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5405,
+          "sd": 0.3256870515626244,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5576,
+          "sd": 0.08212619016556846,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.729809286373419,
+          "sd": 0.1151573535995246,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.7054,
+          "sd": 0.11779473672452431,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2017.3,
+          "sd": 6.515792780280505,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6569753658338076,
+          "sd": 0.05180905122410991,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0724,
+          "sd": 0.05553617439711406,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.03337995916772178,
+          "sd": 0.014211617659677454,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.4707219438904824,
+          "sd": 0.026432613960490677,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.507150403317858,
+          "sd": 0.01576016884309954,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.07476836919975034,
+          "sd": 0.060772710145376635,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0898,
+          "sd": 0.05807619516156723,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5163845330422259,
+          "sd": 0.17477560976402237,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 44.9,
+          "sd": 29.038097580783614,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9653999999999999,
+          "sd": 0.013031585560561021,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 482.7,
+          "sd": 6.515792780280505,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|hypothesis|soft": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.41649465175807887,
+          "sd": 0.26198697037105756,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.4625443971556504,
+          "sd": 0.2510975014462329,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0303,
+          "sd": 0.03281276851741983,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5405,
+          "sd": 0.3256870515626244,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5582,
+          "sd": 0.08377456521986718,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.7341281330055666,
+          "sd": 0.12099021231940277,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.7096,
+          "sd": 0.12337044486693993,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2017.3,
+          "sd": 6.515792780280505,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6569753658338076,
+          "sd": 0.05180905122410991,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.068,
+          "sd": 0.06161529391672529,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.04204122289520033,
+          "sd": 0.015494106973235167,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.4707219438904824,
+          "sd": 0.026432613960490677,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.507150403317858,
+          "sd": 0.01576016884309954,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.07191304746278726,
+          "sd": 0.06544439220882176,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0896,
+          "sd": 0.06487457985306042,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5880103046323264,
+          "sd": 0.11621195320649427,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 44.8,
+          "sd": 32.437289926530205,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9653999999999999,
+          "sd": 0.013031585560561021,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 482.7,
+          "sd": 6.515792780280505,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|mean|hypothesis": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.6505151585323999,
+          "sd": 0.12499728742844685,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.6032567668602151,
+          "sd": 0.1404741826726719,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.4169,
+          "sd": 0.07306078139315085,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0263,
+          "sd": 0.013928787137116825,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.2354,
+          "sd": 0.0713305295399133,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.49387033010515724,
+          "sd": 0.05137186884040211,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.4812,
+          "sd": 0.05444018123898318,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2013.2,
+          "sd": 7.899367063252599,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6345383346974718,
+          "sd": 0.055730139740679537,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0316,
+          "sd": 0.014135848832745143,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1960096481537067,
+          "sd": 0.08268215377461734,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5441060636112868,
+          "sd": 0.07176940468091526,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.793606364703282,
+          "sd": 0.052563059136469435,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.07523660608787207,
+          "sd": 0.03836298442696355,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0752,
+          "sd": 0.03745456506815216,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.07314777327935224,
+          "sd": 0.07345274731907005,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 37.6,
+          "sd": 18.727282534076082,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9736,
+          "sd": 0.015798734126505214,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 486.8,
+          "sd": 7.899367063252599,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|mean|mean": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.14840421111674604,
+          "sd": 0.06569343723271857,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.13996625689011552,
+          "sd": 0.07441727836818926,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.4169,
+          "sd": 0.07306078139315085,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0263,
+          "sd": 0.013928787137116825,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.2402,
+          "sd": 0.0752031323224712,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5857863385207579,
+          "sd": 0.03881622187084109,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5706,
+          "sd": 0.043287668246536695,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2013.2,
+          "sd": 7.899367063252599,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6345383346974718,
+          "sd": 0.055730139740679537,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0964,
+          "sd": 0.029959973297718406,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.004610629417966369,
+          "sd": 0.004077620782155042,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5441060636112868,
+          "sd": 0.07176940468091526,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.793606364703282,
+          "sd": 0.052563059136469435,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.10595538953092543,
+          "sd": 0.02927566710341709,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1062,
+          "sd": 0.0295815257663743,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.13523327549643338,
+          "sd": 0.11994313415882174,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 53.1,
+          "sd": 14.790762883187151,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9736,
+          "sd": 0.015798734126505214,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 486.8,
+          "sd": 7.899367063252599,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|mean|soft": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.13096656537299273,
+          "sd": 0.044473232291683845,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.15300530552056224,
+          "sd": 0.05522380019458737,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.4169,
+          "sd": 0.07306078139315085,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0263,
+          "sd": 0.013928787137116825,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.237,
+          "sd": 0.07376388758133014,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.6122067056620866,
+          "sd": 0.04171210342576479,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5964,
+          "sd": 0.04730797442762102,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2013.2,
+          "sd": 7.899367063252599,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6345383346974718,
+          "sd": 0.055730139740679537,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1348,
+          "sd": 0.02909295447354909,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.026460155821982644,
+          "sd": 0.019265679923584238,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5441060636112868,
+          "sd": 0.07176940468091526,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.793606364703282,
+          "sd": 0.052563059136469435,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.14090135251892877,
+          "sd": 0.030194116706125127,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1506,
+          "sd": 0.03266054364383898,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5766131675342202,
+          "sd": 0.19685556080797756,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 75.3,
+          "sd": 16.330271821919492,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9736,
+          "sd": 0.015798734126505214,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 486.8,
+          "sd": 7.899367063252599,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|soft|hypothesis": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.6837786379580362,
+          "sd": 0.10492331759040811,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.6618462043785437,
+          "sd": 0.13041450300637286,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.375,
+          "sd": 0.09120307012376283,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0124,
+          "sd": 0.011413442367080437,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.2436,
+          "sd": 0.06704426398532042,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.4676572734269102,
+          "sd": 0.06899126230046898,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.4514,
+          "sd": 0.07676254873887976,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2018.8,
+          "sd": 15.215489184088401,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6171923595654426,
+          "sd": 0.06318979765995138,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0402,
+          "sd": 0.016423560312348033,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.27109485590514565,
+          "sd": 0.10605224121174943,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.49739432191803096,
+          "sd": 0.07522459639296217,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.74641653991408,
+          "sd": 0.07545013885961593,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.11550463840990349,
+          "sd": 0.05233001016981633,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1174,
+          "sd": 0.052662869061396354,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.21864082554872027,
+          "sd": 0.1982220060111913,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 58.7,
+          "sd": 26.33143453069818,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9624,
+          "sd": 0.030430978368176778,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 481.2,
+          "sd": 15.215489184088401,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|soft|mean": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.14670363375263623,
+          "sd": 0.03466284772084024,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.187771830396297,
+          "sd": 0.06357109955262127,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.375,
+          "sd": 0.09120307012376283,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0124,
+          "sd": 0.011413442367080437,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.2414,
+          "sd": 0.06637971577723624,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5843226121199226,
+          "sd": 0.0540603936428154,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5636,
+          "sd": 0.06696466730050009,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2018.8,
+          "sd": 15.215489184088401,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6171923595654426,
+          "sd": 0.06318979765995138,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1276,
+          "sd": 0.042851682191795776,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.008313818604186615,
+          "sd": 0.007369951994181136,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.49739432191803096,
+          "sd": 0.07522459639296217,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.74641653991408,
+          "sd": 0.07545013885961593,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.13541517086007288,
+          "sd": 0.04325794883905649,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1396,
+          "sd": 0.04516439108658748,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.29846870965292016,
+          "sd": 0.18992330320200382,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 69.8,
+          "sd": 22.58219554329374,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9624,
+          "sd": 0.030430978368176778,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 481.2,
+          "sd": 15.215489184088401,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n7|soft|soft": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.13139144480931314,
+          "sd": 0.06373767644242981,
+          "total_seeds": 10
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 10,
+          "mean": 0.17979848660274897,
+          "sd": 0.06532144580400398,
+          "total_seeds": 10
+        },
+        "coalition_claims": {
+          "defined_seeds": 10,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.375,
+          "sd": 0.09120307012376283,
+          "total_seeds": 10
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 10,
+          "mean": 0.0124,
+          "sd": 0.011413442367080437,
+          "total_seeds": 10
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 10,
+          "mean": 0.2424,
+          "sd": 0.06810971541074982,
+          "total_seeds": 10
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.5962958281484592,
+          "sd": 0.06050833249090066,
+          "total_seeds": 10
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.5752,
+          "sd": 0.07298827911993054,
+          "total_seeds": 10
+        },
+        "crew_ballots": {
+          "defined_seeds": 10,
+          "mean": 2018.8,
+          "sd": 15.215489184088401,
+          "total_seeds": 10
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 10,
+          "mean": 0.6171923595654426,
+          "sd": 0.06318979765995138,
+          "total_seeds": 10
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.1774,
+          "sd": 0.0487173252321777,
+          "total_seeds": 10
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 10,
+          "mean": 0.030524332404399238,
+          "sd": 0.015324293724638406,
+          "total_seeds": 10
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.49739432191803096,
+          "sd": 0.07522459639296217,
+          "total_seeds": 10
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 10,
+          "mean": 0.74641653991408,
+          "sd": 0.07545013885961593,
+          "total_seeds": 10
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 10,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "episodes": {
+          "defined_seeds": 10,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 10
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 10,
+          "mean": 0.1776309254163112,
+          "sd": 0.04018111975289058,
+          "total_seeds": 10
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 10,
+          "mean": 0.195,
+          "sd": 0.047918912990824646,
+          "total_seeds": 10
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 10,
+          "mean": 0.6597388357256778,
+          "sd": 0.2262093062005429,
+          "total_seeds": 10
+        },
+        "false_ejections": {
+          "defined_seeds": 10,
+          "mean": 97.5,
+          "sd": 23.95945649541232,
+          "total_seeds": 10
+        },
+        "incident_rate": {
+          "defined_seeds": 10,
+          "mean": 0.9624,
+          "sd": 0.030430978368176778,
+          "total_seeds": 10
+        },
+        "incidents": {
+          "defined_seeds": 10,
+          "mean": 481.2,
+          "sd": 15.215489184088401,
+          "total_seeds": 10
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "n9|hypothesis|hypothesis": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 1.0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 1.0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0016,
+          "sd": 0.001949358868961793,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9962,
+          "sd": 0.005263078946776312,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.6636,
+          "sd": 0.029305289624912426,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.13115026579100664,
+          "sd": 0.015936345799291284,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1228,
+          "sd": 0.014601369798755185,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3031.6,
+          "sd": 9.20869154657707,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6228250652137567,
+          "sd": 0.03629393278901638,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.898788109263062,
+          "sd": 0.010971875525143938,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.36943449723012917,
+          "sd": 0.053502974576456086,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.40969075901207674,
+          "sd": 0.0062985244538670835,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.616555047512915,
+          "sd": 0.010743133202223082,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.6048,
+          "sd": 0.012132600710482491,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.4333823653460077,
+          "sd": 0.05403613518651933,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 302.4,
+          "sd": 6.06630035524124,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9368,
+          "sd": 0.018417383093154105,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 468.4,
+          "sd": 9.20869154657707,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|hypothesis|mean": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.5489646464646465,
+          "sd": 0.19912237456919832,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.604520202020202,
+          "sd": 0.17693463435749626,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0016,
+          "sd": 0.001949358868961793,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9962,
+          "sd": 0.005263078946776312,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.2476,
+          "sd": 0.08583006466268099,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.9146859754778468,
+          "sd": 0.013170368137477705,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.8568,
+          "sd": 0.016346253393362053,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3031.6,
+          "sd": 9.20869154657707,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6228250652137567,
+          "sd": 0.03629393278901638,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.014,
+          "sd": 0.009273618495495704,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.04972620479731317,
+          "sd": 0.00962341473931827,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.36943449723012917,
+          "sd": 0.053502974576456086,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.40969075901207674,
+          "sd": 0.0062985244538670835,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.0034366893014829802,
+          "sd": 0.004512313840351375,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.03,
+          "sd": 0.01095445115010332,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.42319407444215923,
+          "sd": 0.11196272342589322,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 15,
+          "sd": 5.477225575051661,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9368,
+          "sd": 0.018417383093154105,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 468.4,
+          "sd": 9.20869154657707,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|hypothesis|soft": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 1.0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 1.0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0016,
+          "sd": 0.001949358868961793,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9962,
+          "sd": 0.005263078946776312,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.2488,
+          "sd": 0.08705860095361055,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.9190011570394909,
+          "sd": 0.01763623199045675,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.8608,
+          "sd": 0.01718138527593164,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3031.6,
+          "sd": 9.20869154657707,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6228250652137567,
+          "sd": 0.03629393278901638,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0004,
+          "sd": 0.0008944271909999159,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.07284783745481765,
+          "sd": 0.020971999646456654,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.36943449723012917,
+          "sd": 0.053502974576456086,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.40969075901207674,
+          "sd": 0.0062985244538670835,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0276,
+          "sd": 0.008049844718999243,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.4382604141264955,
+          "sd": 0.05012785542471435,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 13.8,
+          "sd": 4.024922359499621,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9368,
+          "sd": 0.018417383093154105,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 468.4,
+          "sd": 9.20869154657707,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|mean|hypothesis": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.7695551127873053,
+          "sd": 0.12255465385671946,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.7692580231978937,
+          "sd": 0.13257316680639109,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.3432,
+          "sd": 0.07776052983358589,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0308,
+          "sd": 0.011713240371477059,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1812,
+          "sd": 0.055939252765835196,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.4057528234994131,
+          "sd": 0.0791332509426882,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.3868,
+          "sd": 0.08219002372551061,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3024.8,
+          "sd": 9.909591313469996,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6140857864966264,
+          "sd": 0.05803756213033047,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0272,
+          "sd": 0.009011104260855048,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.4480347022747781,
+          "sd": 0.1664670868374744,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.40765518173283405,
+          "sd": 0.0637357156606329,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.6832273184991741,
+          "sd": 0.1023794266000772,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.13228981315819555,
+          "sd": 0.0701675037894897,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.128,
+          "sd": 0.06681317235396025,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.05081481481481481,
+          "sd": 0.047371514189995544,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 64,
+          "sd": 33.406586176980134,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9504,
+          "sd": 0.019819182626939966,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 475.2,
+          "sd": 9.909591313469996,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|mean|mean": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.06712616684628459,
+          "sd": 0.013552098450818712,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.08019868780617707,
+          "sd": 0.016820206881649032,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.3432,
+          "sd": 0.07776052983358589,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0308,
+          "sd": 0.011713240371477059,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1992,
+          "sd": 0.05382564444574722,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.6243596253904676,
+          "sd": 0.03972010616737953,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.594,
+          "sd": 0.049658836071740556,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3024.8,
+          "sd": 9.909591313469996,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6140857864966264,
+          "sd": 0.05803756213033047,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.14,
+          "sd": 0.042,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.007056997686114254,
+          "sd": 0.007169268127584494,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.40765518173283405,
+          "sd": 0.0637357156606329,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.6832273184991741,
+          "sd": 0.1023794266000772,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.14808949157971255,
+          "sd": 0.04918728726119381,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1484,
+          "sd": 0.04809157930448947,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.16456644880174293,
+          "sd": 0.04220131190441523,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 74.2,
+          "sd": 24.045789652244736,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9504,
+          "sd": 0.019819182626939966,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 475.2,
+          "sd": 9.909591313469996,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|mean|soft": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.0702768374485708,
+          "sd": 0.03924356575788711,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.10659461412897041,
+          "sd": 0.03786113668347918,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.3432,
+          "sd": 0.07776052983358589,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0308,
+          "sd": 0.011713240371477059,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1996,
+          "sd": 0.052428999608995004,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.6373376919754771,
+          "sd": 0.0431801785068488,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.6064,
+          "sd": 0.053205262897574344,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3024.8,
+          "sd": 9.909591313469996,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6140857864966264,
+          "sd": 0.05803756213033047,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1856,
+          "sd": 0.036997297198579256,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.04009919703178191,
+          "sd": 0.014673347590137976,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.40765518173283405,
+          "sd": 0.0637357156606329,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.6832273184991741,
+          "sd": 0.1023794266000772,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.18323808575703457,
+          "sd": 0.03648739173670128,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1992,
+          "sd": 0.04318796128552493,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.5040087145969498,
+          "sd": 0.12449065587738412,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 99.6,
+          "sd": 21.593980642762464,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.9504,
+          "sd": 0.019819182626939966,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 475.2,
+          "sd": 9.909591313469996,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|soft|hypothesis": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.8189669979143663,
+          "sd": 0.04145501622253839,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.8225309777941358,
+          "sd": 0.039816786416407374,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.379,
+          "sd": 0.030091527046662164,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0196,
+          "sd": 0.007602631123499285,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.226,
+          "sd": 0.028740215726399825,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.43188289180005024,
+          "sd": 0.03812795689520572,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.4128,
+          "sd": 0.04676751008980486,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3023,
+          "sd": 14.679918255903198,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6294222510959511,
+          "sd": 0.03413098581005831,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0216,
+          "sd": 0.011523888232710345,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.4063698823816773,
+          "sd": 0.04979185549260193,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.44084335256144574,
+          "sd": 0.030594595280753402,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.7132170476128187,
+          "sd": 0.034004553043592636,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.10364039430696963,
+          "sd": 0.03813184451373191,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1008,
+          "sd": 0.03783120405168199,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.03854875283446712,
+          "sd": 0.05380412933199397,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 50.4,
+          "sd": 18.915602025840997,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.954,
+          "sd": 0.029359836511806372,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 477,
+          "sd": 14.679918255903198,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|soft|mean": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.0741637935322358,
+          "sd": 0.03692471742980492,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.0993482873691282,
+          "sd": 0.047533357848510926,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.379,
+          "sd": 0.030091527046662164,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0196,
+          "sd": 0.007602631123499285,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.2524,
+          "sd": 0.052828022866656665,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.6316873296957592,
+          "sd": 0.020440698849226634,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.6028,
+          "sd": 0.03113197712963311,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3023,
+          "sd": 14.679918255903198,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6294222510959511,
+          "sd": 0.03413098581005831,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1252,
+          "sd": 0.021568495543268663,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.010092777986240538,
+          "sd": 0.007757508299502646,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.44084335256144574,
+          "sd": 0.030594595280753402,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.7132170476128187,
+          "sd": 0.034004553043592636,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.1355908640536241,
+          "sd": 0.026548819303155755,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1328,
+          "sd": 0.023047776465420697,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.09154020582592011,
+          "sd": 0.057284030738288985,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 66.4,
+          "sd": 11.523888232710346,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.954,
+          "sd": 0.029359836511806372,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 477,
+          "sd": 14.679918255903198,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "n9|soft|soft": {
+      "metrics": {
+        "coalition_ballots_necessary_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.09676354073038383,
+          "sd": 0.06081138972741534,
+          "total_seeds": 5
+        },
+        "coalition_ballots_sufficient_alone_share_of_fe": {
+          "defined_seeds": 5,
+          "mean": 0.14535789188340872,
+          "sd": 0.06865524598156937,
+          "total_seeds": 5
+        },
+        "coalition_claims": {
+          "defined_seeds": 5,
+          "mean": 1000,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "coalition_false_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.379,
+          "sd": 0.030091527046662164,
+          "total_seeds": 5
+        },
+        "coalition_noinfo_claim_rate": {
+          "defined_seeds": 5,
+          "mean": 0.0196,
+          "sd": 0.007602631123499285,
+          "total_seeds": 5
+        },
+        "coalition_same_target_rate": {
+          "defined_seeds": 5,
+          "mean": 0.2552,
+          "sd": 0.051139026193309546,
+          "total_seeds": 5
+        },
+        "creator_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.6304067394019929,
+          "sd": 0.021483117393774398,
+          "total_seeds": 5
+        },
+        "creator_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.6016,
+          "sd": 0.032168307384753694,
+          "total_seeds": 5
+        },
+        "crew_ballots": {
+          "defined_seeds": 5,
+          "mean": 3023,
+          "sd": 14.679918255903198,
+          "total_seeds": 5
+        },
+        "crew_creator_score_top_correct": {
+          "defined_seeds": 5,
+          "mean": 0.6294222510959511,
+          "sd": 0.03413098581005831,
+          "total_seeds": 5
+        },
+        "crew_only_any_false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1768,
+          "sd": 0.01764086165695996,
+          "total_seeds": 5
+        },
+        "crew_skip_rate": {
+          "defined_seeds": 5,
+          "mean": 0.04406199741375123,
+          "sd": 0.03495357605004376,
+          "total_seeds": 5
+        },
+        "crew_top2_is_coalition_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.44084335256144574,
+          "sd": 0.030594595280753402,
+          "total_seeds": 5
+        },
+        "crew_top_membership_score": {
+          "defined_seeds": 5,
+          "mean": 0.7132170476128187,
+          "sd": 0.034004553043592636,
+          "total_seeds": 5
+        },
+        "crew_zero_score_view_rate": {
+          "defined_seeds": 5,
+          "mean": 0,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "episodes": {
+          "defined_seeds": 5,
+          "mean": 500,
+          "sd": 0.0,
+          "total_seeds": 5
+        },
+        "false_ejection_per_incident": {
+          "defined_seeds": 5,
+          "mean": 0.1798557861624478,
+          "sd": 0.020320693063446,
+          "total_seeds": 5
+        },
+        "false_ejection_rate": {
+          "defined_seeds": 5,
+          "mean": 0.1948,
+          "sd": 0.02551862065237852,
+          "total_seeds": 5
+        },
+        "false_ejection_without_incident": {
+          "defined_seeds": 5,
+          "mean": 0.5164106668308349,
+          "sd": 0.13631974973747818,
+          "total_seeds": 5
+        },
+        "false_ejections": {
+          "defined_seeds": 5,
+          "mean": 97.4,
+          "sd": 12.759310326189265,
+          "total_seeds": 5
+        },
+        "incident_rate": {
+          "defined_seeds": 5,
+          "mean": 0.954,
+          "sd": 0.029359836511806372,
+          "total_seeds": 5
+        },
+        "incidents": {
+          "defined_seeds": 5,
+          "mean": 477,
+          "sd": 14.679918255903198,
+          "total_seeds": 5
+        }
+      },
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "inference": "descriptive mean and sample SD only",
+  "smoke": false
+}

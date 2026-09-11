@@ -1,0 +1,1880 @@
+{
+  "cells": 135,
+  "checked_inputs": {
+    "counterattack_hyp_n7_r1_s0": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "54c0feaee7911948b2d5a4754c5c9866c25bf5f7d1cd15b2882d0bcc256deb50",
+            "checkpoint_150.pt": "cba952fde1aef2c0d967fde3a93cb2b716a565495e54eb8ff779e59fb92ab923",
+            "checkpoint_200.pt": "c8d84bb4e08dc3d89bd0fcf2cfb879cc7b2ed0fdf4095507aeafda3594fcfd12",
+            "checkpoint_250.pt": "65fc61d51e2da52bac2bf1a73c3cbc080c9d13ddd72fe9f5760d42b7ca857238",
+            "checkpoint_300.pt": "36cbb68cc73f71fd1de23fb8ee49267e9dee12d18dd2ff73d96c2cae8505b271",
+            "checkpoint_350.pt": "cfa799ebf7ff3cfaa9dc62d033ea9201eba052e083e8a203ea10ed98ad962678",
+            "checkpoint_400.pt": "d8bff275bde84d5a2db84749284b69f83754ca3674f1fd2db4d0d6267814738b",
+            "checkpoint_50.pt": "bbac67cefd8523497d5a0f18adee170a16f956c7734a6aa4a8d2e744ed3ae6cd",
+            "checkpoint_final.pt": "11abdfa64d333d1714f624cdf2620b755648349ee9b9af50d7c18d55b67608d0"
+          },
+          "history_sha256": "9ae9afe1dbeed6271bebc70a78ef87bec44db3054192f4df33b7c9f6a9b3d837",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s0/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "11abdfa64d333d1714f624cdf2620b755648349ee9b9af50d7c18d55b67608d0",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "e5a5cc6ea8c7bf9056dcd93889913e6a209bd7fc099f00eb17228815814ac7e5",
+            "checkpoint_150.pt": "13f6d022fbb4b174adaa67fe3162c873bf28de0b069db2dc5e87af83ec695506",
+            "checkpoint_200.pt": "7b0a94ee778010dfe5024c0af3bd44e09b42e7681928c463ad6702a04fc4ed7f",
+            "checkpoint_250.pt": "42b2515a497c127c0dca15e8953490316197437f9dfab810f855976102b23f24",
+            "checkpoint_300.pt": "b633f7d084034390809634281e87ac2b6c6a992c2ba75ce88bd3a94c8fd6c397",
+            "checkpoint_350.pt": "73079d61ac3a65875b726a7fd5620564faf29c0ed30b1e3ba42f6ad331b13fb8",
+            "checkpoint_400.pt": "54f1f53cffa9d4689c53f07e1c48df42ed948ba55593d31cb5adbce27d56428d",
+            "checkpoint_50.pt": "32005d2ecb08ce950197ddf66b73485beac2f1282ed58ac3fc182086ae8d4134",
+            "checkpoint_final.pt": "6d2bafacdc76667109094e3d693857784c603c6252615e69ecedd3be3eb9fef2"
+          },
+          "history_sha256": "0e38f2ef8db499a1db3d32045805cc46f780786421569a5e0c4070dc9d9bae1b",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s0/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "6d2bafacdc76667109094e3d693857784c603c6252615e69ecedd3be3eb9fef2",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "45f95c752e6771bd548986118bff935cf15bb58a3ac94fee3981448c62afb6bf",
+            "checkpoint_150.pt": "a97a8145254b6329b233abdc763ae78b4311cd0ee3ba5ca76912f2ba17483304",
+            "checkpoint_200.pt": "00e556f448c500ed4fbae44701bb058ba76159dd08844d77f779e7bd40eaecac",
+            "checkpoint_250.pt": "96dc985c1499ce798a20747cb9c989439d99936a754d1b5eb4aa64e6d12f55b7",
+            "checkpoint_300.pt": "36351e45d368a35929488ddb89ea25a5bc36b836d17d5b1f2742f0146e41600d",
+            "checkpoint_350.pt": "2ae5a7ac6057688e9a251bb043ebf617897f1b693374e3d1cd26a4e2355e7465",
+            "checkpoint_400.pt": "0b7c5faf52225a9c00f26df68eea990ca1bf6384523876551af3ea2b51346e17",
+            "checkpoint_50.pt": "27ae195dacd67f559666f6f968ccf26ad209ff4c8d492e3f76e7ea9cda703f24",
+            "checkpoint_final.pt": "4d1e99e64e93107363ff24d2d89393336a71bc688bf85774d3213c376b19f52b"
+          },
+          "history_sha256": "c2e96bde03efc2526e9430c3d30f11c2baec0541f025f26ab48d3316de8e86e5",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s0/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "4d1e99e64e93107363ff24d2d89393336a71bc688bf85774d3213c376b19f52b",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "0b1edba14733f4ee951c985d3ac44930d41f666ab4def70278c52e9327b1c03c",
+      "n_agents": 7,
+      "seed": 0
+    },
+    "counterattack_hyp_n7_r1_s1": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "41f47f1ab3ad2097480a326150d086f8502c6b08258add2820c6536f7cf37fa1",
+            "checkpoint_150.pt": "e865e3fadbd894b598d4c624296581a33e01921a523d5ac27299ac78bddb03e5",
+            "checkpoint_200.pt": "f83713778eec9dc3da95f42557a9d2ba44090b8587a06c969f221f2cdda7e028",
+            "checkpoint_250.pt": "16b13f02c68473ddce676689e4ff5a5ca4201513e03360a0a4b18ae4b8a132d3",
+            "checkpoint_300.pt": "138b170177d676ac35d2b758597bb287ce89eaebe5bd7d528b7bbb18af97f47c",
+            "checkpoint_350.pt": "35327c7b5d12671aee76388c3b5de135aa516d0c1d4fae2b52129aafd223693a",
+            "checkpoint_400.pt": "b3034238869770add9fa8629ea8e8c78d0a98aa78e611d516d42ef5cb9b647f7",
+            "checkpoint_50.pt": "6f6d42079647659e2e492739075197580d866690eb224b9e7cb33a566e2a3562",
+            "checkpoint_final.pt": "e139e9122d8ba56b69c4cb62317f30a8b334a789f5c659c07aaed698a68bffd6"
+          },
+          "history_sha256": "65bef4007d9cbd73c833ca051d425eff7f901e9f6d34720ada1ca0efb7f6e6fb",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s1/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "e139e9122d8ba56b69c4cb62317f30a8b334a789f5c659c07aaed698a68bffd6",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "52e94ced210296c408d50c5e1f94425a8ee38104b667c7d9d4f0a2174109cf8f",
+            "checkpoint_150.pt": "ec71452cb43dd0ed6abd976fddf7087986dd270d9978be96aa3936d79944721a",
+            "checkpoint_200.pt": "c1eddada760c748ea382807a69b16c1dbbc9e6affc66616e8e55659319188c59",
+            "checkpoint_250.pt": "2f99117aa152fde2215773cbf572555b6110ff8e890a23c1a71780750a841195",
+            "checkpoint_300.pt": "50e89930b52480de6b6634ab38ea8ab5003a68a517f1de3e9d8d543978efdc3f",
+            "checkpoint_350.pt": "556cb00ffbb38c1bbf35c62b50a202f25d0154073ffe7129f30c4f3dd1abab2d",
+            "checkpoint_400.pt": "2bf8fcb143023d7b874f17293385a523efd6f69d7a19524b59e1ab8c8ee6260e",
+            "checkpoint_50.pt": "23d872eb25826abec773fe71309baca8488415fd6dda9c26e678da3098ab5ba8",
+            "checkpoint_final.pt": "524d3da2495212feed02cb19967813b474813e4b7d05fd24db0b0a0dd2e28c03"
+          },
+          "history_sha256": "297377da6b98f8c0b6175e2723fa5a02d997c0b7d746ca30aeb085c8028268c2",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s1/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "524d3da2495212feed02cb19967813b474813e4b7d05fd24db0b0a0dd2e28c03",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "78c497e265e5ff6330a658e5b88e211c437f369fb094139a326e0928b56f12de",
+            "checkpoint_150.pt": "227070b00014c9bebe439f9114d5172789b6b33a3551842c2e11e1f9407df68f",
+            "checkpoint_200.pt": "811294987c04b689f724b076e0338ea74a07709bcf3086f0b30c35df5c2f500b",
+            "checkpoint_250.pt": "4935d305ba0841d0656f2452a3a8b6f28ae9d967084762ded66968af6df39777",
+            "checkpoint_300.pt": "ffa39b4e1a15f518b18a0e5b1466233db2ffa9fde2491385837c6aed9a8ba6c7",
+            "checkpoint_350.pt": "ebfab332623ea82e1a301c546df625049d479c3b19f3aaef4d2d8e44689650d5",
+            "checkpoint_400.pt": "d33c4067e3ccc427bacdb3e38a4db528f570a9c8f9a923aff80006b3010dc7b0",
+            "checkpoint_50.pt": "cb6a8b70bf8d62414af6080fe437258c43f075bdd2867bdc141f617d8594c8b4",
+            "checkpoint_final.pt": "f7a1989c2dd0c50ddc69f1e982b2d4c0cc54c0ae9aa9a59fa4a124a0500175da"
+          },
+          "history_sha256": "c36f0bb889d6043098164ebdb284e136c8689a4928a7fe14543a295ae206b70d",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s1/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "f7a1989c2dd0c50ddc69f1e982b2d4c0cc54c0ae9aa9a59fa4a124a0500175da",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "2e2600adf9fc4bb17492b063d3a3b2c3698e14537370f91d096a20e0caac830f",
+      "n_agents": 7,
+      "seed": 1
+    },
+    "counterattack_hyp_n7_r1_s2": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "95821bc2cd441097637863ebf9bef9c843bb9b459273356fb1fbdc5a68c8c570",
+            "checkpoint_150.pt": "5ce3f2d581f90217d08141ba8748c2fb2d728690f1520bf700af0bb168dc17ad",
+            "checkpoint_200.pt": "9692dabb045f35bf39b7aa4b7a5c38740d59937f4c7a1e6f1dd1488577c1bd83",
+            "checkpoint_250.pt": "bfbc14f5e37a9a8319446551d9184ace0604eeddf69e7d9d58dbb89390ac8178",
+            "checkpoint_300.pt": "4ee97c467628c8b81c4d57e744b453d949c8583b3dc876854cf11a8e04975780",
+            "checkpoint_350.pt": "a48ff04f336b2a16dcea0c9eed18ec91ae86d7f0c68f102ebd2db8e0e8efd3a2",
+            "checkpoint_400.pt": "6db2d7770c25d013ddd86d2bffea7a5aa0e346b7d4ffe32e3f0f742b1b911078",
+            "checkpoint_50.pt": "4891b6057423fb45d3c68b3d03222daa267a0d98da7df4e52610436c6c52d3c1",
+            "checkpoint_final.pt": "680201d08658e62afb1dc8912e8e150aa33aba3e4520ad5e9eea1537fe86236f"
+          },
+          "history_sha256": "03e66c84fd39d2f82dd41972c45ca362a7ab51365c5aacd4d1ae6e139bb1818c",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s2/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "680201d08658e62afb1dc8912e8e150aa33aba3e4520ad5e9eea1537fe86236f",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "b3dde1315a769dbb6986b6eeab1821b5e4811512c4d1d23196d8abcfc2f8cfd8",
+            "checkpoint_150.pt": "943c7537b839c186f7b0cbc845b033a051ee6a189fdde09455ae38019a2d13a2",
+            "checkpoint_200.pt": "fb116635525ff3476dfa7a762d4d710334104a6a9429f3f239629df301ba9387",
+            "checkpoint_250.pt": "7b8c24105a222d18075675beab0752112d6d82c4ebf40ddf26fb7d7393c1a14b",
+            "checkpoint_300.pt": "30ad38b1c3e58a729dfe4c9b404707a3e613734cba88a2452fad0b3688117b48",
+            "checkpoint_350.pt": "95075b644094f6d5708f9f27382545ffe152ed136b3af749852fe749cacb5ffd",
+            "checkpoint_400.pt": "6002136504b10c942a94542caec036646425be2ed42687a56b40fad3f3ca3f82",
+            "checkpoint_50.pt": "a493801dde68f7cd7248df07b57cb0c92f6e0f128c6799f9e6c4342cbf961fb4",
+            "checkpoint_final.pt": "8375c970e2bdec7cc84e9cde7ab39ce23a932b31c43b9215ea2989604d936b2a"
+          },
+          "history_sha256": "657b414bb1f05d731c2925c18b6142a3578f6923272763acaa9c5ea3653ecbb3",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s2/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "8375c970e2bdec7cc84e9cde7ab39ce23a932b31c43b9215ea2989604d936b2a",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "8cd92fd917c10dc7a5d195028246027a414ac48ed277c7678a8a217e5a736d0b",
+            "checkpoint_150.pt": "65d3a84b5169f6dd43d30228efabfa41090635bf2aaa8a93eebfd14c8b609064",
+            "checkpoint_200.pt": "50104ec6b402c40572602b1ad3921ebf4262e7cfea9efd01e205f3d0dc33065c",
+            "checkpoint_250.pt": "b683b45ffbbc78d410fff830be705c414ef3445fa8824bd5f54b39d8bed9763a",
+            "checkpoint_300.pt": "f2dd02b5f27731de0850d7a5fa76368a248b66c1c6b01e50dfecca81e0c90928",
+            "checkpoint_350.pt": "574313362a401f254b72df8700a802082dae2547e74b82239122efb0dcae0cd7",
+            "checkpoint_400.pt": "26fc24b6116e29af5da7d74e031b2188ee3b61bf8dc759a13e927c3e01015252",
+            "checkpoint_50.pt": "b5ff30a69168c5e14bb555b8234efa5c41e6c660944aa377e9a522c7c7fadd73",
+            "checkpoint_final.pt": "208495b759734bbb9ff195cb5c6f63b032f7f085ef27305ddb51877f290ed91a"
+          },
+          "history_sha256": "afe3fc2e7942b2316879204faccce7aa07d28c397420955a651814005eb42009",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s2/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "208495b759734bbb9ff195cb5c6f63b032f7f085ef27305ddb51877f290ed91a",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "2fa5a3f33c6624779fb39b0b8abc0ac3b5beb3cf97f5e593dcbf1c5e08dbcd3f",
+      "n_agents": 7,
+      "seed": 2
+    },
+    "counterattack_hyp_n7_r1_s3": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "9fe545fc4cb3601d585ebc082513c58f6280337f60cee0a585ed7e5621e183a7",
+            "checkpoint_150.pt": "0b0a768f7422a2e77f83412f2c93351f4be32d832c202628b40a76eac64bd9d0",
+            "checkpoint_200.pt": "e2a475045778d3c92eb70ac2e890654469c58e5ead24d900f5e868c05d25df27",
+            "checkpoint_250.pt": "ef100b46aecfac164c9832a4365e8defe909b5c763de79304fc7b5f9ad33dfd3",
+            "checkpoint_300.pt": "45857ae7027709e91d8987f811689a5ac4798799c532cf356e085e667fd5c026",
+            "checkpoint_350.pt": "4ee35e3012e1cc8c23474dea7400c3bc46207a6afeff221f5ec106b90a9eda84",
+            "checkpoint_400.pt": "a01c0fa857a99a7cf007fdc4fc5d092f768723a7cf7b058ea2f8a6529e0477dc",
+            "checkpoint_50.pt": "59d468a06d7e4bec7180381e7e1109b3f2cea1413c9923ca6a4cd0a361159c1b",
+            "checkpoint_final.pt": "9441a400ed7c33c04f60b997242ffd25fd9b52ff62738386e0a3d3af0246a872"
+          },
+          "history_sha256": "e3ccc2199aa31361c35d1ea6ac4f1e4d32f0bc53f48dae4c6db733e6b47c5d86",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s3/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "9441a400ed7c33c04f60b997242ffd25fd9b52ff62738386e0a3d3af0246a872",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "668e712bc01b21d908ebced848f3e0fd6aab43dab9f58a9c39b1275bf3ec0dfd",
+            "checkpoint_150.pt": "b1f6301c3c9a444ab448a9c5c72f664e4187cc8572d37152a4789ed6d80e4d49",
+            "checkpoint_200.pt": "675f780328d15bca0ee435711fb53470401e669ee8baaef53ebf204009c9fccf",
+            "checkpoint_250.pt": "29a01bb7f2ed02d138307887f4cea3e547c0863b7d5b1efae695c36c6ffaaf4d",
+            "checkpoint_300.pt": "49050c6a2bc943a19e4923b804953b9a2232ff4192d5884ceb52d7128ef62c34",
+            "checkpoint_350.pt": "f753a9e75ebb53e3a3a113eca7c9f0ee3ebf0319385205f42e40748c34c9619b",
+            "checkpoint_400.pt": "9c87653ef45dff65b82f2dd29c08ad29007e25fd5271c42dee728b296849dd55",
+            "checkpoint_50.pt": "23a13ca53c3cded2b563b734c9c8c7635f90600ae12a6d50ad637fcb3eb10616",
+            "checkpoint_final.pt": "dff5e5c1815679b5e54486af54af077bacc0cade5be7d178e40e28dc8727f8e1"
+          },
+          "history_sha256": "45f4216373ceaf91484c7337832c2b863768a15a4c48636941df9724b4016239",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s3/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "dff5e5c1815679b5e54486af54af077bacc0cade5be7d178e40e28dc8727f8e1",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "4fb75ac90c7554c39cd2b256d02049b8f716fefae31824bec83be73375289cf6",
+            "checkpoint_150.pt": "1a6e6ed3b0e6acf58bfad85d8bd801a1addbc38a8ab625537f76635eb5fc8d28",
+            "checkpoint_200.pt": "7f5800cee6cd6e0409e97ccc7ae24a16b6234615e1eab9e9d910e191752f62fe",
+            "checkpoint_250.pt": "b5ba9de030193666c4e2a85ffc32b2a2535a8ebb5a391a2547c684394f19e661",
+            "checkpoint_300.pt": "9fb49e63caac8d3242fe970319b688b2e4856f197e776083eed0b7622e3a06ec",
+            "checkpoint_350.pt": "ba72c745709560694a7c789bfe00e64bfdeea538cc305020a9b8b4b0e34852f5",
+            "checkpoint_400.pt": "e0ba1e7f0f0444a8bc4e73c0ea86a0af9e9d030381e50d3ecf36bc9cc9be70e4",
+            "checkpoint_50.pt": "19392eb67b91b327c0f23c4571fbcebbf27e9f98792dca96d7e45f8e882d57e3",
+            "checkpoint_final.pt": "7f0bec10351a0e7505ca748679b6947137772a0fbb97ae863067d3dab5ed8fab"
+          },
+          "history_sha256": "91c32fb96c33504018ceb381b276a1c8f23dc9d4b86c4fd52e5470ef519298c0",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s3/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "7f0bec10351a0e7505ca748679b6947137772a0fbb97ae863067d3dab5ed8fab",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "cf73a5c954f2ceded9717d242feb0cb0cd0f74c29280725592337f3504140896",
+      "n_agents": 7,
+      "seed": 3
+    },
+    "counterattack_hyp_n7_r1_s4": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "5bf5d9648443963521bd03132ef3c86474cc6ff7ccc57b0271e567c1e952519e",
+            "checkpoint_150.pt": "f0b89a6731dd3e3bae741ec5bd783e5eb964120cd2af4f66695f00bf3b8f3482",
+            "checkpoint_200.pt": "795a2612157665320d69677e9fdc4f5f81f931ab2077b251c4a7c13fb2129634",
+            "checkpoint_250.pt": "bac28eb3c71bfb720d1d274e34b0abfad2cac5c8c4749875bc898daa6a4ddb73",
+            "checkpoint_300.pt": "919a61fc4c299c785f959c935b1b33bfa4b5b2e0a4ce2d1379cd87274418a22c",
+            "checkpoint_350.pt": "d324373224e183cb80b9fb298240787cad413e1048c8402a8bd82ee4cac9ae8f",
+            "checkpoint_400.pt": "afd25d505d7e1b187a9dcff103c560a059bac5f924ec5a4db59a6f959ef2ab4e",
+            "checkpoint_50.pt": "438c8f188706d59e4dc0f895718222b53a79dd9ce7e3d79a5e4101054fedec77",
+            "checkpoint_final.pt": "3fdf003c71024648e44e0fdb3d39961679038f395e04033c7d64cb816481cdf8"
+          },
+          "history_sha256": "c3048839707974b1d6ab061920f6a5a6a2f93c1db3c7efad460e7c869999899f",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s4/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "3fdf003c71024648e44e0fdb3d39961679038f395e04033c7d64cb816481cdf8",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "300aa6320604f71d830b10f44ff6784786139761024be2ea8eeae25259696d8a",
+            "checkpoint_150.pt": "90a29e40a6a0d2ab9684f798411b6052ca760b2338cf4ee798ab596128d9e53a",
+            "checkpoint_200.pt": "d4e926fd6465deadfa5ba90530aafe823ad009124807fb2c37bc2d6646bcc21a",
+            "checkpoint_250.pt": "95c02f7749cbc65297068ac0c1038241b9d0c84a595be63382efa371bd5b510b",
+            "checkpoint_300.pt": "8bc962df0cc72b1eb850cfaf4a990b4dc9bf4172e621d0a2092b202c262747ff",
+            "checkpoint_350.pt": "664d1862ccddd970b9aa6b934e4529c996c51cb1d27f212131d494efcbde2669",
+            "checkpoint_400.pt": "f213abc592351aae2b50e512a7665ae645ec1fa33ee1dbf3d90b31921b693f1d",
+            "checkpoint_50.pt": "4f58eb0eefa0b961aefa58830c9ba5cf7ef360191dcf99acf0319c4b0baa48d8",
+            "checkpoint_final.pt": "5df135de8b70d769b4d94cb4545c87384e0633a274ad47bbd9491d7645cdbf7a"
+          },
+          "history_sha256": "bbc1a2ef927416ac79f2f742d27b8b64b132075490ee3738869911ba69982f91",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s4/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "5df135de8b70d769b4d94cb4545c87384e0633a274ad47bbd9491d7645cdbf7a",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "8805c421e593813ca260224b77d972a54879cf4706f0a20b07e7c91d084045c5",
+            "checkpoint_150.pt": "6c814c7358d17c5152aa93f4e9b86549b7603468e07d023f4473036d418f6d71",
+            "checkpoint_200.pt": "e7637a27926eca2a3b5c236b6ca8d0d793a3f218e52d1c8690913ae901ff0734",
+            "checkpoint_250.pt": "717ed7ad2fc5ce33b88d23fbfac5cd1920a1adf9fb8c5db964cced15c613daaa",
+            "checkpoint_300.pt": "043385e4b0f27142d75596f501d8e782942c9a32a7dbd8905e0348760820e23b",
+            "checkpoint_350.pt": "15bfcbb693a24140428f0d74eff54259483ae4329af6c33f0dcc6ca08637a54a",
+            "checkpoint_400.pt": "92c131ddd0ba744cea50e6bd1fde42763147c96e898b3bd1d4dc49708d57a6ac",
+            "checkpoint_50.pt": "96ccf8e9ac5bc5169d4249bc66bc7e177f196972e26b708a3b043b77c365dcd9",
+            "checkpoint_final.pt": "7a11ad88b35009a0c38f680f9e8f4580459cb8f988b9072b201582bbbddfb84a"
+          },
+          "history_sha256": "e1d435d6b31ff686d4a231a3a8b487c093c7876ce0bee43e3d86cd1d3be4a063",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s4/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "7a11ad88b35009a0c38f680f9e8f4580459cb8f988b9072b201582bbbddfb84a",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "cd496af9e056aa5548b3290c8c589bf3ec6ee6ff2be1c5d679265fded34511d9",
+      "n_agents": 7,
+      "seed": 4
+    },
+    "counterattack_hyp_n7_r1_s5": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "78ea857149b8911c827b4eff23e809affe9b8cf6eea6c9f68bf4385920265b9d",
+            "checkpoint_150.pt": "363b5c672654c7ab5a76816831dc2e27a3a2f29132c1a635175923899ac659dd",
+            "checkpoint_200.pt": "0747ff2748c06721f19f38fe27d1f82c22ace6b60e69c82b6688020359cbeeb8",
+            "checkpoint_250.pt": "33bad277d62b107109bc6fbd4c55e833948baedceb66a7c08e5358c5af543205",
+            "checkpoint_300.pt": "bb71e17a64c64a5f72af788768dc77ee1d4f69279f5bdb077330d82b818927c0",
+            "checkpoint_350.pt": "93f1ef5dd00a26564aa5259eed64ec754e9021d91c6f3d1257f77912821aa9f7",
+            "checkpoint_400.pt": "04271f0d8d7607b7618ba4ee84a616d60585fd03b2062a4514f65669b218fe17",
+            "checkpoint_50.pt": "11cfb4a15fbb4455dee41b5150fc4702811f4bbc43e71f3baee86a024c099a03",
+            "checkpoint_final.pt": "6bd44468062688b78ed89edfd361f0c2818a799e00b2a6ea1ee8b786816bbc92"
+          },
+          "history_sha256": "0d3093bacb3134b5e049cec2b928c49d4bdc39fd8fdd2b1f133b6af58e60ecce",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s5/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "6bd44468062688b78ed89edfd361f0c2818a799e00b2a6ea1ee8b786816bbc92",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "40f86f0604652a4aff40e8f5a0829e1c22ba3ca1aabb54368df9b331f99626ee",
+            "checkpoint_150.pt": "5f46e7224217d0b51f6328bead532deeb28112df67491c191c329663f11c3de2",
+            "checkpoint_200.pt": "3fac0a8d4e22e973ba0ebc13289e2cf5aaa86a34e1c920fd0566afbd28ddc859",
+            "checkpoint_250.pt": "d963532b04be6d9fb7c716125a41bb9d5536389ce642e438fa0b7f638477c1e5",
+            "checkpoint_300.pt": "7f664a7c98530da82d93cbec18e16dc3f665d7e5f97468ea277d6fedab6aeeb5",
+            "checkpoint_350.pt": "36d136fd969472583ba5af3e2c34a06f546eb1b5e3c1c857c15ff288a2483112",
+            "checkpoint_400.pt": "fa08e30f6f2294d66b9974856273657160f06b84ca33d77cb20b6ad9d4000cff",
+            "checkpoint_50.pt": "1a6be62c0c1a11bdee7fbfe809bc42d62ddfef66caf3a4179e84fd027a544084",
+            "checkpoint_final.pt": "f25fb4279e8be8832fee20479617b0cc69a856a587661c6fa2e2028436cd249a"
+          },
+          "history_sha256": "b01088baf20e6c745f380bea2b63130ee086c1e35189d09523a7fea90883615b",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s5/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "f25fb4279e8be8832fee20479617b0cc69a856a587661c6fa2e2028436cd249a",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "6bff91a61e9c0ef45c5056d110aeef3c273e49dc08812d73f688ede58c0c3824",
+            "checkpoint_150.pt": "4b75e71b57f822b06e4148bf1279d1b488562f5058312f549d602d0e7a45dddf",
+            "checkpoint_200.pt": "446c5de247a6675c38245a7442cd4a5fce315a8a7124bc9aa86167abbe8c2ec3",
+            "checkpoint_250.pt": "42c97fa750a8c321335704b5e92aaa8895f28601aa9f9f3e0d737287849536f0",
+            "checkpoint_300.pt": "292baa66706ce30de7c26dbbc68eea43efe82c12521b2163e35cf6f2123d255b",
+            "checkpoint_350.pt": "547fe4ba929ca6dad932246e10773b6f69bc6f2cf1f4c4cbd4fac081de822858",
+            "checkpoint_400.pt": "cb5ab667cf69dbfd7302883d31f93de20fea597ffc4786ce2a3cfbbaba9c3cd2",
+            "checkpoint_50.pt": "eb96c0d499d52431dd9002833a7603974657fa33e54f0a8b6eab570ee9e5767c",
+            "checkpoint_final.pt": "549fd6545e4fd2cd1dcd94a6108bce83d650afc01381c5e1150a27268811f84f"
+          },
+          "history_sha256": "6c735f923c28c33b83b7a8fe689225faee9acb2dcc6009b25a19b671ebf44986",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s5/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "549fd6545e4fd2cd1dcd94a6108bce83d650afc01381c5e1150a27268811f84f",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "742534b9bfc67d42d0dee0356202c43a46fbcfc63b7c64bb30dcd19c43f730e2",
+      "n_agents": 7,
+      "seed": 5
+    },
+    "counterattack_hyp_n7_r1_s6": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "7daf0e5254fa9416c5473bdb31dc01ae3ed9b6a8881dab2bdeedbc52acf1758e",
+            "checkpoint_150.pt": "b35e75d82019f031bffe86f59c8028a0ec632b28159445441cf777ae4cdea928",
+            "checkpoint_200.pt": "a7bb1b99f0df2a53d4dc68b1269d80153d84b761e5e33efb6e0b05657ef8782f",
+            "checkpoint_250.pt": "13ca203c57eb8a9446dbe19bd47828c340ffab3ecf9d1628f6242b10b6e9bd15",
+            "checkpoint_300.pt": "72ecf2340ccc59b8122d55190951d1f00ac84714118f29ab52f6e11531c34d65",
+            "checkpoint_350.pt": "241043716c6d54525e54553f32ddb355b04b311ba171c751483d3b4f2d04a06b",
+            "checkpoint_400.pt": "a39a2af22aaca820883d6ea4b1a87088a49b3dd067ded836ae2281e032f2c0bb",
+            "checkpoint_50.pt": "ff38e55dc7f96f64bfb533e04e63ab3817400f533c082d673cd7c8b91a30e59e",
+            "checkpoint_final.pt": "7d39fcee3291820bd2c8bd1dabd099901257fa3543080a3b5edb1b5129b4b03f"
+          },
+          "history_sha256": "8eaaf7d15413b7450fc17979fcb062ff8b0bc15ed1a3859ff5071d04f5e4bdd8",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s6/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "7d39fcee3291820bd2c8bd1dabd099901257fa3543080a3b5edb1b5129b4b03f",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "92ece4e5caaec85d2e3d81e88e41f2e53a5577a144ae12da1c12e24d7485509f",
+            "checkpoint_150.pt": "da4ce8a1df496d31d228d59d7b5d015268fe13c1bdace843f73e2617bc3554e9",
+            "checkpoint_200.pt": "851702c1d7a694886f4dae7e575adae2652a4c8f820d1b7db0a0a0feb9f83787",
+            "checkpoint_250.pt": "26f4020469c70b93e81ee00e3f7b55a97f2d73ac50968de4a719eec32b2ec42b",
+            "checkpoint_300.pt": "57de0ce30cd1a2a2c526883f990adbbbaf95334fe4e3d31d516f0d7f67f09900",
+            "checkpoint_350.pt": "372f1222b99ea87b25527672958ed9fe5d0ea5a0fdf4d5d1bcb7369206bd60e8",
+            "checkpoint_400.pt": "b65b04150ea8dcd58e65f9124ea3dbd0f3301248a0f8d0359fd9dd9530c64bdd",
+            "checkpoint_50.pt": "ccdf4b9f4c205593b1226b644c7c7d6df0a3b2dbb4ddb682113b40fcdcee6d16",
+            "checkpoint_final.pt": "447f584a557fde564b7e30201fb8024511c8f65f9dd5c3258ed4bddd70597709"
+          },
+          "history_sha256": "fdde47ecd096d38ce889f38ffb105ea2205ae6a9e156c26a786e23600492d622",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s6/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "447f584a557fde564b7e30201fb8024511c8f65f9dd5c3258ed4bddd70597709",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "d60eeb6226d906347a35a02dc62223f4e8da98fa592047b0d75bb4177f422fb7",
+            "checkpoint_150.pt": "bb5855135287c3bea234db6073a2bf61cdb4c3679d6ae7469285d0b68617edea",
+            "checkpoint_200.pt": "fe3ba3ac8932e3940477bab7970250a04728b81223076fef3629628c8f4c7544",
+            "checkpoint_250.pt": "bbe39f564c81fe6a9f0c8d80fc326aa13a633acfef5abd5965d5c20caa3bbc44",
+            "checkpoint_300.pt": "d1c4d33fcd19c228bbd85e605e6f7c923e6dd489184e03ddddb7f7bf8599167a",
+            "checkpoint_350.pt": "880255a204d699699948b3388f7bded0811ec96489bef8c9d108f7f2de330bad",
+            "checkpoint_400.pt": "64ed01f447a9bdfaf16eb5e01d5314ad04098f6727ad1c6080d4ff217e441d58",
+            "checkpoint_50.pt": "2c8a432fbfea79b5595947569bd5726b87589b9464fbc3199e75d0ac5c77d6d9",
+            "checkpoint_final.pt": "3df55651fc7827cb2e0ab12593d3fc6b978d5f72c7fe4dfa7a6b99b54ebbeed5"
+          },
+          "history_sha256": "61acc050e6e35a7e0245d6eb29f30bee5bea71348f427954a44afd25b1f3c41b",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s6/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "3df55651fc7827cb2e0ab12593d3fc6b978d5f72c7fe4dfa7a6b99b54ebbeed5",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "3345d02732051d2c0431b94f2e1acfab66abdcd05c85a144e64131fc60c40c01",
+      "n_agents": 7,
+      "seed": 6
+    },
+    "counterattack_hyp_n7_r1_s7": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "49e291a2f9ef2ea7eb1a566714809940b8745ec320f877ad2908b495bdd78a0b",
+            "checkpoint_150.pt": "95f68024647cc8afa0ea016071bc0c2a2b6d7d1319921c4572e7cff83bdf0704",
+            "checkpoint_200.pt": "1c7975c202a81cdc5fdc028d1feefe0a7b7a4b4bc58289c54136753a012bf973",
+            "checkpoint_250.pt": "a8b44ab959c70f6d12b4fd84839a014113248551b7552a741f79d692f7b93b9c",
+            "checkpoint_300.pt": "55cc23fef1f26880bc62df759f7258aadc7301cc315bce328d2d7fe1d2d32acc",
+            "checkpoint_350.pt": "aeabc3a00538524077c7b94a30dc17ab9b4d47fbcbb5a94445d4402f4ff933db",
+            "checkpoint_400.pt": "b005e58e159bf378bc054f99b324df645780081f38dea3bbcf87ff557f38d6f5",
+            "checkpoint_50.pt": "1bfad1e4eaaaed9e5561a9832ec0d892afd109f1ecf3ac31503802915a9b7dd1",
+            "checkpoint_final.pt": "f73de685f22ad892e9317b024b8a06be99a7fcb808f8f740059b0a8864be67a2"
+          },
+          "history_sha256": "740120345be0f5f2f25f41be035c3d71d983c1ed2d72dc9702a333df624b4669",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s7/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "f73de685f22ad892e9317b024b8a06be99a7fcb808f8f740059b0a8864be67a2",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "5eb726c09274ab20b721ef81aa7fe15dca26fc8a849f29d7b45132268b8f59e9",
+            "checkpoint_150.pt": "ff839f71efcc162a7cc87cd3c8e1d0d16baefab55e8ddc2257f904d5658b9b4f",
+            "checkpoint_200.pt": "7cb07fe354d352fecdab35c86401dc98ed03fe848317c5f77bda08fefd17cfe3",
+            "checkpoint_250.pt": "ac039f20fbf3bc9ca494ba1cc6935ecce7a3b73d79de23c96b57438b5f466d68",
+            "checkpoint_300.pt": "d889ee8ae505982305b1997a1031bc18ef1c8ef1f686ae2d9308019e980774fb",
+            "checkpoint_350.pt": "9288aabf235ff7d5eba91f11d60abed7130341c09342cbef842c25f8ce3dce82",
+            "checkpoint_400.pt": "b2c57a0520d5d2a868d40ecbc85d94c1164737ebc9053b2dfa3a4fd0a25c27a9",
+            "checkpoint_50.pt": "961e9a75fd7e5ebfb255bb479b7470bc6f2169d4cbb22e9740582f04bcee65ba",
+            "checkpoint_final.pt": "d1ce3bccf3a5146058abca662198622fa24febde5cd8a2dced12d6ab7f9d5ba4"
+          },
+          "history_sha256": "512144f26462cf3144256063da87bbc8b014f3e43eccfa3096c74ea438ca2641",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s7/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "d1ce3bccf3a5146058abca662198622fa24febde5cd8a2dced12d6ab7f9d5ba4",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "f986c6e6c5d9e19754a507194a095a174e975ef7affad33459a68a953679b106",
+            "checkpoint_150.pt": "38c6572029fafad55449c5f5d13a2fbff4f56bf12967834b0ae224848722490b",
+            "checkpoint_200.pt": "4ad097c3366e1b4c6e44c6918571c11c8334026ce21dd5b1964fa853f3dbc65f",
+            "checkpoint_250.pt": "83d0c9d77805f751e8c830413392314b92137b63fa11bdb9e46a5234e8e2e75e",
+            "checkpoint_300.pt": "3025d023f5dc90f25287e257482ae3cc023312372998a2213dec492973fd7c2e",
+            "checkpoint_350.pt": "2b9d879c577238263776925aa23a2959eed80dc3a0436b0c8ac7da083e21cb21",
+            "checkpoint_400.pt": "ed4138f6f17dc30d547eab9ed5efbc5b1bd483d2ecf53f29812f1ec770eafbb5",
+            "checkpoint_50.pt": "9c406c362f1fd7296fb796cd57ce3feebf18820766100bb70ba57928890307c2",
+            "checkpoint_final.pt": "869c65671fc8243099bc23c9113012ac2757ed14dca807d2872640b77936e0c7"
+          },
+          "history_sha256": "b60f1630e3985378274f61bf02a7403713912acda4698dbb7a902ec589d213e5",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s7/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "869c65671fc8243099bc23c9113012ac2757ed14dca807d2872640b77936e0c7",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "abc3841e9f697f56b7b59b1d9c549a933815dd16e27acdcb9d27e9f7a913bf7d",
+      "n_agents": 7,
+      "seed": 7
+    },
+    "counterattack_hyp_n7_r1_s8": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "81056916153bbe48f4b33ac1f2686e02f1b07aae6b6398aaea82242b0e89fda7",
+            "checkpoint_150.pt": "15fcdf6e1b55765c2be12b5445fb00a698f5bbefbc2d990d1ce03cdc31c267ea",
+            "checkpoint_200.pt": "af0775d03869ba42a05b6187e605e529aaee732e144e401238c7af71004c5571",
+            "checkpoint_250.pt": "2ac98831c68729322685824fe7f058d51f949378546f40e79131a3d19034f98a",
+            "checkpoint_300.pt": "0447401995262d90e4d3ee0fe4881560bc41674aa5d095919063bd6ecc772aef",
+            "checkpoint_350.pt": "8764f7c06ac57ca3337ec20b3baf32938fb6fdcdcf9aefc3aebdc1a690fe92e1",
+            "checkpoint_400.pt": "66c5c7ee866be7269329aeed175be46c8889b98ab9e07f43342cfe3d05109c97",
+            "checkpoint_50.pt": "07c16f2dde15c359ae505daaf1f2dd9ca411ab28b352f5c1a70ac9dc3d85cd9b",
+            "checkpoint_final.pt": "d05b02c10abb25b2211df2b373c1a8560aae872b17d9bc1a3cff000925e56292"
+          },
+          "history_sha256": "4d7920bddb5252f2eba6ad020047421909ed1ce05dd4602b3b30f2af96980843",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s8/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "d05b02c10abb25b2211df2b373c1a8560aae872b17d9bc1a3cff000925e56292",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "e580326202b82cef2f044ced7d4739566d08482a416056a0ca3442281f131c3d",
+            "checkpoint_150.pt": "97bf049029eebe62b56fac5cb1027984f5e64256487775073b918c5d06ea62c1",
+            "checkpoint_200.pt": "12f8f224ee7ab6f12bae2a06adf76cbf775d29f3000a5504d6a1deb2d8f7e140",
+            "checkpoint_250.pt": "37f4a3f9990edd3d7767ae984856100cd8579f8098848cffc393209388c773af",
+            "checkpoint_300.pt": "01574e09e375e8444dbc08cd00a7f1aedb35129a0e52079093d6c94a61866541",
+            "checkpoint_350.pt": "384a2690d4cdbb7543f846072062fc49993b5fc10b4616404356cfd947a800f9",
+            "checkpoint_400.pt": "d6b8bd43eb1651d4bdd2272258d02267c3c1948b368c8ac479daa8996cad2dd0",
+            "checkpoint_50.pt": "747cd892cf3f88abddff2f8524bb19552b3233c44c7928fc4d08de957b45d0d6",
+            "checkpoint_final.pt": "70a53dee7f24c8f77eca697630f6ae2dace7494925eb0dc5d12089fbd2951b2f"
+          },
+          "history_sha256": "2006387d8377ae66c946d1113b62dd32dbf2b6698f79dcd4ca1d6b498235f87c",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s8/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "70a53dee7f24c8f77eca697630f6ae2dace7494925eb0dc5d12089fbd2951b2f",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "7ba6ba4e145b83a11c4f954e2279ec2c7b06c8223c2fbe97520dddf4864f942b",
+            "checkpoint_150.pt": "44ce35cd53d18bb327145a470ee4cfcb7ebb16975ef20c1bf83242bc2978c6e3",
+            "checkpoint_200.pt": "e42e09a4aefcdcf325ab7b84951fcdb20b4fb06113f55ecc072c792590a902fd",
+            "checkpoint_250.pt": "9ab448f71f8ef3729a784e9d24275cdfb62e8e4a35e9561dfc51b4c92ccd63dd",
+            "checkpoint_300.pt": "dfb50b310f66cdf0c0c8423e03c670782ef42bdaba2c06d51c49ecbd4b7daf27",
+            "checkpoint_350.pt": "2362c49d2bc6ff8f22ff2078915820c5d271210963fca0862f6b58ce88eceeec",
+            "checkpoint_400.pt": "831af3f0489deb5755b790d0227021d646937349a24714cc89ad8657e850432e",
+            "checkpoint_50.pt": "81c61ca55d832a0aa9b4dc76a6ccafdb614597c8d10dbf93770f208fec6d6b63",
+            "checkpoint_final.pt": "0a1faed7a34d856824ebac445178daf4555974664d4295ea0dfda8f361a8d682"
+          },
+          "history_sha256": "0fc72363c77565fdbc94e83a6bdb0578911ccab00b49be07d6cc0281aa4d2d37",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s8/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "0a1faed7a34d856824ebac445178daf4555974664d4295ea0dfda8f361a8d682",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "7aea046fa58af7bc000055315e1d0f393855a98e665c33d3c37c0cea6aec5652",
+      "n_agents": 7,
+      "seed": 8
+    },
+    "counterattack_hyp_n7_r1_s9": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "8c2c5dfe0f47213e8a40660b066bf47e89da5889a516870ca88437fc91f86d90",
+            "checkpoint_150.pt": "db3cad01641c8bf8c6d9082e7f82a6ec6c18546d0a2760743db4e823659d82b8",
+            "checkpoint_200.pt": "a45f2abb14421eb09b76d44a4e21636fdb1fd21761502981a87daf63b41b6149",
+            "checkpoint_250.pt": "f258569bb854f88c63c79f73b7547d7a1782eb8002cfa172b860911457085408",
+            "checkpoint_300.pt": "4807911c13603d7c415747743945903a3eef7f4d3c49fbf1fb3ab2026b5c56b0",
+            "checkpoint_350.pt": "0fb8e3ba3f35cb8e7262407f6321ec7409b049aa678ecf4927145bda461f6f4d",
+            "checkpoint_400.pt": "03568339570913b72b1c6b2010838f6a139d842a34395f3d1ccb9e219970e805",
+            "checkpoint_50.pt": "e5d592cd29b44a771ff84f9f6aa306364ffbf3668b938cd52b97aca9fd19bea7",
+            "checkpoint_final.pt": "f33fc29a2f4a7a4bec6f71c114f127ca4fab3619d28a4a96964bc5c46839c5a1"
+          },
+          "history_sha256": "2c1083b2837700a2afd0000b13103adcd2d3a4917c3b523b9ca00ddcf3b1ead8",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s9/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "f33fc29a2f4a7a4bec6f71c114f127ca4fab3619d28a4a96964bc5c46839c5a1",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "402608d5b60c49a4adef8f73ea388872786277d3bae5f9593a95af11ac55da57",
+            "checkpoint_150.pt": "5e2092d265972d7a00cd2f1b4410a42c846888379a1d867050dfb5ebc0b6b593",
+            "checkpoint_200.pt": "d09d1551663172fccaacf664c389850b4a5d706b9d4c78082b9cacdf8eb4d040",
+            "checkpoint_250.pt": "5efea0c3bf2a413aac09a6da632545806b2ec38761d9a4171c86368e745e9d2b",
+            "checkpoint_300.pt": "4b522d65d5025f63434aad323821efc7b1ae3d0fee2a633caa679ef112d7f99f",
+            "checkpoint_350.pt": "4f59958c1cee26dd9791d29da56ad490bc769fe2038f4953e3d4c5f198291409",
+            "checkpoint_400.pt": "0e7a288c8a63ce9aa409d8a3fc36aadac40f9b99023751c5166ef55cda496ef0",
+            "checkpoint_50.pt": "acd1825929ad4bf659b2c240280c89c43e972a0df0e77c100a24801d55addbc9",
+            "checkpoint_final.pt": "36b2175b01b6171143293d446a88978ec161beea5db26ff18bae643d324bb127"
+          },
+          "history_sha256": "7ed7ed4fb5be8ceb9fea25f49968fc5b9f6b691568986b24ea0eeaa4e17bd52e",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s9/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "36b2175b01b6171143293d446a88978ec161beea5db26ff18bae643d324bb127",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "2c7386b591774f9a428b30f1b69fc4bbc99559b46742a53aec92751ecca10b18",
+            "checkpoint_150.pt": "a7bda37f705f8ba4c4888dc0c3ce98643fbb912bba788d0b8319b0f257ddf4c5",
+            "checkpoint_200.pt": "f642da998920f3dc72c65bc5f3f78a4d2a860509841bfda0bd40df9e84c4f62b",
+            "checkpoint_250.pt": "20e2e05c64f9536670ab42d999438dd4204a0d7c0fed89fd808d485ca9a71aef",
+            "checkpoint_300.pt": "8b3cac4235ba385715ddb777b208ab8c9672cdff8cda077b2f258539992e281f",
+            "checkpoint_350.pt": "4e2c7bf30bb9a23290c8082f5a9d5ab79aea6c6da7954c23b4489a6a32d696d8",
+            "checkpoint_400.pt": "df0b02506234637c70453450a5dad9e2e1c235d6a9db99b7736b60bd5f597f04",
+            "checkpoint_50.pt": "037501eba907b5d26a5dfb99a79688a35042938d132d7cd37b74305c22a7c6e4",
+            "checkpoint_final.pt": "fcec3d7fbb8f0aab618f6a393458d364e2f4fe7f8310d5f97ba40a3d57c81aa2"
+          },
+          "history_sha256": "3d5587971e1f1712c02a0fad32acf1a5338919f7e18ba666af228df02a83edd2",
+          "path": "results/submission_20260909/counterattack_hyp_n7_r1_s9/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "fcec3d7fbb8f0aab618f6a393458d364e2f4fe7f8310d5f97ba40a3d57c81aa2",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "2f8a2a5ba7cc639132ad3f0b7dd8badb938d2a61ba5972f884dd65134f70c7b1",
+      "n_agents": 7,
+      "seed": 9
+    },
+    "counterattack_hyp_n9_r1_s0": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "ceaaa7d0b096ba6b6e9007cd0f261191ca7fc912ca8ebf3cf09b8d7696f59ae8",
+            "checkpoint_150.pt": "a85b737832cc31260c80e0de727ece25e78c48135e32379b6c45de0ff1eefa27",
+            "checkpoint_200.pt": "6897686399369ccee09dc59db3ab7833bf2049ca58174715f16f6e8006d24220",
+            "checkpoint_250.pt": "d5098faf49500cbe38712ec68ade2f4857e56bd81f85603afd587d1307b0a231",
+            "checkpoint_300.pt": "614ff12802e6fb0cc6317450a773a6cdf95e74bc6b7b016c1af4c1a56fd876ac",
+            "checkpoint_350.pt": "503cc1d9905d5907a7b0e173de5216090c735a5bdc220d1d75eb98faa46ce79d",
+            "checkpoint_400.pt": "849c5ef0d409726670648bef6d0fd501764d4b432f0410a1a86394652305d697",
+            "checkpoint_50.pt": "c957f35655af370402c0b62725b2643fb1d17b6e7d2f1488206f6cd9f8f85585",
+            "checkpoint_final.pt": "4575fb775192acbe1f6ed43dd8b9b680c83b343d808967621df747330e3a98b5"
+          },
+          "history_sha256": "adde21df08d5758bfb2a6a357f5092ef74178ec3bd47a0621620e3141ba9b3b5",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s0/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "4575fb775192acbe1f6ed43dd8b9b680c83b343d808967621df747330e3a98b5",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "5138e6d173ea85cac8f38217ba34dd9df6cb520bb0b76e07e79ae877b94c63ce",
+            "checkpoint_150.pt": "417cef59a3f8d831a7d633223b92f25151f806c958bf42797138766c333dbc78",
+            "checkpoint_200.pt": "9198788bc55579e6868129da72e390ebc3fd5062eae1892785eb34ecc699432d",
+            "checkpoint_250.pt": "db3b0eab40c87806e1eb57cbc0e5e9aa1ff4a8ec97accea79bc68de8dbf2ce4a",
+            "checkpoint_300.pt": "e68063234cc0758a2cebe84820360473fe4e88235aa8cbe56dbef7e35954ff64",
+            "checkpoint_350.pt": "baa3789d79a3a40d38b1ccc973485221a937c3addcacfec2fefbd63042374453",
+            "checkpoint_400.pt": "8f1533e8230fb5f81827422d1c07ddc83e4d96ee0dca2c344ffb0cb6c3a180e9",
+            "checkpoint_50.pt": "0087fca08bf5be4e4690acd6dd5ce0519189f7dc6abafb7d6f02bf82c9bd4852",
+            "checkpoint_final.pt": "0a0f7aadb23035dfaaa49ac283aa7990e607f24d807fe24dbb78447f677ecf13"
+          },
+          "history_sha256": "9d0af8a2a4acc4c26f20942d58c08105bc148d8c6a705c870db3af7fea21bfcb",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s0/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "0a0f7aadb23035dfaaa49ac283aa7990e607f24d807fe24dbb78447f677ecf13",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "cc70eba4094199230394e5813e4298d44b9685e33b9a7645f5810eadf4e9ce66",
+            "checkpoint_150.pt": "5da5d9d2d379bce51781a855e6102efb4533cfaeb7c4af40fcb49dbc991cfdb9",
+            "checkpoint_200.pt": "392b00348f142a7f58f54aeb4bf67f22138e56fd8deea0f758ddf6d38c529900",
+            "checkpoint_250.pt": "bb49f3c70b787a13b80fd33b63b3baa902a33d9fd393591b1adf79dae4f08c8d",
+            "checkpoint_300.pt": "0e4a7e40abeb06a681003f269fde990a2d877e7bad93e90ec930323e49bdfe31",
+            "checkpoint_350.pt": "20ab8c3b34d27574c2ab147f9d0f763785ff3503916d7dd55a5c79be323e468d",
+            "checkpoint_400.pt": "fcb03e2d98da02e4886276fe03460c6ffaf46e75cded54bc2bba22afc81f7f6a",
+            "checkpoint_50.pt": "41638f8c9199244764fe225545639a6ed19c1f63053bde858f88075fb7de052f",
+            "checkpoint_final.pt": "8715b112e25e8a79d323bbc40f481eeb31f2e1ed973b29f49debf3af392bbae3"
+          },
+          "history_sha256": "decc7ef45fe0b17cd2dc96fbbd74c6a25b8d8796e9b013d22e57cd5b84aa612f",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s0/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "8715b112e25e8a79d323bbc40f481eeb31f2e1ed973b29f49debf3af392bbae3",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 9,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "b8234795fdcae912c9a1548a2f73531f20b73939b8eb4d32587fdacde378b49a",
+      "n_agents": 9,
+      "seed": 0
+    },
+    "counterattack_hyp_n9_r1_s1": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "7bc491f74631ee84f9f9d9a205dcdff5928a3af8d971bffcf84a43e3e4c60ec8",
+            "checkpoint_150.pt": "735ee67cd8a987cbd9b53f52e2afc039ab60dd75a27daae5d9def4b6a5446303",
+            "checkpoint_200.pt": "06e951a7f41ce3c2724d849eed24603c38a264a999cbe3bb353ec08c2e4ffcd6",
+            "checkpoint_250.pt": "4ea10f90bda518bdcc08a7ab21d2400de9dce85c3a303e3c5166ee24202d4a8e",
+            "checkpoint_300.pt": "71b6cd4bf98f0d386b715253522826b9a4b6d098a52a1bb6e25c9cf1d0ba7175",
+            "checkpoint_350.pt": "b26d1b546e388922fcd99ae7bd9dfb7ffcaecdb246db394193903ad12c4a2c18",
+            "checkpoint_400.pt": "fb385b731cefc9caf9341ccb5307d5770c10d7bdc1d46873770f847a861d6c6f",
+            "checkpoint_50.pt": "36218faf7ee180d85e47d00e838a1ac97eaca55b885c01ac19c4a9d5b9e8449e",
+            "checkpoint_final.pt": "32cfa85126a8d3560cb1c7794f52786bc060b080aad9878ed4b2366ef93b52e6"
+          },
+          "history_sha256": "781e1537d5aedc4005563ed59ed7a116ad290b803926f30cce1fa7a926becf78",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s1/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "32cfa85126a8d3560cb1c7794f52786bc060b080aad9878ed4b2366ef93b52e6",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "df051f6564a530730d5c02626f39570422f30f61bc1b5b16eb58de78e80d9845",
+            "checkpoint_150.pt": "e5842830960d99d3214f7ddd9600779a515d173521a1869319f85ead77eb5c5b",
+            "checkpoint_200.pt": "c34a151c9ac25c7a0d5d14ed7cdb661d4545bc0e2ad35eb104b37d54d6baaaf3",
+            "checkpoint_250.pt": "f1cede7375c4591a4a4f5887e1064b6911a6b01ae0135d3cec81df16676bf4a1",
+            "checkpoint_300.pt": "01c2b9a8b3d5ca6af1624a9fee347daf53ea88c68eb3984f11249fe0a2b59fcd",
+            "checkpoint_350.pt": "82b620a962af165fa4fbca4e320ba82bd3f833f57b0b66f4ccf12f00c35a9ba5",
+            "checkpoint_400.pt": "ef153296d54e26592dbd9379d2dcce4627ba171522cb83098426f80fb94ed41c",
+            "checkpoint_50.pt": "1c2547cfca776b4ddcbd7c9c200a8f270405264d58cc0d7ef26f5ee2135124b3",
+            "checkpoint_final.pt": "09036158c450b34d86fb14933ad328fc110c0b93e3ee0ad49f351dbf7a8e5d10"
+          },
+          "history_sha256": "a550cc0a294cadf9a0e7f2fb50615630f3acc936090be10144eaa084fc12b9ce",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s1/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "09036158c450b34d86fb14933ad328fc110c0b93e3ee0ad49f351dbf7a8e5d10",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "4e0ac4d4a25fc33e95434a38266bb01a6c627bbb3e20246651d774e680b64f65",
+            "checkpoint_150.pt": "c2e6a6ac73299cc4d019648289c417d08be0496aab3f422d511fd6b09fd060b5",
+            "checkpoint_200.pt": "7cdfe555022f5fe6d4a99de92a596f1984c1965ae50bb2f6f59acefc17250dbe",
+            "checkpoint_250.pt": "a27b944c5190df5ff0f9a8d6b572305134a97c69f00a8f48fdbf4cbcc6b88867",
+            "checkpoint_300.pt": "56071ab12dd0f4e8d4bbbdb5e1558fecc71861364fdd562f947ac13580ef7ddb",
+            "checkpoint_350.pt": "7d79ea982767cb73f1cc8f944f74a18bbdc96a2f157408344a3f6f93f5e96502",
+            "checkpoint_400.pt": "db74473076efb76dbcfea3aa4df5afb77f519171414fe80b4052352eebb54b33",
+            "checkpoint_50.pt": "75ac277ffb32ebfc483ebfb3dcf65381437b72bcceb7ead6231e8e8d916cf709",
+            "checkpoint_final.pt": "00e425cac51be65a8da84ba9073f0047477220af585a42bc0b18ff9efe585f9c"
+          },
+          "history_sha256": "8dabe93946760b5e88dc7ee68e5fd8b88c17855e216ebc6bbe15f53ba00ca2f5",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s1/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "00e425cac51be65a8da84ba9073f0047477220af585a42bc0b18ff9efe585f9c",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 9,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "ff78412a3a20e5e178251a6c8e6b9dda768f6973113a4f5e1b4d866096192b6d",
+      "n_agents": 9,
+      "seed": 1
+    },
+    "counterattack_hyp_n9_r1_s2": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "dfa119352d0e3754b06892fbbcf70d4fb988cd126300bac80504f6eb84c1120e",
+            "checkpoint_150.pt": "7ff696934d6fae19741b79a78ecf1f3ec266be901c1f9c2d5e5bc060b8bf0d09",
+            "checkpoint_200.pt": "56b88fbcec398184b9131cc9ad48302b0cacb8958d47fc01fccb8a5611157dda",
+            "checkpoint_250.pt": "100e63ce7d614a5c9dd1332ac7fd4f14d21cb6ba0705ac5dedd626cd5a6ce13e",
+            "checkpoint_300.pt": "71abfd0b481c86f816bfca3a48e65eab3b363b89d417f08dcb5fc6644c9d7b93",
+            "checkpoint_350.pt": "48e1cb4e4c99756a3830fdbabc739f8559ea775f7d5cb05a8944e73dcd9626f0",
+            "checkpoint_400.pt": "f79c2df6a6027b8e5447d3a16192239878cee821ed68297d62d96d73272f0e1e",
+            "checkpoint_50.pt": "8a843d99c0f5b97872162d9f1c7dd815676210e7ad5cb3ade5e6cc8ee2c66c6e",
+            "checkpoint_final.pt": "02a31572e1ea23ed2e7f89c6a8587340cff0308eb08ca9af9a743185ce5d6588"
+          },
+          "history_sha256": "405d949a36915cce88224b4eca5f194de59ad1fa4712b62ad7598f2fb9fa9c7d",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s2/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "02a31572e1ea23ed2e7f89c6a8587340cff0308eb08ca9af9a743185ce5d6588",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "62c9813330e6172713813face2598c208b1d96df58699a0010d2d0cd68273c8a",
+            "checkpoint_150.pt": "002376bfe2ae3a14fc581fb444f608973d75ba8ff85213ac954e3e6c3e9b4cc9",
+            "checkpoint_200.pt": "acd24c2c8ada2a65e6f040f9cd0a7af2074eaf4bc978071c64182d4b5f61c143",
+            "checkpoint_250.pt": "b105b59598121f7bf0bd65f8c29f19a4b4e8c1d57c12b01c9ad1f280c19703d8",
+            "checkpoint_300.pt": "44ee48b7ff808c9f3addeb2090f3b66d2eeb4ece735ae5cf8f25960056cf0982",
+            "checkpoint_350.pt": "b9dca2ff839f94911ba96913b2689e37d7a24d969210b6520e90b5351b17ff62",
+            "checkpoint_400.pt": "bc9ba756455e633be4ec047b379f1a6ba4a0695acdb6c0e6ccad031b690420ea",
+            "checkpoint_50.pt": "86d3adb1c32bac6f57d8bf4c3404ca1d3ae33b7c3b8207f1ceff0e216cd5623d",
+            "checkpoint_final.pt": "880a6e449246e7fc58d7405cf748da844b83b482a0a396c86b2eebad7330e202"
+          },
+          "history_sha256": "387249548f051c1da4ad3668e0d5bdae8964ed81760409f134852c08523f6470",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s2/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "880a6e449246e7fc58d7405cf748da844b83b482a0a396c86b2eebad7330e202",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "afc8934de6368b024f0c10a8a79fa5d65b49058774ee92035b2fbab4fe948e09",
+            "checkpoint_150.pt": "4dfb711ae18d6b2c569793f6ae237bfdb147f1e5198265f78820cf522299287b",
+            "checkpoint_200.pt": "c8f58b5df353ebf9271a4fbb61f9a8364f782fa2b1c1b21cfd928f6f0d29d502",
+            "checkpoint_250.pt": "b133bbf2049b7b37bdcaf84898c2293e230fb397199cfa15026c26f05245f74a",
+            "checkpoint_300.pt": "b0b4321b33cd7796e2e408cc7553da31c8975a98a2b75fa387573221d97cdcdf",
+            "checkpoint_350.pt": "28b31fdfff19cae2ab6561a3bcca34655fc91414cb8f497b6fc09a9a16b1d7a7",
+            "checkpoint_400.pt": "39c85b6dfb7ea95eafdb715ea4707c8a81f9dfc3fb8034fc8b9297511c993ef4",
+            "checkpoint_50.pt": "731aead2256fc99826c018a98e798d92032b3bb72b49969a5a1b002cf244e488",
+            "checkpoint_final.pt": "f508cf538df3cba8efff1d3afd9f0e6c8e21707ca194455c8783b7c22e2e0f16"
+          },
+          "history_sha256": "97b226c36b0b6f0843593dcdc8bf25297dabc811446240835dc2ee0df6cbfdb6",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s2/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "f508cf538df3cba8efff1d3afd9f0e6c8e21707ca194455c8783b7c22e2e0f16",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 9,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "d6ae1b990bfc1853b9e4619cca8365e8cb7a295dd212c16ed27f88b085e46c38",
+      "n_agents": 9,
+      "seed": 2
+    },
+    "counterattack_hyp_n9_r1_s3": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "44e0187b55267c21a4d720de8183c24fc7653dd81a3a87dd1f88f74503dfa821",
+            "checkpoint_150.pt": "acff584e2e4ca1e99c1375c88e83fd07b5484055ac14e22309fb64f0f75be27a",
+            "checkpoint_200.pt": "c957117faf2abe6dcd530ce0889a023e74ab3f7f7da5f367ea61950b07b825a5",
+            "checkpoint_250.pt": "c3e1fceb2f92ce8d42fed1afe882b13e2c4b4666ff6cd97aca981878b03c2957",
+            "checkpoint_300.pt": "a0b625fedee5cc8e50a5b010ed4e6c39e2bef554d5045e84ab7d8c2debb188ed",
+            "checkpoint_350.pt": "42801d7fe15699442afecb676ff2ef0cdb60e3aa0346778cd28a59a951f6db5e",
+            "checkpoint_400.pt": "7e73a39ca563c64fa152bb5663aa6e6bea86e4b4b9d2ea20c2fd21531c1892c6",
+            "checkpoint_50.pt": "c7d7387eb6031564231fa09557c930152bc29d8d1ac179035686090b36005571",
+            "checkpoint_final.pt": "eff94d2f879947c731cf541695cfff58eb2667d9804f32789e7a85da04edbb46"
+          },
+          "history_sha256": "379e660d1ee8ba723bd661d0cb99b27407d8aa00eeb4e072e9a8a1759772639a",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s3/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "eff94d2f879947c731cf541695cfff58eb2667d9804f32789e7a85da04edbb46",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "393be63d1b9d0e9895a7852b92e57a6b5113cdf7910d89ae3be2b03371191f44",
+            "checkpoint_150.pt": "07b88e2d97c76e32ca505b9238f1afaf9786990d19c34ec692eb459c4a1a2156",
+            "checkpoint_200.pt": "114a7fe220a2e03bbf8ba0d3f3eed2961bcb721179c9ceb0b3c73b63e0fb81ba",
+            "checkpoint_250.pt": "343ddc1b632d4ed8fb71653c1a4467a77a689c9ab5c45a2190dd2046e94f9c20",
+            "checkpoint_300.pt": "f36b6af0ec5cee2e8d24f531d08d5d9ceaed133a45531f2849d6610b50e2ec6a",
+            "checkpoint_350.pt": "bdb074c137a1015d58fce11fb3a63d59b629d67fbbda99720a9680d1103dc114",
+            "checkpoint_400.pt": "90063badd7f64973f12250943591b66c9d14dfec9709d531f2137c1f1d9db3d8",
+            "checkpoint_50.pt": "36a680eba0eb91b84bc3d655e8a4f56b86ff8f2e699707698e45e48523bcb97e",
+            "checkpoint_final.pt": "3b113671c79e167c190e53a83424db6e06aa5625ca2d14cd1c58b8d0ffcdb72d"
+          },
+          "history_sha256": "22e5e66a98fa1498e86f7a6619563e9fea631a4ba813f5bc7553d5b14f77c003",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s3/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "3b113671c79e167c190e53a83424db6e06aa5625ca2d14cd1c58b8d0ffcdb72d",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "5bd07619ab88a4a1779778ef54a2e713cb89b2a7850cbc317765ea7dc69a1a45",
+            "checkpoint_150.pt": "fb019ce8f441f1b3ab45f869935454e04adedf0a26e8c2ee334a813183d4080a",
+            "checkpoint_200.pt": "4f8c556152ea6ac2a4f1a6b654ee5f6b6a9fb4edaba6c122e6a5f557f91da771",
+            "checkpoint_250.pt": "222f7608e16f4d0df098019ff4ba760700a48895c918e758ab8fd7250f009b1c",
+            "checkpoint_300.pt": "d0610554398189f17af7ac21d47f27e981b63002396abc456cc4dcb689313684",
+            "checkpoint_350.pt": "521a742cd0195c0a3182aa38d24ab571a657256959b4af9902295d5bf0cf9b85",
+            "checkpoint_400.pt": "67db67c8f3a7e20afc034036ddb8ec61781cd97e8c68418a113b8c05dddd31c0",
+            "checkpoint_50.pt": "688b1954565101e489b08a5c473c189a7656a96e781e4ad69e365a8e7c96fbfe",
+            "checkpoint_final.pt": "f29dd0d5c69c5ff56ca004d28748c5fde22bea4a335c57265d5f072a8158ee2f"
+          },
+          "history_sha256": "3f8de173e8edc8501db2911848e51fdccef8cec636987da8c01da8adff8cdd55",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s3/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "f29dd0d5c69c5ff56ca004d28748c5fde22bea4a335c57265d5f072a8158ee2f",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 9,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "37c5781ce52f2c13d606480a26c47ac3f649921429ba94a11da7926763601f79",
+      "n_agents": 9,
+      "seed": 3
+    },
+    "counterattack_hyp_n9_r1_s4": {
+      "checkpoints": {
+        "hypothesis": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "f367ead474ffbef3792ef1a1840482172a2d783fc3889898095107c5abcb522b",
+            "checkpoint_150.pt": "288b59c66df0677c8ebbcff5e2e2eb7f20a4a95851bc09c22938d30cefdc6d26",
+            "checkpoint_200.pt": "8c38dcfa4b89b6918ccf4f2b860fe98a19c3b83fbc848ddbe066fec3944d1172",
+            "checkpoint_250.pt": "46280ec8c6da47b0064fd648750a4be47a3b1bff4cc98da606e1c237c6800cca",
+            "checkpoint_300.pt": "7d618640566320a1b970500d06678ebd3b700d169bff861b17b3b36ca44260c2",
+            "checkpoint_350.pt": "092e7e375218b7c7d271774023a3e9dc4ebffd3dd7597605bd0942c8800a1ec7",
+            "checkpoint_400.pt": "8663c2839c21f4a446848518be2947c1bd2cf12bd40ace30b1920da3f96b0036",
+            "checkpoint_50.pt": "1c8df0be425ea1c310ed213ffbceb99c8769bbb1dd48542f1b2f91f10c3dea7b",
+            "checkpoint_final.pt": "f9c3161c4fa1c0407c416947968581431f69ee3f27ee0eb414d36f8f2896f023"
+          },
+          "history_sha256": "35d35e2e51781efbbf078a17b48340f5ae3f4a201812bbda4e7331c0e1886c04",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s4/coalition_vs_hypothesis/checkpoint_final.pt",
+          "sha256": "f9c3161c4fa1c0407c416947968581431f69ee3f27ee0eb414d36f8f2896f023",
+          "updates": 400
+        },
+        "mean": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "c086c142f689c262efbda51597d2e3b2a34d615648bc2785bee7a4c32858a466",
+            "checkpoint_150.pt": "8cc0878b26ac119be3205ea9af53b60bcd6399def7ebb3552a8d9f8617ced5d2",
+            "checkpoint_200.pt": "048af454fef22076dc6eb5dfb0c4303cb24b802cab5064f3718ab14e20397aaa",
+            "checkpoint_250.pt": "d1ab3f83a92637cd2f21dc9e2d0d050085518d1f0672b44c0e3033ec5b353304",
+            "checkpoint_300.pt": "93109d4a5539664067ff8d09d74ddfc1caca3a27601dfda2663152390009a22e",
+            "checkpoint_350.pt": "2bb313a19c0cd729e9e36796c31963485c9b8843c58e8061375818080c429719",
+            "checkpoint_400.pt": "dce2418b471d9b226eff46dab228b8abd4a33d5f3d02d41b272f3f8c8450f6a4",
+            "checkpoint_50.pt": "6b79f5847df76c62247502ac7027cb251c2ecc9cdaba397955b191137685b911",
+            "checkpoint_final.pt": "caf854a17d1c026518157cf6b3452085293267cd106e689f297e9f66b6d3ae0a"
+          },
+          "history_sha256": "ddeaec80843cfa3ffd1ad1822a89534638e31ce853e77231eeddf8bae076fe06",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s4/coalition_vs_mean/checkpoint_final.pt",
+          "sha256": "caf854a17d1c026518157cf6b3452085293267cd106e689f297e9f66b6d3ae0a",
+          "updates": 400
+        },
+        "soft": {
+          "checkpoint_hashes": {
+            "checkpoint_100.pt": "bae864dc0dadf12c8fcf8a30f563b14d1e8d60cf473a80fd0967684b229184e3",
+            "checkpoint_150.pt": "a6222255593dcf9786926d475150adcb6e4dca70dd02d53983a733245097fdfe",
+            "checkpoint_200.pt": "587f58dfa49b1f2ddd0f9c859e18d4d2c80e2cd273146345adaec048c4bc3558",
+            "checkpoint_250.pt": "be7eaba20fde9ed2266a0cb2810244a35504462cc77911b4ad6e8a7184dd697a",
+            "checkpoint_300.pt": "74e4b5797fb37917ba9ce893073f85d3df0afd0c4fb7b4c104fc93ae669a78b6",
+            "checkpoint_350.pt": "f812fc53cf2ac37bd839769dbe49acd4510fb6a9097ecd052624ff7fece49c22",
+            "checkpoint_400.pt": "5c5b359116cf3e4c01bdde1038785a61ec45e05d7e2c8e45e780a34d46569214",
+            "checkpoint_50.pt": "5c7089ee7c14b8b85549f34b6341b795db6abbf2a110b6fa7ef06ee11ed8cbce",
+            "checkpoint_final.pt": "97699c6d6fadf1cfa4f098c515e2c8cce4dda608c2058fca087edd9ca89d5639"
+          },
+          "history_sha256": "99aff1f271090b88ad4019bce880d3aea09ecda57a9a1ab42239660850e3703e",
+          "path": "results/submission_20260909/counterattack_hyp_n9_r1_s4/coalition_vs_soft/checkpoint_final.pt",
+          "sha256": "97699c6d6fadf1cfa4f098c515e2c8cce4dda608c2058fca087edd9ca89d5639",
+          "updates": 400
+        }
+      },
+      "config": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 9,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "job_sha256": "fb6e8234f8a3a1ab1e2312fb4fa2778cf33b86978074f3e5ba71ea9b0c4402d1",
+      "n_agents": 9,
+      "seed": 4
+    }
+  },
+  "diagnostic_protocol_sha256": "921b9f6fc331c8b2054787c4b8fe4a37cf2ac0ec23f557d3da0b38f2b7bb45de",
+  "elapsed_seconds": 9488.719000000041,
+  "episodes": 67500,
+  "episodes_per_cell": 500,
+  "numpy": "2.5.2",
+  "per_seed_sha256": "65ee77f7b987988e497d1d374b9d3c93e524ec1715830c058a94a44c477ee0aa",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "raw_sha256": {
+    "raw\\n7_s0_hypothesis_vs_hypothesis.jsonl.gz": "fb1f4fcceeba138ce27289b516eeb40c44a02fd9c8e4910356b8968c4ee11ace",
+    "raw\\n7_s0_hypothesis_vs_mean.jsonl.gz": "a1ccdff3398069bb2079b610b11f2e0c01246515cc71dd2150d29987592a334a",
+    "raw\\n7_s0_hypothesis_vs_soft.jsonl.gz": "90e74ad90875784e7420af96a3d44738efca540951374c62ec2a209c903f2d0e",
+    "raw\\n7_s0_mean_vs_hypothesis.jsonl.gz": "315ca9a6ebad2a314a80ad9d2684437da0403bcd52f78803a3fbeaeae7070a6b",
+    "raw\\n7_s0_mean_vs_mean.jsonl.gz": "d50ec98abff32324f60dd6a53438937417feb23a833aff82c3eb999cf706954a",
+    "raw\\n7_s0_mean_vs_soft.jsonl.gz": "018b6c66ff415a3276a300fe26f560de10c8f1a4777aaf73954a2e709fbcc8f4",
+    "raw\\n7_s0_soft_vs_hypothesis.jsonl.gz": "f581471749dea824f03bdcafa69e44729792036fdaef11d1bb8157cfa7f752e2",
+    "raw\\n7_s0_soft_vs_mean.jsonl.gz": "f1253a2fedab3dbac9db9b37fb846516d7642dc3714b206c44b0a7306bc7bafa",
+    "raw\\n7_s0_soft_vs_soft.jsonl.gz": "930dd421da739393b621d5c7a13720dc1c4dcb37bbe5e26325f085c273ef1cb8",
+    "raw\\n7_s1_hypothesis_vs_hypothesis.jsonl.gz": "4268c39f1992df5eb63dcd4f000da4a3b34b8b8613be17b5d24ad504220681f7",
+    "raw\\n7_s1_hypothesis_vs_mean.jsonl.gz": "24c792992d89bbd800545ed4888887bebaf97dc0719f6307d2435134cc7063d0",
+    "raw\\n7_s1_hypothesis_vs_soft.jsonl.gz": "63afc1d330df3ca98b489506a4220eff7c7378573bec52072a895f0ca09b11ef",
+    "raw\\n7_s1_mean_vs_hypothesis.jsonl.gz": "b4230ab70a4a5a92f8b21e01aea4abfbee53cceb965ee3101f9ce191cde8d573",
+    "raw\\n7_s1_mean_vs_mean.jsonl.gz": "0d5d84c767c0a1600b4f024ba0b15c3a5a0b953d2affac0c73a49b8d6b521b60",
+    "raw\\n7_s1_mean_vs_soft.jsonl.gz": "b81a443e99a36045f2899c2cc1d647c8f339ea7330c629fb50977d54df06acb0",
+    "raw\\n7_s1_soft_vs_hypothesis.jsonl.gz": "671c13e90caa55835b6a65b629921aea1b4e16f8db5fbb320de53f2bac5b81c7",
+    "raw\\n7_s1_soft_vs_mean.jsonl.gz": "fc5e6f27304b54a7ecc3f2eada33df559b7f0c042ae174c94713d7399aeec79e",
+    "raw\\n7_s1_soft_vs_soft.jsonl.gz": "33f0245d8d5b5ff573b68295b1621f6e64562f3c564c17cfc354588a0154833c",
+    "raw\\n7_s2_hypothesis_vs_hypothesis.jsonl.gz": "883e60373fdb7e0d6bfcf1a73d762a72f019651544e36bef830c5344b757916e",
+    "raw\\n7_s2_hypothesis_vs_mean.jsonl.gz": "741178f32dde4ceaf112f6943338a1d357bf52dea398986271706863789a8242",
+    "raw\\n7_s2_hypothesis_vs_soft.jsonl.gz": "373afa32af33d27ef72ff48deeec4da43e7635f64ad50f880ccebc25ec7ab246",
+    "raw\\n7_s2_mean_vs_hypothesis.jsonl.gz": "94054a3c3678a4478e54c736fceeca63bfd572c4e95a9152ab63c863915311d4",
+    "raw\\n7_s2_mean_vs_mean.jsonl.gz": "625b40b4092850c92b607c14ca846a6c2dbb0f77b4d6aa91b1e90671229ec5e1",
+    "raw\\n7_s2_mean_vs_soft.jsonl.gz": "d4ae8a540b777cebf139d0917b762974c9c56e32aa2535f9fe6f054017f0fc92",
+    "raw\\n7_s2_soft_vs_hypothesis.jsonl.gz": "2a749405132b0441f76441e4c09de2d2d28dcc5b875f41b0aecbc0cd6e9038f9",
+    "raw\\n7_s2_soft_vs_mean.jsonl.gz": "09b7da990aab2bd9d55143125a1c0891c72f96d952bd6c851a05ce60bd399f2b",
+    "raw\\n7_s2_soft_vs_soft.jsonl.gz": "ce8cf1dc1e7540e515218e68e927512ae867ca2cdbf450c1d8b153e13d498840",
+    "raw\\n7_s3_hypothesis_vs_hypothesis.jsonl.gz": "7f10e549238a1a9df36a9fc16b2b07295406aa753ed41c952b928c3402736804",
+    "raw\\n7_s3_hypothesis_vs_mean.jsonl.gz": "0eae16bfeda051e97632474382ee8ee165355dbbe7eca047879c66fef49dfab0",
+    "raw\\n7_s3_hypothesis_vs_soft.jsonl.gz": "7badfd84fa5631a98ea88b12f3fd9b54446084785e4e509bb5212ac574334fc7",
+    "raw\\n7_s3_mean_vs_hypothesis.jsonl.gz": "e4c4db59ac3f4a77d1b0ff14b04ac5fe2d2b7642fb325bd7fc3d5d1be779a0cb",
+    "raw\\n7_s3_mean_vs_mean.jsonl.gz": "8ad36e5935f5377deaa13fb3a6b799f89d6d03ab7e0b03e95685153df582731b",
+    "raw\\n7_s3_mean_vs_soft.jsonl.gz": "aceb1dac359da794c7180841c4aa784440449498115847360cdf2b7f121c782f",
+    "raw\\n7_s3_soft_vs_hypothesis.jsonl.gz": "4013cd2389b4cbca12884638e510413955aa149c4f411c1c13fa2f14b687c83e",
+    "raw\\n7_s3_soft_vs_mean.jsonl.gz": "69699011cf6793b1d28823621dc1d4e701f58e48ee528bb6ea34ccb48f1b7b33",
+    "raw\\n7_s3_soft_vs_soft.jsonl.gz": "c1f8cbff35f45ae2e83ea9ef697aef03dc6b74c8d3e6f58f2b8b521d45a0f75e",
+    "raw\\n7_s4_hypothesis_vs_hypothesis.jsonl.gz": "0df6ece8420e321efe3dd734607202ef31aed9cadd988b69ed5f7ed060f9bc33",
+    "raw\\n7_s4_hypothesis_vs_mean.jsonl.gz": "cc2dab5919ef31d4179aca1ea9c3fe4df899be7aecb7395a228b1353530e6075",
+    "raw\\n7_s4_hypothesis_vs_soft.jsonl.gz": "c586b0771ce53728ee73d5099aa000166d6a5468241681d18888268dbf898626",
+    "raw\\n7_s4_mean_vs_hypothesis.jsonl.gz": "8684c47ca975094565e29d3ad503c95c99031dee70406bb0e0926e0bfab601d3",
+    "raw\\n7_s4_mean_vs_mean.jsonl.gz": "066a4e3925b5f136d451171fe1b985f4017269ae9b7ed21ffab1f0ee9cb214e8",
+    "raw\\n7_s4_mean_vs_soft.jsonl.gz": "4e4a4af49984ce2f4c6383df4eaf6dce7aa3451d4850d9c75346eff8e4c863a4",
+    "raw\\n7_s4_soft_vs_hypothesis.jsonl.gz": "c957792987ee7f86571b6676c134c2be796c00b92ab8b3a6b946e87c394b2e5f",
+    "raw\\n7_s4_soft_vs_mean.jsonl.gz": "c2d080cfa8d2bfb71c8f8e7bed4a96434d5bb96ebe04550e51a8665c3b85cbb4",
+    "raw\\n7_s4_soft_vs_soft.jsonl.gz": "55874c27ef37e82c15e97af825a3e79a551aed4e7c349f81638b206200d61a8a",
+    "raw\\n7_s5_hypothesis_vs_hypothesis.jsonl.gz": "b5360c283bca5ef51bb10541682e1c94bd582665b8bd0658df7162843e8436a0",
+    "raw\\n7_s5_hypothesis_vs_mean.jsonl.gz": "5f61efa3fa2908a7a4d190d38b3bf63d76cd6ccab7726585d8ca8a819bdfd606",
+    "raw\\n7_s5_hypothesis_vs_soft.jsonl.gz": "eebe1d0dc63fd3a2988163632347941a82ee00edb2220107f14d5b2edb5a32ef",
+    "raw\\n7_s5_mean_vs_hypothesis.jsonl.gz": "ff2592b27a6884fe6fcf85adf73dbfa278436c744d680ff25008e5bdad8e224b",
+    "raw\\n7_s5_mean_vs_mean.jsonl.gz": "22cc5a253ba7bc7e8ca1e5ac3b370c8cc5d27355619ae57d2f346d521af0ce37",
+    "raw\\n7_s5_mean_vs_soft.jsonl.gz": "1ca6c68563f9878857931a9aad31d7c16d935041e7ebe68aa27568b58a4c8a2b",
+    "raw\\n7_s5_soft_vs_hypothesis.jsonl.gz": "e77c841d661c7f8794d59caa5a206cdbc7812e747cf17f973fa645344f17faba",
+    "raw\\n7_s5_soft_vs_mean.jsonl.gz": "d3105a4952f610dd2f03dd3c3499b6318a80cc5528bbb9547eeb3055d160c03c",
+    "raw\\n7_s5_soft_vs_soft.jsonl.gz": "2bb3920ec061dc75db078d5486458c0f566de1082cb779ef86ddb058802bc31d",
+    "raw\\n7_s6_hypothesis_vs_hypothesis.jsonl.gz": "ec2f06d9195ca1880a06fd1627c0b09d7c46a5c188267004e8dca5914c5e5315",
+    "raw\\n7_s6_hypothesis_vs_mean.jsonl.gz": "cec19673ed5cb3afbbe065c18449ebe22c305dcd1f44f1fd9b2b37ac121bdf95",
+    "raw\\n7_s6_hypothesis_vs_soft.jsonl.gz": "2c6964de409154f27da5c6577bf34313322859d5bc145638e9d25565f377b0ac",
+    "raw\\n7_s6_mean_vs_hypothesis.jsonl.gz": "aac793d41f1961dcd03c4c73b0f6c8f2e1d63664053764542ef9ff8089b0fe74",
+    "raw\\n7_s6_mean_vs_mean.jsonl.gz": "4c8a61b80f7be84b43d72e774db8284da6d9913ab248455b5bd53f9d991966b1",
+    "raw\\n7_s6_mean_vs_soft.jsonl.gz": "1b93217f5e64619cdd23bcf15e9a69f4dcf6f91b66cca53a69bd27393fab1579",
+    "raw\\n7_s6_soft_vs_hypothesis.jsonl.gz": "2396c0afccf6a447bcd1d04d6eff5cfc3f480fcce0a5d453486f8c73fa6d6f8f",
+    "raw\\n7_s6_soft_vs_mean.jsonl.gz": "270ce0672b1ea39817f1605dee88023c49502a31aa90c77197cb7a06dd8fd13b",
+    "raw\\n7_s6_soft_vs_soft.jsonl.gz": "e2a79afd4db2e91bdb4732cc12b902c85919caba21c7ea8a04d4107c5ba26c05",
+    "raw\\n7_s7_hypothesis_vs_hypothesis.jsonl.gz": "295e9fc99504a21e14425075436939b35efd4d8da8056c162f4de9fb6ff18488",
+    "raw\\n7_s7_hypothesis_vs_mean.jsonl.gz": "5bb3948d9d855cd920269b05e41c098b2da2b9c8ca94e7e45ccb314be5922f6d",
+    "raw\\n7_s7_hypothesis_vs_soft.jsonl.gz": "674362f6cd9df0da8e4cf2eb42caa20c793c07d8db4b0b777e2bf9646df64c55",
+    "raw\\n7_s7_mean_vs_hypothesis.jsonl.gz": "f87014b0efc28e307a612e29a055ea769cd524b84914736849120bec15eb6c68",
+    "raw\\n7_s7_mean_vs_mean.jsonl.gz": "d4f2cf2cb33c5fa54fe7f64f2ee66cc1c7ebf3ae32d8eacc7f6813c24fd7395e",
+    "raw\\n7_s7_mean_vs_soft.jsonl.gz": "1500966602230fa602aef822276229105d84308551379bacc3c84868d0166b6d",
+    "raw\\n7_s7_soft_vs_hypothesis.jsonl.gz": "d986de963d28cfc1714cb426a5d2c14633060ed19fa54f5bec3d7c4474e98a97",
+    "raw\\n7_s7_soft_vs_mean.jsonl.gz": "9d5c530895613b2e6ed6dc6b3399ffd19589b4318ca0ccb3457635d0052803f9",
+    "raw\\n7_s7_soft_vs_soft.jsonl.gz": "3fcb9cc0661510df9e00467df023a109aa6690e010fb7ce0cbe428da1a2e6f3f",
+    "raw\\n7_s8_hypothesis_vs_hypothesis.jsonl.gz": "40af39dc9298a5e1cfc9ae5baf183eb798b13d5695dd12a44e38881a7a1fd7f5",
+    "raw\\n7_s8_hypothesis_vs_mean.jsonl.gz": "142105480ded61986d8f0f466654c2be060919a2773d4402724ba5b5b88ca03a",
+    "raw\\n7_s8_hypothesis_vs_soft.jsonl.gz": "91e239149299714188318b8bebde7b8303d8f2989aaadbec459461b18984104e",
+    "raw\\n7_s8_mean_vs_hypothesis.jsonl.gz": "613cec01b82a61b4e9aa15658c0f17d9affda14c53b792703d15a590aa368bd8",
+    "raw\\n7_s8_mean_vs_mean.jsonl.gz": "b7fd2eca450d287c078ebcc2623bb39769b0528ce375de909fe8597aef196522",
+    "raw\\n7_s8_mean_vs_soft.jsonl.gz": "177013506bf3e363c97f6dfd3927850206d633d120ff3963fab38329973e51ea",
+    "raw\\n7_s8_soft_vs_hypothesis.jsonl.gz": "41bbeb11b5f4bee1dbcd1df01bce28cde4efded1d48f0b8da8f6dfe20132e10f",
+    "raw\\n7_s8_soft_vs_mean.jsonl.gz": "eb9adc045c808f253c64961954c67e652e875df5a1d2588d37f84d0d975beb3b",
+    "raw\\n7_s8_soft_vs_soft.jsonl.gz": "4d9411d66ff94283fbc0e2340a2b06e6a4a94382acf0800657d19e1c175ce115",
+    "raw\\n7_s9_hypothesis_vs_hypothesis.jsonl.gz": "9c5f19b06cd1239b5e2a449b6f45df2bfe1ba987ba25e0a94f9c97fd07e5a353",
+    "raw\\n7_s9_hypothesis_vs_mean.jsonl.gz": "04278308adadb6cd587db59e6b64ed3da03af0c20b672ebfb930239676dfadef",
+    "raw\\n7_s9_hypothesis_vs_soft.jsonl.gz": "16d4cfbba0b3ed6b232b2cf98ffeac3104c09d2939c8d38f699dab7871b371d5",
+    "raw\\n7_s9_mean_vs_hypothesis.jsonl.gz": "3f8e6a828b002ea51e1871502a4b51bdebb2e7fc83daea57746a53e795a79aa9",
+    "raw\\n7_s9_mean_vs_mean.jsonl.gz": "87cf59880892a449a068df7d262a069933fa8ac55aee4f87f65e4243384353cf",
+    "raw\\n7_s9_mean_vs_soft.jsonl.gz": "7c673b973ef4bc2ebd97aa02eb62c1d04a100256cf11a0186201587f76c8178e",
+    "raw\\n7_s9_soft_vs_hypothesis.jsonl.gz": "54342cf898822dba2555569775004ea3eeaed5503488a3eeeb52947ac517ade1",
+    "raw\\n7_s9_soft_vs_mean.jsonl.gz": "387cd638e37e3375257d89305f4001c981492ceba6db65d8cede917f4aabe3c0",
+    "raw\\n7_s9_soft_vs_soft.jsonl.gz": "a980ea9ca34cc2420647d87e1a2d393557e4918e1e00d1cec3828c0eea898ec2",
+    "raw\\n9_s0_hypothesis_vs_hypothesis.jsonl.gz": "9b99a65f4ac877f1c8747c78e56d43a96a55e0c21f1c15a39541b2a514be8fda",
+    "raw\\n9_s0_hypothesis_vs_mean.jsonl.gz": "731c229eb95137a0a95d0bfde98ef36832509ada0d5e7b5f76c1fe90a2b57008",
+    "raw\\n9_s0_hypothesis_vs_soft.jsonl.gz": "637b906e6dc76bed05bb6055542b26f014cc3cf2e0a8f6c85b557ee8afb3b3a7",
+    "raw\\n9_s0_mean_vs_hypothesis.jsonl.gz": "54f70cb80a9ee15afc337b31ba8387f1380c16957d7115fbf84f05705784b769",
+    "raw\\n9_s0_mean_vs_mean.jsonl.gz": "ccb2150b0bcbbdd04b2e027075839f5b0a74223221aec38a287c189ff45c3d0c",
+    "raw\\n9_s0_mean_vs_soft.jsonl.gz": "cbd9918be7dfe9ffa5b702c05881766b017ffbdf0db8d77381cf8cc1cd9bc14e",
+    "raw\\n9_s0_soft_vs_hypothesis.jsonl.gz": "6a7139a29b4c72d30a4a76d23a5dc44dbdec976b76e03ec6cd0afa7ee94e0ec7",
+    "raw\\n9_s0_soft_vs_mean.jsonl.gz": "7caf684ffd4d1865e0ad1d3589cb6da655454a2b933ad1df4924af8463a73298",
+    "raw\\n9_s0_soft_vs_soft.jsonl.gz": "807d55402988335336d4633a9a1df7a81b9c9ae9b93f09515d3a22b150145544",
+    "raw\\n9_s1_hypothesis_vs_hypothesis.jsonl.gz": "f243909637ae89b33c81166e9cec4a133af9c75360c3e95d27e566aa3344f6ad",
+    "raw\\n9_s1_hypothesis_vs_mean.jsonl.gz": "be157b53b68be0f6fe028ed062cdd3c81f5845556bbf4ddfe132ed075efe0c19",
+    "raw\\n9_s1_hypothesis_vs_soft.jsonl.gz": "a5a3a3a55663322a09e034f0b59680801a9c99622a1daf3938f6d1847cd3f1f8",
+    "raw\\n9_s1_mean_vs_hypothesis.jsonl.gz": "f2189862648b3693d333d0f203343c0bf6dce3f2f64743e759d580cfc2772f4f",
+    "raw\\n9_s1_mean_vs_mean.jsonl.gz": "94a87018b95b022ee8e3172143e9cabce96e8e94938968001f089f1aeff5b0c1",
+    "raw\\n9_s1_mean_vs_soft.jsonl.gz": "e9a88ca5765d92b98fbdd502e493eff25999e29e399dbac44e508b074fbdabe0",
+    "raw\\n9_s1_soft_vs_hypothesis.jsonl.gz": "dfb3b5e323cffffcca6dda2def01e9ce55de28dcac3ee47d05558d47f9cfed71",
+    "raw\\n9_s1_soft_vs_mean.jsonl.gz": "6af2d1b83487ce9fe449200c5f5611705583789775dcaad15c47b5169d312be8",
+    "raw\\n9_s1_soft_vs_soft.jsonl.gz": "5ee78025b8134cdc1c2f37e831500605e14eaa0369c47a436dd0eee940e588d7",
+    "raw\\n9_s2_hypothesis_vs_hypothesis.jsonl.gz": "d54f768426224ace277454baa4c2ee6594a468c5a6def17fe864b24f218f7f13",
+    "raw\\n9_s2_hypothesis_vs_mean.jsonl.gz": "38a6fac4dad97dff06d23ae841c00565dbb88bee0b53c5169ef1fd3764c1b648",
+    "raw\\n9_s2_hypothesis_vs_soft.jsonl.gz": "c3b515a6b74632ff2ba1784f9a103b77343ce32bfc0d4fed2c4ea142ddba6319",
+    "raw\\n9_s2_mean_vs_hypothesis.jsonl.gz": "45e5c4bd26676e6157fa0c10c47265bba5b424ed8f4644b647568671e68528d5",
+    "raw\\n9_s2_mean_vs_mean.jsonl.gz": "e29d6af2c8bf7a4e2d3d0316b5a4f10c2ed07eb6b945c272305eda76edbc5d4e",
+    "raw\\n9_s2_mean_vs_soft.jsonl.gz": "4c6782326335a84b84286b8ede7f054148f2ac2a416e05e83095c3e2b6fc8f6a",
+    "raw\\n9_s2_soft_vs_hypothesis.jsonl.gz": "72faf45b03c5fae7f4871c6592d48c816f572faf504c924420155bdbe7c7d3b9",
+    "raw\\n9_s2_soft_vs_mean.jsonl.gz": "22e64e468d109e4af62180570a7f6f575a4bd8db54b01a6e5b23e1b2618b17d8",
+    "raw\\n9_s2_soft_vs_soft.jsonl.gz": "a8aa5398e55910084e097ecd5766862fc682fccdda0f2cd4340c0aad8fd25c87",
+    "raw\\n9_s3_hypothesis_vs_hypothesis.jsonl.gz": "a68d7a32be66eb2a9d553f9720236e43389061f7ed7efdab00c40b60997a6944",
+    "raw\\n9_s3_hypothesis_vs_mean.jsonl.gz": "156e34d54f6d4bb186444fcc8b40e9aa606490d2b7e614bfcd6dacb32defdd2b",
+    "raw\\n9_s3_hypothesis_vs_soft.jsonl.gz": "2b28c29ab2f6f97f48eaf2cb9efe282ed5133ee4b71be320b3c71b3c44a116ce",
+    "raw\\n9_s3_mean_vs_hypothesis.jsonl.gz": "5567ea3c1e9617315cfbc26259204c8244f9d9c7d2e5cfd7f788591b5e058d1a",
+    "raw\\n9_s3_mean_vs_mean.jsonl.gz": "75d3a6be5e9edae18de2b40ef840c3c9b796aff7f39f41ea18ca5dd2f5e7c9fc",
+    "raw\\n9_s3_mean_vs_soft.jsonl.gz": "aaa7b7123500eb86edbd50b676f06190cf94af13481125abf1871b883b5cf7c8",
+    "raw\\n9_s3_soft_vs_hypothesis.jsonl.gz": "fe2bd7bdd19962b6ff89cefbf8799d6463e003f5d0a736c4874fd6ef5698f6bb",
+    "raw\\n9_s3_soft_vs_mean.jsonl.gz": "d072834620ef6ec341a3659cbc830de13ff9667bef62ea7cbc59a986161d49b4",
+    "raw\\n9_s3_soft_vs_soft.jsonl.gz": "5f7a20e7c24892f2f18385f0a99a500d3a60b2ba1e5a71a1717e995a61641773",
+    "raw\\n9_s4_hypothesis_vs_hypothesis.jsonl.gz": "004562a3e50d464da54c38706126f4e2598475e0aae13f941ff88548eeb56661",
+    "raw\\n9_s4_hypothesis_vs_mean.jsonl.gz": "9a259da71a9130e9f5d760fe72c758786b32b41b0d47ee25c89191c45f9c51ac",
+    "raw\\n9_s4_hypothesis_vs_soft.jsonl.gz": "80a72dab50526c126a5bcd512248e6e4ebc21bbf4950eda9b11a35ab7f39b944",
+    "raw\\n9_s4_mean_vs_hypothesis.jsonl.gz": "98b335e818a27bc3d77ab7ce403894b6d48a8c0110b64290db74c9524860c675",
+    "raw\\n9_s4_mean_vs_mean.jsonl.gz": "688da0b77d5c31dbf7d852722c86bb455e9590ff4e5cf43d535bd2628c43af64",
+    "raw\\n9_s4_mean_vs_soft.jsonl.gz": "5764c91d765ab2d8ec00df51225819238a90775a33af4496a4c401c71e757e73",
+    "raw\\n9_s4_soft_vs_hypothesis.jsonl.gz": "926b2c637ec6acfdec28dd89e9dd696f03588a896f0e7c68b7aa6226b5b6f8b1",
+    "raw\\n9_s4_soft_vs_mean.jsonl.gz": "eb45c06bd5ed72df7e5ce71b21402973b8a820eaf90bbfc7e0767d5ac8d2b6e6",
+    "raw\\n9_s4_soft_vs_soft.jsonl.gz": "b2b8c564e6383903f058edf5548698634233970befb42bface27c1059cfea5a9"
+  },
+  "script_sha256": "183607e68622c20ae722fd2c8a915e5ecbb98b5b21bcc0e72fa7e77f7b5c868e",
+  "smoke": false,
+  "source_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+  "study_protocol_sha256": "05be4efaff58996ee58c3dffa92b24f8faa4cd60a37ae8b1baf32cfe08eb8aa0",
+  "summary_sha256": "be78803f8e10306b53f007ef5ae8ee0b2cadaee585f518e7b3bd6dd04745ee61",
+  "torch": "2.14.0+cpu"
+}

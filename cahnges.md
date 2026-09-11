@@ -1,59 +1,59 @@
-# Audit changes and new findings
+# Audit changes and final findings
 
-**9 September 2026 — corrected replication in progress.** This public edition contains the repaired research code, reproduction protocols and current working paper. It does not contain a completed experimental data release and is not submission-ready. The filename `cahnges.md` is intentional.
-
-All 30 F1 and 30 F3 jobs and the separate 540,000-episode mechanism study are complete. The local controller has also finished all 30 F2 evaluations without reported failures. Remaining experimental computation runs on the desktop. Final analysis of the entire 240-job study is pending.
+**Completed corrected revision — 11 September 2026 UTC.** The requested filename cahnges.md is retained. All 240 main jobs, 1,255 learner stages, 303 planned comparisons, and both supplemental studies are complete. The manuscript replaces its remaining archived empirical sections with the final corrected evidence. The [final results review](data/reviews/FINAL_RESULTS_REVIEW.md), complete machine-readable data, and validation receipts provide further detail.
 
 ## Research and implementation corrections
 
-The audit reproduced archived summaries but found defects that require new experiments. Agreement with an archived CSV does not validate how its policies were trained or evaluated.
+The audit reproduced 437 archived summary rows but found defects requiring new experiments. Agreement with a historical CSV did not validate how its policies were trained or evaluated.
 
-- **Training and evaluation:** the spatial PPO collector could finalize unfinished trajectories with incorrect terminal targets. It now collects complete vector batches. The evaluator also favored short games by retaining the first completions; it now completes predetermined episode indices. Evaluation uses copied policies and independent sampling streams, so monitoring no longer advances training randomness. F1 now retains a genuinely untrained checkpoint, distinct monitoring and final evaluation streams, and intermediate checkpoints with actual update counts.
-- **Information access:** learned spatial actors now retain the same within-round private positional history available to scripted crews. Scripted movement no longer inspects unseen neighboring occupancy. Hidden-partner action masks use role-blind attempts with silent resolution; message presence no longer directly reveals a missing partner. These repairs remove demonstrated information channels, without preventing ordinary inference from observed outcomes. The hidden-partner condition changes information and communication together.
-- **Feasibility and hypothesis scoring:** joint compatibility checks no longer silently skip larger constraint sets or omit joint temporal constraints. Exactness applies to the constraints actually emitted; documented relaxations remain. Publicly impossible coalition members are excluded, private evidence is enforced, and impossible hypotheses receive zero weight. The resulting hypothesis score is explicitly a heuristic, not an exact posterior or a guarantee against deception.
-- **Outcome measurement:** dependence statistics now use the complete electorate before ejection and count historical meetings once. Records distinguish terminal false ejection from any innocent ejection during a game, counts per game, and pooled counts per meeting, including incident-free meetings. Creator survival requires an actual incident; it is not the complement of creator ejection when no incident occurred. Raw game and meeting records support independent recomputation.
-- **Reproduction checks:** source inventories reject empty manifests. Completion checks validate planned jobs, stages, configurations, checkpoints and raw outcomes. Windows-exported relative result paths resolve on Linux while rejecting absolute paths and directory traversal. A partial training history alone does not mark a job complete.
+- **Training and evaluation:** spatial PPO completes episode batches before finalizing terminal targets. Evaluation completes predetermined episode IDs rather than retaining the fastest games. Copied policies and independent random streams prevent monitoring from changing training randomness. F1 retains a genuinely untrained checkpoint and independent initial/final holdouts.
+- **Information access:** learned actors retain within-round private history comparable to scripted crews. Scripted movement no longer inspects unseen adjacent rooms. Hidden-partner controls remove demonstrated legality-mask and message-presence identity channels, while permitting inference from observed events. This is a combined information/communication intervention.
+- **Feasibility and hypothesis scoring:** joint checks no longer omit larger or temporally coupled constraint sets. Publicly impossible coalitions are excluded, private facts are enforced, and impossible hypotheses receive zero weight. Exactness concerns emitted constraints, with documented relaxations; normalized feasibility scores are not exact generative posteriors.
+- **Whole-game measurement:** all meetings and the complete electorate before ejection are retained. Historical meetings are counted once. Outcomes distinguish terminal false ejection, any innocent ejection per game, counts per game, and pooled counts per meeting, including incident-free meetings. Creator survival requires an incident.
+- **Reproduction:** source inventories reject empty manifests. Completion checks validate jobs, stages, configurations, checkpoint tensors/update counts, hashes, and raw outcomes. Windows-exported paths resolve on Linux. The portable package preserves the study design with an explicit distinct source identity.
 
-Regression tests, smoke experiments and independent raw-record checks cover these repairs. Passing tests establishes implementation properties, not the paper's empirical conclusions.
+The final postprocessing correction concerned two undefined terminal-coordination cells. Complete meeting histories proved that an earlier coalition ejection left fewer than two terminal ballots in every episode. The analyzer accepts only that proven zero-denominator case; it preserves nulls, all seeds, primary outcomes, missing-data guards, and planned comparisons.
 
-## Mathematical and statistical corrections
+## Theory and statistics
 
-The Gaussian analysis now distinguishes exact pairwise probabilities from a deterministic mean-field surrogate. Applying softmax to expected counts is not equivalent to averaging softmax weights from realized counts; the predicted amplification direction can differ. Median contamination-bias approximations are separated from finite-sample mean-squared-error bounds, with variance terms and valid order-statistic arguments restored. The dependence penalty uses the correct maximum of within- and cross-group agreement, and its attenuation claim is restricted to the parameter region where the derivation holds. Numerical edge cases and heatmap/contour alignment were repaired.
+The Gaussian analysis distinguishes softmax of expected agreement counts from expected softmax of realized counts; their amplification directions can differ. Median bias approximations are separated from finite-sample MSE bounds and variance. The dependence penalty uses the actual maximum of within- and cross-group agreement, with a restricted attenuation result. Figures and references were corrected. A 3+2 game has 2+2 reporters after its victim is removed, outside the strict-minority theorem.
 
-The paper no longer treats finite PPO training as an exact game-theoretic best response or observed alternation as proof of asymptotic nonconvergence. Mathematical minority assumptions count actual reporters: a 3+2 game becomes 2+2 after an honest victim is removed.
+The final analysis uses paired seed differences, 20,000-resample pointwise bootstrap intervals, exact mean sign-flip tests, and Holm correction within 15 fixed families. All 303 contrasts remain included. Episodes are not independent training replicates. Five-seed tests cannot reject at raw 0.05; the 27-contrast F4 family cannot reject at Holm 0.05 with its ten-seed exact-test minimum. Families were not shrunk to obtain significance. Supplements remain descriptive.
 
-Some archived tests labeled “sign-flip” actually counted signs while discarding effect magnitudes; these were corrected to paired mean sign-flip calculations. Control comparisons now use matched seed cohorts. Undefined conditional rates remain undefined. The new analysis specifies 303 comparisons in 15 families, paired seed comparisons and multiplicity correction. Seeds are the replicate unit; episodes are not independent training replicates. Interim outputs suppress p-values and confidence intervals, including for completed groups. The supplemental studies are post-audit descriptive work, not retrospective preregistrations.
+References and novelty claims were checked, including repair of a DOI pointing to an unrelated paper. Finite PPO responses and alternating outcomes are not described as exact best responses, convergence, or a permanent attracting cycle.
 
-## Findings from completed corrected components
+## Final findings
 
-The following values are descriptive means; “±” denotes sample SD across ten seeds. They must not be pooled with archived runs.
+Values below are seed/replicate means. Full SDs, intervals, signed comparisons, and adjusted p-values accompany the data.
 
-**F1: meeting-only coalition learning.** Each population completed 400 updates, with 400 held-out episodes per seed at both untrained and final checkpoints.
+| Component | Completed finding |
+| --- | --- |
+| F1 — meeting-only learning | False ejection rises from 0.045 to approximately 0.271 at 3+2, 0.073 to 0.2125 at 5+2, and 0.091 to 0.194 at 7+2. All three specified FE effects have Holm p=0.0117. Aligned voting and creator survival rise descriptively while false claims fall. |
+| F2 — scripted rules | Hypothesis-rule truthful-testimony FE is 0.2447/0.3700/0.3926 across increasing sizes, versus zero for mean and soft credibility. It improves some alibi/framer outcomes but has a substantial accuracy tradeoff. Truthful claims do not mean cooperative coalition voting. |
+| F3 — spatial adaptation | At 5+2, FE is 0.1940 for C0–D0, 0.4031 for C0–D1, 0.5385 for C1–D1 and 0.0759 for C1–D0. At 3+2 coalition adaptation lowers the mean from 0.4635 to 0.4153, with an interval crossing zero; a uniform adaptation claim fails. |
+| F4 — multi-round play | At 5+2 victory falls 0.9670→0.3603 after defender training and returns to 0.8514 after coalition retraining. During retraining, any innocent ejection changes only 0.8392→0.8467 while mean FE count falls by 0.4249. Victory and accumulated harm diverge. No F4 contrast passes the retained Holm family. |
+| F5 — repeated responses | At generation ten, 5+2 multi-round victory is 0.3068 for C9–D10 and 0.7968 for C10–D10, but only 0.1804 for C10–D0. Ten-seed matrix-gain tests pass Holm p=0.0488; parity and late/early tests do not. This is finite evidence, not an asymptotic result. |
+| F7 — dependence defense | At 5+2, dependence-specific counterattack effects are uncertain. In the matched four-generation loop, the defense increases any-FE by 4.24 percentage points after C stages and 10.44 after D stages (Holm p=0.0117), while lowering C-stage wins by 2.88 points (Holm p=0.0410). |
+| F8 — hypothesis attack | At 5+2, targeted training raises hypothesis-defender FE from 0.1255 to 0.4217: effect 0.2962, pointwise 95% CI [0.2521,0.3418], Holm p=0.0273. The coalition transfers poorly to mean and soft rules. |
+| Controls | No declared ablation, budget or reward contrast passes Holm at 0.05. Limited five-seed resolution prevents interpreting this as equivalence or proof that the controls do not matter. |
 
-| Initial crew + coalition | False ejection, untrained → final | Same-target voting, untrained → final |
-| --- | --- | --- |
-| 3+2 | 0.045 ± 0.011 → 0.271 ± 0.046 | 0.126 ± 0.023 → 0.613 ± 0.062 |
-| 5+2 | 0.073 ± 0.008 → 0.212 ± 0.018 | 0.108 ± 0.023 → 0.316 ± 0.058 |
-| 7+2 | 0.091 ± 0.017 → 0.194 ± 0.027 | 0.092 ± 0.016 → 0.244 ± 0.041 |
+The 540,000-episode mechanism study and 240,000 honest-voter records show soft-minus-mean alibi FE differences of +1.12/+6.80/+15.86 percentage points despite below-uniform coalition weights. Removing alibi support or moving caught-lying penalties changes errors differently across attacks. No tested score repair is uniformly beneficial.
 
-Creator survival also rises, while the mean false-claim rate falls, at all three sizes. Same-target voting excludes shared abstention. These joint changes do not identify a causal mechanism.
+The 67,500-episode ballot supplement contains 135 cells and 317,670 honest score views. For hypothesis-trained attacks against the hypothesis rule, FE is 0.4240 at 5+2 and 0.6048 at 7+2, with honest skip rates about 66.1% and 89.9%. Coalition ballots are necessary for about 97.3% and 100% of observed false ejections under fixed recorded votes. This supports an abstention-related route, not a claim about behavior after changing the voting rules.
 
-**F3: spatial adaptation and transfer.** All three populations completed ten seeds, with 1,000 final games per seed in each of four policy pairings. At 5+2, false ejection is 0.194 ± 0.051 for the initial coalition against scripted crew, 0.403 ± 0.040 against the learned defender, 0.538 ± 0.053 after coalition adaptation, and 0.076 ± 0.014 when that adapted coalition returns to scripted crew. The pattern depends on the opponent.
+## Manuscript and validation
 
-The old universal adaptation claim fails: against the learned defender, coalition retraining lowers false ejection at 3+2 from 0.463 to 0.415, while raising it at 7+2 from 0.475 to 0.587. Initial-coalition incident probabilities against scripted crew are now 0.986, 0.963 and 0.943, contradicting the archived rare-incident account. Multiple repairs changed together, preventing attribution to one fix. Conditional rates exclude undefined strata explicitly; unconditional rates retain every seed.
+The title remains **Coalition Deception and Defensive Adaptation in a Social-Deduction Benchmark**. The abstract, methods, all results, interpretation, limitations, conclusion, data availability and reproduction appendix describe the completed study. All 19 figures and 18 tables are embedded in synchronized Markdown/TeX/PDF; the value manifest records selected final rows and input hashes. The corrected historical omniscient replay is no longer used as a final empirical result.
 
-**Mechanism replication.** Ten independent replicates at each population cover four testimony conditions, three aggregation rules and three intervention variants, using matched environment evidence. The 540,000 outcomes and 240,000 pre-ejection honest-voter records replace one-seed diagnostics and supply the previously missing catch-penalty intervention implementation.
+Validation includes:
 
-Under coordinated alibis, soft credibility exceeds mean false ejection by 0.0112, 0.0680 and 0.1586 across increasing populations, despite coalition weights below their uniform shares. Removing alibi support helps against alibis but worsens lone-liar and framer errors. Moving the catch penalty outside aggregation raises 3+2 soft lone-liar error from 0.1734 to 0.3274. There is no uniformly beneficial repair. Lower false ejection can also mean abstention: truthful 3+2 has zero false ejections but a 0.9496 ± 0.0094 no-ejection rate. These are measured properties of these scripted conditions, not general guarantees.
+- All **240 jobs and 11,885 checkpoints** accepted by raw/source/checkpoint gates.
+- Independent agreement for **all 303 effects, SDs, exact p-values, deterministic bootstrap intervals and Holm adjustments**.
+- Public-code reanalysis reproducing every semantic value in the five main tables, including 108,133 per-seed records.
+- **366 public-package tests** and wheel build passed; both source fingerprints preserved.
+- Independent supplemental raw-semantic and summary checks.
+- Manuscript source-table, citation, caption, build, and PDF layout checks.
 
-**F2: a truthful-testimony cost.** Reviewed 3+2 and 5+2 results show hypothesis-rule false ejection of 0.2447 ± 0.0175 and 0.3700 ± 0.0083 under truthful testimony, versus zero for mean and soft credibility. At 5+2 it improves on the mean against alibis and framers, showing a tradeoff rather than universal accuracy. A bounded replay of ten false ejections retained the true coalition in all 40 honest views and demonstrated score ties and coalition-only ejections after honest abstention. It does not explain the full error rate. “Truthful” concerns supported claim contents; coalition voting remains adversarial.
+The repository contains complete analysis tables and diagnostics, with documented archive-relative paths. Raw records, checkpoints, original source, and checksums are supplied through the [corrected-study release](https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11). Its seven numbered parts reconstruct the complete archive; verify the supplied hashes before extraction.
 
-## Paper, packaging and remaining work
-
-The neutral title is now *Coalition Deception and Defensive Adaptation in a Social-Deduction Benchmark*. The paper incorporates corrected F1/F3 and mechanism measurements; other empirical figures and tables, including F2 Tables 3–4, remain explicitly archived or provisional pending integration. Citations, mathematical qualifications and novelty claims were corrected. The synchronized Markdown, TeX and PDF use 12-point text with attached captions and readable multipage tables. A replay exposing full trajectories is correctly labeled omniscient.
-
-The clean repository separates `code/` and `paper/` and removes historical operational clutter. Its portable protocol preserves the original 240 jobs, seeds and budgets, but has a distinct source fingerprint; [packaging provenance](code/provenance/packaging.json) records the relationship. The original ongoing runs remain unchanged. Moving remaining computation to the desktop changes execution placement, not experimental design; software/platform differences remain relevant to reproduction. See the [code guide](code/README.md) for validation and execution commands.
-
-The clean package passed **360 tests**. Its wheel includes the replay viewer asset; the mechanism self-test retained ejected honest voters and detected the intended score changes. All 240 job definitions and 72 packaged source hashes were rechecked. The rebuilt paper has 59 pages, 19 figures and 18 tables. These checks validate the package, not unfinished scientific results.
-
-Remaining work includes completing and validating the main study and ballot diagnostic, integrating their results, reconsidering conclusions, releasing the final data/checkpoints, and obtaining author review and submission declarations. This code-and-paper release does not replace those steps.
+Computational work and manuscript integration are complete. Author affiliations/contact, funding, competing interests, contributions, peer-review model and approval remain author-supplied submission facts. No journal submission or acceptance is claimed.

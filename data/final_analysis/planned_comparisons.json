@@ -1,0 +1,10075 @@
+[
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r1|no_channel minus default|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r1|no_partner minus default|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_partner",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r1|no_channel_no_partner minus default|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel_no_partner",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_channel minus default|same_target_vote_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel",
+          "same_target_vote_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "same_target_vote_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_partner minus default|same_target_vote_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_partner",
+          "same_target_vote_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "same_target_vote_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_channel_no_partner minus default|same_target_vote_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel_no_partner",
+          "same_target_vote_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "same_target_vote_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_channel minus default|coalition_false_claim_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel",
+          "coalition_false_claim_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "coalition_false_claim_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_partner minus default|coalition_false_claim_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_partner",
+          "coalition_false_claim_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "coalition_false_claim_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_channel_no_partner minus default|coalition_false_claim_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel_no_partner",
+          "coalition_false_claim_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "coalition_false_claim_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_channel minus default|creator_survival",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel",
+          "creator_survival"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "creator_survival"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_partner minus default|creator_survival",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_partner",
+          "creator_survival"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "creator_survival"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r1|no_channel_no_partner minus default|creator_survival",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "no_channel_no_partner",
+          "creator_survival"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r1",
+          "ablation",
+          "default",
+          "creator_survival"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r8|no_channel minus default|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r8|no_partner minus default|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_partner",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r8|no_channel_no_partner minus default|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel_no_partner",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r8|no_channel minus default|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r8|no_partner minus default|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_partner",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation",
+    "name": "ablation_n7_r8|no_channel_no_partner minus default|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel_no_partner",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_channel minus default|same_target_vote_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel",
+          "same_target_vote_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "same_target_vote_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_partner minus default|same_target_vote_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_partner",
+          "same_target_vote_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "same_target_vote_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_channel_no_partner minus default|same_target_vote_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel_no_partner",
+          "same_target_vote_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "same_target_vote_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_channel minus default|coalition_false_claim_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel",
+          "coalition_false_claim_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "coalition_false_claim_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_partner minus default|coalition_false_claim_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_partner",
+          "coalition_false_claim_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "coalition_false_claim_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_channel_no_partner minus default|coalition_false_claim_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel_no_partner",
+          "coalition_false_claim_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "coalition_false_claim_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_channel minus default|creator_survival",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel",
+          "creator_survival"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "creator_survival"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_partner minus default|creator_survival",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_partner",
+          "creator_survival"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "creator_survival"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "ablation_behavior",
+    "name": "ablation_n7_r8|no_channel_no_partner minus default|creator_survival",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "no_channel_no_partner",
+          "creator_survival"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "ablation_n7_r8",
+          "ablation",
+          "default",
+          "creator_survival"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|mean adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "mean|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "soft|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|mean matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "mean|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|mean transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "mean|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|hypothesis adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "hypothesis|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "soft|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|hypothesis matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "hypothesis|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|hypothesis transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "hypothesis|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n7_r1|hypothesis|hypothesis minus mean|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "hypothesis|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n7_r1",
+          "crossplay",
+          "mean|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|mean adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "mean|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "soft|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|mean matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "mean|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|mean transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "mean|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|hypothesis adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "hypothesis|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "soft|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|hypothesis matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "hypothesis|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|hypothesis transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "hypothesis|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "hypothesis_adaptation",
+    "name": "counterattack_hyp_n9_r1|hypothesis|hypothesis minus mean|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "hypothesis|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_hyp_n9_r1",
+          "crossplay",
+          "mean|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n5_r1|rule adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "rule|rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "soft|rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n5_r1|rule matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "rule|rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n5_r1|rule transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "rule|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n5_r1|both adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "both|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "soft|both",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n5_r1|both matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "both|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n5_r1|both transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "both|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n5_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n7_r1|rule adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "rule|rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "soft|rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n7_r1|rule matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "rule|rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n7_r1|rule transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "rule|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n7_r1|both adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "both|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "soft|both",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n7_r1|both matched adaptive difference|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "both|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_counterattack",
+    "name": "counterattack_n7_r1|both transfer|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "both|soft",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "counterattack_n7_r1",
+          "crossplay",
+          "soft|soft",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|truthful|mean minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|truthful|median minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|truthful|trimmed minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|truthful|sharp_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|truthful|dependence_aware minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|truthful|hypothesis minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|lone_liar|mean minus lone_liar|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|lone_liar|median minus lone_liar|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|lone_liar|trimmed minus lone_liar|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|lone_liar|sharp_credibility minus lone_liar|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|lone_liar|dependence_aware minus lone_liar|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|lone_liar|hypothesis minus lone_liar|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|alibi|mean minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|alibi|median minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|alibi|trimmed minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|alibi|sharp_credibility minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|alibi|dependence_aware minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|alibi|hypothesis minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|framer|mean minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|framer|median minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|framer|trimmed minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|framer|sharp_credibility minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|framer|dependence_aware minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_rules",
+    "name": "depstatic_n7_r1|framer|hypothesis minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|mean|crew_rule minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|mean|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|median|crew_rule minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|median|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|trimmed|crew_rule minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|trimmed|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|sharp_credibility|crew_rule minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|sharp_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|dependence_aware|crew_rule minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|dependence_aware|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|hypothesis|crew_rule minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|hypothesis|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C0|dependence_aware|both minus C0|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|dependence_aware|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C0|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|mean|crew_rule minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|mean|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|median|crew_rule minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|median|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|trimmed|crew_rule minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|trimmed|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|sharp_credibility|crew_rule minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|sharp_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|dependence_aware|crew_rule minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|dependence_aware|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|hypothesis|crew_rule minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|hypothesis|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C1|dependence_aware|both minus C1|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|dependence_aware|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C1|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|mean|crew_rule minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|mean|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|median|crew_rule minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|median|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|trimmed|crew_rule minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|trimmed|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|sharp_credibility|crew_rule minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|sharp_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|dependence_aware|crew_rule minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|dependence_aware|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|hypothesis|crew_rule minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|hypothesis|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C2|dependence_aware|both minus C2|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|dependence_aware|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C2|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|mean|crew_rule minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|mean|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|median|crew_rule minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|median|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|trimmed|crew_rule minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|trimmed|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|sharp_credibility|crew_rule minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|sharp_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|dependence_aware|crew_rule minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|dependence_aware|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|hypothesis|crew_rule minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|hypothesis|crew_rule",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "static_learned",
+    "name": "depstatic_n7_r1|C3|dependence_aware|both minus C3|soft_credibility|crew_rule|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|dependence_aware|both",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "depstatic_n7_r1",
+          "learned",
+          "C3|soft_credibility|crew_rule",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f1_learning",
+    "name": "f1_tenseed_crew3|final minus initial|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f1_tenseed_crew3",
+          "holdout",
+          "final",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f1_tenseed_crew3",
+          "holdout",
+          "initial",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f1_learning",
+    "name": "f1_tenseed_crew3|final minus initial|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f1_tenseed_crew3",
+          "holdout",
+          "final",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f1_tenseed_crew3",
+          "holdout",
+          "initial",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f1_learning",
+    "name": "f1_tenseed_crew5|final minus initial|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f1_tenseed_crew5",
+          "holdout",
+          "final",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f1_tenseed_crew5",
+          "holdout",
+          "initial",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f1_learning",
+    "name": "f1_tenseed_crew5|final minus initial|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f1_tenseed_crew5",
+          "holdout",
+          "final",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f1_tenseed_crew5",
+          "holdout",
+          "initial",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f1_learning",
+    "name": "f1_tenseed_crew7|final minus initial|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f1_tenseed_crew7",
+          "holdout",
+          "final",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f1_tenseed_crew7",
+          "holdout",
+          "initial",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f1_learning",
+    "name": "f1_tenseed_crew7|final minus initial|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f1_tenseed_crew7",
+          "holdout",
+          "final",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f1_tenseed_crew7",
+          "holdout",
+          "initial",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|lone_liar|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "lone_liar|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|alibi|mean minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|alibi|median minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|alibi|trimmed minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|alibi|sharp_credibility minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|alibi|dependence_aware minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|alibi|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|alibi|hypothesis minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|framer|mean minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|framer|median minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|framer|trimmed minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|framer|sharp_credibility minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|framer|dependence_aware minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew3|framer|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew3|framer|hypothesis minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew3",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|lone_liar|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "lone_liar|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|alibi|mean minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|alibi|median minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|alibi|trimmed minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|alibi|sharp_credibility minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|alibi|dependence_aware minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|alibi|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|alibi|hypothesis minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|framer|mean minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|framer|median minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|framer|trimmed minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|framer|sharp_credibility minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|framer|dependence_aware minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew5|framer|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew5|framer|hypothesis minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew5",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|lone_liar|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "lone_liar|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|alibi|mean minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|alibi|median minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|alibi|trimmed minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|alibi|sharp_credibility minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|alibi|dependence_aware minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|alibi|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|alibi|hypothesis minus alibi|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "alibi|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|mean minus truthful|mean|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|framer|mean minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|median minus truthful|median|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|median",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|framer|median minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|median",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|trimmed minus truthful|trimmed|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|trimmed",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|framer|trimmed minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|trimmed",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|sharp_credibility minus truthful|sharp_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|framer|sharp_credibility minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|sharp_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|soft_credibility minus truthful|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|dependence_aware minus truthful|dependence_aware|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|framer|dependence_aware minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|dependence_aware",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_condition_effects",
+    "name": "f2_tenseed_crew7|framer|hypothesis minus truthful|hypothesis|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "truthful|hypothesis",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f2_rule_effects",
+    "name": "f2_tenseed_crew7|framer|hypothesis minus framer|soft_credibility|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|hypothesis",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f2_tenseed_crew7",
+          "rules",
+          "framer|soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f3_budget_d1600_crew5|coalition0_vs_learned_crew1 extended minus 400|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_budget_d1600_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f3_budget_d1600_crew5|coalition1_vs_learned_crew1 extended minus 400|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_budget_d1600_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f3_budget_d800_crew5|coalition0_vs_learned_crew1 extended minus 400|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_budget_d800_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f3_budget_d800_crew5|coalition1_vs_learned_crew1 extended minus 400|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_budget_d800_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew3|defender effect|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew3|adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew3|net change|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew5|defender effect|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew5|adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew5|net change|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew7|defender effect|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew7|adaptation|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f3_cycle",
+    "name": "f3_tenseed_crew7|net change|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f3_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f3_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f4_budget_d800_crew5|coalition0_vs_learned_crew1 extended minus 400|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_budget_d800_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f4_budget_d800_crew5|coalition1_vs_learned_crew1 extended minus 400|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_budget_d800_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f4_budget_d800_crew5|coalition0_vs_learned_crew1 extended minus 400|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_budget_d800_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "budget",
+    "name": "f4_budget_d800_crew5|coalition1_vs_learned_crew1 extended minus 400|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_budget_d800_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|defender effect|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|adaptation|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|net change|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|defender effect|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|adaptation|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|net change|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|defender effect|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|adaptation|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew3|net change|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew3",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|defender effect|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|adaptation|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|net change|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|defender effect|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|adaptation|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|net change|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|defender effect|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|adaptation|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew5|net change|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew5",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|defender effect|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|adaptation|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|net change|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|defender effect|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|adaptation|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|net change|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|defender effect|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|adaptation|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "f4_cycle",
+    "name": "f4_tenseed_crew7|net change|mean_false_ejections",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition1_vs_learned_crew1",
+          "mean_false_ejections"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "f4_tenseed_crew7",
+          "crossplay",
+          "coalition0_vs_soft_credibility",
+          "mean_false_ejections"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_dependence_n7_r8_k4|matrix_adaptation_gain|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_dependence_n7_r8_k4|late_minus_early|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "late_minus_early",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_dependence_n7_r8_k4|parity_gap|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "parity_gap",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_dependence_n7_r8_k4|matrix_adaptation_gain|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_dependence_n7_r8_k4|late_minus_early|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "late_minus_early",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_dependence_n7_r8_k4|parity_gap|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "parity_gap",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_loop",
+    "name": "multigen_dependence_n7_r8_k4|c_stage_mean minus reference h4|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "c_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h4",
+          "c_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_loop",
+    "name": "multigen_dependence_n7_r8_k4|d_stage_mean minus reference h4|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "d_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h4",
+          "d_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_loop",
+    "name": "multigen_dependence_n7_r8_k4|matrix_adaptation_gain minus reference h4|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_loop",
+    "name": "multigen_dependence_n7_r8_k4|c_stage_mean minus reference h4|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "c_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h4",
+          "c_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_loop",
+    "name": "multigen_dependence_n7_r8_k4|d_stage_mean minus reference h4|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "d_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h4",
+          "d_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "dependence_loop",
+    "name": "multigen_dependence_n7_r8_k4|matrix_adaptation_gain minus reference h4|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_dependence_n7_r8_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n5_r8_k10|matrix_adaptation_gain|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n5_r8_k10",
+          "loop_h10",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n5_r8_k10|late_minus_early|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n5_r8_k10",
+          "loop_h10",
+          "late_minus_early",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n5_r8_k10|parity_gap|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n5_r8_k10",
+          "loop_h10",
+          "parity_gap",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n5_r8_k10|matrix_adaptation_gain|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n5_r8_k10",
+          "loop_h10",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n5_r8_k10|late_minus_early|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n5_r8_k10",
+          "loop_h10",
+          "late_minus_early",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n5_r8_k10|parity_gap|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n5_r8_k10",
+          "loop_h10",
+          "parity_gap",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r1_k10|matrix_adaptation_gain|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h10",
+          "matrix_adaptation_gain",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r1_k10|late_minus_early|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h10",
+          "late_minus_early",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r1_k10|parity_gap|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h10",
+          "parity_gap",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r8_k10|matrix_adaptation_gain|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h10",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r8_k10|late_minus_early|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h10",
+          "late_minus_early",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r8_k10|parity_gap|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h10",
+          "parity_gap",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r8_k10|matrix_adaptation_gain|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h10",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r8_k10|late_minus_early|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h10",
+          "late_minus_early",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n7_r8_k10|parity_gap|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h10",
+          "parity_gap",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n9_r8_k3|matrix_adaptation_gain|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n9_r8_k3",
+          "loop_h3",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n9_r8_k3|late_minus_early|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n9_r8_k3",
+          "loop_h3",
+          "late_minus_early",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n9_r8_k3|matrix_adaptation_gain|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n9_r8_k3",
+          "loop_h3",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "loop_dynamics",
+    "name": "multigen_none_n9_r8_k3|late_minus_early|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_none_n9_r8_k3",
+          "loop_h3",
+          "late_minus_early",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwbal_n7_r1_k4|c_stage_mean minus reference h4|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwbal_n7_r1_k4",
+          "loop_h4",
+          "c_stage_mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "c_stage_mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwbal_n7_r1_k4|d_stage_mean minus reference h4|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwbal_n7_r1_k4",
+          "loop_h4",
+          "d_stage_mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "d_stage_mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwbal_n7_r1_k4|matrix_adaptation_gain minus reference h4|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwbal_n7_r1_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwbal_n7_r1_k4|c_stage_mean minus reference h4|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwbal_n7_r1_k4",
+          "loop_h4",
+          "c_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "c_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwbal_n7_r1_k4|d_stage_mean minus reference h4|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwbal_n7_r1_k4",
+          "loop_h4",
+          "d_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "d_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwbal_n7_r1_k4|matrix_adaptation_gain minus reference h4|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwbal_n7_r1_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwfe_n7_r8_k2|c_stage_mean minus reference h2|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwfe_n7_r8_k2",
+          "loop_h2",
+          "c_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h2",
+          "c_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwfe_n7_r8_k2|d_stage_mean minus reference h2|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwfe_n7_r8_k2",
+          "loop_h2",
+          "d_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h2",
+          "d_stage_mean",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwfe_n7_r8_k2|matrix_adaptation_gain minus reference h2|any_false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwfe_n7_r8_k2",
+          "loop_h2",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h2",
+          "matrix_adaptation_gain",
+          "any_false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwfe_n7_r8_k2|c_stage_mean minus reference h2|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwfe_n7_r8_k2",
+          "loop_h2",
+          "c_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h2",
+          "c_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwfe_n7_r8_k2|d_stage_mean minus reference h2|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwfe_n7_r8_k2",
+          "loop_h2",
+          "d_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h2",
+          "d_stage_mean",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwfe_n7_r8_k2|matrix_adaptation_gain minus reference h2|coalition_game_win_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwfe_n7_r8_k2",
+          "loop_h2",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r8_k10",
+          "loop_h2",
+          "matrix_adaptation_gain",
+          "coalition_game_win_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwmeet_n7_r1_k4|c_stage_mean minus reference h4|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwmeet_n7_r1_k4",
+          "loop_h4",
+          "c_stage_mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "c_stage_mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwmeet_n7_r1_k4|d_stage_mean minus reference h4|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwmeet_n7_r1_k4",
+          "loop_h4",
+          "d_stage_mean",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "d_stage_mean",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwmeet_n7_r1_k4|matrix_adaptation_gain minus reference h4|false_ejection_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwmeet_n7_r1_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "false_ejection_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "false_ejection_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwmeet_n7_r1_k4|c_stage_mean minus reference h4|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwmeet_n7_r1_k4",
+          "loop_h4",
+          "c_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "c_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwmeet_n7_r1_k4|d_stage_mean minus reference h4|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwmeet_n7_r1_k4",
+          "loop_h4",
+          "d_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "d_stage_mean",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  },
+  {
+    "family": "reward_controls",
+    "name": "multigen_rwmeet_n7_r1_k4|matrix_adaptation_gain minus reference h4|coalition_favorable_rate",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terms": [
+      [
+        1.0,
+        [
+          "multigen_rwmeet_n7_r1_k4",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_favorable_rate"
+        ]
+      ],
+      [
+        -1.0,
+        [
+          "multigen_none_n7_r1_k10",
+          "loop_h4",
+          "matrix_adaptation_gain",
+          "coalition_favorable_rate"
+        ]
+      ]
+    ]
+  }
+]

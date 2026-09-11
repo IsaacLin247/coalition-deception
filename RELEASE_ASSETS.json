@@ -1,0 +1,121 @@
+{
+  "aggregate_upload_MiB_per_second": 42.283154628571715,
+  "asset_count": 14,
+  "assets": [
+    {
+      "bytes": 3774,
+      "github_digest": "sha256:72e5892e7b58879fb709003948626935ca0dbe30fb407f21da02b54f7e2c84c2",
+      "id": 556421467,
+      "name": "RECONSTRUCT.md",
+      "sha256": "72e5892e7b58879fb709003948626935ca0dbe30fb407f21da02b54f7e2c84c2"
+    },
+    {
+      "bytes": 1599,
+      "github_digest": "sha256:1b2f6f74e246a54ef6bf5e73227223f828eec38f84f1d236a8406d7b3e0d3be0",
+      "id": 556421464,
+      "name": "SHA256SUMS",
+      "sha256": "1b2f6f74e246a54ef6bf5e73227223f828eec38f84f1d236a8406d7b3e0d3be0"
+    },
+    {
+      "bytes": 1409,
+      "github_digest": "sha256:9be53502bfddf999fd514a7e2c68e50393f25d22cb4b09b2016303372bfe59df",
+      "id": 556421442,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.complete.json",
+      "sha256": "9be53502bfddf999fd514a7e2c68e50393f25d22cb4b09b2016303372bfe59df"
+    },
+    {
+      "bytes": 5784828,
+      "github_digest": "sha256:55e8fb35857168340bdbc6d5a7f002ae6d13115b53a2373e0b3fa255beb37bad",
+      "id": 556421494,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.manifest.json",
+      "sha256": "55e8fb35857168340bdbc6d5a7f002ae6d13115b53a2373e0b3fa255beb37bad"
+    },
+    {
+      "bytes": 1500000000,
+      "github_digest": "sha256:a65b6859ba7efaa04d3870bb44c3c549b30815836e62cbdc7e574568d44c8c25",
+      "id": 556421500,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-001",
+      "sha256": "a65b6859ba7efaa04d3870bb44c3c549b30815836e62cbdc7e574568d44c8c25"
+    },
+    {
+      "bytes": 1500000000,
+      "github_digest": "sha256:e6328d7dd8f5944d9da5f5dcfb3d17077063cd42dab7b08a4db7c6946a1363a2",
+      "id": 556421537,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-002",
+      "sha256": "e6328d7dd8f5944d9da5f5dcfb3d17077063cd42dab7b08a4db7c6946a1363a2"
+    },
+    {
+      "bytes": 1500000000,
+      "github_digest": "sha256:d29fdc4b4262bb42daa31ca55a4664f8c3993619935431edcc6f343f84adc954",
+      "id": 556423030,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-003",
+      "sha256": "d29fdc4b4262bb42daa31ca55a4664f8c3993619935431edcc6f343f84adc954"
+    },
+    {
+      "bytes": 1500000000,
+      "github_digest": "sha256:998f5c4d1a6d116c4e472fccc713a7c74deca815e4139b2adb5b7169c1e2d21b",
+      "id": 556423741,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-004",
+      "sha256": "998f5c4d1a6d116c4e472fccc713a7c74deca815e4139b2adb5b7169c1e2d21b"
+    },
+    {
+      "bytes": 1500000000,
+      "github_digest": "sha256:a06943341d79fcfb8fd0a19eb99fa93d81fddbeb11e3e819015163b814efcee3",
+      "id": 556424021,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-005",
+      "sha256": "a06943341d79fcfb8fd0a19eb99fa93d81fddbeb11e3e819015163b814efcee3"
+    },
+    {
+      "bytes": 1500000000,
+      "github_digest": "sha256:af809fa152998991dd776721583a11a30eb715dce9866a128023c946b098525e",
+      "id": 556424559,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-006",
+      "sha256": "af809fa152998991dd776721583a11a30eb715dce9866a128023c946b098525e"
+    },
+    {
+      "bytes": 1251673047,
+      "github_digest": "sha256:20e31084b4c96997a271458ab1cb7fd731515d6cf03f8eea32206238a19dea08",
+      "id": 556421493,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.part-007",
+      "sha256": "20e31084b4c96997a271458ab1cb7fd731515d6cf03f8eea32206238a19dea08"
+    },
+    {
+      "bytes": 120,
+      "github_digest": "sha256:289bbc389d9b7272f4748c18de648cb2d9a86ee7dba559c11e00a7e7115240f7",
+      "id": 556421440,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.sha256",
+      "sha256": "289bbc389d9b7272f4748c18de648cb2d9a86ee7dba559c11e00a7e7115240f7"
+    },
+    {
+      "bytes": 839,
+      "github_digest": "sha256:d286e30d4a3744ae641b3ed15b9571d4284f4924b54ad126dc92d4ad66b713a8",
+      "id": 556421443,
+      "name": "coalition-deception-corrected-study-2026-09-11.tar.gz.verified.json",
+      "sha256": "d286e30d4a3744ae641b3ed15b9571d4284f4924b54ad126dc92d4ad66b713a8"
+    },
+    {
+      "bytes": 1667,
+      "github_digest": "sha256:96024adc45126f163529bef0c31f1489080a0469f341c6dfd82c602f1e55a329",
+      "id": 556421466,
+      "name": "split_manifest.json",
+      "sha256": "96024adc45126f163529bef0c31f1489080a0469f341c6dfd82c602f1e55a329"
+    }
+  ],
+  "checks": [
+    "exact expected asset names",
+    "GitHub state uploaded",
+    "exact byte lengths",
+    "GitHub SHA-256 digests equal local asset SHA-256"
+  ],
+  "failed_uploads": 0,
+  "release_id": 386775298,
+  "release_url": "https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11",
+  "repo": "IsaacLin247/coalition-deception",
+  "status": "passed",
+  "tag": "corrected-study-2026-09-11",
+  "target_commitish_at_validation": "main",
+  "total_asset_bytes": 10257467283,
+  "upload_elapsed_seconds": 231.3517802799979,
+  "validated_utc": "2026-09-11T04:00:30.400287+00:00",
+  "verification_stage": "Draft-upload verification; immutable asset IDs, bytes and GitHub SHA-256 digests."
+}
