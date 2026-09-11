@@ -1,0 +1,1663 @@
+{
+  "attacks": [
+    {
+      "development_seed": 100,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s0.pt",
+      "sha256": "6d2bafacdc76667109094e3d693857784c603c6252615e69ecedd3be3eb9fef2",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s0",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 0
+    },
+    {
+      "development_seed": 100,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s0.pt",
+      "sha256": "4d1e99e64e93107363ff24d2d89393336a71bc688bf85774d3213c376b19f52b",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s0",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 0
+    },
+    {
+      "development_seed": 100,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s0.pt",
+      "sha256": "11abdfa64d333d1714f624cdf2620b755648349ee9b9af50d7c18d55b67608d0",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s0",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 0
+    },
+    {
+      "development_seed": 101,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s1.pt",
+      "sha256": "524d3da2495212feed02cb19967813b474813e4b7d05fd24db0b0a0dd2e28c03",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s1",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 1
+    },
+    {
+      "development_seed": 101,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s1.pt",
+      "sha256": "f7a1989c2dd0c50ddc69f1e982b2d4c0cc54c0ae9aa9a59fa4a124a0500175da",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s1",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 1
+    },
+    {
+      "development_seed": 101,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s1.pt",
+      "sha256": "e139e9122d8ba56b69c4cb62317f30a8b334a789f5c659c07aaed698a68bffd6",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s1",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 1
+    },
+    {
+      "development_seed": 102,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s2.pt",
+      "sha256": "8375c970e2bdec7cc84e9cde7ab39ce23a932b31c43b9215ea2989604d936b2a",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s2",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 2
+    },
+    {
+      "development_seed": 102,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s2.pt",
+      "sha256": "208495b759734bbb9ff195cb5c6f63b032f7f085ef27305ddb51877f290ed91a",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s2",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 2
+    },
+    {
+      "development_seed": 102,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s2.pt",
+      "sha256": "680201d08658e62afb1dc8912e8e150aa33aba3e4520ad5e9eea1537fe86236f",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s2",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 2
+    },
+    {
+      "development_seed": 103,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s3.pt",
+      "sha256": "dff5e5c1815679b5e54486af54af077bacc0cade5be7d178e40e28dc8727f8e1",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s3",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 3
+    },
+    {
+      "development_seed": 103,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s3.pt",
+      "sha256": "7f0bec10351a0e7505ca748679b6947137772a0fbb97ae863067d3dab5ed8fab",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s3",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 3
+    },
+    {
+      "development_seed": 103,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s3.pt",
+      "sha256": "9441a400ed7c33c04f60b997242ffd25fd9b52ff62738386e0a3d3af0246a872",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s3",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 3
+    },
+    {
+      "development_seed": 104,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s4.pt",
+      "sha256": "5df135de8b70d769b4d94cb4545c87384e0633a274ad47bbd9491d7645cdbf7a",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s4",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 4
+    },
+    {
+      "development_seed": 104,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s4.pt",
+      "sha256": "7a11ad88b35009a0c38f680f9e8f4580459cb8f988b9072b201582bbbddfb84a",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s4",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 4
+    },
+    {
+      "development_seed": 104,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s4.pt",
+      "sha256": "3fdf003c71024648e44e0fdb3d39961679038f395e04033c7d64cb816481cdf8",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s4",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 4
+    },
+    {
+      "development_seed": 105,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s5.pt",
+      "sha256": "f25fb4279e8be8832fee20479617b0cc69a856a587661c6fa2e2028436cd249a",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s5",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 5
+    },
+    {
+      "development_seed": 105,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s5.pt",
+      "sha256": "549fd6545e4fd2cd1dcd94a6108bce83d650afc01381c5e1150a27268811f84f",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s5",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 5
+    },
+    {
+      "development_seed": 105,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s5.pt",
+      "sha256": "6bd44468062688b78ed89edfd361f0c2818a799e00b2a6ea1ee8b786816bbc92",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s5",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 5
+    },
+    {
+      "development_seed": 106,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s6.pt",
+      "sha256": "447f584a557fde564b7e30201fb8024511c8f65f9dd5c3258ed4bddd70597709",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s6",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 6
+    },
+    {
+      "development_seed": 106,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s6.pt",
+      "sha256": "3df55651fc7827cb2e0ab12593d3fc6b978d5f72c7fe4dfa7a6b99b54ebbeed5",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s6",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 6
+    },
+    {
+      "development_seed": 106,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s6.pt",
+      "sha256": "7d39fcee3291820bd2c8bd1dabd099901257fa3543080a3b5edb1b5129b4b03f",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s6",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 6
+    },
+    {
+      "development_seed": 107,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_mean",
+      "path": "validation/inputs/development_attacks/mean_s7.pt",
+      "sha256": "d1ce3bccf3a5146058abca662198622fa24febde5cd8a2dced12d6ab7f9d5ba4",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s7",
+      "source_stage": "coalition_vs_mean",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 7
+    },
+    {
+      "development_seed": 107,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_soft",
+      "path": "validation/inputs/development_attacks/soft_s7.pt",
+      "sha256": "869c65671fc8243099bc23c9113012ac2757ed14dca807d2872640b77936e0c7",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s7",
+      "source_stage": "coalition_vs_soft",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 7
+    },
+    {
+      "development_seed": 107,
+      "env_overrides": {
+        "actor_private_history": true,
+        "allow_self_vote": false,
+        "allow_skip_vote": true,
+        "auto_report_at_end": true,
+        "coalition_objective": "balanced_ejection",
+        "confidence_levels": 3,
+        "dependence_penalty": 4.0,
+        "dependence_top_j": 1,
+        "dependence_window": 3,
+        "edges": [
+          [
+            "Hub",
+            "Electrical"
+          ],
+          [
+            "Hub",
+            "Navigation"
+          ],
+          [
+            "Hub",
+            "Medbay"
+          ],
+          [
+            "Electrical",
+            "Navigation"
+          ]
+        ],
+        "enable_response_round": true,
+        "enable_symbol_channel": true,
+        "free_play_turns": 8,
+        "incident_requires_isolation": true,
+        "incident_time_public": true,
+        "judge_sighted": false,
+        "max_evidence_retries": 64,
+        "max_rounds": 1,
+        "n_agents": 7,
+        "n_coalition": 2,
+        "n_symbols": 4,
+        "n_tasks_per_agent": 2,
+        "name": "full_short_game",
+        "partner_known": true,
+        "random_speaking_order": true,
+        "reputation_accuracy": false,
+        "reveal_role_on_eject": false,
+        "rooms": [
+          "Hub",
+          "Electrical",
+          "Navigation",
+          "Medbay"
+        ],
+        "shared_reward": true,
+        "symbol_mode": "learned",
+        "synthetic_evidence": false,
+        "tie_ejects": false,
+        "vote_aggregation": "majority"
+      },
+      "environment": "full_short_game",
+      "name": "legacy_hypothesis",
+      "path": "validation/inputs/development_attacks/hypothesis_s7.pt",
+      "sha256": "f73de685f22ad892e9317b024b8a06be99a7fcb808f8f740059b0a8864be67a2",
+      "size": 940129,
+      "source_run": "counterattack_hyp_n7_r1_s7",
+      "source_stage": "coalition_vs_hypothesis",
+      "source_study_sha256": "691f7687435424185064b24a9fee1832c6e7b32b9661efe20a10e35ca0c17d35",
+      "training_seed": 7
+    }
+  ],
+  "purpose": "Frozen prior-study attacks for development selection only; no final test checkpoint reuse.",
+  "schema_version": 1,
+  "source_release": "https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11"
+}

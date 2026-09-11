@@ -1,0 +1,1173 @@
+{
+  "analysis": {
+    "episodes_per_cell": 16,
+    "final_outcome_blinding": "Software smoke only; no effect-size or chosen-rule interpretation.",
+    "final_seed_count": 2,
+    "final_seeds": [
+      3000,
+      3001
+    ],
+    "inclusion": "All planned seeds; no data-dependent stopping or exclusions.",
+    "seed_unit": "independent training seed or scripted evaluation evidence batch",
+    "smoke_only": true
+  },
+  "jobs": [
+    {
+      "defenses": [
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_035",
+          "threshold": 0.35,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_050",
+          "threshold": 0.5,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_065",
+          "threshold": 0.65,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_080",
+          "threshold": 0.8,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_035",
+          "threshold": 0.35,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_050",
+          "threshold": 0.5,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_065",
+          "threshold": 0.65,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_080",
+          "threshold": 0.8,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_035",
+          "threshold": 0.35,
+          "tie_break": "skip"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_050",
+          "threshold": 0.5,
+          "tie_break": "skip"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_065",
+          "threshold": 0.65,
+          "tie_break": "skip"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_080",
+          "threshold": 0.8,
+          "tie_break": "skip"
+        },
+        {
+          "name": "soft",
+          "rule": "soft_credibility"
+        },
+        {
+          "name": "mean",
+          "rule": "mean"
+        }
+      ],
+      "env_overrides": {},
+      "environment": "full_short_game",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987654421,
+      "kind": "static",
+      "max_rounds": 1,
+      "n_agents": 7,
+      "name": "dev_s100",
+      "opponents": [
+        {
+          "condition": "truthful",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "truthful"
+        },
+        {
+          "condition": "lone_liar",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "lone_liar"
+        },
+        {
+          "condition": "alibi",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "alibi"
+        },
+        {
+          "condition": "framer",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "framer"
+        },
+        {
+          "env_overrides": {
+            "actor_private_history": true,
+            "allow_self_vote": false,
+            "allow_skip_vote": true,
+            "auto_report_at_end": true,
+            "coalition_objective": "balanced_ejection",
+            "confidence_levels": 3,
+            "dependence_penalty": 4.0,
+            "dependence_top_j": 1,
+            "dependence_window": 3,
+            "edges": [
+              [
+                "Hub",
+                "Electrical"
+              ],
+              [
+                "Hub",
+                "Navigation"
+              ],
+              [
+                "Hub",
+                "Medbay"
+              ],
+              [
+                "Electrical",
+                "Navigation"
+              ]
+            ],
+            "enable_response_round": true,
+            "enable_symbol_channel": true,
+            "free_play_turns": 8,
+            "incident_requires_isolation": true,
+            "incident_time_public": true,
+            "judge_sighted": false,
+            "max_evidence_retries": 64,
+            "max_rounds": 1,
+            "n_agents": 7,
+            "n_coalition": 2,
+            "n_symbols": 4,
+            "n_tasks_per_agent": 2,
+            "name": "full_short_game",
+            "partner_known": true,
+            "random_speaking_order": true,
+            "reputation_accuracy": false,
+            "reveal_role_on_eject": false,
+            "rooms": [
+              "Hub",
+              "Electrical",
+              "Navigation",
+              "Medbay"
+            ],
+            "shared_reward": true,
+            "symbol_mode": "learned",
+            "synthetic_evidence": false,
+            "tie_ejects": false,
+            "vote_aggregation": "majority"
+          },
+          "environment": "full_short_game",
+          "input": {
+            "path": "validation/inputs/development_attacks/mean_s0.pt",
+            "sha256": "6d2bafacdc76667109094e3d693857784c603c6252615e69ecedd3be3eb9fef2"
+          },
+          "kind": "checkpoint",
+          "name": "trained_mean"
+        },
+        {
+          "env_overrides": {
+            "actor_private_history": true,
+            "allow_self_vote": false,
+            "allow_skip_vote": true,
+            "auto_report_at_end": true,
+            "coalition_objective": "balanced_ejection",
+            "confidence_levels": 3,
+            "dependence_penalty": 4.0,
+            "dependence_top_j": 1,
+            "dependence_window": 3,
+            "edges": [
+              [
+                "Hub",
+                "Electrical"
+              ],
+              [
+                "Hub",
+                "Navigation"
+              ],
+              [
+                "Hub",
+                "Medbay"
+              ],
+              [
+                "Electrical",
+                "Navigation"
+              ]
+            ],
+            "enable_response_round": true,
+            "enable_symbol_channel": true,
+            "free_play_turns": 8,
+            "incident_requires_isolation": true,
+            "incident_time_public": true,
+            "judge_sighted": false,
+            "max_evidence_retries": 64,
+            "max_rounds": 1,
+            "n_agents": 7,
+            "n_coalition": 2,
+            "n_symbols": 4,
+            "n_tasks_per_agent": 2,
+            "name": "full_short_game",
+            "partner_known": true,
+            "random_speaking_order": true,
+            "reputation_accuracy": false,
+            "reveal_role_on_eject": false,
+            "rooms": [
+              "Hub",
+              "Electrical",
+              "Navigation",
+              "Medbay"
+            ],
+            "shared_reward": true,
+            "symbol_mode": "learned",
+            "synthetic_evidence": false,
+            "tie_ejects": false,
+            "vote_aggregation": "majority"
+          },
+          "environment": "full_short_game",
+          "input": {
+            "path": "validation/inputs/development_attacks/soft_s0.pt",
+            "sha256": "4d1e99e64e93107363ff24d2d89393336a71bc688bf85774d3213c376b19f52b"
+          },
+          "kind": "checkpoint",
+          "name": "trained_soft"
+        },
+        {
+          "env_overrides": {
+            "actor_private_history": true,
+            "allow_self_vote": false,
+            "allow_skip_vote": true,
+            "auto_report_at_end": true,
+            "coalition_objective": "balanced_ejection",
+            "confidence_levels": 3,
+            "dependence_penalty": 4.0,
+            "dependence_top_j": 1,
+            "dependence_window": 3,
+            "edges": [
+              [
+                "Hub",
+                "Electrical"
+              ],
+              [
+                "Hub",
+                "Navigation"
+              ],
+              [
+                "Hub",
+                "Medbay"
+              ],
+              [
+                "Electrical",
+                "Navigation"
+              ]
+            ],
+            "enable_response_round": true,
+            "enable_symbol_channel": true,
+            "free_play_turns": 8,
+            "incident_requires_isolation": true,
+            "incident_time_public": true,
+            "judge_sighted": false,
+            "max_evidence_retries": 64,
+            "max_rounds": 1,
+            "n_agents": 7,
+            "n_coalition": 2,
+            "n_symbols": 4,
+            "n_tasks_per_agent": 2,
+            "name": "full_short_game",
+            "partner_known": true,
+            "random_speaking_order": true,
+            "reputation_accuracy": false,
+            "reveal_role_on_eject": false,
+            "rooms": [
+              "Hub",
+              "Electrical",
+              "Navigation",
+              "Medbay"
+            ],
+            "shared_reward": true,
+            "symbol_mode": "learned",
+            "synthetic_evidence": false,
+            "tie_ejects": false,
+            "vote_aggregation": "majority"
+          },
+          "environment": "full_short_game",
+          "input": {
+            "path": "validation/inputs/development_attacks/hypothesis_s0.pt",
+            "sha256": "11abdfa64d333d1714f624cdf2620b755648349ee9b9af50d7c18d55b67608d0"
+          },
+          "kind": "checkpoint",
+          "name": "trained_hypothesis"
+        }
+      ],
+      "phase": "development",
+      "seed": 100
+    },
+    {
+      "defenses": [
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_035",
+          "threshold": 0.35,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_050",
+          "threshold": 0.5,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_065",
+          "threshold": 0.65,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_080",
+          "threshold": 0.8,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_035",
+          "threshold": 0.35,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_050",
+          "threshold": 0.5,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_065",
+          "threshold": 0.65,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_080",
+          "threshold": 0.8,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_035",
+          "threshold": 0.35,
+          "tie_break": "skip"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_050",
+          "threshold": 0.5,
+          "tie_break": "skip"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_065",
+          "threshold": 0.65,
+          "tie_break": "skip"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_080",
+          "threshold": 0.8,
+          "tie_break": "skip"
+        },
+        {
+          "name": "soft",
+          "rule": "soft_credibility"
+        },
+        {
+          "name": "mean",
+          "rule": "mean"
+        }
+      ],
+      "env_overrides": {},
+      "environment": "full_short_game",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987654422,
+      "kind": "static",
+      "max_rounds": 1,
+      "n_agents": 7,
+      "name": "dev_s101",
+      "opponents": [
+        {
+          "condition": "truthful",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "truthful"
+        },
+        {
+          "condition": "lone_liar",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "lone_liar"
+        },
+        {
+          "condition": "alibi",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "alibi"
+        },
+        {
+          "condition": "framer",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "framer"
+        },
+        {
+          "env_overrides": {
+            "actor_private_history": true,
+            "allow_self_vote": false,
+            "allow_skip_vote": true,
+            "auto_report_at_end": true,
+            "coalition_objective": "balanced_ejection",
+            "confidence_levels": 3,
+            "dependence_penalty": 4.0,
+            "dependence_top_j": 1,
+            "dependence_window": 3,
+            "edges": [
+              [
+                "Hub",
+                "Electrical"
+              ],
+              [
+                "Hub",
+                "Navigation"
+              ],
+              [
+                "Hub",
+                "Medbay"
+              ],
+              [
+                "Electrical",
+                "Navigation"
+              ]
+            ],
+            "enable_response_round": true,
+            "enable_symbol_channel": true,
+            "free_play_turns": 8,
+            "incident_requires_isolation": true,
+            "incident_time_public": true,
+            "judge_sighted": false,
+            "max_evidence_retries": 64,
+            "max_rounds": 1,
+            "n_agents": 7,
+            "n_coalition": 2,
+            "n_symbols": 4,
+            "n_tasks_per_agent": 2,
+            "name": "full_short_game",
+            "partner_known": true,
+            "random_speaking_order": true,
+            "reputation_accuracy": false,
+            "reveal_role_on_eject": false,
+            "rooms": [
+              "Hub",
+              "Electrical",
+              "Navigation",
+              "Medbay"
+            ],
+            "shared_reward": true,
+            "symbol_mode": "learned",
+            "synthetic_evidence": false,
+            "tie_ejects": false,
+            "vote_aggregation": "majority"
+          },
+          "environment": "full_short_game",
+          "input": {
+            "path": "validation/inputs/development_attacks/mean_s1.pt",
+            "sha256": "524d3da2495212feed02cb19967813b474813e4b7d05fd24db0b0a0dd2e28c03"
+          },
+          "kind": "checkpoint",
+          "name": "trained_mean"
+        },
+        {
+          "env_overrides": {
+            "actor_private_history": true,
+            "allow_self_vote": false,
+            "allow_skip_vote": true,
+            "auto_report_at_end": true,
+            "coalition_objective": "balanced_ejection",
+            "confidence_levels": 3,
+            "dependence_penalty": 4.0,
+            "dependence_top_j": 1,
+            "dependence_window": 3,
+            "edges": [
+              [
+                "Hub",
+                "Electrical"
+              ],
+              [
+                "Hub",
+                "Navigation"
+              ],
+              [
+                "Hub",
+                "Medbay"
+              ],
+              [
+                "Electrical",
+                "Navigation"
+              ]
+            ],
+            "enable_response_round": true,
+            "enable_symbol_channel": true,
+            "free_play_turns": 8,
+            "incident_requires_isolation": true,
+            "incident_time_public": true,
+            "judge_sighted": false,
+            "max_evidence_retries": 64,
+            "max_rounds": 1,
+            "n_agents": 7,
+            "n_coalition": 2,
+            "n_symbols": 4,
+            "n_tasks_per_agent": 2,
+            "name": "full_short_game",
+            "partner_known": true,
+            "random_speaking_order": true,
+            "reputation_accuracy": false,
+            "reveal_role_on_eject": false,
+            "rooms": [
+              "Hub",
+              "Electrical",
+              "Navigation",
+              "Medbay"
+            ],
+            "shared_reward": true,
+            "symbol_mode": "learned",
+            "synthetic_evidence": false,
+            "tie_ejects": false,
+            "vote_aggregation": "majority"
+          },
+          "environment": "full_short_game",
+          "input": {
+            "path": "validation/inputs/development_attacks/soft_s1.pt",
+            "sha256": "f7a1989c2dd0c50ddc69f1e982b2d4c0cc54c0ae9aa9a59fa4a124a0500175da"
+          },
+          "kind": "checkpoint",
+          "name": "trained_soft"
+        },
+        {
+          "env_overrides": {
+            "actor_private_history": true,
+            "allow_self_vote": false,
+            "allow_skip_vote": true,
+            "auto_report_at_end": true,
+            "coalition_objective": "balanced_ejection",
+            "confidence_levels": 3,
+            "dependence_penalty": 4.0,
+            "dependence_top_j": 1,
+            "dependence_window": 3,
+            "edges": [
+              [
+                "Hub",
+                "Electrical"
+              ],
+              [
+                "Hub",
+                "Navigation"
+              ],
+              [
+                "Hub",
+                "Medbay"
+              ],
+              [
+                "Electrical",
+                "Navigation"
+              ]
+            ],
+            "enable_response_round": true,
+            "enable_symbol_channel": true,
+            "free_play_turns": 8,
+            "incident_requires_isolation": true,
+            "incident_time_public": true,
+            "judge_sighted": false,
+            "max_evidence_retries": 64,
+            "max_rounds": 1,
+            "n_agents": 7,
+            "n_coalition": 2,
+            "n_symbols": 4,
+            "n_tasks_per_agent": 2,
+            "name": "full_short_game",
+            "partner_known": true,
+            "random_speaking_order": true,
+            "reputation_accuracy": false,
+            "reveal_role_on_eject": false,
+            "rooms": [
+              "Hub",
+              "Electrical",
+              "Navigation",
+              "Medbay"
+            ],
+            "shared_reward": true,
+            "symbol_mode": "learned",
+            "synthetic_evidence": false,
+            "tie_ejects": false,
+            "vote_aggregation": "majority"
+          },
+          "environment": "full_short_game",
+          "input": {
+            "path": "validation/inputs/development_attacks/hypothesis_s1.pt",
+            "sha256": "e139e9122d8ba56b69c4cb62317f30a8b334a789f5c659c07aaed698a68bffd6"
+          },
+          "kind": "checkpoint",
+          "name": "trained_hypothesis"
+        }
+      ],
+      "phase": "development",
+      "seed": 101
+    },
+    {
+      "defenses": [
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_050",
+          "threshold": 0.5,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_050",
+          "threshold": 0.5,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_050",
+          "threshold": 0.5,
+          "tie_break": "skip"
+        },
+        {
+          "name": "selected",
+          "selection": true
+        },
+        {
+          "name": "soft",
+          "rule": "soft_credibility"
+        },
+        {
+          "name": "mean",
+          "rule": "mean"
+        }
+      ],
+      "env_overrides": {
+        "coalition_objective": "false_ejection"
+      },
+      "environment": "meeting_only",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987657321,
+      "kind": "static",
+      "max_rounds": 1,
+      "n_agents": 7,
+      "name": "static_s3000",
+      "opponents": [
+        {
+          "condition": "truthful",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "truthful"
+        },
+        {
+          "condition": "lone_liar",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "lone_liar"
+        },
+        {
+          "condition": "alibi",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "alibi"
+        },
+        {
+          "condition": "framer",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "framer"
+        }
+      ],
+      "phase": "final",
+      "seed": 3000
+    },
+    {
+      "checkpoint_every": 1,
+      "defenses": [
+        {
+          "name": "soft",
+          "rule": "soft_credibility"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_050",
+          "threshold": 0.5,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_050",
+          "threshold": 0.5,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_050",
+          "threshold": 0.5,
+          "tie_break": "skip"
+        },
+        {
+          "name": "selected",
+          "selection": true
+        }
+      ],
+      "device": "cpu",
+      "env_overrides": {
+        "dependence_penalty": 4.0,
+        "dependence_window": 3
+      },
+      "environment": "full_short_game",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987657321,
+      "kind": "adaptive",
+      "max_rounds": 1,
+      "monitor_episodes": 4,
+      "monitor_every": 1,
+      "n_agents": 7,
+      "n_envs": 4,
+      "name": "adaptive_s3000",
+      "phase": "final",
+      "rollout_episodes": 4,
+      "seed": 3000,
+      "updates": 2
+    },
+    {
+      "checkpoint_every": 1,
+      "device": "cpu",
+      "env_overrides": {},
+      "environment": "full_short_game",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987657321,
+      "kind": "matched_cycle",
+      "max_rounds": 8,
+      "monitor_episodes": 4,
+      "monitor_every": 1,
+      "n_agents": 7,
+      "n_envs": 4,
+      "name": "cycle_s3000",
+      "phase": "final",
+      "rollout_episodes": 4,
+      "seed": 3000,
+      "updates": 2
+    },
+    {
+      "defenses": [
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_050",
+          "threshold": 0.5,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_050",
+          "threshold": 0.5,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_050",
+          "threshold": 0.5,
+          "tie_break": "skip"
+        },
+        {
+          "name": "selected",
+          "selection": true
+        },
+        {
+          "name": "soft",
+          "rule": "soft_credibility"
+        },
+        {
+          "name": "mean",
+          "rule": "mean"
+        }
+      ],
+      "env_overrides": {
+        "coalition_objective": "false_ejection"
+      },
+      "environment": "meeting_only",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987657322,
+      "kind": "static",
+      "max_rounds": 1,
+      "n_agents": 7,
+      "name": "static_s3001",
+      "opponents": [
+        {
+          "condition": "truthful",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "truthful"
+        },
+        {
+          "condition": "lone_liar",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "lone_liar"
+        },
+        {
+          "condition": "alibi",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "alibi"
+        },
+        {
+          "condition": "framer",
+          "env_overrides": {
+            "coalition_objective": "false_ejection"
+          },
+          "environment": "meeting_only",
+          "kind": "scripted",
+          "name": "framer"
+        }
+      ],
+      "phase": "final",
+      "seed": 3001
+    },
+    {
+      "checkpoint_every": 1,
+      "defenses": [
+        {
+          "name": "soft",
+          "rule": "soft_credibility"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_index_050",
+          "threshold": 0.5,
+          "tie_break": "index"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_random_050",
+          "threshold": 0.5,
+          "tie_break": "random"
+        },
+        {
+          "honesty": 0.5,
+          "name": "hypothesis_skip_050",
+          "threshold": 0.5,
+          "tie_break": "skip"
+        },
+        {
+          "name": "selected",
+          "selection": true
+        }
+      ],
+      "device": "cpu",
+      "env_overrides": {
+        "dependence_penalty": 4.0,
+        "dependence_window": 3
+      },
+      "environment": "full_short_game",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987657322,
+      "kind": "adaptive",
+      "max_rounds": 1,
+      "monitor_episodes": 4,
+      "monitor_every": 1,
+      "n_agents": 7,
+      "n_envs": 4,
+      "name": "adaptive_s3001",
+      "phase": "final",
+      "rollout_episodes": 4,
+      "seed": 3001,
+      "updates": 2
+    },
+    {
+      "checkpoint_every": 1,
+      "device": "cpu",
+      "env_overrides": {},
+      "environment": "full_short_game",
+      "episodes": 16,
+      "eval_batch_size": 4,
+      "eval_seed": 4987657322,
+      "kind": "matched_cycle",
+      "max_rounds": 8,
+      "monitor_episodes": 4,
+      "monitor_every": 1,
+      "n_agents": 7,
+      "n_envs": 4,
+      "name": "cycle_s3001",
+      "phase": "final",
+      "rollout_episodes": 4,
+      "seed": 3001,
+      "updates": 2
+    }
+  ],
+  "note": "Desktop-only integration smoke; separate final training seeds3000/3001 and evidence base4987654321. No smoke outcome enters scientific selection or final inference.",
+  "primary_inference": {
+    "alpha": 0.05,
+    "alternative": "two-sided",
+    "confidence_intervals": {
+      "coverage": "pointwise, not familywise",
+      "level": 0.95,
+      "method": "percentile bootstrap of complete paired seed differences",
+      "resamples": 20000,
+      "rng": "deterministic contrast-ID hash, separate from simulation RNG"
+    },
+    "episode_denominator": 16,
+    "family": "post_review_validation",
+    "family_size": 6,
+    "lattice_scale": 16,
+    "missingness": "Suppress final inference until all planned final jobs and required raw counts verify; no favorable subset",
+    "multiplicity": "Holm across all six prespecified contrasts; family size never reduced",
+    "null_assumption": "Complete seed differences are symmetric/exchangeable under sign changes under the null; pairing alone does not establish this",
+    "p_tail": "P(|signed_sum| >= |observed_sum|), retain all 2^2 smoke assignments; software test only",
+    "primary_contrasts": [
+      {
+        "description": "Synthetic F2 truthful selected minus original-index defense false ejection",
+        "group": "static",
+        "id": "P1",
+        "metric": "false_ejection_rate",
+        "terms": [
+          [
+            1,
+            "truthful__selected",
+            "false_ejection_rate"
+          ],
+          [
+            -1,
+            "truthful__hypothesis_index_050",
+            "false_ejection_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Spatial F8 selected-trained minus soft-trained attack evaluated on selected defense",
+        "group": "adaptive",
+        "id": "P2",
+        "metric": "false_ejection_rate",
+        "terms": [
+          [
+            1,
+            "selected__selected",
+            "false_ejection_rate"
+          ],
+          [
+            -1,
+            "soft__selected",
+            "false_ejection_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Spatial F8 matched selected adaptation minus matched original-index adaptation",
+        "group": "adaptive",
+        "id": "P3",
+        "metric": "false_ejection_rate",
+        "terms": [
+          [
+            1,
+            "selected__selected",
+            "false_ejection_rate"
+          ],
+          [
+            -1,
+            "hypothesis_index_050__hypothesis_index_050",
+            "false_ejection_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Eight-round coalition game win adaptation",
+        "group": "matched_cycle",
+        "id": "P4",
+        "metric": "coalition_game_win_rate",
+        "terms": [
+          [
+            1,
+            "C1__D1",
+            "coalition_game_win_rate"
+          ],
+          [
+            -1,
+            "C0__D1",
+            "coalition_game_win_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Eight-round mean innocent-ejection count adaptation",
+        "group": "matched_cycle",
+        "id": "P5",
+        "metric": "mean_false_ejections",
+        "terms": [
+          [
+            1,
+            "C1__D1",
+            "mean_false_ejections"
+          ],
+          [
+            -1,
+            "C0__D1",
+            "mean_false_ejections"
+          ]
+        ]
+      },
+      {
+        "description": "Difference between win adaptation and any-false-ejection adaptation probabilities",
+        "group": "matched_cycle",
+        "id": "P6",
+        "metric": "win_minus_any_false_ejection_adaptation",
+        "terms": [
+          [
+            1,
+            "C1__D1",
+            "coalition_game_win_rate"
+          ],
+          [
+            -1,
+            "C0__D1",
+            "coalition_game_win_rate"
+          ],
+          [
+            -1,
+            "C1__D1",
+            "any_false_ejection_rate"
+          ],
+          [
+            1,
+            "C0__D1",
+            "any_false_ejection_rate"
+          ]
+        ]
+      }
+    ],
+    "sensitivity": "Paired t-test p-values for the same six contrasts, explicitly sensitivity only; show all seed differences",
+    "test": "Exact paired-mean sign-flip using arbitrary-size integer lattice dynamic programming"
+  },
+  "schema_version": 1,
+  "selection": {
+    "aggregation": "equal_seed_then_equal_task",
+    "baseline_defense": "hypothesis_index_050",
+    "candidate_order": [
+      "hypothesis_index_035",
+      "hypothesis_index_050",
+      "hypothesis_index_065",
+      "hypothesis_index_080",
+      "hypothesis_random_035",
+      "hypothesis_random_050",
+      "hypothesis_random_065",
+      "hypothesis_random_080",
+      "hypothesis_skip_035",
+      "hypothesis_skip_050",
+      "hypothesis_skip_065",
+      "hypothesis_skip_080"
+    ],
+    "development_seeds": [
+      100,
+      101
+    ],
+    "episodes_per_cell": 16,
+    "fallback_defense": "hypothesis_index_050",
+    "maximum_overall_capture_loss": 0.05,
+    "maximum_truthful_capture_loss": 0.05,
+    "minimum_truthful_creator_capture": 0.2,
+    "task_count": 7,
+    "task_names": [
+      "truthful",
+      "lone_liar",
+      "alibi",
+      "framer",
+      "trained_mean",
+      "trained_soft",
+      "trained_hypothesis"
+    ],
+    "truthful_task": "truthful"
+  },
+  "smoke_only": true,
+  "study": "post_review_validation_engineering_smoke_20260911"
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "scipy_version": "1.17.0",
+  "method": "Two-sided noncentral-t power; normal paired differences",
+  "family_size": 6,
+  "familywise_alpha": 0.05,
+  "individual_alpha": 0.008333333333333333,
+  "sample_sizes": [
+    32,
+    48,
+    64,
+    72,
+    80,
+    96
+  ],
+  "limitations": [
+    "New defender variance is unknown; historical SD does not guarantee it.",
+    "Power is for one contrast at the conservative first Holm threshold.",
+    "It is not the probability all family members reject.",
+    "Normal-theory assumptions are approximations for seed-level outcomes.",
+    "Effect targets describe detectable changes, not equivalence margins.",
+    "No prospective outcomes are read and no optional sample expansion is implied."
+  ],
+  "historical_reference": {
+    "file": "data/final_analysis/paired_effects.json",
+    "sha256": "93d8e72adffb565aea03b344f28414d072e0feb2e1c472a0bf1ccab1fabb1924",
+    "role": "Historical planning reference only; never pooled into new tests",
+    "rows": [
+      {
+        "label": "legacy_hypothesis_adaptation",
+        "contrast": "counterattack_hyp_n7_r1|hypothesis adaptation|false_ejection_rate",
+        "n": 10,
+        "mean": 0.2962,
+        "sd": 0.07605378213986322,
+        "sd_times_1_5": 0.11408067320979483
+      },
+      {
+        "label": "f4_win_adaptation",
+        "contrast": "f4_tenseed_crew5|adaptation|coalition_game_win_rate",
+        "n": 10,
+        "mean": 0.49110000000000004,
+        "sd": 0.10920668477707765,
+        "sd_times_1_5": 0.1638100271656165
+      },
+      {
+        "label": "f4_false_ejection_count_adaptation",
+        "contrast": "f4_tenseed_crew5|adaptation|mean_false_ejections",
+        "n": 10,
+        "mean": -0.42490000000000006,
+        "sd": 0.17108961264657638,
+        "sd_times_1_5": 0.25663441896986455
+      },
+      {
+        "label": "f4_win_minus_any_harm_adaptation",
+        "n": 10,
+        "mean": 0.48360000000000003,
+        "sd": 0.07146902981167597,
+        "sd_times_1_5": 0.10720354471751395
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "label": "5 percentage points, SD .10",
+      "unit": "probability",
+      "effect": 0.05,
+      "sd": 0.1,
+      "standardized_effect": 0.5,
+      "power": {
+        "32": 0.5126315389843085,
+        "48": 0.7570747993015224,
+        "64": 0.8944232801596679,
+        "72": 0.9331309654075892,
+        "80": 0.9585847318711096,
+        "96": 0.9850018848571455
+      },
+      "minimum_n_for_80_percent": 52,
+      "minimum_n_for_90_percent": 65
+    },
+    {
+      "label": "5 percentage points, 1.5 times legacy hypothesis SD",
+      "unit": "probability",
+      "effect": 0.05,
+      "sd": 0.11408067320979483,
+      "standardized_effect": 0.4382863336373357,
+      "power": {
+        "32": 0.3831413468060463,
+        "48": 0.6124446866001516,
+        "64": 0.779573452790194,
+        "72": 0.8386910248674139,
+        "80": 0.8839629667623702,
+        "96": 0.942586885264969
+      },
+      "minimum_n_for_80_percent": 67,
+      "minimum_n_for_90_percent": 84
+    },
+    {
+      "label": "5 percentage points, SD .15",
+      "unit": "probability",
+      "effect": 0.05,
+      "sd": 0.15,
+      "standardized_effect": 0.33333333333333337,
+      "power": {
+        "32": 0.19572531196539344,
+        "48": 0.339463390709158,
+        "64": 0.4819893625474176,
+        "72": 0.5480942776843418,
+        "80": 0.6092777714061747,
+        "96": 0.714908122968876
+      },
+      "minimum_n_for_80_percent": 113,
+      "minimum_n_for_90_percent": 142
+    },
+    {
+      "label": "10 percentage points, SD .10",
+      "unit": "probability",
+      "effect": 0.1,
+      "sd": 0.1,
+      "standardized_effect": 1.0,
+      "power": {
+        "32": 0.9964273498091333,
+        "48": 0.999971426455944,
+        "64": 0.9999998575467446,
+        "72": 0.9999999910964276,
+        "80": 0.9999999994779489,
+        "96": 0.9999999999984662
+      },
+      "minimum_n_for_80_percent": 16,
+      "minimum_n_for_90_percent": 19
+    },
+    {
+      "label": "10 percentage points, SD .15",
+      "unit": "probability",
+      "effect": 0.1,
+      "sd": 0.15,
+      "standardized_effect": 0.6666666666666667,
+      "power": {
+        "32": 0.8209657551231233,
+        "48": 0.9646117111607346,
+        "64": 0.9945409091634377,
+        "72": 0.997996527309742,
+        "80": 0.9992911539852711,
+        "96": 0.9999190475608903
+      },
+      "minimum_n_for_80_percent": 31,
+      "minimum_n_for_90_percent": 39
+    },
+    {
+      "label": "0.10 ejections/game, SD .20",
+      "unit": "false_ejections_per_game",
+      "effect": 0.1,
+      "sd": 0.2,
+      "standardized_effect": 0.5,
+      "power": {
+        "32": 0.5126315389843085,
+        "48": 0.7570747993015224,
+        "64": 0.8944232801596679,
+        "72": 0.9331309654075892,
+        "80": 0.9585847318711096,
+        "96": 0.9850018848571455
+      },
+      "minimum_n_for_80_percent": 52,
+      "minimum_n_for_90_percent": 65
+    },
+    {
+      "label": "0.20 ejections/game, SD .20",
+      "unit": "false_ejections_per_game",
+      "effect": 0.2,
+      "sd": 0.2,
+      "standardized_effect": 1.0,
+      "power": {
+        "32": 0.9964273498091333,
+        "48": 0.999971426455944,
+        "64": 0.9999998575467446,
+        "72": 0.9999999910964276,
+        "80": 0.9999999994779489,
+        "96": 0.9999999999984662
+      },
+      "minimum_n_for_80_percent": 16,
+      "minimum_n_for_90_percent": 19
+    }
+  ],
+  "signflip_monte_carlo": [
+    {
+      "n": 72,
+      "effect": 0.05,
+      "sd": 0.1,
+      "alpha": 0.008333333333333333,
+      "synthetic_alternatives": 1000,
+      "sign_draws_per_alternative": 8191,
+      "rng_seed": 2026091101,
+      "integer_lattice_scale": 1000,
+      "rejections": 942,
+      "estimated_power": 0.942,
+      "mc_standard_error": 0.007391616873188169,
+      "mc_wilson95": [
+        0.9257504237337675,
+        0.9548667217650018
+      ],
+      "interpretation": "MC uncertainty conditional on normal rounded alternatives; not uncertainty about power in the real environment",
+      "pvalue": "(1 + randomized_tail_count)/(1 + sign_draws)",
+      "finite_sign_error": "Approximates, rather than exhaustively evaluates, the intended exact sign-flip test"
+    },
+    {
+      "n": 72,
+      "effect": 0.05,
+      "sd": 0.11408067320979483,
+      "alpha": 0.008333333333333333,
+      "synthetic_alternatives": 1000,
+      "sign_draws_per_alternative": 8191,
+      "rng_seed": 2026091102,
+      "integer_lattice_scale": 1000,
+      "rejections": 834,
+      "estimated_power": 0.834,
+      "mc_standard_error": 0.011766222843376714,
+      "mc_wilson95": [
+        0.8096691971622607,
+        0.8557745281693885
+      ],
+      "interpretation": "MC uncertainty conditional on normal rounded alternatives; not uncertainty about power in the real environment",
+      "pvalue": "(1 + randomized_tail_count)/(1 + sign_draws)",
+      "finite_sign_error": "Approximates, rather than exhaustively evaluates, the intended exact sign-flip test"
+    },
+    {
+      "n": 72,
+      "effect": 0.05,
+      "sd": 0.15,
+      "alpha": 0.008333333333333333,
+      "synthetic_alternatives": 1000,
+      "sign_draws_per_alternative": 8191,
+      "rng_seed": 2026091103,
+      "integer_lattice_scale": 1000,
+      "rejections": 578,
+      "estimated_power": 0.578,
+      "mc_standard_error": 0.015617810345883958,
+      "mc_wilson95": [
+        0.5471483343234702,
+        0.6082546913527831
+      ],
+      "interpretation": "MC uncertainty conditional on normal rounded alternatives; not uncertainty about power in the real environment",
+      "pvalue": "(1 + randomized_tail_count)/(1 + sign_draws)",
+      "finite_sign_error": "Approximates, rather than exhaustively evaluates, the intended exact sign-flip test"
+    }
+  ]
+}

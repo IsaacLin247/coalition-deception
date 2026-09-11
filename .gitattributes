@@ -2,5 +2,6 @@
 code/** -text
 data/** -text
 paper/** -text
+validation/** -text
 *.pdf binary
 *.png binary

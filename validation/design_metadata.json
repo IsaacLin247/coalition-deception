@@ -1,0 +1,295 @@
+{
+  "power_plan": {
+    "fixed_final_seed_count": 72,
+    "limitations": [
+      "New selected defense variance unknown",
+      "No claim of power to reject all6 simultaneously",
+      "Limited power for5pp atSD.15",
+      "No outcome-based expansion or selective family shrinking"
+    ],
+    "normal_theory_benchmark": "Two-sided noncentral-t power at conservative first Holm threshold .05/6; approximate planning for exact sign-flip, not an environment guarantee",
+    "planning_effect_count": 0.1,
+    "planning_effect_probability": 0.05,
+    "planning_sd_count": 0.2,
+    "planning_sd_probability": [
+      0.1,
+      0.11408067320979483,
+      0.15
+    ],
+    "power_report_path": "validation/POWER_ANALYSIS.json",
+    "power_report_sha256": "b39cecc7b149d9db32c5d11547ce5ea7580f8b5753bac7c5b201dc2c1fb9eefe",
+    "statistical_mc": "1000 independently generated rounded-normal alternatives per SD,8191 independent random sign draws per alternative,72 seeds,plus-one p-value"
+  },
+  "primary_inference": {
+    "alpha": 0.05,
+    "alternative": "two-sided",
+    "confidence_intervals": {
+      "coverage": "pointwise, not familywise",
+      "level": 0.95,
+      "method": "percentile bootstrap of complete paired seed differences",
+      "resamples": 20000,
+      "rng": "deterministic contrast-ID hash, separate from simulation RNG"
+    },
+    "episode_denominator": 1000,
+    "family": "post_review_validation",
+    "family_size": 6,
+    "lattice_scale": 1000,
+    "missingness": "Suppress final inference until all planned final jobs and required raw counts verify; no favorable subset",
+    "multiplicity": "Holm across all six prespecified contrasts; family size never reduced",
+    "null_assumption": "Complete seed differences are symmetric/exchangeable under sign changes under the null; pairing alone does not establish this",
+    "p_tail": "P(|signed_sum| >= |observed_sum|), retain all 2^72 assignments including multiplicities and zero differences",
+    "primary_contrasts": [
+      {
+        "description": "Synthetic F2 truthful selected minus original-index defense false ejection",
+        "group": "static",
+        "id": "P1",
+        "metric": "false_ejection_rate",
+        "terms": [
+          [
+            1,
+            "truthful__selected",
+            "false_ejection_rate"
+          ],
+          [
+            -1,
+            "truthful__hypothesis_index_050",
+            "false_ejection_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Spatial F8 selected-trained minus soft-trained attack evaluated on selected defense",
+        "group": "adaptive",
+        "id": "P2",
+        "metric": "false_ejection_rate",
+        "terms": [
+          [
+            1,
+            "selected__selected",
+            "false_ejection_rate"
+          ],
+          [
+            -1,
+            "soft__selected",
+            "false_ejection_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Spatial F8 matched selected adaptation minus matched original-index adaptation",
+        "group": "adaptive",
+        "id": "P3",
+        "metric": "false_ejection_rate",
+        "terms": [
+          [
+            1,
+            "selected__selected",
+            "false_ejection_rate"
+          ],
+          [
+            -1,
+            "hypothesis_index_050__hypothesis_index_050",
+            "false_ejection_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Eight-round coalition game win adaptation",
+        "group": "matched_cycle",
+        "id": "P4",
+        "metric": "coalition_game_win_rate",
+        "terms": [
+          [
+            1,
+            "C1__D1",
+            "coalition_game_win_rate"
+          ],
+          [
+            -1,
+            "C0__D1",
+            "coalition_game_win_rate"
+          ]
+        ]
+      },
+      {
+        "description": "Eight-round mean innocent-ejection count adaptation",
+        "group": "matched_cycle",
+        "id": "P5",
+        "metric": "mean_false_ejections",
+        "terms": [
+          [
+            1,
+            "C1__D1",
+            "mean_false_ejections"
+          ],
+          [
+            -1,
+            "C0__D1",
+            "mean_false_ejections"
+          ]
+        ]
+      },
+      {
+        "description": "Difference between win adaptation and any-false-ejection adaptation probabilities",
+        "group": "matched_cycle",
+        "id": "P6",
+        "metric": "win_minus_any_false_ejection_adaptation",
+        "terms": [
+          [
+            1,
+            "C1__D1",
+            "coalition_game_win_rate"
+          ],
+          [
+            -1,
+            "C0__D1",
+            "coalition_game_win_rate"
+          ],
+          [
+            -1,
+            "C1__D1",
+            "any_false_ejection_rate"
+          ],
+          [
+            1,
+            "C0__D1",
+            "any_false_ejection_rate"
+          ]
+        ]
+      }
+    ],
+    "sensitivity": "Paired t-test p-values for the same six contrasts, explicitly sensitivity only; show all seed differences",
+    "test": "Exact paired-mean sign-flip using arbitrary-size integer lattice dynamic programming"
+  },
+  "scientific_design": {
+    "all_planned_seeds_required": true,
+    "candidate_grid": {
+      "honesty": 0.5,
+      "threshold": [
+        0.35,
+        0.5,
+        0.65,
+        0.8
+      ],
+      "tie_break": [
+        "index",
+        "random",
+        "skip"
+      ],
+      "tie_definition": "Exact full lexicographic tuple (membership, creator, own evidence) ties; replace last index tie only"
+    },
+    "canonical_sensitivity": {
+      "adaptive_crossplay": "Full 5x5 on every seed; 400 updates per newly initialized attack",
+      "adaptive_defense_slots": [
+        "hypothesis_index_050",
+        "hypothesis_random_050",
+        "hypothesis_skip_050",
+        "selected",
+        "soft"
+      ],
+      "interpretation": "Prespecified descriptive random/skip sensitivities; no new confirmatory tests; duplicate selected slot kept even if canonical",
+      "static_defense_slots": [
+        "hypothesis_index_050",
+        "hypothesis_random_050",
+        "hypothesis_skip_050",
+        "selected",
+        "mean",
+        "soft"
+      ]
+    },
+    "creator_capture_definition": "Unconditional joint probability of real incident and creator ejection; incident-free episodes retained in denominator",
+    "design_date": "2026-09-11",
+    "development_checkpoint_library": "Old seeds0-7 from each of mean/soft/original hypothesis attack families; dev seed100+i uses old seed i",
+    "development_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107
+    ],
+    "development_tasks": "Four scripts in synthetic F2 meeting environment plus three fixed old learned attack families in spatial F8; seven equally weighted task means",
+    "final_seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029,
+      1030,
+      1031,
+      1032,
+      1033,
+      1034,
+      1035,
+      1036,
+      1037,
+      1038,
+      1039,
+      1040,
+      1041,
+      1042,
+      1043,
+      1044,
+      1045,
+      1046,
+      1047,
+      1048,
+      1049,
+      1050,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056,
+      1057,
+      1058,
+      1059,
+      1060,
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      1071
+    ],
+    "historical_contrasts_unchanged": 303,
+    "historical_families_unchanged": 15,
+    "independent_unit": "Complete training-seed procedure, or independently seeded scripted evidence batch for P1",
+    "no_optional_stopping": true,
+    "scope": "Prospectively specified independent-seed supplement informed by the completed corrected study; no retrospective reclassification of old contrasts",
+    "selection_report": "All12 candidates,7task scores,8batch counts,eligibility,capturefloors,exactranking; fallbackoriginal ifnoneeligible"
+  }
+}

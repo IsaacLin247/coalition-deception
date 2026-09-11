@@ -56,4 +56,14 @@ Validation includes:
 
 The repository contains complete analysis tables and diagnostics, with documented archive-relative paths. Raw records, checkpoints, original source, and checksums are supplied through the [corrected-study release](https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11). Its seven numbered parts reconstruct the complete archive; verify the supplied hashes before extraction.
 
-Computational work and manuscript integration are complete. Author affiliations/contact, funding, competing interests, contributions, peer-review model and approval remain author-supplied submission facts. No journal submission or acceptance is claimed.
+Computation and manuscript integration for that corrected study are complete. Further scientific validation is described below. Author affiliations/contact, funding, competing interests, contributions, peer-review model and approval remain author-supplied submission facts. No journal submission or acceptance is claimed.
+
+## Additional validation authorized after review — 11 September 2026
+
+An external critique identified two remaining design concerns: the repaired hypothesis rule is not established as a strong defense, and nine of the fifteen earlier statistical families cannot reject under their specified exact-test resolution. Those nine families contain 231 of 303 contrasts. The old results and family definitions remain intact; the new study does not reinterpret their nonsignificance as equivalence.
+
+The [new validation protocol](validation/README.md) specifies twelve tie/threshold candidates on separate development evidence, then a fixed selected rule for untouched evaluation and fresh attack training. Canonical random and skip variants are retained in final evaluation even when they are not selected. The feasibility solver, information access, game rules, and PPO collector remain unchanged. Development selection requires declared creator-capture floors so that lower false ejection alone cannot reward a practically useless abstention policy.
+
+The new primary analysis fixes 72 independent replicate IDs and six contrasts covering truthful-condition error, adaptation against the selected defense, matched adaptive defense comparison, and the distinction between eight-round coalition victory and innocent-ejection outcomes. All other new comparisons are descriptive. A conditional power analysis and its full calculation are retained; no result-dependent seed expansion or statistical family shrinking is permitted.
+
+All new research simulations and training run on `ssh desktop` in a separate workspace. Complete episode and meeting records, full ballots, decision-time score/tie/skip records, checkpoints, frozen source hashes, and selection provenance are retained. Results will be added to the manuscript after the entire new cohort passes verification. No new empirical finding is asserted merely from preparing this follow-up.

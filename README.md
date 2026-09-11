@@ -4,6 +4,8 @@ Code, completed analysis, and manuscript for **Coalition Deception and Defensive
 
 **Final corrected analysis — 11 September 2026 UTC:** all **240 jobs**, **1,255 training stages**, and **303 statistical comparisons** are complete and independently verified. Both descriptive supplements are complete: **540,000 mechanism-study episodes** and **67,500 ballot-diagnostic episodes**. The manuscript uses the completed corrected results throughout.
 
+**Additional validation before submission:** a separate [prospective supplement](validation/README.md) tests hypothesis-defense tie handling and threshold selection, followed by fresh adaptive attacks and a 72-seed response-cycle replication. The current manuscript reports the completed earlier study; the new supplement must finish and pass analysis before its results are incorporated.
+
 ## Read and reproduce
 
 | Item | Contents |
@@ -14,6 +16,7 @@ Code, completed analysis, and manuscript for **Coalition Deception and Defensive
 | [Final analysis data](data/README.md) | All seed-level results and 303 comparisons, complete figures, supplemental summaries, and validation receipts. |
 | [Corrected-study release](https://github.com/IsaacLin247/coalition-deception/releases/tag/corrected-study-2026-09-11) | Original frozen source, all checkpoints and raw records, split archive, reconstruction guide, and checksums. |
 | [cahnges.md](cahnges.md) | Audit corrections, final findings, and validation. |
+| [Additional validation](validation/README.md) | Fixed development/test separation, defense variants, power analysis, and six new primary comparisons. |
 
 ## Main findings
 
@@ -50,6 +53,6 @@ The build requires Pandoc and XeLaTeX. PDF checks additionally use Poppler's pdf
 
 ## Publication status and attribution
 
-Computational work and manuscript integration are complete for author review. Journal submission has not been performed. Affiliations, corresponding-author details, funding, competing interests, contributions, review model, and final author approval remain author-supplied submission information.
+The corrected study and its manuscript integration are complete. Further scientific validation is in progress before submission; successful reproduction alone does not establish submission readiness. Journal submission has not been performed. Affiliations, corresponding-author details, funding, competing interests, contributions, review model, and final author approval remain author-supplied submission information.
 
 The original [MIT license](LICENSE) and copyright notice are retained. This derives from the [original benchmark](https://github.com/xi10017/when-credibility-collapses). The citation style retains its own license, documented in the paper guide. Citation metadata is in [CITATION.cff](CITATION.cff).
