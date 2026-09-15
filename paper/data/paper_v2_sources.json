@@ -1,0 +1,94 @@
+{
+  "purpose": "Editorial alternative to the preserved 53-page corrected-study article; no new experimental results.",
+  "original_words": 14247,
+  "original_pages": 53,
+  "original_files": {
+    "when_credibility_collapses.md": "1eb6a0c08019cf61ca55e076b62d33dbe22919316c29157d2e2c30121252b6b1",
+    "when_credibility_collapses.tex": "27c24ada72ebce1d5bb899dbb407f127f46e192f5b425f2f6af2a1e7c3a37702",
+    "when_credibility_collapses.pdf": "86c4c5f03eb27ec4a6f5d62b3721864935d87f9df4e18eaa1906b4b0726fc393",
+    "build.sh": "5f1a9c25f05cc608ef5ffb431e0298c05a5fd49e8f41761f66e33bc36ce9ea35",
+    "verify_manuscript.py": "330df4e2ff36b40693e8790616a2cbdf25343240b480a0d4fb538ede8df49522",
+    "numbered_captions.lua": "d3bf03fad694a4f91325b87485e01a0d959d66f541387e2b815cc64febd99b42",
+    "caption_layout.tex": "66dd16319d7b5741f393617e6e96b3beb1f6f19e3dba11ba99ed176284fb70b5",
+    "references.bib": "fa71afe12f05d303c967297f4ea059072e276eae779cb0279a8456285d9578c9"
+  },
+  "table_manifest_sha256": "02213b11e8a1845ae53afb6a19e14aa7e56bc37c4f32d9c0296c6baa7dee77c1",
+  "figures": [
+    {
+      "v2_number": 1,
+      "original_number": 1,
+      "path": "figures/final/f1_learning_and_holdout.pdf",
+      "sha256": "ca89a6eeae3a94bc5af09d3197763467d678653d6423a0471e9c543dd009acd8"
+    },
+    {
+      "v2_number": 2,
+      "original_number": 2,
+      "path": "figures/final/f2_tenseed_crew5_rules.pdf",
+      "sha256": "db7bc4a438b98ad06996906f5c1b1e57ba5b3c28abb78b087f9dd6684f804196"
+    },
+    {
+      "v2_number": 3,
+      "original_number": 18,
+      "path": "figures/v2/hypothesis_crossplay.pdf",
+      "original_path": "figures/final/counterattack_hyp_n7_r1_crossplay.pdf",
+      "original_sha256": "48871063a0386daa5c49b42f3fe8f54df368a13cea54d9ea2290ceb3c41d3117",
+      "replot_from": "data/paper_v2_figure_sources.json",
+      "sha256": "3bad4102d50dce1964d0d7512004d841a4b63ba4e7476bbeac6b71a341e82e05"
+    },
+    {
+      "v2_number": 4,
+      "original_number": 4,
+      "path": "figures/final/f4_tenseed_crew5_crossplay.pdf",
+      "sha256": "c7380c6bcf7edda45fbd227827d1224f544e0baf207e8c9347156b78de1badd5"
+    },
+    {
+      "v2_number": 5,
+      "original_number": 9,
+      "path": "figures/v2/finite_crossplay.pdf",
+      "original_path": "figures/final/multigen_none_n7_r8_k10_matrix.pdf",
+      "original_sha256": "4fb3def05664e2c2f24c656df2b768f8290a5712c37643de6446c77891e40ab8",
+      "replot_from": "data/paper_v2_figure_sources.json",
+      "sha256": "3104cc88fdf9c41cf68e0369c5190c75b7786b62a5fb97edcbf150a1a4782673"
+    }
+  ],
+  "tables": {
+    "1": {
+      "description": "Condensed experimental cohorts and evaluation budgets; manually reviewed against the original Methods."
+    },
+    "2": {
+      "original_table": "17",
+      "filter_column": 0,
+      "filter_value": "5+2",
+      "columns": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "expected_data_rows": 3
+    },
+    "3": {
+      "original_table": "15",
+      "columns": "all",
+      "expected_data_rows": 6
+    }
+  },
+  "coverage": {
+    "F1": "Results: Learning increases harmful coordination",
+    "F2": "Results: Scripted performance and adaptive robustness differ",
+    "F3": "Results: Response training changes victory and voting harm differently",
+    "F4": "Results: Response training changes victory and voting harm differently",
+    "F5": "Results: Repeated responses produce finite, opponent-specific gains",
+    "F6": "Mechanisms and Appendix A",
+    "F7": "Results: Dependence penalties have conditional benefits",
+    "F8": "Results: Scripted performance and adaptive robustness differ",
+    "information_budget_reward_controls": "Results: Information, budget, and reward controls",
+    "mechanism_and_sensor_studies": "Mechanisms: score construction and correlated reports",
+    "ballot_diagnostic": "Table 2 and adaptive robustness subsection",
+    "analytical_proof": "Appendix A; original proposition and proof preserved",
+    "reproduction": "Appendix B and public source/data archive"
+  },
+  "new_validation_incorporated": false
+}

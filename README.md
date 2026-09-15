@@ -11,6 +11,7 @@ Code, completed analysis, and manuscript for **Coalition Deception and Defensive
 | Item | Contents |
 | --- | --- |
 | [Paper PDF](paper/when_credibility_collapses.pdf) | Complete research revision with F1–F8, controls, statistical interpretation, and limitations. |
+| [Shorter paper v2](paper/paper_v2.pdf) | Separate 21-page single-document edition for comparison; original article unchanged. [Changes and coverage](paper/paper_v2_changes.md). |
 | [Paper source](paper/) | Markdown, generated TeX, bibliography, 19 figures, 18 tables, source-value manifest, and self-contained build. |
 | [Code guide](code/README.md) | Training, evaluation, protocols, tests, and original/portable provenance checks. |
 | [Final analysis data](data/README.md) | All seed-level results and 303 comparisons, complete figures, supplemental summaries, and validation receipts. |
@@ -48,6 +49,16 @@ The original and portable source fingerprints differ; their protocols retain ide
 bash paper/build.sh
 python paper/verify_manuscript.py
 ~~~
+
+The shorter alternative has its own build and checks:
+
+~~~sh
+bash paper/build_v2.sh
+python paper/verify_paper_v2.py
+~~~
+
+Edit [paper_v2.md](paper/paper_v2.md) for the shorter version; its build generates
+`paper_v2.tex` and `paper_v2.pdf` without overwriting the original article.
 
 The build requires Pandoc and XeLaTeX. PDF checks additionally use Poppler's pdfinfo and pdftotext. The checked-in PDF requires no tools. The raw-data archive is split to fit GitHub's per-asset limit; follow its RECONSTRUCT.md to join and verify all parts.
 
