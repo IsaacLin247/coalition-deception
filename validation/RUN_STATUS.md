@@ -1,5 +1,22 @@
 # Desktop execution status
 
+## Completion update — 15 September 2026
+
+All eight development jobs and 216 final jobs completed on the desktop on
+12 September. Local collection of all 224 jobs and independent reanalysis
+completed on 15 September at 20:35 UTC. Reanalysis checked 3,816,000 episode rows
+and 4,490,695 meeting rows with no incomplete jobs or reported problems. Primary
+counts and exact sign-flip/Holm p-values matched the desktop analysis; remaining
+floating-point results matched at absolute tolerance 1e-12 and relative tolerance
+1e-10. The [completion receipt](completion_receipt.json) retains protocol,
+selection, and source identities.
+
+Scientific interpretation and manuscript integration of these prospective
+results remain pending. The current `paper_v2` reports the earlier corrected
+240-job study, including the subsequent review corrections.
+
+## Launch record — 11 September 2026
+
 Production launched **11 September 2026 at 19:33:17 UTC** (14:33 CDT) as
 `WCCValidation20260911` on the user's desktop. The scheduled task continues after
 SSH disconnects. The initial check confirmed all eight development jobs running
@@ -25,7 +42,6 @@ then complete-cohort analysis. A separate local monitor checks operational
 progress, collects completed jobs with checksums, and reanalyzes the complete
 cohort. It does not expose partial final effect estimates for model selection.
 
-This file records launch status, not a live dashboard or a claim of completion.
-The manuscript update and scientific interpretation remain pending the final
-results. The [protocol](PROTOCOL.md) and [study guide](README.md) describe the
-fixed design and reproduction commands.
+The preceding launch record is retained for provenance; the dated completion
+update above supersedes its operational status. The [protocol](PROTOCOL.md) and
+[study guide](README.md) describe the fixed design and reproduction commands.

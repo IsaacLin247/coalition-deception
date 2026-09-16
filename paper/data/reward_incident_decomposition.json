@@ -1,0 +1,1900 @@
+{
+  "cells": [
+    {
+      "cell": "C0D0",
+      "counts": {
+        "false_ejection": 1883,
+        "incident": 9859,
+        "incident_and_false_ejection": 1806,
+        "no_incident": 141,
+        "no_incident_and_false_ejection": 77
+      },
+      "crew_plus_coalition": "3+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew3",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.18322630234942291,
+        "false_ejection_given_no_incident": 0.5885741314069487
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 210,
+          "incident": 981,
+          "incident_and_false_ejection": 203,
+          "no_incident": 19,
+          "no_incident_and_false_ejection": 7,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 153,
+          "incident": 982,
+          "incident_and_false_ejection": 152,
+          "no_incident": 18,
+          "no_incident_and_false_ejection": 1,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 219,
+          "incident": 994,
+          "incident_and_false_ejection": 215,
+          "no_incident": 6,
+          "no_incident_and_false_ejection": 4,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 264,
+          "incident": 983,
+          "incident_and_false_ejection": 253,
+          "no_incident": 17,
+          "no_incident_and_false_ejection": 11,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 181,
+          "incident": 978,
+          "incident_and_false_ejection": 170,
+          "no_incident": 22,
+          "no_incident_and_false_ejection": 11,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 212,
+          "incident": 990,
+          "incident_and_false_ejection": 204,
+          "no_incident": 10,
+          "no_incident_and_false_ejection": 8,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 164,
+          "incident": 988,
+          "incident_and_false_ejection": 156,
+          "no_incident": 12,
+          "no_incident_and_false_ejection": 8,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 124,
+          "incident": 988,
+          "incident_and_false_ejection": 116,
+          "no_incident": 12,
+          "no_incident_and_false_ejection": 8,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 226,
+          "incident": 983,
+          "incident_and_false_ejection": 213,
+          "no_incident": 17,
+          "no_incident_and_false_ejection": 13,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 130,
+          "incident": 992,
+          "incident_and_false_ejection": 124,
+          "no_incident": 8,
+          "no_incident_and_false_ejection": 6,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.1831828785880921,
+        "false_ejection_given_no_incident": 0.5460992907801419
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.040892193308550186,
+      "source_cell": "coalition0_vs_soft_credibility",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.1883,
+        "incident": 0.9859,
+        "incident_and_false_ejection": 0.1806,
+        "no_incident": 0.0141,
+        "no_incident_and_false_ejection": 0.0077
+      }
+    },
+    {
+      "cell": "C0D1",
+      "counts": {
+        "false_ejection": 4635,
+        "incident": 874,
+        "incident_and_false_ejection": 202,
+        "no_incident": 9126,
+        "no_incident_and_false_ejection": 4433
+      },
+      "crew_plus_coalition": "3+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew3",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.2762643407197863,
+        "false_ejection_given_no_incident": 0.4855495501539697
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 483,
+          "incident": 303,
+          "incident_and_false_ejection": 102,
+          "no_incident": 697,
+          "no_incident_and_false_ejection": 381,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 506,
+          "incident": 10,
+          "incident_and_false_ejection": 4,
+          "no_incident": 990,
+          "no_incident_and_false_ejection": 502,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 496,
+          "incident": 0,
+          "incident_and_false_ejection": 0,
+          "no_incident": 1000,
+          "no_incident_and_false_ejection": 496,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 588,
+          "incident": 0,
+          "incident_and_false_ejection": 0,
+          "no_incident": 1000,
+          "no_incident_and_false_ejection": 588,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 407,
+          "incident": 0,
+          "incident_and_false_ejection": 0,
+          "no_incident": 1000,
+          "no_incident_and_false_ejection": 407,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 488,
+          "incident": 0,
+          "incident_and_false_ejection": 0,
+          "no_incident": 1000,
+          "no_incident_and_false_ejection": 488,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 370,
+          "incident": 350,
+          "incident_and_false_ejection": 74,
+          "no_incident": 650,
+          "no_incident_and_false_ejection": 296,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 361,
+          "incident": 195,
+          "incident_and_false_ejection": 13,
+          "no_incident": 805,
+          "no_incident_and_false_ejection": 348,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 414,
+          "incident": 2,
+          "incident_and_false_ejection": 0,
+          "no_incident": 998,
+          "no_incident_and_false_ejection": 414,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 522,
+          "incident": 14,
+          "incident_and_false_ejection": 9,
+          "no_incident": 986,
+          "no_incident_and_false_ejection": 513,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.2311212814645309,
+        "false_ejection_given_no_incident": 0.48575498575498577
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.9564185544768069,
+      "source_cell": "coalition0_vs_learned_crew1",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.4635,
+        "incident": 0.0874,
+        "incident_and_false_ejection": 0.0202,
+        "no_incident": 0.9126,
+        "no_incident_and_false_ejection": 0.4433
+      }
+    },
+    {
+      "cell": "C1D1",
+      "counts": {
+        "false_ejection": 4153,
+        "incident": 3018,
+        "incident_and_false_ejection": 1429,
+        "no_incident": 6982,
+        "no_incident_and_false_ejection": 2724
+      },
+      "crew_plus_coalition": "3+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew3",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.40530473143362566,
+        "false_ejection_given_no_incident": 0.4137395959087679
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 578,
+          "incident": 670,
+          "incident_and_false_ejection": 392,
+          "no_incident": 330,
+          "no_incident_and_false_ejection": 186,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 339,
+          "incident": 180,
+          "incident_and_false_ejection": 40,
+          "no_incident": 820,
+          "no_incident_and_false_ejection": 299,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 409,
+          "incident": 2,
+          "incident_and_false_ejection": 0,
+          "no_incident": 998,
+          "no_incident_and_false_ejection": 409,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 487,
+          "incident": 276,
+          "incident_and_false_ejection": 161,
+          "no_incident": 724,
+          "no_incident_and_false_ejection": 326,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 277,
+          "incident": 0,
+          "incident_and_false_ejection": 0,
+          "no_incident": 1000,
+          "no_incident_and_false_ejection": 277,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 414,
+          "incident": 0,
+          "incident_and_false_ejection": 0,
+          "no_incident": 1000,
+          "no_incident_and_false_ejection": 414,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 396,
+          "incident": 607,
+          "incident_and_false_ejection": 230,
+          "no_incident": 393,
+          "no_incident_and_false_ejection": 166,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 454,
+          "incident": 764,
+          "incident_and_false_ejection": 331,
+          "no_incident": 236,
+          "no_incident_and_false_ejection": 123,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 322,
+          "incident": 224,
+          "incident_and_false_ejection": 100,
+          "no_incident": 776,
+          "no_incident_and_false_ejection": 222,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 477,
+          "incident": 295,
+          "incident_and_false_ejection": 175,
+          "no_incident": 705,
+          "no_incident_and_false_ejection": 302,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.47349237905897945,
+        "false_ejection_given_no_incident": 0.3901460899455743
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.6559113893570913,
+      "source_cell": "coalition1_vs_learned_crew1",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.4153,
+        "incident": 0.3018,
+        "incident_and_false_ejection": 0.1429,
+        "no_incident": 0.6982,
+        "no_incident_and_false_ejection": 0.2724
+      }
+    },
+    {
+      "cell": "C1D0",
+      "counts": {
+        "false_ejection": 676,
+        "incident": 9488,
+        "incident_and_false_ejection": 471,
+        "no_incident": 512,
+        "no_incident_and_false_ejection": 205
+      },
+      "crew_plus_coalition": "3+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew3",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.04995938147595769,
+        "false_ejection_given_no_incident": 0.4578567748041432
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 69,
+          "incident": 990,
+          "incident_and_false_ejection": 64,
+          "no_incident": 10,
+          "no_incident_and_false_ejection": 5,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 49,
+          "incident": 990,
+          "incident_and_false_ejection": 43,
+          "no_incident": 10,
+          "no_incident_and_false_ejection": 6,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 22,
+          "incident": 995,
+          "incident_and_false_ejection": 20,
+          "no_incident": 5,
+          "no_incident_and_false_ejection": 2,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 72,
+          "incident": 985,
+          "incident_and_false_ejection": 65,
+          "no_incident": 15,
+          "no_incident_and_false_ejection": 7,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 144,
+          "incident": 714,
+          "incident_and_false_ejection": 46,
+          "no_incident": 286,
+          "no_incident_and_false_ejection": 98,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 88,
+          "incident": 883,
+          "incident_and_false_ejection": 31,
+          "no_incident": 117,
+          "no_incident_and_false_ejection": 57,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 37,
+          "incident": 989,
+          "incident_and_false_ejection": 32,
+          "no_incident": 11,
+          "no_incident_and_false_ejection": 5,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 81,
+          "incident": 975,
+          "incident_and_false_ejection": 73,
+          "no_incident": 25,
+          "no_incident_and_false_ejection": 8,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 48,
+          "incident": 986,
+          "incident_and_false_ejection": 42,
+          "no_incident": 14,
+          "no_incident_and_false_ejection": 6,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 66,
+          "incident": 981,
+          "incident_and_false_ejection": 55,
+          "no_incident": 19,
+          "no_incident_and_false_ejection": 11,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.04964165261382799,
+        "false_ejection_given_no_incident": 0.400390625
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.3032544378698225,
+      "source_cell": "coalition1_vs_soft_credibility",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.0676,
+        "incident": 0.9488,
+        "incident_and_false_ejection": 0.0471,
+        "no_incident": 0.0512,
+        "no_incident_and_false_ejection": 0.0205
+      }
+    },
+    {
+      "cell": "C0D0",
+      "counts": {
+        "false_ejection": 1940,
+        "incident": 9626,
+        "incident_and_false_ejection": 1678,
+        "no_incident": 374,
+        "no_incident_and_false_ejection": 262
+      },
+      "crew_plus_coalition": "5+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew5",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.1749157209499162,
+        "false_ejection_given_no_incident": 0.6609871064909825
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 121,
+          "incident": 986,
+          "incident_and_false_ejection": 112,
+          "no_incident": 14,
+          "no_incident_and_false_ejection": 9,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 121,
+          "incident": 982,
+          "incident_and_false_ejection": 111,
+          "no_incident": 18,
+          "no_incident_and_false_ejection": 10,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 247,
+          "incident": 914,
+          "incident_and_false_ejection": 180,
+          "no_incident": 86,
+          "no_incident_and_false_ejection": 67,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 244,
+          "incident": 965,
+          "incident_and_false_ejection": 222,
+          "no_incident": 35,
+          "no_incident_and_false_ejection": 22,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 244,
+          "incident": 946,
+          "incident_and_false_ejection": 202,
+          "no_incident": 54,
+          "no_incident_and_false_ejection": 42,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 207,
+          "incident": 976,
+          "incident_and_false_ejection": 195,
+          "no_incident": 24,
+          "no_incident_and_false_ejection": 12,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 196,
+          "incident": 978,
+          "incident_and_false_ejection": 182,
+          "no_incident": 22,
+          "no_incident_and_false_ejection": 14,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 240,
+          "incident": 919,
+          "incident_and_false_ejection": 182,
+          "no_incident": 81,
+          "no_incident_and_false_ejection": 58,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 174,
+          "incident": 974,
+          "incident_and_false_ejection": 155,
+          "no_incident": 26,
+          "no_incident_and_false_ejection": 19,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 146,
+          "incident": 986,
+          "incident_and_false_ejection": 137,
+          "no_incident": 14,
+          "no_incident_and_false_ejection": 9,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.17431955121545814,
+        "false_ejection_given_no_incident": 0.7005347593582888
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.13505154639175257,
+      "source_cell": "coalition0_vs_soft_credibility",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.194,
+        "incident": 0.9626,
+        "incident_and_false_ejection": 0.1678,
+        "no_incident": 0.0374,
+        "no_incident_and_false_ejection": 0.0262
+      }
+    },
+    {
+      "cell": "C0D1",
+      "counts": {
+        "false_ejection": 4031,
+        "incident": 2543,
+        "incident_and_false_ejection": 903,
+        "no_incident": 7457,
+        "no_incident_and_false_ejection": 3128
+      },
+      "crew_plus_coalition": "5+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew5",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.3531054148182927,
+        "false_ejection_given_no_incident": 0.4164016310712748
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 427,
+          "incident": 35,
+          "incident_and_false_ejection": 8,
+          "no_incident": 965,
+          "no_incident_and_false_ejection": 419,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 354,
+          "incident": 348,
+          "incident_and_false_ejection": 137,
+          "no_incident": 652,
+          "no_incident_and_false_ejection": 217,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 370,
+          "incident": 350,
+          "incident_and_false_ejection": 102,
+          "no_incident": 650,
+          "no_incident_and_false_ejection": 268,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 353,
+          "incident": 472,
+          "incident_and_false_ejection": 137,
+          "no_incident": 528,
+          "no_incident_and_false_ejection": 216,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 433,
+          "incident": 440,
+          "incident_and_false_ejection": 178,
+          "no_incident": 560,
+          "no_incident_and_false_ejection": 255,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 394,
+          "incident": 392,
+          "incident_and_false_ejection": 153,
+          "no_incident": 608,
+          "no_incident_and_false_ejection": 241,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 412,
+          "incident": 307,
+          "incident_and_false_ejection": 119,
+          "no_incident": 693,
+          "no_incident_and_false_ejection": 293,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 392,
+          "incident": 61,
+          "incident_and_false_ejection": 16,
+          "no_incident": 939,
+          "no_incident_and_false_ejection": 376,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 484,
+          "incident": 2,
+          "incident_and_false_ejection": 1,
+          "no_incident": 998,
+          "no_incident_and_false_ejection": 483,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 412,
+          "incident": 136,
+          "incident_and_false_ejection": 52,
+          "no_incident": 864,
+          "no_incident_and_false_ejection": 360,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.3550924105387338,
+        "false_ejection_given_no_incident": 0.41947163738768944
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.7759861076655916,
+      "source_cell": "coalition0_vs_learned_crew1",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.4031,
+        "incident": 0.2543,
+        "incident_and_false_ejection": 0.0903,
+        "no_incident": 0.7457,
+        "no_incident_and_false_ejection": 0.3128
+      }
+    },
+    {
+      "cell": "C1D1",
+      "counts": {
+        "false_ejection": 5385,
+        "incident": 7884,
+        "incident_and_false_ejection": 4374,
+        "no_incident": 2116,
+        "no_incident_and_false_ejection": 1011
+      },
+      "crew_plus_coalition": "5+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew5",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.552781105017252,
+        "false_ejection_given_no_incident": 0.480227372325756
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 582,
+          "incident": 564,
+          "incident_and_false_ejection": 346,
+          "no_incident": 436,
+          "no_incident_and_false_ejection": 236,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 450,
+          "incident": 545,
+          "incident_and_false_ejection": 261,
+          "no_incident": 455,
+          "no_incident_and_false_ejection": 189,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 528,
+          "incident": 896,
+          "incident_and_false_ejection": 482,
+          "no_incident": 104,
+          "no_incident_and_false_ejection": 46,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 544,
+          "incident": 874,
+          "incident_and_false_ejection": 483,
+          "no_incident": 126,
+          "no_incident_and_false_ejection": 61,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 522,
+          "incident": 892,
+          "incident_and_false_ejection": 471,
+          "no_incident": 108,
+          "no_incident_and_false_ejection": 51,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 487,
+          "incident": 760,
+          "incident_and_false_ejection": 365,
+          "no_incident": 240,
+          "no_incident_and_false_ejection": 122,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 491,
+          "incident": 764,
+          "incident_and_false_ejection": 395,
+          "no_incident": 236,
+          "no_incident_and_false_ejection": 96,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 562,
+          "incident": 851,
+          "incident_and_false_ejection": 482,
+          "no_incident": 149,
+          "no_incident_and_false_ejection": 80,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 613,
+          "incident": 884,
+          "incident_and_false_ejection": 554,
+          "no_incident": 116,
+          "no_incident_and_false_ejection": 59,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 606,
+          "incident": 854,
+          "incident_and_false_ejection": 535,
+          "no_incident": 146,
+          "no_incident_and_false_ejection": 71,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.5547945205479452,
+        "false_ejection_given_no_incident": 0.4777882797731569
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.18774373259052926,
+      "source_cell": "coalition1_vs_learned_crew1",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.5385,
+        "incident": 0.7884,
+        "incident_and_false_ejection": 0.4374,
+        "no_incident": 0.2116,
+        "no_incident_and_false_ejection": 0.1011
+      }
+    },
+    {
+      "cell": "C1D0",
+      "counts": {
+        "false_ejection": 759,
+        "incident": 9844,
+        "incident_and_false_ejection": 660,
+        "no_incident": 156,
+        "no_incident_and_false_ejection": 99
+      },
+      "crew_plus_coalition": "5+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew5",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.06704871610484038,
+        "false_ejection_given_no_incident": 0.6514645318449666
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 78,
+          "incident": 982,
+          "incident_and_false_ejection": 69,
+          "no_incident": 18,
+          "no_incident_and_false_ejection": 9,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 88,
+          "incident": 977,
+          "incident_and_false_ejection": 77,
+          "no_incident": 23,
+          "no_incident_and_false_ejection": 11,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 59,
+          "incident": 984,
+          "incident_and_false_ejection": 52,
+          "no_incident": 16,
+          "no_incident_and_false_ejection": 7,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 90,
+          "incident": 987,
+          "incident_and_false_ejection": 80,
+          "no_incident": 13,
+          "no_incident_and_false_ejection": 10,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 75,
+          "incident": 984,
+          "incident_and_false_ejection": 63,
+          "no_incident": 16,
+          "no_incident_and_false_ejection": 12,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 50,
+          "incident": 985,
+          "incident_and_false_ejection": 40,
+          "no_incident": 15,
+          "no_incident_and_false_ejection": 10,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 84,
+          "incident": 989,
+          "incident_and_false_ejection": 76,
+          "no_incident": 11,
+          "no_incident_and_false_ejection": 8,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 72,
+          "incident": 985,
+          "incident_and_false_ejection": 60,
+          "no_incident": 15,
+          "no_incident_and_false_ejection": 12,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 69,
+          "incident": 986,
+          "incident_and_false_ejection": 58,
+          "no_incident": 14,
+          "no_incident_and_false_ejection": 11,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 94,
+          "incident": 985,
+          "incident_and_false_ejection": 85,
+          "no_incident": 15,
+          "no_incident_and_false_ejection": 9,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.06704591629418935,
+        "false_ejection_given_no_incident": 0.6346153846153846
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.13043478260869565,
+      "source_cell": "coalition1_vs_soft_credibility",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.0759,
+        "incident": 0.9844,
+        "incident_and_false_ejection": 0.066,
+        "no_incident": 0.0156,
+        "no_incident_and_false_ejection": 0.0099
+      }
+    },
+    {
+      "cell": "C0D0",
+      "counts": {
+        "false_ejection": 2109,
+        "incident": 9429,
+        "incident_and_false_ejection": 1768,
+        "no_incident": 571,
+        "no_incident_and_false_ejection": 341
+      },
+      "crew_plus_coalition": "7+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew7",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.18763772053405622,
+        "false_ejection_given_no_incident": 0.6040014084529427
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 232,
+          "incident": 882,
+          "incident_and_false_ejection": 178,
+          "no_incident": 118,
+          "no_incident_and_false_ejection": 54,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 232,
+          "incident": 969,
+          "incident_and_false_ejection": 213,
+          "no_incident": 31,
+          "no_incident_and_false_ejection": 19,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 186,
+          "incident": 964,
+          "incident_and_false_ejection": 168,
+          "no_incident": 36,
+          "no_incident_and_false_ejection": 18,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 184,
+          "incident": 966,
+          "incident_and_false_ejection": 165,
+          "no_incident": 34,
+          "no_incident_and_false_ejection": 19,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 199,
+          "incident": 964,
+          "incident_and_false_ejection": 174,
+          "no_incident": 36,
+          "no_incident_and_false_ejection": 25,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 241,
+          "incident": 905,
+          "incident_and_false_ejection": 175,
+          "no_incident": 95,
+          "no_incident_and_false_ejection": 66,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 199,
+          "incident": 937,
+          "incident_and_false_ejection": 158,
+          "no_incident": 63,
+          "no_incident_and_false_ejection": 41,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 199,
+          "incident": 966,
+          "incident_and_false_ejection": 180,
+          "no_incident": 34,
+          "no_incident_and_false_ejection": 19,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 234,
+          "incident": 933,
+          "incident_and_false_ejection": 199,
+          "no_incident": 67,
+          "no_incident_and_false_ejection": 35,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 203,
+          "incident": 943,
+          "incident_and_false_ejection": 158,
+          "no_incident": 57,
+          "no_incident_and_false_ejection": 45,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.18750662848658395,
+        "false_ejection_given_no_incident": 0.5971978984238179
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.16168800379326695,
+      "source_cell": "coalition0_vs_soft_credibility",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.2109,
+        "incident": 0.9429,
+        "incident_and_false_ejection": 0.1768,
+        "no_incident": 0.0571,
+        "no_incident_and_false_ejection": 0.0341
+      }
+    },
+    {
+      "cell": "C0D1",
+      "counts": {
+        "false_ejection": 4747,
+        "incident": 3211,
+        "incident_and_false_ejection": 1552,
+        "no_incident": 6789,
+        "no_incident_and_false_ejection": 3195
+      },
+      "crew_plus_coalition": "7+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew7",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.4739018089467016,
+        "false_ejection_given_no_incident": 0.47640682466771905
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 430,
+          "incident": 305,
+          "incident_and_false_ejection": 144,
+          "no_incident": 695,
+          "no_incident_and_false_ejection": 286,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 493,
+          "incident": 410,
+          "incident_and_false_ejection": 192,
+          "no_incident": 590,
+          "no_incident_and_false_ejection": 301,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 538,
+          "incident": 624,
+          "incident_and_false_ejection": 329,
+          "no_incident": 376,
+          "no_incident_and_false_ejection": 209,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 509,
+          "incident": 31,
+          "incident_and_false_ejection": 15,
+          "no_incident": 969,
+          "no_incident_and_false_ejection": 494,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 457,
+          "incident": 138,
+          "incident_and_false_ejection": 64,
+          "no_incident": 862,
+          "no_incident_and_false_ejection": 393,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 413,
+          "incident": 242,
+          "incident_and_false_ejection": 98,
+          "no_incident": 758,
+          "no_incident_and_false_ejection": 315,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 481,
+          "incident": 214,
+          "incident_and_false_ejection": 101,
+          "no_incident": 786,
+          "no_incident_and_false_ejection": 380,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 475,
+          "incident": 227,
+          "incident_and_false_ejection": 100,
+          "no_incident": 773,
+          "no_incident_and_false_ejection": 375,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 454,
+          "incident": 283,
+          "incident_and_false_ejection": 145,
+          "no_incident": 717,
+          "no_incident_and_false_ejection": 309,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 497,
+          "incident": 737,
+          "incident_and_false_ejection": 364,
+          "no_incident": 263,
+          "no_incident_and_false_ejection": 133,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.48333852382435377,
+        "false_ejection_given_no_incident": 0.4706142288996907
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.6730566673688645,
+      "source_cell": "coalition0_vs_learned_crew1",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.4747,
+        "incident": 0.3211,
+        "incident_and_false_ejection": 0.1552,
+        "no_incident": 0.6789,
+        "no_incident_and_false_ejection": 0.3195
+      }
+    },
+    {
+      "cell": "C1D1",
+      "counts": {
+        "false_ejection": 5871,
+        "incident": 7545,
+        "incident_and_false_ejection": 4615,
+        "no_incident": 2455,
+        "no_incident_and_false_ejection": 1256
+      },
+      "crew_plus_coalition": "7+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew7",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.6142153331706816,
+        "false_ejection_given_no_incident": 0.5158993245727158
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 635,
+          "incident": 718,
+          "incident_and_false_ejection": 487,
+          "no_incident": 282,
+          "no_incident_and_false_ejection": 148,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 559,
+          "incident": 634,
+          "incident_and_false_ejection": 372,
+          "no_incident": 366,
+          "no_incident_and_false_ejection": 187,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 570,
+          "incident": 831,
+          "incident_and_false_ejection": 483,
+          "no_incident": 169,
+          "no_incident_and_false_ejection": 87,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 640,
+          "incident": 751,
+          "incident_and_false_ejection": 508,
+          "no_incident": 249,
+          "no_incident_and_false_ejection": 132,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 618,
+          "incident": 763,
+          "incident_and_false_ejection": 499,
+          "no_incident": 237,
+          "no_incident_and_false_ejection": 119,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 606,
+          "incident": 813,
+          "incident_and_false_ejection": 510,
+          "no_incident": 187,
+          "no_incident_and_false_ejection": 96,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 529,
+          "incident": 588,
+          "incident_and_false_ejection": 335,
+          "no_incident": 412,
+          "no_incident_and_false_ejection": 194,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 609,
+          "incident": 616,
+          "incident_and_false_ejection": 407,
+          "no_incident": 384,
+          "no_incident_and_false_ejection": 202,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 538,
+          "incident": 922,
+          "incident_and_false_ejection": 502,
+          "no_incident": 78,
+          "no_incident_and_false_ejection": 36,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 567,
+          "incident": 909,
+          "incident_and_false_ejection": 512,
+          "no_incident": 91,
+          "no_incident_and_false_ejection": 55,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.6116633532140491,
+        "false_ejection_given_no_incident": 0.5116089613034623
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.21393289047862374,
+      "source_cell": "coalition1_vs_learned_crew1",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.5871,
+        "incident": 0.7545,
+        "incident_and_false_ejection": 0.4615,
+        "no_incident": 0.2455,
+        "no_incident_and_false_ejection": 0.1256
+      }
+    },
+    {
+      "cell": "C1D0",
+      "counts": {
+        "false_ejection": 832,
+        "incident": 9696,
+        "incident_and_false_ejection": 641,
+        "no_incident": 304,
+        "no_incident_and_false_ejection": 191
+      },
+      "crew_plus_coalition": "7+2",
+      "defined_seeds_for_conditional_means": {
+        "false_ejection_given_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "false_ejection_given_no_incident": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "episodes_per_seed": 1000,
+      "group": "f3_tenseed_crew7",
+      "mean_seed_conditional_rates": {
+        "false_ejection_given_incident": 0.06607166541233447,
+        "false_ejection_given_no_incident": 0.6112589946285599
+      },
+      "n_seeds": 10,
+      "per_seed_counts_reconstructed_from_published_rates": [
+        {
+          "episodes": 1000,
+          "false_ejection": 91,
+          "incident": 976,
+          "incident_and_false_ejection": 76,
+          "no_incident": 24,
+          "no_incident_and_false_ejection": 15,
+          "seed": 0
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 120,
+          "incident": 970,
+          "incident_and_false_ejection": 98,
+          "no_incident": 30,
+          "no_incident_and_false_ejection": 22,
+          "seed": 1
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 67,
+          "incident": 968,
+          "incident_and_false_ejection": 47,
+          "no_incident": 32,
+          "no_incident_and_false_ejection": 20,
+          "seed": 2
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 102,
+          "incident": 944,
+          "incident_and_false_ejection": 62,
+          "no_incident": 56,
+          "no_incident_and_false_ejection": 40,
+          "seed": 3
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 71,
+          "incident": 961,
+          "incident_and_false_ejection": 44,
+          "no_incident": 39,
+          "no_incident_and_false_ejection": 27,
+          "seed": 4
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 91,
+          "incident": 977,
+          "incident_and_false_ejection": 79,
+          "no_incident": 23,
+          "no_incident_and_false_ejection": 12,
+          "seed": 5
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 71,
+          "incident": 972,
+          "incident_and_false_ejection": 56,
+          "no_incident": 28,
+          "no_incident_and_false_ejection": 15,
+          "seed": 6
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 60,
+          "incident": 976,
+          "incident_and_false_ejection": 51,
+          "no_incident": 24,
+          "no_incident_and_false_ejection": 9,
+          "seed": 7
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 96,
+          "incident": 978,
+          "incident_and_false_ejection": 82,
+          "no_incident": 22,
+          "no_incident_and_false_ejection": 14,
+          "seed": 8
+        },
+        {
+          "episodes": 1000,
+          "false_ejection": 63,
+          "incident": 974,
+          "incident_and_false_ejection": 46,
+          "no_incident": 26,
+          "no_incident_and_false_ejection": 17,
+          "seed": 9
+        }
+      ],
+      "pooled_conditional_rates": {
+        "false_ejection_given_incident": 0.06610973597359736,
+        "false_ejection_given_no_incident": 0.6282894736842105
+      },
+      "share_of_false_ejections_in_no_incident_games": 0.22956730769230768,
+      "source_cell": "coalition1_vs_soft_credibility",
+      "total_episodes": 10000,
+      "unconditional_rates": {
+        "false_ejection": 0.0832,
+        "incident": 0.9696,
+        "incident_and_false_ejection": 0.0641,
+        "no_incident": 0.0304,
+        "no_incident_and_false_ejection": 0.0191
+      }
+    }
+  ],
+  "checks": {
+    "all_joint_decompositions_verified": true,
+    "f3_cells": 12,
+    "f3_seed_cells": 120,
+    "games_generated": 0,
+    "models_trained": 0,
+    "source_mean_checks": 72,
+    "synthetic_terminal_reward_cases": 6
+  },
+  "defender_change_decomposition": [
+    {
+      "change_in_unconditional_rate": {
+        "false_ejection": 0.2752,
+        "incident": -0.8985,
+        "incident_and_false_ejection": -0.16040000000000001,
+        "no_incident_and_false_ejection": 0.43560000000000004
+      },
+      "contrast": "C0D1 minus C0D0",
+      "crew_plus_coalition": "3+2"
+    },
+    {
+      "change_in_unconditional_rate": {
+        "false_ejection": 0.2091,
+        "incident": -0.7082999999999999,
+        "incident_and_false_ejection": -0.0775,
+        "no_incident_and_false_ejection": 0.2866
+      },
+      "contrast": "C0D1 minus C0D0",
+      "crew_plus_coalition": "5+2"
+    },
+    {
+      "change_in_unconditional_rate": {
+        "false_ejection": 0.26380000000000003,
+        "incident": -0.6217999999999999,
+        "incident_and_false_ejection": -0.021600000000000008,
+        "no_incident_and_false_ejection": 0.2854
+      },
+      "contrast": "C0D1 minus C0D0",
+      "crew_plus_coalition": "7+2"
+    }
+  ],
+  "definitions": {
+    "F": "An innocent is ejected in the single-meeting game.",
+    "I": "The game contains a real incident.",
+    "identity": "P(F) = P(F and I) + P(F and not I).",
+    "mean_seed_conditional_rates": "The published cell_summary.json equally weights defined per-seed conditional rates, omitting seeds with zero conditional denominator; their denominators differ across seeds. See defined_seeds_for_conditional_means for the explicit contributing seed lists.",
+    "pooled_conditional_rates": "Numerators divided by all incident/no-incident episodes across seeds; these differ from equally weighted means of seed-conditional rates.",
+    "share_of_false_ejections_in_no_incident_games": "P(F and not I)/P(F); a descriptive composition of the observed false ejections.",
+    "unconditional_rates": "Each numerator is divided by all 10,000 episodes (ten seeds, 1,000 per seed). Equal sample sizes also make this the mean seed rate."
+  },
+  "purpose": "Reviewer point 2: incident decomposition and reward-objective verification for the released exploratory F3/F4 results.",
+  "reward_interpretation": {
+    "F3": "The frozen protocol selects balanced_ejection. Crew receives +1 in every no-incident game regardless of ejection; with an incident, crew receives -1 for innocent ejection, 0 for skip, and +1 for coalition ejection. Thus the objective does not penalize innocent ejection in no-incident games, whereas the reported overall false-ejection outcome includes it.",
+    "F4": "The script sets coalition_objective=survive for max_rounds=8. The reward implementation assigns terminal +/-1 by coalition victory at parity, with the exact opposite crew reward. The optimized target is victory, not minimizing innocent-ejection count or its occurrence.",
+    "identification_limit": "The decomposition is descriptive. Incidence and post-incident outcomes both change with the policies; conditioning on incident selects different game populations. Neither the decomposition nor the conditional rates isolate susceptibility to testimony."
+  },
+  "reward_truth_table": [
+    {
+      "coalition_reward": -1,
+      "crew_reward": 1,
+      "ejection": "skip",
+      "has_incident": false
+    },
+    {
+      "coalition_reward": -1,
+      "crew_reward": 1,
+      "ejection": "innocent",
+      "has_incident": false
+    },
+    {
+      "coalition_reward": -1,
+      "crew_reward": 1,
+      "ejection": "coalition",
+      "has_incident": false
+    },
+    {
+      "coalition_reward": 0,
+      "crew_reward": 0,
+      "ejection": "skip",
+      "has_incident": true
+    },
+    {
+      "coalition_reward": 1,
+      "crew_reward": -1,
+      "ejection": "innocent",
+      "has_incident": true
+    },
+    {
+      "coalition_reward": -1,
+      "crew_reward": 1,
+      "ejection": "coalition",
+      "has_incident": true
+    }
+  ],
+  "source_sha256": {
+    "code/scripts/train_f3_matched_cycle.py": "c86dc4609fd79e5457bf05a85b0e6636f2ef979565f0340f2c7170fcf7a43fdd",
+    "code/src/social_collusion/env/rewards.py": "eed8bded7426091a552e46fd2d1c425950a94769786d0ceeda8f94d0a16d0869",
+    "code/src/social_collusion/metrics/outcome_metrics.py": "bf69ac4b74f34ce611cddb955c649f3e34b2e4e15e779ad3b7e89f789e797085",
+    "data/final_analysis/cell_summary.json": "d244c7f32d5292f6caa7a7afbc1f0c7da45a29612a803dc2aa07b73849028b61",
+    "data/final_analysis/per_seed.json": "6de93d77ae37386cb7fff2fc8f494ae5feade4af9f9ae8c0f69445b35e90b38f",
+    "data/final_analysis/submission_protocol.json": "05be4efaff58996ee58c3dffa92b24f8faa4cd60a37ae8b1baf32cfe08eb8aa0"
+  }
+}

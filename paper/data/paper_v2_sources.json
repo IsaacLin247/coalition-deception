@@ -1,5 +1,5 @@
 {
-  "purpose": "Editorial alternative to the preserved 53-page corrected-study article; no new experimental results.",
+  "purpose": "Shorter alternative to the preserved 53-page article, with review corrections and a descriptive decomposition of existing outcomes; no new experiments.",
   "original_words": 14247,
   "original_pages": 53,
   "original_files": {
@@ -76,7 +76,7 @@
     }
   },
   "coverage": {
-    "F1": "Results: Learning increases harmful coordination",
+    "F1": "Results: False ejection and vote agreement after training",
     "F2": "Results: Scripted performance and adaptive robustness differ",
     "F3": "Results: Response training changes victory and voting harm differently",
     "F4": "Results: Response training changes victory and voting harm differently",
@@ -90,5 +90,10 @@
     "analytical_proof": "Appendix A; original proposition and proof preserved",
     "reproduction": "Appendix B and public source/data archive"
   },
-  "new_validation_incorporated": false
+  "new_validation_incorporated": false,
+  "review_corrections": {
+    "record": "paper_v2_review_response.md",
+    "incident_decomposition": "data/reward_incident_decomposition.json",
+    "new_experiments": false
+  }
 }

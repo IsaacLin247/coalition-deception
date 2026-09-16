@@ -7,20 +7,25 @@ is a separate editable manuscript, not a replacement for the original.
 | Measure | Original | Version 2 |
 |:--|--:|--:|
 | PDF pages, including references and appendices | 53 | 21 |
-| Markdown words* | 14,247 | 5,711 |
+| Markdown words* | 14,247 | 6,039 |
 | Figures in the document | 19 | 5 |
 | Tables in the document | 18 | 3 |
-| Abstract words | 224 | 178 |
+| Abstract words | 224 | 182 |
 | Cited references | 19 | 19 |
 | Body and caption size | 12 pt | 12 pt |
 | Page margins | 1 inch | 1 inch |
 
 *Whitespace-separated source tokens, including metadata, equations, and tables;
-the same counting method is used for both files. This is a **59.9% reduction** in
+the same counting method is used for both files. This is a **57.6% reduction** in
 source length and a **60.4% reduction** in pages. The reduction comes from editing
 and selecting displays, without reducing the body or caption font size.
 
 ## What changed
+
+The subsequent [review corrections](paper_v2_review_response.md) clarify the
+skip-excluding tally, decompose false ejections by incident occurrence, explain
+the training reward's scope, and narrow the coordination and mechanism claims.
+The table above describes the current revision, including these corrections.
 
 The original repeatedly introduced, tabulated, plotted, and interpreted the same
 outcomes. Version 2 combines the introduction and related work, brings the game,
@@ -101,7 +106,9 @@ python paper/plot_paper_v2.py
 ```
 
 The figure source manifest retains all 130 plotted cells and 1,300 seed records.
-The verifier independently reconstructs every plotted mean and sample SD.
+The verifier independently reconstructs every plotted mean and sample SD, plus
+all 120 seed-level incident decompositions. The separate reward/incident checker
+also evaluates the six terminal-reward cases without generating games.
 
 The verifier checks original-file hashes, reused figure identities and replotted
 source values, retained
@@ -113,9 +120,9 @@ reviews supplement these automated checks. The original `build.sh` and
 
 ## Scope of this revision
 
-This is an editorial revision of the existing corrected 240-job study. It makes
-no new empirical finding and does **not** incorporate the separate 72-seed
-prospective validation. That study's desktop jobs and analysis finished on
-12 September; recovery of its local data collection and independent raw-record
-verification is underway. Its findings require a separate scientific integration
-after verification, which should preserve this shorter structure.
+This revision uses the existing corrected 240-job study. The review corrections
+add a verified descriptive decomposition of already published outcomes; they do
+**not** incorporate the separate 72-seed prospective validation. That study's
+desktop jobs finished on 12 September; collection of all 224 jobs and independent
+local reanalysis completed on 15 September. Its findings still require separate
+scientific integration, which should preserve this shorter structure.

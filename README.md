@@ -4,7 +4,7 @@ Code, completed analysis, and manuscript for **Coalition Deception and Defensive
 
 **Final corrected analysis — 11 September 2026 UTC:** all **240 jobs**, **1,255 training stages**, and **303 statistical comparisons** are complete and independently verified. Both descriptive supplements are complete: **540,000 mechanism-study episodes** and **67,500 ballot-diagnostic episodes**. The manuscript uses the completed corrected results throughout.
 
-**Additional validation before submission:** a separate [prospective supplement](validation/README.md) tests hypothesis-defense tie handling and threshold selection, followed by fresh adaptive attacks and a 72-seed response-cycle replication. The current manuscript reports the completed earlier study; the new supplement must finish and pass analysis before its results are incorporated.
+**Additional validation before submission:** a separate [prospective follow-up](validation/README.md) tests hypothesis-defense tie handling and threshold selection, followed by fresh adaptive attacks and a 72-seed response-cycle replication. All 224 jobs are complete and passed independent local reanalysis on 15 September; [scientific interpretation and manuscript integration remain pending](validation/RUN_STATUS.md). The current manuscript reports the earlier 240-job study.
 
 ## Read and reproduce
 
@@ -21,7 +21,7 @@ Code, completed analysis, and manuscript for **Coalition Deception and Defensive
 
 ## Main findings
 
-Meeting-only learning increases harmful aligned voting while directly false claims decrease. Spatial adaptation is opponent-dependent. Lower coalition victory can coexist with frequent innocent ejections. The hypothesis defense has a truthful-testimony accuracy cost and a substantial targeted-attack vulnerability. Dependence-aware defense has mixed effects, including increased whole-game innocent ejections in the repeated loop. Finite response sequences do not establish an equilibrium or permanent cycle.
+Meeting-only training increases false ejection and raw coalition vote agreement; this does not establish communication-driven collusion. The false-claim fraction includes non-informative actions and cannot establish greater truthfulness. Spatial adaptation is opponent-dependent. F3 leaves incident-free innocent ejections unpenalized, and multi-round training optimizes victory rather than avoiding innocent harm. The hypothesis defense has a truthful-testimony accuracy cost and a targeted-attack vulnerability. Dependence-aware defense has mixed effects. Finite response sequences do not establish an equilibrium or permanent cycle. The [v2 review corrections](paper/paper_v2_review_response.md) explain the reward decomposition and interpretation limits.
 
 The paper reports effect sizes, seed variability, pointwise intervals, and within-family Holm adjustment. Five-seed exact tests have a minimum raw p-value of 0.0625; larger ten-seed families also face resolution limits. Nonsignificance is not equivalence.
 
@@ -64,6 +64,6 @@ The build requires Pandoc and XeLaTeX. PDF checks additionally use Poppler's pdf
 
 ## Publication status and attribution
 
-The corrected study and its manuscript integration are complete. Further scientific validation is in progress before submission; successful reproduction alone does not establish submission readiness. Journal submission has not been performed. Affiliations, corresponding-author details, funding, competing interests, contributions, review model, and final author approval remain author-supplied submission information.
+The corrected study is incorporated in the manuscript. The separate prospective follow-up has completed execution and verification; its scientific interpretation and manuscript integration remain pending. Successful reproduction alone does not establish submission readiness. Journal submission has not been performed. Affiliations, corresponding-author details, funding, competing interests, contributions, review model, and final author approval remain author-supplied submission information.
 
 The original [MIT license](LICENSE) and copyright notice are retained. This derives from the [original benchmark](https://github.com/xi10017/when-credibility-collapses). The citation style retains its own license, documented in the paper guide. Citation metadata is in [CITATION.cff](CITATION.cff).

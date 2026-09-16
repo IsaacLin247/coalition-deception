@@ -132,23 +132,25 @@ Social-Deduction Benchmark}
 How well do defenses against coordinated testimony withstand attackers
 trained against them? We investigate a social-deduction benchmark with
 structured claims, exact truth labels, and two impostors sharing a
-reinforcement-learning policy. A corrected 240-job study finds that
-learning increases innocent ejections and aligned voting even as
-directly false claims decrease. Defensive adaptation depends on the
-outcome: with five crew and two impostors, multi-round coalition victory
-falls from 0.967 to 0.360 after defender training and returns to 0.851
-after coalition retraining, while innocent ejections remain frequent.
-Ten-generation crossplay shows renewed gains against the latest
-opponent, without establishing an asymptotic cycle. A hypothesis-based
-defender incurs substantial truthful-testimony error and is vulnerable
-to targeted training, which increases false ejection from 0.126 to
-0.422. Ballot diagnostics identify an abstention-related failure route
-under fixed recorded votes. Mechanism experiments show that alibi errors
-can increase without coalition-weight amplification; a separate Gaussian
-surrogate characterizes when such amplification is possible under
-explicit assumptions. Dependence penalties have mixed effects on victory
-and voting harm. These findings support evaluating defenses across
-adaptive opponents, distinct outcomes, and directly measured mechanisms.
+reinforcement-learning policy. An exploratory 240-job study finds higher
+false-ejection rates and raw vote agreement after training; this does
+not establish communication-driven collusion. With five crew and two
+impostors, descriptive multi-round coalition-victory rates are 0.967
+before defender training, 0.360 afterward, and 0.851 after coalition
+retraining. Training optimizes victory, while innocent ejections remain
+frequent. Ten-generation crossplay shows renewed gains against the
+latest opponent, without establishing an asymptotic cycle. A
+hypothesis-based defender incurs substantial truthful-testimony error
+and is vulnerable to targeted training, which increases false ejection
+from 0.126 to 0.422. Ballot diagnostics support an abstention-related
+vulnerability under fixed recorded votes. Scripted alibi errors occur
+without excessive total coalition credibility weight, but scoring
+interventions do not identify a unique causal channel. A separate
+Gaussian surrogate characterizes when weight amplification is possible
+under explicit assumptions. Dependence penalties have mixed effects on
+victory and voting harm. These findings support evaluating defenses
+across adaptive opponents, distinct outcomes, and directly measured
+mechanisms.
 \end{abstract}
 
 \FloatBarrier
@@ -180,8 +182,8 @@ related defenses with explicit assumptions
 \citeproc{ref-arieli2023}{{[}6{]}}, \citeproc{ref-figura2021}{{[}7{]}},
 \citeproc{ref-witkowski2012}{{[}8{]}}; geometric-median mechanisms also
 face strategyproofness limits \citeproc{ref-elmhamdi2023}{{[}9{]}}.
-Social-deduction agents and language-model studies examine deception and
-hidden roles \citeproc{ref-kopparapu2022}{{[}10{]}},
+Learned social-deduction agents and Among Us-style communication have
+already been studied \citeproc{ref-kopparapu2022}{{[}10{]}},
 \citeproc{ref-sarkar2025}{{[}11{]}}. Adversarial communication, credit
 assignment, cooperation under uncertain incentives, and secret collusion
 provide adjacent settings \citeproc{ref-blumenkamp2021}{{[}12{]}},
@@ -191,22 +193,19 @@ provide adjacent settings \citeproc{ref-blumenkamp2021}{{[}12{]}},
 Adaptive evaluation is already an established requirement in adversarial
 robustness \citeproc{ref-tramer2020}{{[}16{]}}, as is learning
 approximate responses to policy populations
-\citeproc{ref-lanctot2017}{{[}17{]}}. Our contribution is a comparison
-within a structured social-deduction benchmark: exact claim labels
-separate explicitly false testimony from harmful coordination, crossplay
-separates opponent-specific gains from transfer, and complete game
-records distinguish coalition victory from innocent ejection. Mechanism
-studies examine credibility weights, score construction, and ballots
-directly. A Gaussian report model supplies a separate, analytically
-tractable account of weight amplification.
+\citeproc{ref-lanctot2017}{{[}17{]}}. Our contribution is the
+combination of adaptive-defense crossplay, separate victory and
+innocent-harm outcomes, and direct diagnostics of testimony scores and
+ballots in one structured benchmark. Claim labels describe testimony
+alongside voting outcomes; crossplay distinguishes opponent-specific
+gains from transfer. A Gaussian report model supplies a separate,
+analytically tractable account of weight amplification.
 
-The results resist a single ranking of defenses. The hypothesis rule
-improves against some scripts but makes many errors under supported
-testimony and targeted attacks. Learned defenders can suppress coalition
-victory while retaining frequent innocent ejections. Repeated response
-training produces renewed gains against recent opponents, while
-dependence penalties can improve one outcome and worsen another. The
-analysis therefore keeps these outcomes and mechanisms distinct.
+The results are exploratory and do not support a single ranking of
+defenses. Scripted benefits coexist with baseline errors and targeted
+vulnerability. Training objectives also differ from some evaluated
+harms, so improved reward does not imply uniformly better defensive
+decisions.
 
 \FloatBarrier
 
@@ -218,11 +217,14 @@ analysis therefore keeps these outcomes and mechanisms distinct.
 
 The benchmark contains two hidden impostors and 3, 5, or 7 crew members,
 denoted 3+2, 5+2, and 7+2. Roles are randomized each episode. A meeting
-consists of structured claims, responses, and a plurality vote with
-abstention; tied votes produce no ejection, and ejection does not reveal
-roles. The incident time is public. The two impostors share a policy,
-reward, and a feature identifying their partner. Unless ablated, spatial
-policies also exchange private four-symbol messages.
+consists of structured claims, responses, and a plurality vote among
+non-skip candidate ballots. Skip ballots are excluded from the tally:
+the unique candidate with the most votes is ejected even if most voters
+skip. No candidate ballots, or a tie for the highest candidate tally,
+produces no ejection. Ejection does not reveal roles. The incident time
+is public. The two impostors share a policy, reward, and a feature
+identifying their partner. Unless ablated, spatial policies also
+exchange private four-symbol messages.
 
 The meeting-only configuration (F1--F2) generates private evidence
 through six random-walk steps on the Hub--Electrical, Hub--Navigation,
@@ -315,17 +317,21 @@ randomness.
 
 Rewards are terminal and do not directly reward lying or coordination.
 F1 gives the coalition +1 for an innocent ejection after a real incident
-and −1 otherwise. F3's zero-sum balanced-ejection objective gives +1 for
-innocent ejection, 0 for no ejection after an incident, and −1 for
-coalition ejection or no incident. Single-meeting multigeneration loops
-retain that coalition objective but train crew with meeting-ejection
-rewards after a real incident: +1 for coalition ejection, −1 for
-innocent ejection, and 0 for no ejection or no incident. Reward controls
-compare these constructions. In multiround survival experiments, the
-coalition wins when living impostors are at least as numerous as living
-crew after a meeting vote; crew win by eliminating the coalition or
-reaching the round cap without that condition. A separate control
-substitutes the incident-gated innocent-ejection count for survival.
+and −1 otherwise. F3's zero-sum balanced-ejection objective gives the
+coalition +1 for innocent ejection, 0 for no ejection, and −1 for
+coalition ejection after a real incident. Without an incident it gives
+the coalition −1 and the crew +1 regardless of the vote, including an
+innocent ejection. Thus incident-free voting harm is unpenalized by this
+objective. Single-meeting multigeneration loops retain that coalition
+objective but train crew with meeting-ejection rewards after a real
+incident: +1 for coalition ejection, −1 for innocent ejection, and 0 for
+no ejection or no incident. Reward controls compare these constructions.
+In multiround survival experiments, the coalition wins when living
+impostors are at least as numerous as living crew after a meeting vote;
+crew win by eliminating the coalition or reaching the round cap without
+that condition. This reward optimizes victory, not avoidance of innocent
+ejections. A separate control substitutes the incident-gated
+innocent-ejection count for survival.
 
 Response training proceeds \(C_0\rightarrow D_1\rightarrow C_1\):
 coalition against scripted soft-credibility crew, crew against frozen
@@ -406,6 +412,13 @@ pre-ejection electorate and count historical meetings once. Conditional
 metrics are averaged over seeds with nonzero denominators, retaining
 contributing counts; undefined values are not replaced by zero.
 
+Aligned voting is the fraction of meetings with both coalition ballots
+recorded in which both choose the same non-skip target; any skip counts
+as nonalignment. Multiround games use the terminal meeting. This raw
+agreement rate has no matched-independent baseline. The false-claim
+fraction counts claims labelled FALSE among all coalition claim actions,
+including non-informative claims.
+
 Final evaluation starts at seed 1987654321 plus run seed, separately
 from monitoring at 987654321 plus run seed, and does not advance
 training randomness. Predetermined episode indices are completed without
@@ -457,19 +470,22 @@ retrospective gap is neither true exploitability nor a convergence test.
 
 \FloatBarrier
 
-\subsection{Learning increases harmful
-coordination}\label{learning-increases-harmful-coordination}
+\subsection{False ejection and vote agreement after
+training}\label{false-ejection-and-vote-agreement-after-training}
 
 In the meeting-only game (F1), coalition training increases false
 ejection from 0.045 to 0.271 at 3+2, from 0.073 to 0.2125 at 5+2, and
 from 0.091 to 0.194 at 7+2. All three final-minus-untrained contrasts
-have Holm-adjusted \(p=0.0117\) in the six-test F1 family. Aligned
-non-skip voting and creator survival also increase, while directly false
-claims decrease at every population (Figure 1). At 5+2, aligned voting
-rises from 0.108 to 0.316, and the false-claim fraction falls from 0.423
-to 0.349. Thus greater voting harm need not require more explicitly
-false statements. These joint changes do not isolate communication as
-their causal driver.
+have Holm-adjusted \(p=0.0117\) in the six-test F1 family. Raw
+same-target vote agreement and creator survival also increase, while the
+fraction of claim actions labelled FALSE decreases at every population
+(Figure 1). At 5+2, vote agreement rises from 0.108 to 0.316 and the
+false-claim fraction falls from 0.423 to 0.349. Shared policy
+parameters, public observations, and incentives can produce aligned
+votes without communication-driven collusion; no matched-independent
+learned-policy baseline is reported. Because non-informative actions
+enter its denominator, the lower false-claim fraction does not establish
+greater truthfulness among informative claims.
 
 \begin{figure}
 \centering
@@ -477,7 +493,8 @@ their causal driver.
 \caption{Figure 1. Coalition learning against scripted soft-credibility
 crew in the meeting-only game. Curves use monitored evaluations;
 untrained and final points use independent holdout episodes. Variability
-is across ten seeds, not independent episode replicates.}\label{fig:1}
+is across ten seeds. Vote agreement is raw; the false-claim denominator
+includes non-informative actions.}\label{fig:1}
 \end{figure}
 
 \FloatBarrier
@@ -512,8 +529,10 @@ truthful-testimony errors found that the true coalition retained
 positive weight and its timelines satisfied the emitted constraints.
 Some errors arose from exact score ties resolved by agent index; another
 involved unanimous honest abstention. This replay identifies possible
-failure routes, not their prevalence. The 63- and 36-test F2 families
-cannot reject at 0.05 with the retained ten-seed exact-test resolution.
+failure routes, not their prevalence. Since skips do not compete in the
+candidate tally, coalition ballots can decide an ejection when all
+honest voters abstain. The 63- and 36-test F2 families cannot reject at
+0.05 with the retained ten-seed exact-test resolution.
 
 Targeted training against the hypothesis rule (F8) exposes a further
 vulnerability. At 5+2, its false-ejection rate increases from 0.1255
@@ -590,33 +609,45 @@ hypothesis & 0.424 & 0.661 & 0.973 & 0.978 & 0.014 \\
 \subsection{Response training changes victory and voting harm
 differently}\label{response-training-changes-victory-and-voting-harm-differently}
 
-In spatial single-meeting crossplay (F3), the learned defender produces
-more false ejections against the fixed initial coalition. At 5+2, rates
-are 0.1940 for \(C_0\)--\(D_0\), 0.4031 for \(C_0\)--\(D_1\), and 0.5385
-for \(C_1\)--\(D_1\); the adapted coalition obtains only 0.0759 against
+In spatial single-meeting crossplay (F3), unconditional false ejection
+is more frequent against the learned defender. At 5+2, rates are 0.1940
+for \(C_0\)--\(D_0\), 0.4031 for \(C_0\)--\(D_1\), and 0.5385 for
+\(C_1\)--\(D_1\); the adapted coalition obtains only 0.0759 against
 \(D_0\). The specified defender-effect contrast, \(C_0\)--\(D_0\) minus
 \(C_0\)--\(D_1\), is negative at all three populations (adjusted
 \(p=0.0176\)). Coalition adaptation against \(D_1\) is not uniformly
 beneficial: its false-ejection effect is −0.0482 at 3+2, +0.1354 at 5+2,
 and +0.1124 at 7+2; the negative effect does not reject.
 
-Defender training also changes incident opportunities. At 5+2, \(C_0\)
-creates incidents in 0.963 of games against \(D_0\) but 0.254 against
-\(D_1\). Thus the comparison combines movement, incident creation,
-testimony, and voting. Some 3+2 seeds have no incidents against \(D_1\);
-their conditional rates remain undefined while unconditional summaries
-retain all ten seeds.
+The incident decomposition changes its interpretation. For
+\(C_0\)--\(D_1\), total false-ejection probability equals
+incident-associated plus incident-free false ejection: 0.4635 = 0.0202 +
+0.4433 at 3+2, 0.4031 = 0.0903 + 0.3128 at 5+2, and 0.4747 = 0.1552 +
+0.3195 at 7+2. Each component uses all games as its denominator; these
+are joint, not incident-conditional, probabilities. At 5+2, incident
+probability is 0.9626 against \(D_0\) but 0.2543 against \(D_1\). F3
+rewards the defender +1 in incident-free games even after innocent
+ejection. Most of its observed false ejections therefore occur outside
+the reward's penalized conditions. Unconditional error alone cannot
+establish greater vulnerability to deceptive testimony: the comparison
+also changes incident opportunities and includes a reward--metric
+mismatch. Indeed, the joint incident-and-false-ejection rate decreases
+after defender training at all three populations; at 5+2 the overall
+increase decomposes as \(0.2091 = -0.0775 + 0.2866\), with the increase
+confined to incident-free games. Some 3+2 seeds have no incidents
+against \(D_1\); their conditional rates remain undefined while
+unconditional summaries retain all ten seeds.
 
-In eight-round play (F4), defender training substantially reduces
-coalition victory, but victory and voting harm separate (Figure 4). At
-5+2, victory changes from 0.9670 (\(C_0\)--\(D_0\)) to 0.3603
-(\(C_0\)--\(D_1\)), then to 0.8514 (\(C_1\)--\(D_1\)). The last
-adaptation raises victory by 0.4911 while changing the probability of
-any innocent ejection only from 0.8392 to 0.8467 and reducing mean
-innocent-ejection count by 0.4249 per game. At 7+2, victory rises by
-0.5104 while mean count falls by 1.0066. Differently terminated or
-shorter games can therefore produce more coalition wins with fewer total
-innocent ejections.
+Eight-round play (F4) optimizes terminal victory, while innocent
+ejection is an additional evaluation outcome. Descriptive victory and
+voting-harm rates differ (Figure 4). At 5+2, victory rates are 0.9670
+(\(C_0\)--\(D_0\)), 0.3603 (\(C_0\)--\(D_1\)), and 0.8514
+(\(C_1\)--\(D_1\)). The last adaptation raises victory by 0.4911 while
+changing the probability of any innocent ejection only from 0.8392 to
+0.8467 and reducing mean innocent-ejection count by 0.4249 per game. At
+7+2, victory rises by 0.5104 while mean count falls by 1.0066.
+Differently terminated or shorter games can therefore produce more
+coalition wins with fewer total innocent ejections.
 
 \begin{figure}
 \centering
@@ -770,8 +801,8 @@ optimal training.
 \section{Mechanisms: score construction and correlated
 reports}\label{mechanisms-score-construction-and-correlated-reports}
 
-The 540,000-episode mechanism study separates coalition-weight
-amplification from other ways credibility weighting can change votes.
+The 540,000-episode mechanism study checks whether excessive total
+coalition weight accompanies errors in the tested scripted records.
 Under alibi attacks, soft credibility's mean coalition weight is 0.2630
 at 3+2, 0.1425 at 5+2, and 0.0976 at 7+2, below the uniform shares
 0.5000, 0.3333, and 0.2500. These shares count actual reporters after
@@ -793,13 +824,17 @@ but allow responses and votes to change.
 The benefits are conditional. Removing alibi credit increases soft
 framer error by 0.0876 at 5+2 and 0.1332 at 7+2; moving the catch
 penalty increases soft lone-liar error by 0.1540 at 3+2. Lower false
-ejection can also mean more abstention: under 3+2 alibi attacks, every
-tested variant has zero creator ejection and coalition-favorable rate
-one, meaning no coalition member is ejected, including meetings with no
-ejection. Under 5+2 lone liars, soft catch-outside reduces false
-ejection from 0.1598 to 0.1316 but increases coalition-favorable
-outcomes from 0.2000 to 0.2416. Neither excessive total coalition weight
-nor a universally beneficial score repair explains these observations.
+ejection can also mean more no-ejection outcomes: under 3+2 alibi
+attacks, every tested variant has zero creator ejection and
+coalition-favorable rate one, meaning no coalition member is ejected,
+including meetings with no ejection. Under 5+2 lone liars, soft
+catch-outside reduces false ejection from 0.1598 to 0.1316 but increases
+coalition-favorable outcomes from 0.2000 to 0.2416. The narrow finding
+is that these alibi errors occur without excessive total coalition
+weight, while score modifications have condition-dependent effects.
+Because responses and votes change with the interventions, they do not
+isolate a unique causal channel or localize all failures to candidate
+scoring.
 
 The Gaussian model (F6) isolates weight amplification under different
 assumptions. There are \(n\) honest reports with independent
@@ -845,12 +880,16 @@ an incident in the initial 3+2 game.
 
 \section{Discussion and limitations}\label{discussion-and-limitations}
 
-Three distinctions organize the findings. First, performance against a
-script does not determine robustness to a trained opponent. Second,
-coalition victory and innocent ejection can move differently. Third,
-credibility-induced errors need not arise through excessive total
-coalition weight. Adaptive crossplay and direct score and ballot records
-are needed to distinguish these mechanisms.
+Three distinctions organize the findings. Scripted performance differs
+from adaptive crossplay; victory differs from voting harm; and an
+observed scoring intervention differs from identifying a causal
+mechanism. F3 leaves incident-free ejections unpenalized, while F4
+optimizes victory rather than innocent-ejection avoidance. These
+reward--metric mismatches limit a simple interpretation of increased
+harm as failed resistance to deception. Raw vote agreement under shared
+parameters and incentives also does not establish communication-driven
+collusion. Adaptive crossplay and direct diagnostics characterize these
+outcomes without resolving those causal questions.
 
 The scope is limited by the benchmark and learning procedure. Small
 maps, structured claims, and two policy-sharing impostors do not
@@ -876,14 +915,15 @@ protocols and raw records make the reported comparisons auditable.
 
 \section{Conclusion}\label{conclusion}
 
-Coalition learning increases harmful voting without increasing directly
-false claims. Hypothesis scoring trades some scripted-attack benefits
-for substantial baseline error and targeted vulnerability. Repeated
-training restores gains against recent opponents within the observed
-horizon, while defenses can reduce coalition victory and still increase
-innocent ejections. Evaluating adaptive opponents, distinct harms, and
-measured mechanisms provides a more precise account of defensive
-performance than a single win rate or credibility score.
+Training is associated with higher false-ejection rates and raw
+coalition vote agreement; it does not establish communication-driven
+collusion or greater truthfulness. Hypothesis scoring combines
+scripted-attack benefits with baseline error and targeted vulnerability.
+Finite response sequences show opponent-specific gains, while victory
+and innocent harm can differ under objectives that do not penalize every
+measured harm. These exploratory findings motivate adaptive-defense
+crossplay, separate outcome reporting, and direct diagnostics, without
+establishing a universal causal mechanism or a permanent learning cycle.
 
 \FloatBarrier
 

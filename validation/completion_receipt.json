@@ -1,0 +1,39 @@
+{
+  "scope": "Completion and arithmetic-verification status only; prospective outcomes not integrated into paper_v2.",
+  "collection": {
+    "status": "complete",
+    "collected_jobs": 224,
+    "completed_utc": "2026-09-15T20:35:48.472085+00:00",
+    "selection_sha256": "57013422719a8d1d966d8cccc440d98e623328ed10ae0f4ff83de8b8072bb850",
+    "primary_results_match": true,
+    "primary_results_identical": false,
+    "numerical_tolerance": "Exact counts, exact sign-flip/Holm p; other floats atol1e-12/rtol1e-10",
+    "manuscript_integration": "Awaiting final scientific interpretation and manuscript update"
+  },
+  "local_reanalysis": {
+    "checked_utc": "2026-09-15T20:32:05.703721+00:00",
+    "complete_development_jobs": 8,
+    "complete_final_jobs": 216,
+    "descriptive_rows": 269,
+    "expected_development_jobs": 8,
+    "expected_final_jobs": 216,
+    "incomplete_jobs": [],
+    "inference_enabled": true,
+    "per_seed_cells": 3816,
+    "primary_contrasts": 6,
+    "problems": [],
+    "protocol_sha256": "fa017c32f1e99da67644b5c1823fa406c7a9d0325b1331c8cdacf2135a01f02e",
+    "raw_episode_rows": 3816000,
+    "raw_meeting_rows": 4490695,
+    "results_sha256": "1fb20e14e0df48162c8233ba725284e7edd3a59e2648407e6604b5498cf8fe24",
+    "selected_is_original": false,
+    "selection_sha256": "57013422719a8d1d966d8cccc440d98e623328ed10ae0f4ff83de8b8072bb850",
+    "smoke_only": false,
+    "source_sha256": "95e13e33f671270685281eb7cc20ff15f7f0686a38e7edcefa3401807d655402",
+    "status": "complete"
+  },
+  "source_receipt_sha256": {
+    "collection_status.json": "defa1804f336e5bde9a7b0b91e17fbd93e4f3fdbc1ce034b01f04c54f80bf9ed",
+    "local_analysis/status.json": "fdf1fb5ab418b27d7ca5311b8c1bf26d1676c8e73841a9e9c0d0f806eed5fe29"
+  }
+}

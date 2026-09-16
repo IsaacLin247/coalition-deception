@@ -1,5 +1,12 @@
 # Audit changes and final findings
 
+**15 September review update:** the separate, shorter `paper_v2` now corrects the
+voting description, explains the incident-free reward mismatch, adds the verified
+false-ejection decomposition, and narrows coordination, truthfulness, and mechanism
+claims. See the [five-point correction record](paper/paper_v2_review_response.md).
+It supersedes the interpretive shorthand in this earlier audit record. The
+original long manuscript is preserved for comparison.
+
 **Completed corrected revision — 11 September 2026 UTC.** The requested filename cahnges.md is retained. All 240 main jobs, 1,255 learner stages, 303 planned comparisons, and both supplemental studies are complete. The manuscript replaces its remaining archived empirical sections with the final corrected evidence. The [final results review](data/reviews/FINAL_RESULTS_REVIEW.md), complete machine-readable data, and validation receipts provide further detail.
 
 ## Research and implementation corrections
